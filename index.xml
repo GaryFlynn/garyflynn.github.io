@@ -493,7 +493,7 @@ note in quotes as the second parameter.  The inner body of the note can be whate
           &lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;instagram-simple-shortcode&#34;&gt;Instagram Simple Shortcode&lt;/h2&gt;
-&lt;br&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;youtube-privacy-enhanced-shortcode&#34;&gt;YouTube Privacy Enhanced Shortcode&lt;/h2&gt;
 
@@ -501,33 +501,10 @@ note in quotes as the second parameter.  The inner body of the note can be whate
   &lt;iframe src=&#34;https://www.youtube.com/embed/izYiDDt6d8s?controls=1&amp;rel=0&#34; loading=&#34;lazy&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
-&lt;br&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;twitter-simple-shortcode&#34;&gt;Twitter Simple Shortcode&lt;/h2&gt;
-
-
-
-
-&lt;style type=&#34;text/css&#34;&gt;
-  .twitter-tweet {
-  font: 14px/1.45 -apple-system,BlinkMacSystemFont,&#34;Segoe UI&#34;,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&#34;Helvetica Neue&#34;,sans-serif;
-  border-left: 4px solid #2b7bb9;
-  padding-left: 1.5em;
-  color: #555;
-}
-  .twitter-tweet a {
-  color: #2b7bb9;
-  text-decoration: none;
-}
-  blockquote.twitter-tweet a:hover,
-  blockquote.twitter-tweet a:focus {
-  text-decoration: underline;
-}
-&lt;/style&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;“In addition to being more logical, asymmetry has the advantage that its complete appearance is far more optically effective than symmetry.”&lt;br&gt;— Jan Tschichold &lt;a href=&#34;https://t.co/gcv7SrhvJb&#34;&gt;pic.twitter.com/gcv7SrhvJb&lt;/a&gt;&lt;/p&gt;&amp;mdash; Graphic Design History (@DesignReviewed) &lt;a href=&#34;https://twitter.com/DesignReviewed/status/1085870671291310081?ref_src=twsrc%5Etfw&#34;&gt;January 17, 2019&lt;/a&gt;&lt;/blockquote&gt;
-
-&lt;br&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;vimeo-simple-shortcode&#34;&gt;Vimeo Simple Shortcode&lt;/h2&gt;
 
