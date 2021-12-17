@@ -95,7 +95,7 @@ Create Active Directory Forest To …">
 <span><svg class="icon"><use xlink:href="#calendar"/></svg></span>
 <span class=post_date>
 Aug 29, 2018</span>
-<span class=post_time> · 2 min read</span><span>&nbsp;· <a href=https://garyflynn.github.io/tags/active-directory title="Active Directory" class="post_tag button button_translucent">Active Directory
+<span class=post_time> · 3 min read</span><span>&nbsp;· <a href=https://garyflynn.github.io/tags/active-directory title="Active Directory" class="post_tag button button_translucent">Active Directory
 </a><a href=https://garyflynn.github.io/tags/microsoft title=Microsoft class="post_tag button button_translucent">Microsoft
 </a><a href=https://garyflynn.github.io/tags/microsoft title=Microsoft class="post_tag button button_translucent">Microsoft
 </a><a href=https://garyflynn.github.io/tags/powershell title=Powershell class="post_tag button button_translucent">Powershell
@@ -170,7 +170,12 @@ Share on:
 </code></pre></div><p>Once this has completed, it is time to join the server to the domain as a domain controller.</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln>1</span>$cred = Get-Credential
 <span class=ln>2</span>Install-ADDSDomainController -CreateDnsDelegation:$false -DatabasePath &#34;C:\Windows\NTDS&#34; -DomainName &#34;homelab.local&#34; -InstallDns:$true -LogPath &#34;C:\Windows\NTDS&#34; -NoGlobalCatalog:$false -SysvolPath &#34;C:\Windows\SYSVOL&#34; -NoRebootOnCompletion:$false -Credential $cred -Force:$true
-</code></pre></div><p>Once the server has restarted, you will be able to log into the domain controller as a domain administrator.</p>
+</code></pre></div><h2 id=once-the-server-has-restarted-you-will-be-able-to-log-into-the-domain-controller-as-a-domain-administrator>Once the server has restarted, you will be able to log into the domain controller as a domain administrator.</h2>
+<h3 id=comments>Comments:</h3>
+<h4 id=heading></h4>
+<p><a href=%22tessbabe99@gmail.com%22>Tessa</a> - <time datetime="2019-04-24 04:25:09">Apr 3, 2019</time></p>
+<p>What a fantastically detailed post. This is the second time I have had to rebuild my homelab, and this saved me so much time. Guaranteed it'll happn again after I tinker one too many times, so I'm sure I'll be back!</p>
+<hr>
 </div>
 <div class=post_comments>
 <div id=disqus_thread></div>
