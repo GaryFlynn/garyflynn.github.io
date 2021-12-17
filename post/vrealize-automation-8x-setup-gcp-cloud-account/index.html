@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://garyflynn.github.io/post/vrealize-automation-8x-setup-gcp-cloud-account/">
 <meta property="og:title" content="vRealize Automation 8.x - Setup Google Cloud Platform Cloud Account">
 <meta property="og:description" content="vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Google Cloud Platform (GCP) environment, select Cloud Assembly > …">
-<meta property="og:image" content="https://garyflynn.github.io/images/thumbnail.png">
+<meta property="og:image" content="https://garyflynn.github.io/post/vrealize-automation-8x-setup-gcp-cloud-account/images/vra8-logo.png">
 <link rel=apple-touch-icon sizes=180x180 href=https://garyflynn.github.io/icons/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=https://garyflynn.github.io/icons/favicon-32x32.png>
 <link rel=manifest href=https://garyflynn.github.io/icons/site.webmanifest>
@@ -93,7 +93,7 @@
 <span><svg class="icon"><use xlink:href="#calendar"/></svg></span>
 <span class=post_date>
 Mar 15, 2020</span>
-<span class=post_time> · 6 min read</span><span>&nbsp;· <a href=https://garyflynn.github.io/tags/8.x title=8.x class="post_tag button button_translucent">8.x
+<span class=post_time> · 4 min read</span><span>&nbsp;· <a href=https://garyflynn.github.io/tags/8.x title=8.x class="post_tag button button_translucent">8.x
 </a><a href=https://garyflynn.github.io/tags/automation title=Automation class="post_tag button button_translucent">Automation
 </a><a href=https://garyflynn.github.io/tags/gcp title=GCP class="post_tag button button_translucent">GCP
 </a><a href=https://garyflynn.github.io/tags/getting-started title="Getting Started" class="post_tag button button_translucent">Getting Started
@@ -130,48 +130,40 @@ Share on:
 <h2 id=project-id>Project ID</h2>
 <p>To retrieve the project ID, log into the GCP Console and select the appropriate Project. On the Home Dashboard under Project info, copy the Project ID and take note of it to validate it later in the vRA Portal.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-project-id.png title="Open this web path in a new tab" target=_blank class=warning-link>https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-project-id.png</a></p>
-<p>Disk path: /static/https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-project-id.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/vra8-gcp-project-id.png alt loading=lazy decoding=async width=849 height=429>
+</picture>
+</figure>
 </p>
 <h2 id=enable-the-api>Enable the API</h2>
 <p>The GCP project you have created for your environment, must have the Compute Engine API enable. Log into the GCP Console and select your project. From the menu, select APIs & Services > Enable APIs and Services. In the Search for APIs & Services box, type Compute Engine API and select the Compute Engine API.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-compute-engine-api.png title="Open this web path in a new tab" target=_blank class=warning-link>https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-compute-engine-api.png</a></p>
-<p>Disk path: /static/https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-compute-engine-api.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/vra8-gcp-compute-engine-api.png alt loading=lazy decoding=async width=495 height=311>
+</picture>
+</figure>
 </p>
 <p>Select Enable to enable the API and wait for this to complete as it may take up to a minute.</p>
 <h2 id=service-account>Service Account</h2>
 <p>To create a service account, log into the GCP Console and ensure that you have selected the correct Project that you are working in. From the menu, select IAM & Admin > Service accounts > Create Service Account.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-service-accounts-1024x215.png title="Open this web path in a new tab" target=_blank class=warning-link>https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-service-accounts-1024x215.png</a></p>
-<p>Disk path: /static/https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-service-accounts-1024x215.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/vra8-gcp-service-accounts-1024x215.png alt loading=lazy decoding=async width=1024 height=215>
+</picture>
+</figure>
 </p>
 <p>For the new service account, give it a logical name such as such as "svc-vra8" and the Service account ID will be auto-generated, however it can be amended.</p>
 <p>Note: A long service account name will fail vRA validation with an error stating incorrect permissions, when the details are entered in the vRA Add Cloud Account page. Save yourself some pain and choose a short and simple account name.</p>
 <p>Give the service account a description, such as "Service account used for connecting GCP to the Homelab vRealize Automation 8.x environment".</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-new-service-account-svc-vra8.png title="Open this web path in a new tab" target=_blank class=warning-link>https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-new-service-account-svc-vra8.png</a></p>
-<p>Disk path: /static/https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-new-service-account-svc-vra8.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/vra8-gcp-new-service-account-svc-vra8.png alt loading=lazy decoding=async width=534 height=466>
+</picture>
+</figure>
 </p>
 <p>Once the account is created, it must me assigned a role so that it will be able to access the resources required for vRA 8.x to operate. There are several roles listed below which the service account requires to enable full functionality with vRA 8.x.</p>
 <ul>
@@ -182,34 +174,28 @@ Share on:
 </ul>
 <p>Once the roles are selected, click Continue.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-service-account-new-permissions.png title="Open this web path in a new tab" target=_blank class=warning-link>https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-service-account-new-permissions.png</a></p>
-<p>Disk path: /static/https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-service-account-new-permissions.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/vra8-gcp-service-account-new-permissions.png alt loading=lazy decoding=async width=529 height=668>
+</picture>
+</figure>
 </p>
 <p>The next step, granting users access to this service account, is optional and is not required but may be relevant based on your organisations policies etc. Once you have reviewed the page to see if it applies, select Create Key.</p>
 <p>Select the Key type as JSON and select Create.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-service-account-create-key.png title="Open this web path in a new tab" target=_blank class=warning-link>https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-service-account-create-key.png</a></p>
-<p>Disk path: /static/https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-service-account-create-key.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/vra8-gcp-service-account-create-key.png alt loading=lazy decoding=async width=519 height=352>
+</picture>
+</figure>
 </p>
 <p>This will create a JSON file and your browser will download the file. Save it somewhere you can retrieve later. Once stored somewhere securely, select Done.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-service-account-key-id.png title="Open this web path in a new tab" target=_blank class=warning-link>https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-service-account-key-id.png</a></p>
-<p>Disk path: /static/https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-service-account-key-id.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/vra8-gcp-service-account-key-id.png alt loading=lazy decoding=async width=521 height=771>
+</picture>
+</figure>
 </p>
 <h2 id=vra-portal-configuration>vRA Portal Configuration</h2>
 <p>Back in the vRA portal, select Cloud Assembly > Infrastructure > Connections > Cloud Accounts > Add Cloud Account > Google Cloud Platform</p>
@@ -217,8 +203,8 @@ Share on:
 <div class="notices warning image-warning">
 <div class=label>Image not found</div>
 <style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://garyflynn.com/wp-content/uploads/2020/03/vra8-azure-new-cloud-account-1024x253.png title="Open this web path in a new tab" target=_blank class=warning-link>https://garyflynn.com/wp-content/uploads/2020/03/vra8-azure-new-cloud-account-1024x253.png</a></p>
-<p>Disk path: /static/https://garyflynn.com/wp-content/uploads/2020/03/vra8-azure-new-cloud-account-1024x253.png</p>
+<p>Web path: <a href=https://garyflynn.github.io/images/vra8-azure-new-cloud-account-1024x253.png title="Open this web path in a new tab" target=_blank class=warning-link>https://garyflynn.github.io/images/vra8-azure-new-cloud-account-1024x253.png</a></p>
+<p>Disk path: /static/images/vra8-azure-new-cloud-account-1024x253.png</p>
 <p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
 </div>
 </p>
@@ -227,38 +213,34 @@ Share on:
 <div class="notices warning image-warning">
 <div class=label>Image not found</div>
 <style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-new-cloud-account-gcp-credentials-1024x597.png title="Open this web path in a new tab" target=_blank class=warning-link>https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-new-cloud-account-gcp-credentials-1024x597.png</a></p>
-<p>Disk path: /static/https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-new-cloud-account-gcp-credentials-1024x597.png</p>
+<p>Web path: <a href=https://garyflynn.github.io/images/vra8-gcp-new-cloud-account-gcp-credentials-1024x597.png title="Open this web path in a new tab" target=_blank class=warning-link>https://garyflynn.github.io/images/vra8-gcp-new-cloud-account-gcp-credentials-1024x597.png</a></p>
+<p>Disk path: /static/images/vra8-gcp-new-cloud-account-gcp-credentials-1024x597.png</p>
 <p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
 </div>
 </p>
 <p>Enter a name for the Cloud Account and optionally a description. Under Configuration, select the GCP regions to allow provisioning to, ensure the checkbox is select to create a cloud zone for each of the selected regions, and under Capability tags, enter “cloud:azure”. This enable us to use tagging in the blueprint request forms to select the appropriate cloud account / endpoint to provision to. Once done, select Add.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-new-cloud-account-gcp-config.png title="Open this web path in a new tab" target=_blank class=warning-link>https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-new-cloud-account-gcp-config.png</a></p>
-<p>Disk path: /static/https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-new-cloud-account-gcp-config.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/vra8-gcp-new-cloud-account-gcp-config.png alt loading=lazy decoding=async width=847 height=589>
+</picture>
+</figure>
 </p>
 <p>Once the Cloud Account has been created, under Configure > Cloud Zones, you will see your selected regions each having their own Cloud Zones.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-cloud-zones.png title="Open this web path in a new tab" target=_blank class=warning-link>https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-cloud-zones.png</a></p>
-<p>Disk path: /static/https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-cloud-zones.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/vra8-gcp-cloud-zones.png alt loading=lazy decoding=async width=639 height=537>
+</picture>
+</figure>
 </p>
 <p>In more complex environments, you can Open the Cloud Zone and select the Compute tab, and for each availability zone, assign capability tags. If for example you have separate availability zones for dev, test and prod, you could assign the capability tag “environment:dev” to europe-west2-c, “environment:test” to europe-west2-b & “environment:prod” to europe-west2-a, to ensure that different workload environments are placed in different availability zones. The second part of this configuration is done in the blueprint request form.</p>
 <p>
 <div class="notices warning image-warning">
 <div class=label>Image not found</div>
 <style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-availability-zone-tags-1024x480.png title="Open this web path in a new tab" target=_blank class=warning-link>https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-availability-zone-tags-1024x480.png</a></p>
-<p>Disk path: /static/https://garyflynn.com/wp-content/uploads/2020/03/vra8-gcp-availability-zone-tags-1024x480.png</p>
+<p>Web path: <a href=https://garyflynn.github.io/images/vra8-gcp-availability-zone-tags-1024x480.png title="Open this web path in a new tab" target=_blank class=warning-link>https://garyflynn.github.io/images/vra8-gcp-availability-zone-tags-1024x480.png</a></p>
+<p>Disk path: /static/images/vra8-gcp-availability-zone-tags-1024x480.png</p>
 <p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
 </div>
 </p>
@@ -277,7 +259,7 @@ Share on:
 <h2>Gary Flynn</h2>
 </div>
 <div class=author_bio>
-GaryFlynn.com started out in 2016 as a way for me to share my experiences working in IT across the UK and Australia with others. Consider this my brain dumping ground for anything I think could be useful. Find out more about the site here.<br><h2>Achievements</h2><a href=https://www.credly.com/badges/a7b80dc8-2db3-4e75-9fbf-96261da93561><img src=/images/vcp-cma-2021.png alt=Achievement></a> <a href=https://www.credly.com/badges/a72c24d6-2674-4aef-beca-5b24b4a56c7a><img src=/images/vcap-cma-deploy-2021.png alt=Achievement></a><br><a href=https://vexpert.vmware.com/directory/4818><img src=/images/vexpert-cloud-management-badge.png alt=Achievement></a> <a href=https://vexpert.vmware.com/directory/4818><img src=/images/vexpert-2-star.png alt=Achievement></a> <a href=https://vexpert.vmware.com/directory/4818><img src=/images/vexpert-2021.png alt=Achievement></a><br><a href=https://www.credly.com/badges/25777ce7-1628-45eb-bc4b-b4d5bfde3ea0><img src=/images/terraform-associate.png alt=Achievement></a> <a href=https://www.credly.com/badges/a0183b64-d002-4703-ac95-0a57e0bd840e><img src=/images/terraform-chip.png alt=Achievement></a> <img src=/images/hc-ambassador-2021.png alt=Achievement>
+GaryFlynn.com started out in 2016 as a way for me to share my experiences working in IT across the UK and Australia with others. Consider this my brain dumping ground for anything I think could be useful. Find out more about the site <a href=/about/>here</a>.<br><h2>Achievements</h2><a href=https://www.credly.com/badges/a7b80dc8-2db3-4e75-9fbf-96261da93561><img src=/images/vcp-cma-2021.png alt=Achievement></a> <a href=https://www.credly.com/badges/a72c24d6-2674-4aef-beca-5b24b4a56c7a><img src=/images/vcap-cma-deploy-2021.png alt=Achievement></a><br><a href=https://vexpert.vmware.com/directory/4818><img src=/images/vexpert-cloud-management-badge.png alt=Achievement></a> <a href=https://vexpert.vmware.com/directory/4818><img src=/images/vexpert-2-star.png alt=Achievement></a> <a href=https://vexpert.vmware.com/directory/4818><img src=/images/vexpert-2021.png alt=Achievement></a><br><a href=https://www.credly.com/badges/25777ce7-1628-45eb-bc4b-b4d5bfde3ea0><img src=/images/terraform-associate.png alt=Achievement></a> <a href=https://www.credly.com/badges/a0183b64-d002-4703-ac95-0a57e0bd840e><img src=/images/terraform-chip.png alt=Achievement></a> <img src=/images/hc-ambassador-2021.png alt=Achievement>
 </div>
 <a href=https://garyflynn.github.io/about/ class="button mt-1" role=button title="Read More">Read More</a>
 <h2 class=mt-4>Recent Posts</h2>
@@ -286,118 +268,107 @@ GaryFlynn.com started out in 2016 as a way for me to share my experiences workin
 <a href=https://garyflynn.github.io/post/vmworld-2021-vrealize-announcements/ class=nav-link title="VMworld 2021 vRealize Announcements">VMworld 2021 vRealize Announcements</a>
 </li>
 <li>
-<a href=https://garyflynn.github.io/post/vrealize-automation-85-increase-session-timeout-comments/ class=nav-link title="vRealize Automation 8.5+ - Increase Session Timeout">vRealize Automation 8.5+ - Increase Session Timeout</a>
-</li>
-<li>
-<a href=https://garyflynn.github.io/post/vrealize-automation-85-increase-session-timeout/ class=nav-link title="vRealize Automation 8.5+ – Increase Session Timeout">vRealize Automation 8.5+ – Increase Session Timeout</a>
-</li>
-<li>
-<a href=https://garyflynn.github.io/post/setup-vrealize-automation-using-terraform-comments/ class=nav-link title="Setup vRealize Automation using Terraform">Setup vRealize Automation using Terraform</a>
+<a href=https://garyflynn.github.io/post/vrealize-automation-85-increase-session-timeout/ class=nav-link title="vRealize Automation 8.5+ - Increase Session Timeout">vRealize Automation 8.5+ - Increase Session Timeout</a>
 </li>
 <li>
 <a href=https://garyflynn.github.io/post/setup-vrealize-automation-using-terraform/ class=nav-link title="Setup vRealize Automation using Terraform">Setup vRealize Automation using Terraform</a>
 </li>
 <li>
-<a href=https://garyflynn.github.io/post/create-your-first-vsphere-terraform-configuration-comments/ class=nav-link title="Create Your First vSphere Terraform Configuration">Create Your First vSphere Terraform Configuration</a>
-</li>
-<li>
 <a href=https://garyflynn.github.io/post/create-your-first-vsphere-terraform-configuration/ class=nav-link title="Create Your First vSphere Terraform Configuration">Create Your First vSphere Terraform Configuration</a>
 </li>
 <li>
-<a href=https://garyflynn.github.io/post/vra-and-terraform-a-new-way-to-deploy-comments/ class=nav-link title="vRA & Terraform: A New Way to Deploy">vRA & Terraform: A New Way to Deploy</a>
+<a href=https://garyflynn.github.io/post/vra-and-terraform-a-new-way-to-deploy/ class=nav-link title="vRA & Terraform: A New Way to Deploy">vRA & Terraform: A New Way to Deploy</a>
+</li>
+<li>
+<a href=https://garyflynn.github.io/post/vrealize-automation-8x-change-internal-kubernetes-ip-range/ class=nav-link title="vRealize Automation 8.x – Change Internal Kubernetes IP Range">vRealize Automation 8.x – Change Internal Kubernetes IP Range</a>
+</li>
+<li>
+<a href=https://garyflynn.github.io/post/vrealize-automation-8x-vra-not-starting-if-k8s-ip-range-is-changed/ class=nav-link title="vRealize Automation 8.x - vRA Not Starting if K8s IP Range is Changed">vRealize Automation 8.x - vRA Not Starting if K8s IP Range is Changed</a>
+</li>
+<li>
+<a href=https://garyflynn.github.io/post/vrealize-automation-82-terraform-configurations/ class=nav-link title="vRealize Automation 8.2 - Terraform Configurations">vRealize Automation 8.2 - Terraform Configurations</a>
 </li>
 </ul>
-<div>
-<h2 class="mt-4 taxonomy" id=categories-section>Categories</h2>
-<nav class=tags_nav>
-<a href=https://garyflynn.github.io/categories/vmware/ class="post_tag button button_translucent" title=vmware>
-VMWARE
-<span class=button_tally>1</span>
-</a>
-</nav>
-</div>
 <div>
 <h2 class="mt-4 taxonomy" id=tags-section>Tags</h2>
 <nav class=tags_nav>
 <a href=https://garyflynn.github.io/tags/vmware/ class="post_tag button button_translucent" title=vmware>
 VMWARE
-<span class=button_tally>62</span>
+<span class=button_tally>43</span>
 </a>
 <a href=https://garyflynn.github.io/tags/homelab/ class="post_tag button button_translucent" title=homelab>
 HOMELAB
-<span class=button_tally>37</span>
-</a>
-<a href=https://garyflynn.github.io/tags/vra/ class="post_tag button button_translucent" title=vra>
-VRA
-<span class=button_tally>33</span>
+<span class=button_tally>23</span>
 </a>
 <a href=https://garyflynn.github.io/tags/vrealize/ class="post_tag button button_translucent" title=vrealize>
 VREALIZE
-<span class=button_tally>33</span>
+<span class=button_tally>22</span>
+</a>
+<a href=https://garyflynn.github.io/tags/vra/ class="post_tag button button_translucent" title=vra>
+VRA
+<span class=button_tally>21</span>
 </a>
 <a href=https://garyflynn.github.io/tags/automation/ class="post_tag button button_translucent" title=automation>
 AUTOMATION
-<span class=button_tally>27</span>
+<span class=button_tally>17</span>
 </a>
 <a href=https://garyflynn.github.io/tags/8.x/ class="post_tag button button_translucent" title=8.x>
 8.X
-<span class=button_tally>14</span>
-</a>
-<a href=https://garyflynn.github.io/tags/vra-8/ class="post_tag button button_translucent" title=vra-8>
-VRA-8
-<span class=button_tally>12</span>
-</a>
-<a href=https://garyflynn.github.io/tags/vsphere/ class="post_tag button button_translucent" title=vsphere>
-VSPHERE
-<span class=button_tally>11</span>
+<span class=button_tally>9</span>
 </a>
 <a href=https://garyflynn.github.io/tags/configure/ class="post_tag button button_translucent" title=configure>
 CONFIGURE
-<span class=button_tally>10</span>
+<span class=button_tally>8</span>
 </a>
 <a href=https://garyflynn.github.io/tags/vro/ class="post_tag button button_translucent" title=vro>
 VRO
-<span class=button_tally>10</span>
+<span class=button_tally>7</span>
 </a>
-<a href=https://garyflynn.github.io/tags/terraform/ class="post_tag button button_translucent" title=terraform>
-TERRAFORM
-<span class=button_tally>8</span>
-</a>
-<a href=https://garyflynn.github.io/tags/vrslcm/ class="post_tag button button_translucent" title=vrslcm>
-VRSLCM
-<span class=button_tally>8</span>
+<a href=https://garyflynn.github.io/tags/vsphere/ class="post_tag button button_translucent" title=vsphere>
+VSPHERE
+<span class=button_tally>7</span>
 </a>
 <a href=https://garyflynn.github.io/tags/getting-started/ class="post_tag button button_translucent" title=getting-started>
 GETTING-STARTED
-<span class=button_tally>7</span>
+<span class=button_tally>6</span>
 </a>
 <a href=https://garyflynn.github.io/tags/install/ class="post_tag button button_translucent" title=install>
 INSTALL
-<span class=button_tally>7</span>
+<span class=button_tally>6</span>
+</a>
+<a href=https://garyflynn.github.io/tags/vra-8/ class="post_tag button button_translucent" title=vra-8>
+VRA-8
+<span class=button_tally>6</span>
+</a>
+<a href=https://garyflynn.github.io/tags/vrslcm/ class="post_tag button button_translucent" title=vrslcm>
+VRSLCM
+<span class=button_tally>6</span>
+</a>
+<a href=https://garyflynn.github.io/tags/lifecycle-manager/ class="post_tag button button_translucent" title=lifecycle-manager>
+LIFECYCLE-MANAGER
+<span class=button_tally>5</span>
 </a>
 <br>
 <div class="post_tags_toggle button">All Tags</div>
 <div class=post_tags>
 <div class=tags_list>
-<a href=https://garyflynn.github.io/tags/8.x/ class="post_tag button button_translucent" data-position=14 title=8.x>8.X<span class=button_tally>14</span>
+<a href=https://garyflynn.github.io/tags/8.x/ class="post_tag button button_translucent" data-position=9 title=8.x>8.X<span class=button_tally>9</span>
 </a>
-<a href=https://garyflynn.github.io/tags/8x/ class="post_tag button button_translucent" data-position=1 title=8x>8X<span class=button_tally>1</span>
-</a>
-<a href=https://garyflynn.github.io/tags/active-directory/ class="post_tag button button_translucent" data-position=2 title=active-directory>ACTIVE-DIRECTORY<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/active-directory/ class="post_tag button button_translucent" data-position=1 title=active-directory>ACTIVE-DIRECTORY<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/alarms/ class="post_tag button button_translucent" data-position=1 title=alarms>ALARMS<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/alerts/ class="post_tag button button_translucent" data-position=1 title=alerts>ALERTS<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/automation/ class="post_tag button button_translucent" data-position=27 title=automation>AUTOMATION<span class=button_tally>27</span>
+<a href=https://garyflynn.github.io/tags/automation/ class="post_tag button button_translucent" data-position=17 title=automation>AUTOMATION<span class=button_tally>17</span>
 </a>
-<a href=https://garyflynn.github.io/tags/aws/ class="post_tag button button_translucent" data-position=2 title=aws>AWS<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/aws/ class="post_tag button button_translucent" data-position=1 title=aws>AWS<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/azure/ class="post_tag button button_translucent" data-position=2 title=azure>AZURE<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/blogs/ class="post_tag button button_translucent" data-position=1 title=blogs>BLOGS<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/code/ class="post_tag button button_translucent" data-position=4 title=code>CODE<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/code/ class="post_tag button button_translucent" data-position=2 title=code>CODE<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/collection/ class="post_tag button button_translucent" data-position=1 title=collection>COLLECTION<span class=button_tally>1</span>
 </a>
@@ -405,17 +376,17 @@ INSTALL
 </a>
 <a href=https://garyflynn.github.io/tags/configuration-manager/ class="post_tag button button_translucent" data-position=1 title=configuration-manager>CONFIGURATION-MANAGER<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/configure/ class="post_tag button button_translucent" data-position=10 title=configure>CONFIGURE<span class=button_tally>10</span>
+<a href=https://garyflynn.github.io/tags/configure/ class="post_tag button button_translucent" data-position=8 title=configure>CONFIGURE<span class=button_tally>8</span>
 </a>
 <a href=https://garyflynn.github.io/tags/control-center/ class="post_tag button button_translucent" data-position=1 title=control-center>CONTROL-CENTER<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/dashboard/ class="post_tag button button_translucent" data-position=1 title=dashboard>DASHBOARD<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/dfw/ class="post_tag button button_translucent" data-position=3 title=dfw>DFW<span class=button_tally>3</span>
+<a href=https://garyflynn.github.io/tags/dfw/ class="post_tag button button_translucent" data-position=2 title=dfw>DFW<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/downgrade/ class="post_tag button button_translucent" data-position=1 title=downgrade>DOWNGRADE<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/esxi/ class="post_tag button button_translucent" data-position=6 title=esxi>ESXI<span class=button_tally>6</span>
+<a href=https://garyflynn.github.io/tags/esxi/ class="post_tag button button_translucent" data-position=4 title=esxi>ESXI<span class=button_tally>4</span>
 </a>
 <a href=https://garyflynn.github.io/tags/export/ class="post_tag button button_translucent" data-position=1 title=export>EXPORT<span class=button_tally>1</span>
 </a>
@@ -423,69 +394,69 @@ INSTALL
 </a>
 <a href=https://garyflynn.github.io/tags/file-share/ class="post_tag button button_translucent" data-position=1 title=file-share>FILE-SHARE<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/firewall/ class="post_tag button button_translucent" data-position=3 title=firewall>FIREWALL<span class=button_tally>3</span>
+<a href=https://garyflynn.github.io/tags/firewall/ class="post_tag button button_translucent" data-position=2 title=firewall>FIREWALL<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/gaz-top-tips/ class="post_tag button button_translucent" data-position=1 title=gaz-top-tips>GAZ-TOP-TIPS<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/gcp/ class="post_tag button button_translucent" data-position=1 title=gcp>GCP<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/getting-started/ class="post_tag button button_translucent" data-position=7 title=getting-started>GETTING-STARTED<span class=button_tally>7</span>
+<a href=https://garyflynn.github.io/tags/getting-started/ class="post_tag button button_translucent" data-position=6 title=getting-started>GETTING-STARTED<span class=button_tally>6</span>
 </a>
-<a href=https://garyflynn.github.io/tags/github/ class="post_tag button button_translucent" data-position=2 title=github>GITHUB<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/github/ class="post_tag button button_translucent" data-position=1 title=github>GITHUB<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/google-cloud/ class="post_tag button button_translucent" data-position=1 title=google-cloud>GOOGLE-CLOUD<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/guide/ class="post_tag button button_translucent" data-position=6 title=guide>GUIDE<span class=button_tally>6</span>
+<a href=https://garyflynn.github.io/tags/guide/ class="post_tag button button_translucent" data-position=4 title=guide>GUIDE<span class=button_tally>4</span>
 </a>
-<a href=https://garyflynn.github.io/tags/hashicorp/ class="post_tag button button_translucent" data-position=5 title=hashicorp>HASHICORP<span class=button_tally>5</span>
+<a href=https://garyflynn.github.io/tags/hashicorp/ class="post_tag button button_translucent" data-position=3 title=hashicorp>HASHICORP<span class=button_tally>3</span>
 </a>
-<a href=https://garyflynn.github.io/tags/homelab/ class="post_tag button button_translucent" data-position=37 title=homelab>HOMELAB<span class=button_tally>37</span>
+<a href=https://garyflynn.github.io/tags/homelab/ class="post_tag button button_translucent" data-position=23 title=homelab>HOMELAB<span class=button_tally>23</span>
 </a>
-<a href=https://garyflynn.github.io/tags/iac/ class="post_tag button button_translucent" data-position=2 title=iac>IAC<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/iac/ class="post_tag button button_translucent" data-position=1 title=iac>IAC<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/index/ class="post_tag button button_translucent" data-position=1 title=index>INDEX<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/install/ class="post_tag button button_translucent" data-position=7 title=install>INSTALL<span class=button_tally>7</span>
+<a href=https://garyflynn.github.io/tags/install/ class="post_tag button button_translucent" data-position=6 title=install>INSTALL<span class=button_tally>6</span>
 </a>
-<a href=https://garyflynn.github.io/tags/integration/ class="post_tag button button_translucent" data-position=4 title=integration>INTEGRATION<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/integration/ class="post_tag button button_translucent" data-position=2 title=integration>INTEGRATION<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/intel/ class="post_tag button button_translucent" data-position=4 title=intel>INTEL<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/intel/ class="post_tag button button_translucent" data-position=2 title=intel>INTEL<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/iso/ class="post_tag button button_translucent" data-position=1 title=iso>ISO<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/kerberos/ class="post_tag button button_translucent" data-position=2 title=kerberos>KERBEROS<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/kerberos/ class="post_tag button button_translucent" data-position=1 title=kerberos>KERBEROS<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/key/ class="post_tag button button_translucent" data-position=1 title=key>KEY<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/krb5.conf/ class="post_tag button button_translucent" data-position=2 title=krb5.conf>KRB5.CONF<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/krb5.conf/ class="post_tag button button_translucent" data-position=1 title=krb5.conf>KRB5.CONF<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/kubernetes/ class="post_tag button button_translucent" data-position=4 title=kubernetes>KUBERNETES<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/kubernetes/ class="post_tag button button_translucent" data-position=2 title=kubernetes>KUBERNETES<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/license/ class="post_tag button button_translucent" data-position=1 title=license>LICENSE<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/lifecycle-manager/ class="post_tag button button_translucent" data-position=6 title=lifecycle-manager>LIFECYCLE-MANAGER<span class=button_tally>6</span>
+<a href=https://garyflynn.github.io/tags/lifecycle-manager/ class="post_tag button button_translucent" data-position=5 title=lifecycle-manager>LIFECYCLE-MANAGER<span class=button_tally>5</span>
 </a>
 <a href=https://garyflynn.github.io/tags/log-insight/ class="post_tag button button_translucent" data-position=1 title=log-insight>LOG-INSIGHT<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/management/ class="post_tag button button_translucent" data-position=1 title=management>MANAGEMENT<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/memory/ class="post_tag button button_translucent" data-position=3 title=memory>MEMORY<span class=button_tally>3</span>
+<a href=https://garyflynn.github.io/tags/memory/ class="post_tag button button_translucent" data-position=2 title=memory>MEMORY<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/metrics/ class="post_tag button button_translucent" data-position=3 title=metrics>METRICS<span class=button_tally>3</span>
+<a href=https://garyflynn.github.io/tags/metrics/ class="post_tag button button_translucent" data-position=2 title=metrics>METRICS<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/microsoft/ class="post_tag button button_translucent" data-position=5 title=microsoft>MICROSOFT<span class=button_tally>5</span>
+<a href=https://garyflynn.github.io/tags/microsoft/ class="post_tag button button_translucent" data-position=4 title=microsoft>MICROSOFT<span class=button_tally>4</span>
 </a>
-<a href=https://garyflynn.github.io/tags/nsx/ class="post_tag button button_translucent" data-position=3 title=nsx>NSX<span class=button_tally>3</span>
+<a href=https://garyflynn.github.io/tags/nsx/ class="post_tag button button_translucent" data-position=2 title=nsx>NSX<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/nuc/ class="post_tag button button_translucent" data-position=4 title=nuc>NUC<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/nuc/ class="post_tag button button_translucent" data-position=2 title=nuc>NUC<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/orchestrator/ class="post_tag button button_translucent" data-position=1 title=orchestrator>ORCHESTRATOR<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/powercli/ class="post_tag button button_translucent" data-position=1 title=powercli>POWERCLI<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/powershell/ class="post_tag button button_translucent" data-position=5 title=powershell>POWERSHELL<span class=button_tally>5</span>
+<a href=https://garyflynn.github.io/tags/powershell/ class="post_tag button button_translucent" data-position=4 title=powershell>POWERSHELL<span class=button_tally>4</span>
 </a>
-<a href=https://garyflynn.github.io/tags/prelude/ class="post_tag button button_translucent" data-position=2 title=prelude>PRELUDE<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/prelude/ class="post_tag button button_translucent" data-position=1 title=prelude>PRELUDE<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/query/ class="post_tag button button_translucent" data-position=1 title=query>QUERY<span class=button_tally>1</span>
 </a>
@@ -493,79 +464,79 @@ INSTALL
 </a>
 <a href=https://garyflynn.github.io/tags/rufus/ class="post_tag button button_translucent" data-position=1 title=rufus>RUFUS<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/samples/ class="post_tag button button_translucent" data-position=4 title=samples>SAMPLES<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/samples/ class="post_tag button button_translucent" data-position=2 title=samples>SAMPLES<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/sccm/ class="post_tag button button_translucent" data-position=1 title=sccm>SCCM<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/services/ class="post_tag button button_translucent" data-position=2 title=services>SERVICES<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/services/ class="post_tag button button_translucent" data-position=1 title=services>SERVICES<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/setup/ class="post_tag button button_translucent" data-position=2 title=setup>SETUP<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/setup/ class="post_tag button button_translucent" data-position=1 title=setup>SETUP<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/smb/ class="post_tag button button_translucent" data-position=1 title=smb>SMB<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/snapshot/ class="post_tag button button_translucent" data-position=1 title=snapshot>SNAPSHOT<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/storage/ class="post_tag button button_translucent" data-position=2 title=storage>STORAGE<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/storage/ class="post_tag button button_translucent" data-position=1 title=storage>STORAGE<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/system-center/ class="post_tag button button_translucent" data-position=1 title=system-center>SYSTEM-CENTER<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/terraform/ class="post_tag button button_translucent" data-position=8 title=terraform>TERRAFORM<span class=button_tally>8</span>
+<a href=https://garyflynn.github.io/tags/terraform/ class="post_tag button button_translucent" data-position=4 title=terraform>TERRAFORM<span class=button_tally>4</span>
 </a>
 <a href=https://garyflynn.github.io/tags/thresholds/ class="post_tag button button_translucent" data-position=1 title=thresholds>THRESHOLDS<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/troubleshoot/ class="post_tag button button_translucent" data-position=2 title=troubleshoot>TROUBLESHOOT<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/troubleshoot/ class="post_tag button button_translucent" data-position=1 title=troubleshoot>TROUBLESHOOT<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/upgrade/ class="post_tag button button_translucent" data-position=2 title=upgrade>UPGRADE<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/upgrade/ class="post_tag button button_translucent" data-position=1 title=upgrade>UPGRADE<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/usage/ class="post_tag button button_translucent" data-position=1 title=usage>USAGE<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/usb/ class="post_tag button button_translucent" data-position=1 title=usb>USB<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vcenter/ class="post_tag button button_translucent" data-position=6 title=vcenter>VCENTER<span class=button_tally>6</span>
+<a href=https://garyflynn.github.io/tags/vcenter/ class="post_tag button button_translucent" data-position=4 title=vcenter>VCENTER<span class=button_tally>4</span>
 </a>
 <a href=https://garyflynn.github.io/tags/vidm/ class="post_tag button button_translucent" data-position=1 title=vidm>VIDM<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vmware/ class="post_tag button button_translucent" data-position=62 title=vmware>VMWARE<span class=button_tally>62</span>
+<a href=https://garyflynn.github.io/tags/vmware/ class="post_tag button button_translucent" data-position=43 title=vmware>VMWARE<span class=button_tally>43</span>
 </a>
 <a href=https://garyflynn.github.io/tags/vmworld/ class="post_tag button button_translucent" data-position=1 title=vmworld>VMWORLD<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vra/ class="post_tag button button_translucent" data-position=33 title=vra>VRA<span class=button_tally>33</span>
+<a href=https://garyflynn.github.io/tags/vra/ class="post_tag button button_translucent" data-position=21 title=vra>VRA<span class=button_tally>21</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vra-8/ class="post_tag button button_translucent" data-position=12 title=vra-8>VRA-8<span class=button_tally>12</span>
+<a href=https://garyflynn.github.io/tags/vra-8/ class="post_tag button button_translucent" data-position=6 title=vra-8>VRA-8<span class=button_tally>6</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vra-8.1/ class="post_tag button button_translucent" data-position=2 title=vra-8.1>VRA-8.1<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vra-8.1/ class="post_tag button button_translucent" data-position=1 title=vra-8.1>VRA-8.1<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vra-8.2/ class="post_tag button button_translucent" data-position=4 title=vra-8.2>VRA-8.2<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/vra-8.2/ class="post_tag button button_translucent" data-position=2 title=vra-8.2>VRA-8.2<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrealize/ class="post_tag button button_translucent" data-position=33 title=vrealize>VREALIZE<span class=button_tally>33</span>
+<a href=https://garyflynn.github.io/tags/vrealize/ class="post_tag button button_translucent" data-position=22 title=vrealize>VREALIZE<span class=button_tally>22</span>
 </a>
 <a href=https://garyflynn.github.io/tags/vrli/ class="post_tag button button_translucent" data-position=2 title=vrli>VRLI<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vro/ class="post_tag button button_translucent" data-position=10 title=vro>VRO<span class=button_tally>10</span>
+<a href=https://garyflynn.github.io/tags/vro/ class="post_tag button button_translucent" data-position=7 title=vro>VRO<span class=button_tally>7</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vro-7/ class="post_tag button button_translucent" data-position=2 title=vro-7>VRO-7<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vro-7/ class="post_tag button button_translucent" data-position=1 title=vro-7>VRO-7<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vro-8/ class="post_tag button button_translucent" data-position=3 title=vro-8>VRO-8<span class=button_tally>3</span>
+<a href=https://garyflynn.github.io/tags/vro-8/ class="post_tag button button_translucent" data-position=2 title=vro-8>VRO-8<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vro-8.1/ class="post_tag button button_translucent" data-position=2 title=vro-8.1>VRO-8.1<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vro-8.1/ class="post_tag button button_translucent" data-position=1 title=vro-8.1>VRO-8.1<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrops/ class="post_tag button button_translucent" data-position=7 title=vrops>VROPS<span class=button_tally>7</span>
+<a href=https://garyflynn.github.io/tags/vrops/ class="post_tag button button_translucent" data-position=5 title=vrops>VROPS<span class=button_tally>5</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrops-6.7/ class="post_tag button button_translucent" data-position=2 title=vrops-6.7>VROPS-6.7<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vrops-6.7/ class="post_tag button button_translucent" data-position=1 title=vrops-6.7>VROPS-6.7<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrops-7.0/ class="post_tag button button_translucent" data-position=2 title=vrops-7.0>VROPS-7.0<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vrops-7.0/ class="post_tag button button_translucent" data-position=1 title=vrops-7.0>VROPS-7.0<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrops-8.1/ class="post_tag button button_translucent" data-position=2 title=vrops-8.1>VROPS-8.1<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vrops-8.1/ class="post_tag button button_translucent" data-position=1 title=vrops-8.1>VROPS-8.1<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrslcm/ class="post_tag button button_translucent" data-position=8 title=vrslcm>VRSLCM<span class=button_tally>8</span>
+<a href=https://garyflynn.github.io/tags/vrslcm/ class="post_tag button button_translucent" data-position=6 title=vrslcm>VRSLCM<span class=button_tally>6</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrslcm-8.1/ class="post_tag button button_translucent" data-position=2 title=vrslcm-8.1>VRSLCM-8.1<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vrslcm-8.1/ class="post_tag button button_translucent" data-position=1 title=vrslcm-8.1>VRSLCM-8.1<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vsan/ class="post_tag button button_translucent" data-position=4 title=vsan>VSAN<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/vsan/ class="post_tag button button_translucent" data-position=2 title=vsan>VSAN<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vsphere/ class="post_tag button button_translucent" data-position=11 title=vsphere>VSPHERE<span class=button_tally>11</span>
+<a href=https://garyflynn.github.io/tags/vsphere/ class="post_tag button button_translucent" data-position=7 title=vsphere>VSPHERE<span class=button_tally>7</span>
 </a>
-<a href=https://garyflynn.github.io/tags/windows/ class="post_tag button button_translucent" data-position=2 title=windows>WINDOWS<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/windows/ class="post_tag button button_translucent" data-position=1 title=windows>WINDOWS<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/winrm/ class="post_tag button button_translucent" data-position=1 title=winrm>WINRM<span class=button_tally>1</span>
 </a>

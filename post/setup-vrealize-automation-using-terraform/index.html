@@ -8,13 +8,13 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-87692784-3')</script>
 <meta property="og:locale" content="en">
 <meta property="og:type" content="article">
-<meta name=description content="VMware has created a HashiCorp Terraform provider which can be used to setup your vRA infrastructure, along with requesting deployments and consuming XaaS …">
+<meta name=description content="VMware has created a HashiCorp Terraform provider which can be used to set up your vRealize Automation (vRA) infrastructure, along with requesting deployments …">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:creator content="@GaryFlynnAU">
 <meta name=twitter:title content="Setup vRealize Automation using Terraform">
 <meta property="og:url" content="https://garyflynn.github.io/post/setup-vrealize-automation-using-terraform/">
 <meta property="og:title" content="Setup vRealize Automation using Terraform">
-<meta property="og:description" content="VMware has created a HashiCorp Terraform provider which can be used to setup your vRA infrastructure, along with requesting deployments and consuming XaaS …">
+<meta property="og:description" content="VMware has created a HashiCorp Terraform provider which can be used to set up your vRealize Automation (vRA) infrastructure, along with requesting deployments …">
 <meta property="og:image" content="https://garyflynn.github.io/post/setup-vrealize-automation-using-terraform/images/vra_terraform.png">
 <link rel=apple-touch-icon sizes=180x180 href=https://garyflynn.github.io/icons/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=https://garyflynn.github.io/icons/favicon-32x32.png>
@@ -93,11 +93,13 @@
 <span><svg class="icon"><use xlink:href="#calendar"/></svg></span>
 <span class=post_date>
 May 3, 2021</span>
-<span class=post_time> · 5 min read</span><span>&nbsp;· <a href=https://garyflynn.github.io/tags/8x title=8x class="post_tag button button_translucent">8x
+<span class=post_time> · 5 min read</span><span>&nbsp;· <a href=https://garyflynn.github.io/tags/8.x title=8.x class="post_tag button button_translucent">8.x
 </a><a href=https://garyflynn.github.io/tags/automation title=Automation class="post_tag button button_translucent">Automation
+</a><a href=https://garyflynn.github.io/tags/hashicorp title=Hashicorp class="post_tag button button_translucent">Hashicorp
 </a><a href=https://garyflynn.github.io/tags/homelab title=Homelab class="post_tag button button_translucent">Homelab
 </a><a href=https://garyflynn.github.io/tags/iac title=IaC class="post_tag button button_translucent">IaC
 </a><a href=https://garyflynn.github.io/tags/terraform title=Terraform class="post_tag button button_translucent">Terraform
+</a><a href=https://garyflynn.github.io/tags/vmware title=VMware class="post_tag button button_translucent">VMware
 </a><a href=https://garyflynn.github.io/tags/vmware title=VMware class="post_tag button button_translucent">VMware
 </a><a href=https://garyflynn.github.io/tags/vra title=vRA class="post_tag button button_translucent">vRA
 </a><a href=https://garyflynn.github.io/tags/vra-8 title="vRA 8" class="post_tag button button_translucent">vRA 8
@@ -119,122 +121,122 @@ Share on:
 </span>
 </div>
 <div class=post_body><p>VMware has created a HashiCorp Terraform provider which can be used to set up your vRealize Automation (vRA) infrastructure, along with requesting deployments and consuming XaaS resources. This post will cover the basics of setting up vRA using Terraform.</p>
-<p>The first two posts in this series cover the basics of <a href=https://garyflynn.com/technology/hashicorp/vra-and-terraform-a-new-way-to-deploy/>Infrastructure as Code with vRA and Terraform</a> along with <a href=https://garyflynn.com/technology/hashicorp/create-your-first-vsphere-terraform-configuration/>creating your first Terraform configuration to deploy a vSphere virtual machine</a>. To get started, have a read of the documentation available for either <a href=https://registry.terraform.io/providers/vmware/vra/latest/docs>vRA 8</a> or <a href=https://registry.terraform.io/providers/vmware/vra7/latest/docs>vRA 7</a>.</p>
-<p>This post will assume that vRA 8 has been deployed using vRealize Suite Lifecycle Manager, the vIDM has been configured for the required external accounts and a Cloud Account and Cloud Zone have been created to reference a vSphere environment. The below will presume the default user account, in this case, "configadmin" has also been created and that the Terraform version is 0.14.11 which can be downloaded from <a href=https://releases.hashicorp.com/terraform/0.14.11/>here</a>.</p>
+<p>The first two posts in this series cover the basics of <a href=https://garyflynn.com/technology/hashicorp/vra-and-terraform-a-new-way-to-deploy/>Infrastructure as Code with vRA and Terraform</a> along with <a href=https://garyflynn.com/technology/hashicorp/create-your-first-vsphere-terraform-configuration/>creating your first Terraform configuration to deploy a vSphere virtual machine</a>. To get started, have a read of the documentation available for either <a href=https://registry.terraform.io/providers/vmware/vra/latest/docs>vRA 8</a> or <a href=https://registry.terraform.io/providers/vmware/vra7/latest/docs>vRA 7</a>.</p>
+<p>This post will assume that vRA 8 has been deployed using vRealize Suite Lifecycle Manager, the vIDM has been configured for the required external accounts and a Cloud Account and Cloud Zone have been created to reference a vSphere environment. The below will presume the default user account, in this case, "configadmin" has also been created and that the Terraform version is 0.14.11 which can be downloaded from <a href=https://releases.hashicorp.com/terraform/0.14.11/>here</a>.</p>
 <h2 id=create-a-vra-project>Create a vRA Project</h2>
 <p>Create a new file called "main.tf" and define the required_providers block to be used, in this case, "vra" and define the source and version. Following this, create a provider block called "vra" and reference the variables which we'll create next.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-hcl data-lang=hcl><span class=ln> 1</span><span class=k>terraform</span> {
-<span class=ln> 2</span><span class=n>  required_version</span> <span class=o>=</span><span class=n> &#34;&gt;</span><span class=o>=</span> <span class=m>0</span><span class=p>.</span><span class=m>13</span><span class=err>&#34;</span>
-<span class=ln> 3</span>  <span class=k>required_providers</span> {
-<span class=ln> 4</span><span class=n>    vra</span> <span class=o>=</span> {
-<span class=ln> 5</span><span class=n>      source</span>  <span class=o>=</span> <span class=s2>&#34;vmware/vra&#34;</span>
-<span class=ln> 6</span><span class=n>      version</span> <span class=o>=</span> <span class=s2>&#34;0.3.5&#34;</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln> 1</span>terraform {
+<span class=ln> 2</span>  required_version = &#34;&gt;= 0.13&#34;
+<span class=ln> 3</span>  required_providers {
+<span class=ln> 4</span>    vra = {
+<span class=ln> 5</span>      source  = &#34;vmware/vra&#34;
+<span class=ln> 6</span>      version = &#34;0.3.5&#34;
 <span class=ln> 7</span>    }
 <span class=ln> 8</span>  }
 <span class=ln> 9</span>}
 <span class=ln>10</span>
-<span class=ln>11</span><span class=k>provider</span> <span class=s2>&#34;vra&#34;</span> {
-<span class=ln>12</span><span class=n>  url</span>           <span class=o>=</span> <span class=k>var</span><span class=p>.</span><span class=k>url</span>
-<span class=ln>13</span><span class=n>  refresh_token</span> <span class=o>=</span> <span class=k>var</span><span class=p>.</span><span class=k>refresh_token</span>
-<span class=ln>14</span><span class=n>  insecure</span>      <span class=o>=</span> <span class=k>var</span><span class=p>.</span><span class=k>insecure</span>
+<span class=ln>11</span>provider &#34;vra&#34; {
+<span class=ln>12</span>  url           = var.url
+<span class=ln>13</span>  refresh_token = var.refresh_token
+<span class=ln>14</span>  insecure      = var.insecure
 <span class=ln>15</span>}
 </code></pre></div><p>The next file is called "variable.tf" and it is where the variables are defined. Each variable block is created with the variable name, and it's best practice to define a description, type and default value.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-hcl data-lang=hcl><span class=ln> 1</span><span class=c1># Input variable: url
-</span><span class=ln> 2</span><span class=c1></span><span class=k>variable</span> <span class=s2>&#34;url&#34;</span> {
-<span class=ln> 3</span><span class=n>  description</span> <span class=o>=</span> <span class=s2>&#34;The URL of the vRealize Automation environment either vRA 8.x or vRA Cloud&#34;</span>
-<span class=ln> 4</span><span class=n>  type</span> <span class=o>=</span> <span class=k>string</span>
-<span class=ln> 5</span><span class=n>  default</span> <span class=o>=</span> <span class=s2>&#34;https://vra-fqdn&#34;</span>
-<span class=ln> 6</span>}<span class=c1>
-</span><span class=ln> 7</span><span class=c1>
-</span><span class=ln> 8</span><span class=c1># Input variable: refresh_token
-</span><span class=ln> 9</span><span class=c1></span><span class=k>variable</span> <span class=s2>&#34;refresh_token&#34;</span> {
-<span class=ln>10</span><span class=n>  description</span> <span class=o>=</span> <span class=s2>&#34;The refresh token to connect to the vRealize Automation environment&#34;</span>
-<span class=ln>11</span><span class=n>  type</span> <span class=o>=</span> <span class=k>string</span>
-<span class=ln>12</span><span class=n>  default</span> <span class=o>=</span> <span class=s2>&#34;&#34;</span>
-<span class=ln>13</span>}<span class=c1>
-</span><span class=ln>14</span><span class=c1>
-</span><span class=ln>15</span><span class=c1># Input variable: insecure
-</span><span class=ln>16</span><span class=c1></span><span class=k>variable</span> <span class=s2>&#34;insecure&#34;</span> {
-<span class=ln>17</span><span class=n>  description</span> <span class=o>=</span><span class=n> &#34;Should SSL verification be skipped? true</span> <span class=o>=</span> <span class=k>skip</span> <span class=k>ssl</span> <span class=k>verification</span><span class=err>&#34;</span>
-<span class=ln>18</span><span class=n>  type</span> <span class=o>=</span> <span class=k>bool</span>
-<span class=ln>19</span><span class=n>  default</span> <span class=o>=</span> <span class=s2>&#34;false&#34;</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln> 1</span># Input variable: url
+<span class=ln> 2</span>variable &#34;url&#34; {
+<span class=ln> 3</span>  description = &#34;The URL of the vRealize Automation environment either vRA 8.x or vRA Cloud&#34;
+<span class=ln> 4</span>  type = string
+<span class=ln> 5</span>  default = &#34;https://vra-fqdn&#34;
+<span class=ln> 6</span>}
+<span class=ln> 7</span>
+<span class=ln> 8</span># Input variable: refresh_token
+<span class=ln> 9</span>variable &#34;refresh_token&#34; {
+<span class=ln>10</span>  description = &#34;The refresh token to connect to the vRealize Automation environment&#34;
+<span class=ln>11</span>  type = string
+<span class=ln>12</span>  default = &#34;&#34;
+<span class=ln>13</span>}
+<span class=ln>14</span>
+<span class=ln>15</span># Input variable: insecure
+<span class=ln>16</span>variable &#34;insecure&#34; {
+<span class=ln>17</span>  description = &#34;Should SSL verification be skipped? true = skip ssl verification&#34;
+<span class=ln>18</span>  type = bool
+<span class=ln>19</span>  default = &#34;false&#34;
 <span class=ln>20</span>}
 </code></pre></div><p>Create a new file called "projects.tf" and the first block to be created is a data source and for this we will retrieve the vRA Cloud Zone for the vSphere Cloud Zone which should already be created. The second block is a resource block, meaning that something will be created, in this case, a "vra_project". Provide a name and description as a variable, along with your configuration to assign your existing vRA Cloud Zone to your new project. The first field is the zone_id retrieved from the previously defined data source, followed by the priority, max number of instances, cpu limit, memory limit and storage limit. The next few lines are optional, and set if resources should be shared from this project to other projects, any administrators and members that need to be added, an operational timeout set at the project level in case of long running operations, and the machine naming template.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-hcl data-lang=hcl><span class=ln> 1</span><span class=k>data</span> <span class=s2>&#34;vra_zone&#34; &#34;this&#34;</span> {
-<span class=ln> 2</span><span class=n>  name</span> <span class=o>=</span> <span class=k>var</span><span class=p>.</span><span class=k>zone_name</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln> 1</span>data &#34;vra_zone&#34; &#34;this&#34; {
+<span class=ln> 2</span>  name = var.zone_name
 <span class=ln> 3</span>}
 <span class=ln> 4</span>
-<span class=ln> 5</span><span class=k>resource</span> <span class=s2>&#34;vra_project&#34; &#34;this&#34;</span> {
-<span class=ln> 6</span><span class=n>  name</span>        <span class=o>=</span> <span class=k>var</span><span class=p>.</span><span class=k>project_name</span>
-<span class=ln> 7</span><span class=n>  description</span> <span class=o>=</span> <span class=k>var</span><span class=p>.</span><span class=k>project_description</span>
+<span class=ln> 5</span>resource &#34;vra_project&#34; &#34;this&#34; {
+<span class=ln> 6</span>  name        = var.project_name
+<span class=ln> 7</span>  description = var.project_description
 <span class=ln> 8</span>
-<span class=ln> 9</span>  <span class=k>zone_assignments</span> {
-<span class=ln>10</span><span class=n>    zone_id</span>          <span class=o>=</span> <span class=k>data</span><span class=p>.</span><span class=k>vra_zone</span><span class=p>.</span><span class=k>this</span><span class=p>.</span><span class=k>id</span>
-<span class=ln>11</span><span class=n>    priority</span>         <span class=o>=</span> <span class=m>1</span>
-<span class=ln>12</span><span class=n>    max_instances</span>    <span class=o>=</span> <span class=m>5</span>
-<span class=ln>13</span><span class=n>    cpu_limit</span>        <span class=o>=</span> <span class=m>16</span>
-<span class=ln>14</span><span class=n>    memory_limit_mb</span>  <span class=o>=</span> <span class=m>16384</span>
-<span class=ln>15</span><span class=n>    storage_limit_gb</span> <span class=o>=</span> <span class=m>1024</span>
+<span class=ln> 9</span>  zone_assignments {
+<span class=ln>10</span>    zone_id          = data.vra_zone.this.id
+<span class=ln>11</span>    priority         = 1
+<span class=ln>12</span>    max_instances    = 5
+<span class=ln>13</span>    cpu_limit        = 16
+<span class=ln>14</span>    memory_limit_mb  = 16384
+<span class=ln>15</span>    storage_limit_gb = 1024
 <span class=ln>16</span>  }
 <span class=ln>17</span>
-<span class=ln>18</span><span class=n>  shared_resources</span>        <span class=o>=</span> <span class=kt>false</span>
-<span class=ln>19</span><span class=n>  administrators</span>          <span class=o>=</span> <span class=p>[</span><span class=s2>&#34;flynnga@homelab.local&#34;</span><span class=p>]</span>
-<span class=ln>20</span><span class=n>  members</span>                 <span class=o>=</span> <span class=p>[</span><span class=s2>&#34;flynng@homelab.local&#34;</span><span class=p>]</span>
-<span class=ln>21</span><span class=n>  operation_timeout</span>       <span class=o>=</span> <span class=m>6000</span>
-<span class=ln>22</span><span class=n>  machine_naming_template</span> <span class=o>=</span> <span class=s2>&#34;$${resource.name}-$${####}&#34;</span>
+<span class=ln>18</span>  shared_resources        = false
+<span class=ln>19</span>  administrators          = [&#34;flynnga@homelab.local&#34;]
+<span class=ln>20</span>  members                 = [&#34;flynng@homelab.local&#34;]
+<span class=ln>21</span>  operation_timeout       = 6000
+<span class=ln>22</span>  machine_naming_template = &#34;$${resource.name}-$${####}&#34;
 <span class=ln>23</span>}
 </code></pre></div><p>With the "projects.tf" file now created, updated the "variables.tf" file with the new variables just used, to look like the below.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-hcl data-lang=hcl><span class=ln> 1</span><span class=c1># Input variable: url
-</span><span class=ln> 2</span><span class=c1></span><span class=k>variable</span> <span class=s2>&#34;url&#34;</span> {
-<span class=ln> 3</span><span class=n>  description</span> <span class=o>=</span> <span class=s2>&#34;The URL of the vRealize Automation environment either vRA 8.x or vRA Cloud&#34;</span>
-<span class=ln> 4</span><span class=n>  type</span> <span class=o>=</span> <span class=k>string</span>
-<span class=ln> 5</span><span class=n>  default</span> <span class=o>=</span> <span class=s2>&#34;https://vra-fqdn&#34;</span>
-<span class=ln> 6</span>}<span class=c1>
-</span><span class=ln> 7</span><span class=c1>
-</span><span class=ln> 8</span><span class=c1># Input variable: refresh_token
-</span><span class=ln> 9</span><span class=c1></span><span class=k>variable</span> <span class=s2>&#34;refresh_token&#34;</span> {
-<span class=ln>10</span><span class=n>  description</span> <span class=o>=</span> <span class=s2>&#34;The refresh token to connect to the vRealize Automation environment&#34;</span>
-<span class=ln>11</span><span class=n>  type</span> <span class=o>=</span> <span class=k>string</span>
-<span class=ln>12</span><span class=n>  default</span> <span class=o>=</span> <span class=s2>&#34;&#34;</span>
-<span class=ln>13</span>}<span class=c1>
-</span><span class=ln>14</span><span class=c1>
-</span><span class=ln>15</span><span class=c1># Input variable: insecure
-</span><span class=ln>16</span><span class=c1></span><span class=k>variable</span> <span class=s2>&#34;insecure&#34;</span> {
-<span class=ln>17</span><span class=n>  description</span> <span class=o>=</span><span class=n> &#34;Should SSL verification be skipped? true</span> <span class=o>=</span> <span class=k>skip</span> <span class=k>ssl</span> <span class=k>verification</span><span class=err>&#34;</span>
-<span class=ln>18</span><span class=n>  type</span> <span class=o>=</span> <span class=k>bool</span>
-<span class=ln>19</span><span class=n>  default</span> <span class=o>=</span> <span class=s2>&#34;false&#34;</span>
-<span class=ln>20</span>}<span class=c1>
-</span><span class=ln>21</span><span class=c1>
-</span><span class=ln>22</span><span class=c1># Input variable: project_name
-</span><span class=ln>23</span><span class=c1></span><span class=k>variable</span> <span class=s2>&#34;project_name&#34;</span> {
-<span class=ln>24</span><span class=n>  description</span> <span class=o>=</span> <span class=s2>&#34;vRA Project Name to be added to the project&#34;</span>
-<span class=ln>25</span><span class=n>  type</span> <span class=o>=</span> <span class=k>string</span>
-<span class=ln>26</span><span class=n>  default</span> <span class=o>=</span> <span class=s2>&#34;&#34;</span>
-<span class=ln>27</span>}<span class=c1>
-</span><span class=ln>28</span><span class=c1>
-</span><span class=ln>29</span><span class=c1># Input variable: project_description
-</span><span class=ln>30</span><span class=c1></span><span class=k>variable</span> <span class=s2>&#34;project_description&#34;</span> {
-<span class=ln>31</span><span class=n>  description</span> <span class=o>=</span> <span class=s2>&#34;vRA Project Description to be added to the project&#34;</span>
-<span class=ln>32</span><span class=n>  type</span> <span class=o>=</span> <span class=k>string</span>
-<span class=ln>33</span><span class=n>  default</span> <span class=o>=</span> <span class=s2>&#34;&#34;</span>
-<span class=ln>34</span>}<span class=c1>
-</span><span class=ln>35</span><span class=c1>
-</span><span class=ln>36</span><span class=c1># Input variable: zone_name
-</span><span class=ln>37</span><span class=c1></span><span class=k>variable</span> <span class=s2>&#34;zone_name&#34;</span> {
-<span class=ln>38</span><span class=n>  description</span> <span class=o>=</span> <span class=s2>&#34;vRA Zone Name to be added to the project&#34;</span>
-<span class=ln>39</span><span class=n>  type</span> <span class=o>=</span> <span class=k>string</span>
-<span class=ln>40</span><span class=n>  default</span> <span class=o>=</span> <span class=s2>&#34;&#34;</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln> 1</span># Input variable: url
+<span class=ln> 2</span>variable &#34;url&#34; {
+<span class=ln> 3</span>  description = &#34;The URL of the vRealize Automation environment either vRA 8.x or vRA Cloud&#34;
+<span class=ln> 4</span>  type = string
+<span class=ln> 5</span>  default = &#34;https://vra-fqdn&#34;
+<span class=ln> 6</span>}
+<span class=ln> 7</span>
+<span class=ln> 8</span># Input variable: refresh_token
+<span class=ln> 9</span>variable &#34;refresh_token&#34; {
+<span class=ln>10</span>  description = &#34;The refresh token to connect to the vRealize Automation environment&#34;
+<span class=ln>11</span>  type = string
+<span class=ln>12</span>  default = &#34;&#34;
+<span class=ln>13</span>}
+<span class=ln>14</span>
+<span class=ln>15</span># Input variable: insecure
+<span class=ln>16</span>variable &#34;insecure&#34; {
+<span class=ln>17</span>  description = &#34;Should SSL verification be skipped? true = skip ssl verification&#34;
+<span class=ln>18</span>  type = bool
+<span class=ln>19</span>  default = &#34;false&#34;
+<span class=ln>20</span>}
+<span class=ln>21</span>
+<span class=ln>22</span># Input variable: project_name
+<span class=ln>23</span>variable &#34;project_name&#34; {
+<span class=ln>24</span>  description = &#34;vRA Project Name to be added to the project&#34;
+<span class=ln>25</span>  type = string
+<span class=ln>26</span>  default = &#34;&#34;
+<span class=ln>27</span>}
+<span class=ln>28</span>
+<span class=ln>29</span># Input variable: project_description
+<span class=ln>30</span>variable &#34;project_description&#34; {
+<span class=ln>31</span>  description = &#34;vRA Project Description to be added to the project&#34;
+<span class=ln>32</span>  type = string
+<span class=ln>33</span>  default = &#34;&#34;
+<span class=ln>34</span>}
+<span class=ln>35</span>
+<span class=ln>36</span># Input variable: zone_name
+<span class=ln>37</span>variable &#34;zone_name&#34; {
+<span class=ln>38</span>  description = &#34;vRA Zone Name to be added to the project&#34;
+<span class=ln>39</span>  type = string
+<span class=ln>40</span>  default = &#34;&#34;
 <span class=ln>41</span>}
 </code></pre></div><p>The final step is to define the values of each variable. To do this, create a "variables.tfvars" file and enter your environmental details in the file, as per the example below. Remember, all *.tfvars files should not be stored in source control such as git, as the values will differ between environments.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-hcl data-lang=hcl><span class=ln>1</span><span class=n>url</span>                 <span class=o>=</span> <span class=s2>&#34;https://vra8.homelab.local&#34;</span>
-<span class=ln>2</span><span class=n>refresh_token</span>       <span class=o>=</span> <span class=s2>&#34;UhIlbUxsIgFEpzdRtjZxouQH57X61KON&#34;</span>
-<span class=ln>3</span><span class=n>insecure</span>            <span class=o>=</span> <span class=kt>false</span>
-<span class=ln>4</span><span class=n>project_name</span>        <span class=o>=</span> <span class=s2>&#34;Development Web App&#34;</span>
-<span class=ln>5</span><span class=n>project_description</span> <span class=o>=</span> <span class=s2>&#34;A project for the development environment of the web app&#34;</span>
-<span class=ln>6</span><span class=n>zone_name</span>           <span class=o>=</span> <span class=s2>&#34;vcenter-1.homelab.local&#34;</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln>1</span>url                 = &#34;https://vra8.homelab.local&#34;
+<span class=ln>2</span>refresh_token       = &#34;UhIlbUxsIgFEpzdRtjZxouQH57X61KON&#34;
+<span class=ln>3</span>insecure            = false
+<span class=ln>4</span>project_name        = &#34;Development Web App&#34;
+<span class=ln>5</span>project_description = &#34;A project for the development environment of the web app&#34;
+<span class=ln>6</span>zone_name           = &#34;vcenter-1.homelab.local&#34;
 </code></pre></div><p>With all the files now created, run a "terraform plan" and confirm everything looks correct and that your new resource will be created, and then run "terraform apply".</p>
 <p>Once the apply command has finished, in vRA you will see the new project created with the properties configured exactly as set in the "projects.tf" file.</p>
-<p>Whilst this post only covers the creating of a vRA project, you can use this same process to configure most of vRA, with documentation available on the vRA Terraform provider <a href=https://registry.terraform.io/providers/vmware/vra/latest/docs>here</a>.</p>
+<p>Whilst this post only covers the creating of a vRA project, you can use this same process to configure most of vRA, with documentation available on the vRA Terraform provider <a href=https://registry.terraform.io/providers/vmware/vra/latest/docs>here</a>.</p>
 </div>
 <div class=post_comments>
 <div id=disqus_thread></div>
@@ -250,7 +252,7 @@ Share on:
 <h2>Gary Flynn</h2>
 </div>
 <div class=author_bio>
-GaryFlynn.com started out in 2016 as a way for me to share my experiences working in IT across the UK and Australia with others. Consider this my brain dumping ground for anything I think could be useful. Find out more about the site here.<br><h2>Achievements</h2><a href=https://www.credly.com/badges/a7b80dc8-2db3-4e75-9fbf-96261da93561><img src=/images/vcp-cma-2021.png alt=Achievement></a> <a href=https://www.credly.com/badges/a72c24d6-2674-4aef-beca-5b24b4a56c7a><img src=/images/vcap-cma-deploy-2021.png alt=Achievement></a><br><a href=https://vexpert.vmware.com/directory/4818><img src=/images/vexpert-cloud-management-badge.png alt=Achievement></a> <a href=https://vexpert.vmware.com/directory/4818><img src=/images/vexpert-2-star.png alt=Achievement></a> <a href=https://vexpert.vmware.com/directory/4818><img src=/images/vexpert-2021.png alt=Achievement></a><br><a href=https://www.credly.com/badges/25777ce7-1628-45eb-bc4b-b4d5bfde3ea0><img src=/images/terraform-associate.png alt=Achievement></a> <a href=https://www.credly.com/badges/a0183b64-d002-4703-ac95-0a57e0bd840e><img src=/images/terraform-chip.png alt=Achievement></a> <img src=/images/hc-ambassador-2021.png alt=Achievement>
+GaryFlynn.com started out in 2016 as a way for me to share my experiences working in IT across the UK and Australia with others. Consider this my brain dumping ground for anything I think could be useful. Find out more about the site <a href=/about/>here</a>.<br><h2>Achievements</h2><a href=https://www.credly.com/badges/a7b80dc8-2db3-4e75-9fbf-96261da93561><img src=/images/vcp-cma-2021.png alt=Achievement></a> <a href=https://www.credly.com/badges/a72c24d6-2674-4aef-beca-5b24b4a56c7a><img src=/images/vcap-cma-deploy-2021.png alt=Achievement></a><br><a href=https://vexpert.vmware.com/directory/4818><img src=/images/vexpert-cloud-management-badge.png alt=Achievement></a> <a href=https://vexpert.vmware.com/directory/4818><img src=/images/vexpert-2-star.png alt=Achievement></a> <a href=https://vexpert.vmware.com/directory/4818><img src=/images/vexpert-2021.png alt=Achievement></a><br><a href=https://www.credly.com/badges/25777ce7-1628-45eb-bc4b-b4d5bfde3ea0><img src=/images/terraform-associate.png alt=Achievement></a> <a href=https://www.credly.com/badges/a0183b64-d002-4703-ac95-0a57e0bd840e><img src=/images/terraform-chip.png alt=Achievement></a> <img src=/images/hc-ambassador-2021.png alt=Achievement>
 </div>
 <a href=https://garyflynn.github.io/about/ class="button mt-1" role=button title="Read More">Read More</a>
 <h2 class=mt-4>Recent Posts</h2>
@@ -259,118 +261,107 @@ GaryFlynn.com started out in 2016 as a way for me to share my experiences workin
 <a href=https://garyflynn.github.io/post/vmworld-2021-vrealize-announcements/ class=nav-link title="VMworld 2021 vRealize Announcements">VMworld 2021 vRealize Announcements</a>
 </li>
 <li>
-<a href=https://garyflynn.github.io/post/vrealize-automation-85-increase-session-timeout-comments/ class=nav-link title="vRealize Automation 8.5+ - Increase Session Timeout">vRealize Automation 8.5+ - Increase Session Timeout</a>
-</li>
-<li>
-<a href=https://garyflynn.github.io/post/vrealize-automation-85-increase-session-timeout/ class=nav-link title="vRealize Automation 8.5+ – Increase Session Timeout">vRealize Automation 8.5+ – Increase Session Timeout</a>
-</li>
-<li>
-<a href=https://garyflynn.github.io/post/setup-vrealize-automation-using-terraform-comments/ class=nav-link title="Setup vRealize Automation using Terraform">Setup vRealize Automation using Terraform</a>
-</li>
-<li>
-<a href=https://garyflynn.github.io/post/create-your-first-vsphere-terraform-configuration-comments/ class=nav-link title="Create Your First vSphere Terraform Configuration">Create Your First vSphere Terraform Configuration</a>
+<a href=https://garyflynn.github.io/post/vrealize-automation-85-increase-session-timeout/ class=nav-link title="vRealize Automation 8.5+ - Increase Session Timeout">vRealize Automation 8.5+ - Increase Session Timeout</a>
 </li>
 <li>
 <a href=https://garyflynn.github.io/post/create-your-first-vsphere-terraform-configuration/ class=nav-link title="Create Your First vSphere Terraform Configuration">Create Your First vSphere Terraform Configuration</a>
 </li>
 <li>
-<a href=https://garyflynn.github.io/post/vra-and-terraform-a-new-way-to-deploy-comments/ class=nav-link title="vRA & Terraform: A New Way to Deploy">vRA & Terraform: A New Way to Deploy</a>
-</li>
-<li>
 <a href=https://garyflynn.github.io/post/vra-and-terraform-a-new-way-to-deploy/ class=nav-link title="vRA & Terraform: A New Way to Deploy">vRA & Terraform: A New Way to Deploy</a>
 </li>
+<li>
+<a href=https://garyflynn.github.io/post/vrealize-automation-8x-change-internal-kubernetes-ip-range/ class=nav-link title="vRealize Automation 8.x – Change Internal Kubernetes IP Range">vRealize Automation 8.x – Change Internal Kubernetes IP Range</a>
+</li>
+<li>
+<a href=https://garyflynn.github.io/post/vrealize-automation-8x-vra-not-starting-if-k8s-ip-range-is-changed/ class=nav-link title="vRealize Automation 8.x - vRA Not Starting if K8s IP Range is Changed">vRealize Automation 8.x - vRA Not Starting if K8s IP Range is Changed</a>
+</li>
+<li>
+<a href=https://garyflynn.github.io/post/vrealize-automation-82-terraform-configurations/ class=nav-link title="vRealize Automation 8.2 - Terraform Configurations">vRealize Automation 8.2 - Terraform Configurations</a>
+</li>
+<li>
+<a href=https://garyflynn.github.io/post/vrealize-automation-8x-setup-aws-cloud-account/ class=nav-link title="vRealize Automation 8.x - Setup Amazon Web Services Cloud Account">vRealize Automation 8.x - Setup Amazon Web Services Cloud Account</a>
+</li>
 </ul>
-<div>
-<h2 class="mt-4 taxonomy" id=categories-section>Categories</h2>
-<nav class=tags_nav>
-<a href=https://garyflynn.github.io/categories/vmware/ class="post_tag button button_translucent" title=vmware>
-VMWARE
-<span class=button_tally>1</span>
-</a>
-</nav>
-</div>
 <div>
 <h2 class="mt-4 taxonomy" id=tags-section>Tags</h2>
 <nav class=tags_nav>
 <a href=https://garyflynn.github.io/tags/vmware/ class="post_tag button button_translucent" title=vmware>
 VMWARE
-<span class=button_tally>62</span>
+<span class=button_tally>43</span>
 </a>
 <a href=https://garyflynn.github.io/tags/homelab/ class="post_tag button button_translucent" title=homelab>
 HOMELAB
-<span class=button_tally>37</span>
-</a>
-<a href=https://garyflynn.github.io/tags/vra/ class="post_tag button button_translucent" title=vra>
-VRA
-<span class=button_tally>33</span>
+<span class=button_tally>23</span>
 </a>
 <a href=https://garyflynn.github.io/tags/vrealize/ class="post_tag button button_translucent" title=vrealize>
 VREALIZE
-<span class=button_tally>33</span>
+<span class=button_tally>22</span>
+</a>
+<a href=https://garyflynn.github.io/tags/vra/ class="post_tag button button_translucent" title=vra>
+VRA
+<span class=button_tally>21</span>
 </a>
 <a href=https://garyflynn.github.io/tags/automation/ class="post_tag button button_translucent" title=automation>
 AUTOMATION
-<span class=button_tally>27</span>
+<span class=button_tally>17</span>
 </a>
 <a href=https://garyflynn.github.io/tags/8.x/ class="post_tag button button_translucent" title=8.x>
 8.X
-<span class=button_tally>14</span>
-</a>
-<a href=https://garyflynn.github.io/tags/vra-8/ class="post_tag button button_translucent" title=vra-8>
-VRA-8
-<span class=button_tally>12</span>
-</a>
-<a href=https://garyflynn.github.io/tags/vsphere/ class="post_tag button button_translucent" title=vsphere>
-VSPHERE
-<span class=button_tally>11</span>
+<span class=button_tally>9</span>
 </a>
 <a href=https://garyflynn.github.io/tags/configure/ class="post_tag button button_translucent" title=configure>
 CONFIGURE
-<span class=button_tally>10</span>
+<span class=button_tally>8</span>
 </a>
 <a href=https://garyflynn.github.io/tags/vro/ class="post_tag button button_translucent" title=vro>
 VRO
-<span class=button_tally>10</span>
+<span class=button_tally>7</span>
 </a>
-<a href=https://garyflynn.github.io/tags/terraform/ class="post_tag button button_translucent" title=terraform>
-TERRAFORM
-<span class=button_tally>8</span>
-</a>
-<a href=https://garyflynn.github.io/tags/vrslcm/ class="post_tag button button_translucent" title=vrslcm>
-VRSLCM
-<span class=button_tally>8</span>
+<a href=https://garyflynn.github.io/tags/vsphere/ class="post_tag button button_translucent" title=vsphere>
+VSPHERE
+<span class=button_tally>7</span>
 </a>
 <a href=https://garyflynn.github.io/tags/getting-started/ class="post_tag button button_translucent" title=getting-started>
 GETTING-STARTED
-<span class=button_tally>7</span>
+<span class=button_tally>6</span>
 </a>
 <a href=https://garyflynn.github.io/tags/install/ class="post_tag button button_translucent" title=install>
 INSTALL
-<span class=button_tally>7</span>
+<span class=button_tally>6</span>
+</a>
+<a href=https://garyflynn.github.io/tags/vra-8/ class="post_tag button button_translucent" title=vra-8>
+VRA-8
+<span class=button_tally>6</span>
+</a>
+<a href=https://garyflynn.github.io/tags/vrslcm/ class="post_tag button button_translucent" title=vrslcm>
+VRSLCM
+<span class=button_tally>6</span>
+</a>
+<a href=https://garyflynn.github.io/tags/lifecycle-manager/ class="post_tag button button_translucent" title=lifecycle-manager>
+LIFECYCLE-MANAGER
+<span class=button_tally>5</span>
 </a>
 <br>
 <div class="post_tags_toggle button">All Tags</div>
 <div class=post_tags>
 <div class=tags_list>
-<a href=https://garyflynn.github.io/tags/8.x/ class="post_tag button button_translucent" data-position=14 title=8.x>8.X<span class=button_tally>14</span>
+<a href=https://garyflynn.github.io/tags/8.x/ class="post_tag button button_translucent" data-position=9 title=8.x>8.X<span class=button_tally>9</span>
 </a>
-<a href=https://garyflynn.github.io/tags/8x/ class="post_tag button button_translucent" data-position=1 title=8x>8X<span class=button_tally>1</span>
-</a>
-<a href=https://garyflynn.github.io/tags/active-directory/ class="post_tag button button_translucent" data-position=2 title=active-directory>ACTIVE-DIRECTORY<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/active-directory/ class="post_tag button button_translucent" data-position=1 title=active-directory>ACTIVE-DIRECTORY<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/alarms/ class="post_tag button button_translucent" data-position=1 title=alarms>ALARMS<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/alerts/ class="post_tag button button_translucent" data-position=1 title=alerts>ALERTS<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/automation/ class="post_tag button button_translucent" data-position=27 title=automation>AUTOMATION<span class=button_tally>27</span>
+<a href=https://garyflynn.github.io/tags/automation/ class="post_tag button button_translucent" data-position=17 title=automation>AUTOMATION<span class=button_tally>17</span>
 </a>
-<a href=https://garyflynn.github.io/tags/aws/ class="post_tag button button_translucent" data-position=2 title=aws>AWS<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/aws/ class="post_tag button button_translucent" data-position=1 title=aws>AWS<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/azure/ class="post_tag button button_translucent" data-position=2 title=azure>AZURE<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/blogs/ class="post_tag button button_translucent" data-position=1 title=blogs>BLOGS<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/code/ class="post_tag button button_translucent" data-position=4 title=code>CODE<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/code/ class="post_tag button button_translucent" data-position=2 title=code>CODE<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/collection/ class="post_tag button button_translucent" data-position=1 title=collection>COLLECTION<span class=button_tally>1</span>
 </a>
@@ -378,17 +369,17 @@ INSTALL
 </a>
 <a href=https://garyflynn.github.io/tags/configuration-manager/ class="post_tag button button_translucent" data-position=1 title=configuration-manager>CONFIGURATION-MANAGER<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/configure/ class="post_tag button button_translucent" data-position=10 title=configure>CONFIGURE<span class=button_tally>10</span>
+<a href=https://garyflynn.github.io/tags/configure/ class="post_tag button button_translucent" data-position=8 title=configure>CONFIGURE<span class=button_tally>8</span>
 </a>
 <a href=https://garyflynn.github.io/tags/control-center/ class="post_tag button button_translucent" data-position=1 title=control-center>CONTROL-CENTER<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/dashboard/ class="post_tag button button_translucent" data-position=1 title=dashboard>DASHBOARD<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/dfw/ class="post_tag button button_translucent" data-position=3 title=dfw>DFW<span class=button_tally>3</span>
+<a href=https://garyflynn.github.io/tags/dfw/ class="post_tag button button_translucent" data-position=2 title=dfw>DFW<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/downgrade/ class="post_tag button button_translucent" data-position=1 title=downgrade>DOWNGRADE<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/esxi/ class="post_tag button button_translucent" data-position=6 title=esxi>ESXI<span class=button_tally>6</span>
+<a href=https://garyflynn.github.io/tags/esxi/ class="post_tag button button_translucent" data-position=4 title=esxi>ESXI<span class=button_tally>4</span>
 </a>
 <a href=https://garyflynn.github.io/tags/export/ class="post_tag button button_translucent" data-position=1 title=export>EXPORT<span class=button_tally>1</span>
 </a>
@@ -396,69 +387,69 @@ INSTALL
 </a>
 <a href=https://garyflynn.github.io/tags/file-share/ class="post_tag button button_translucent" data-position=1 title=file-share>FILE-SHARE<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/firewall/ class="post_tag button button_translucent" data-position=3 title=firewall>FIREWALL<span class=button_tally>3</span>
+<a href=https://garyflynn.github.io/tags/firewall/ class="post_tag button button_translucent" data-position=2 title=firewall>FIREWALL<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/gaz-top-tips/ class="post_tag button button_translucent" data-position=1 title=gaz-top-tips>GAZ-TOP-TIPS<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/gcp/ class="post_tag button button_translucent" data-position=1 title=gcp>GCP<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/getting-started/ class="post_tag button button_translucent" data-position=7 title=getting-started>GETTING-STARTED<span class=button_tally>7</span>
+<a href=https://garyflynn.github.io/tags/getting-started/ class="post_tag button button_translucent" data-position=6 title=getting-started>GETTING-STARTED<span class=button_tally>6</span>
 </a>
-<a href=https://garyflynn.github.io/tags/github/ class="post_tag button button_translucent" data-position=2 title=github>GITHUB<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/github/ class="post_tag button button_translucent" data-position=1 title=github>GITHUB<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/google-cloud/ class="post_tag button button_translucent" data-position=1 title=google-cloud>GOOGLE-CLOUD<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/guide/ class="post_tag button button_translucent" data-position=6 title=guide>GUIDE<span class=button_tally>6</span>
+<a href=https://garyflynn.github.io/tags/guide/ class="post_tag button button_translucent" data-position=4 title=guide>GUIDE<span class=button_tally>4</span>
 </a>
-<a href=https://garyflynn.github.io/tags/hashicorp/ class="post_tag button button_translucent" data-position=5 title=hashicorp>HASHICORP<span class=button_tally>5</span>
+<a href=https://garyflynn.github.io/tags/hashicorp/ class="post_tag button button_translucent" data-position=3 title=hashicorp>HASHICORP<span class=button_tally>3</span>
 </a>
-<a href=https://garyflynn.github.io/tags/homelab/ class="post_tag button button_translucent" data-position=37 title=homelab>HOMELAB<span class=button_tally>37</span>
+<a href=https://garyflynn.github.io/tags/homelab/ class="post_tag button button_translucent" data-position=23 title=homelab>HOMELAB<span class=button_tally>23</span>
 </a>
-<a href=https://garyflynn.github.io/tags/iac/ class="post_tag button button_translucent" data-position=2 title=iac>IAC<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/iac/ class="post_tag button button_translucent" data-position=1 title=iac>IAC<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/index/ class="post_tag button button_translucent" data-position=1 title=index>INDEX<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/install/ class="post_tag button button_translucent" data-position=7 title=install>INSTALL<span class=button_tally>7</span>
+<a href=https://garyflynn.github.io/tags/install/ class="post_tag button button_translucent" data-position=6 title=install>INSTALL<span class=button_tally>6</span>
 </a>
-<a href=https://garyflynn.github.io/tags/integration/ class="post_tag button button_translucent" data-position=4 title=integration>INTEGRATION<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/integration/ class="post_tag button button_translucent" data-position=2 title=integration>INTEGRATION<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/intel/ class="post_tag button button_translucent" data-position=4 title=intel>INTEL<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/intel/ class="post_tag button button_translucent" data-position=2 title=intel>INTEL<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/iso/ class="post_tag button button_translucent" data-position=1 title=iso>ISO<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/kerberos/ class="post_tag button button_translucent" data-position=2 title=kerberos>KERBEROS<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/kerberos/ class="post_tag button button_translucent" data-position=1 title=kerberos>KERBEROS<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/key/ class="post_tag button button_translucent" data-position=1 title=key>KEY<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/krb5.conf/ class="post_tag button button_translucent" data-position=2 title=krb5.conf>KRB5.CONF<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/krb5.conf/ class="post_tag button button_translucent" data-position=1 title=krb5.conf>KRB5.CONF<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/kubernetes/ class="post_tag button button_translucent" data-position=4 title=kubernetes>KUBERNETES<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/kubernetes/ class="post_tag button button_translucent" data-position=2 title=kubernetes>KUBERNETES<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/license/ class="post_tag button button_translucent" data-position=1 title=license>LICENSE<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/lifecycle-manager/ class="post_tag button button_translucent" data-position=6 title=lifecycle-manager>LIFECYCLE-MANAGER<span class=button_tally>6</span>
+<a href=https://garyflynn.github.io/tags/lifecycle-manager/ class="post_tag button button_translucent" data-position=5 title=lifecycle-manager>LIFECYCLE-MANAGER<span class=button_tally>5</span>
 </a>
 <a href=https://garyflynn.github.io/tags/log-insight/ class="post_tag button button_translucent" data-position=1 title=log-insight>LOG-INSIGHT<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/management/ class="post_tag button button_translucent" data-position=1 title=management>MANAGEMENT<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/memory/ class="post_tag button button_translucent" data-position=3 title=memory>MEMORY<span class=button_tally>3</span>
+<a href=https://garyflynn.github.io/tags/memory/ class="post_tag button button_translucent" data-position=2 title=memory>MEMORY<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/metrics/ class="post_tag button button_translucent" data-position=3 title=metrics>METRICS<span class=button_tally>3</span>
+<a href=https://garyflynn.github.io/tags/metrics/ class="post_tag button button_translucent" data-position=2 title=metrics>METRICS<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/microsoft/ class="post_tag button button_translucent" data-position=5 title=microsoft>MICROSOFT<span class=button_tally>5</span>
+<a href=https://garyflynn.github.io/tags/microsoft/ class="post_tag button button_translucent" data-position=4 title=microsoft>MICROSOFT<span class=button_tally>4</span>
 </a>
-<a href=https://garyflynn.github.io/tags/nsx/ class="post_tag button button_translucent" data-position=3 title=nsx>NSX<span class=button_tally>3</span>
+<a href=https://garyflynn.github.io/tags/nsx/ class="post_tag button button_translucent" data-position=2 title=nsx>NSX<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/nuc/ class="post_tag button button_translucent" data-position=4 title=nuc>NUC<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/nuc/ class="post_tag button button_translucent" data-position=2 title=nuc>NUC<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/orchestrator/ class="post_tag button button_translucent" data-position=1 title=orchestrator>ORCHESTRATOR<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/powercli/ class="post_tag button button_translucent" data-position=1 title=powercli>POWERCLI<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/powershell/ class="post_tag button button_translucent" data-position=5 title=powershell>POWERSHELL<span class=button_tally>5</span>
+<a href=https://garyflynn.github.io/tags/powershell/ class="post_tag button button_translucent" data-position=4 title=powershell>POWERSHELL<span class=button_tally>4</span>
 </a>
-<a href=https://garyflynn.github.io/tags/prelude/ class="post_tag button button_translucent" data-position=2 title=prelude>PRELUDE<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/prelude/ class="post_tag button button_translucent" data-position=1 title=prelude>PRELUDE<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/query/ class="post_tag button button_translucent" data-position=1 title=query>QUERY<span class=button_tally>1</span>
 </a>
@@ -466,79 +457,79 @@ INSTALL
 </a>
 <a href=https://garyflynn.github.io/tags/rufus/ class="post_tag button button_translucent" data-position=1 title=rufus>RUFUS<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/samples/ class="post_tag button button_translucent" data-position=4 title=samples>SAMPLES<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/samples/ class="post_tag button button_translucent" data-position=2 title=samples>SAMPLES<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/sccm/ class="post_tag button button_translucent" data-position=1 title=sccm>SCCM<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/services/ class="post_tag button button_translucent" data-position=2 title=services>SERVICES<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/services/ class="post_tag button button_translucent" data-position=1 title=services>SERVICES<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/setup/ class="post_tag button button_translucent" data-position=2 title=setup>SETUP<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/setup/ class="post_tag button button_translucent" data-position=1 title=setup>SETUP<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/smb/ class="post_tag button button_translucent" data-position=1 title=smb>SMB<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/snapshot/ class="post_tag button button_translucent" data-position=1 title=snapshot>SNAPSHOT<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/storage/ class="post_tag button button_translucent" data-position=2 title=storage>STORAGE<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/storage/ class="post_tag button button_translucent" data-position=1 title=storage>STORAGE<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/system-center/ class="post_tag button button_translucent" data-position=1 title=system-center>SYSTEM-CENTER<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/terraform/ class="post_tag button button_translucent" data-position=8 title=terraform>TERRAFORM<span class=button_tally>8</span>
+<a href=https://garyflynn.github.io/tags/terraform/ class="post_tag button button_translucent" data-position=4 title=terraform>TERRAFORM<span class=button_tally>4</span>
 </a>
 <a href=https://garyflynn.github.io/tags/thresholds/ class="post_tag button button_translucent" data-position=1 title=thresholds>THRESHOLDS<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/troubleshoot/ class="post_tag button button_translucent" data-position=2 title=troubleshoot>TROUBLESHOOT<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/troubleshoot/ class="post_tag button button_translucent" data-position=1 title=troubleshoot>TROUBLESHOOT<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/upgrade/ class="post_tag button button_translucent" data-position=2 title=upgrade>UPGRADE<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/upgrade/ class="post_tag button button_translucent" data-position=1 title=upgrade>UPGRADE<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/usage/ class="post_tag button button_translucent" data-position=1 title=usage>USAGE<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/usb/ class="post_tag button button_translucent" data-position=1 title=usb>USB<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vcenter/ class="post_tag button button_translucent" data-position=6 title=vcenter>VCENTER<span class=button_tally>6</span>
+<a href=https://garyflynn.github.io/tags/vcenter/ class="post_tag button button_translucent" data-position=4 title=vcenter>VCENTER<span class=button_tally>4</span>
 </a>
 <a href=https://garyflynn.github.io/tags/vidm/ class="post_tag button button_translucent" data-position=1 title=vidm>VIDM<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vmware/ class="post_tag button button_translucent" data-position=62 title=vmware>VMWARE<span class=button_tally>62</span>
+<a href=https://garyflynn.github.io/tags/vmware/ class="post_tag button button_translucent" data-position=43 title=vmware>VMWARE<span class=button_tally>43</span>
 </a>
 <a href=https://garyflynn.github.io/tags/vmworld/ class="post_tag button button_translucent" data-position=1 title=vmworld>VMWORLD<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vra/ class="post_tag button button_translucent" data-position=33 title=vra>VRA<span class=button_tally>33</span>
+<a href=https://garyflynn.github.io/tags/vra/ class="post_tag button button_translucent" data-position=21 title=vra>VRA<span class=button_tally>21</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vra-8/ class="post_tag button button_translucent" data-position=12 title=vra-8>VRA-8<span class=button_tally>12</span>
+<a href=https://garyflynn.github.io/tags/vra-8/ class="post_tag button button_translucent" data-position=6 title=vra-8>VRA-8<span class=button_tally>6</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vra-8.1/ class="post_tag button button_translucent" data-position=2 title=vra-8.1>VRA-8.1<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vra-8.1/ class="post_tag button button_translucent" data-position=1 title=vra-8.1>VRA-8.1<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vra-8.2/ class="post_tag button button_translucent" data-position=4 title=vra-8.2>VRA-8.2<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/vra-8.2/ class="post_tag button button_translucent" data-position=2 title=vra-8.2>VRA-8.2<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrealize/ class="post_tag button button_translucent" data-position=33 title=vrealize>VREALIZE<span class=button_tally>33</span>
+<a href=https://garyflynn.github.io/tags/vrealize/ class="post_tag button button_translucent" data-position=22 title=vrealize>VREALIZE<span class=button_tally>22</span>
 </a>
 <a href=https://garyflynn.github.io/tags/vrli/ class="post_tag button button_translucent" data-position=2 title=vrli>VRLI<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vro/ class="post_tag button button_translucent" data-position=10 title=vro>VRO<span class=button_tally>10</span>
+<a href=https://garyflynn.github.io/tags/vro/ class="post_tag button button_translucent" data-position=7 title=vro>VRO<span class=button_tally>7</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vro-7/ class="post_tag button button_translucent" data-position=2 title=vro-7>VRO-7<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vro-7/ class="post_tag button button_translucent" data-position=1 title=vro-7>VRO-7<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vro-8/ class="post_tag button button_translucent" data-position=3 title=vro-8>VRO-8<span class=button_tally>3</span>
+<a href=https://garyflynn.github.io/tags/vro-8/ class="post_tag button button_translucent" data-position=2 title=vro-8>VRO-8<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vro-8.1/ class="post_tag button button_translucent" data-position=2 title=vro-8.1>VRO-8.1<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vro-8.1/ class="post_tag button button_translucent" data-position=1 title=vro-8.1>VRO-8.1<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrops/ class="post_tag button button_translucent" data-position=7 title=vrops>VROPS<span class=button_tally>7</span>
+<a href=https://garyflynn.github.io/tags/vrops/ class="post_tag button button_translucent" data-position=5 title=vrops>VROPS<span class=button_tally>5</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrops-6.7/ class="post_tag button button_translucent" data-position=2 title=vrops-6.7>VROPS-6.7<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vrops-6.7/ class="post_tag button button_translucent" data-position=1 title=vrops-6.7>VROPS-6.7<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrops-7.0/ class="post_tag button button_translucent" data-position=2 title=vrops-7.0>VROPS-7.0<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vrops-7.0/ class="post_tag button button_translucent" data-position=1 title=vrops-7.0>VROPS-7.0<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrops-8.1/ class="post_tag button button_translucent" data-position=2 title=vrops-8.1>VROPS-8.1<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vrops-8.1/ class="post_tag button button_translucent" data-position=1 title=vrops-8.1>VROPS-8.1<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrslcm/ class="post_tag button button_translucent" data-position=8 title=vrslcm>VRSLCM<span class=button_tally>8</span>
+<a href=https://garyflynn.github.io/tags/vrslcm/ class="post_tag button button_translucent" data-position=6 title=vrslcm>VRSLCM<span class=button_tally>6</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrslcm-8.1/ class="post_tag button button_translucent" data-position=2 title=vrslcm-8.1>VRSLCM-8.1<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vrslcm-8.1/ class="post_tag button button_translucent" data-position=1 title=vrslcm-8.1>VRSLCM-8.1<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vsan/ class="post_tag button button_translucent" data-position=4 title=vsan>VSAN<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/vsan/ class="post_tag button button_translucent" data-position=2 title=vsan>VSAN<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vsphere/ class="post_tag button button_translucent" data-position=11 title=vsphere>VSPHERE<span class=button_tally>11</span>
+<a href=https://garyflynn.github.io/tags/vsphere/ class="post_tag button button_translucent" data-position=7 title=vsphere>VSPHERE<span class=button_tally>7</span>
 </a>
-<a href=https://garyflynn.github.io/tags/windows/ class="post_tag button button_translucent" data-position=2 title=windows>WINDOWS<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/windows/ class="post_tag button button_translucent" data-position=1 title=windows>WINDOWS<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/winrm/ class="post_tag button button_translucent" data-position=1 title=winrm>WINRM<span class=button_tally>1</span>
 </a>

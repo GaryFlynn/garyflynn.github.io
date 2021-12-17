@@ -93,7 +93,7 @@
 <span><svg class="icon"><use xlink:href="#calendar"/></svg></span>
 <span class=post_date>
 Aug 29, 2018</span>
-<span class=post_time> · 6 min read</span><span>&nbsp;· <a href=https://garyflynn.github.io/tags/configure title=Configure class="post_tag button button_translucent">Configure
+<span class=post_time> · 3 min read</span><span>&nbsp;· <a href=https://garyflynn.github.io/tags/configure title=Configure class="post_tag button button_translucent">Configure
 </a><a href=https://garyflynn.github.io/tags/esxi title=ESXi class="post_tag button button_translucent">ESXi
 </a><a href=https://garyflynn.github.io/tags/homelab title=Homelab class="post_tag button button_translucent">Homelab
 </a><a href=https://garyflynn.github.io/tags/install title=Install class="post_tag button button_translucent">Install
@@ -117,220 +117,176 @@ Share on:
 </div>
 <div class=post_body><p>This guide will cover the ESXi installation and configuration process. If installing ESXi onto a bare-metal server from a USB, follow my guide <a href=https://garyflynn.com/technology/vmware/create-a-bootable-usb-esxi-installer/>here</a> on how to create a bootable USB installer. Once you have your installation media ready, either a USB installer or the downloaded ISO, insert / attach the media and power on your server. If you are doing this in a nested ESXi environment, attach the media via the VMware Remote Console.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-1.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-1.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-1.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-install-1.png alt loading=lazy decoding=async width=1022 height=754>
+</picture>
+</figure>
 </p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-2.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-2.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-2.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-install-2.png alt loading=lazy decoding=async width=1024 height=761>
+</picture>
+</figure>
 </p>
 <p>Once the installer has launched the wizard below, the installer is now loaded to memory and the installation media can be removed. If you are using a USB, you can leave the USB drive attached and install ESXi onto the USB and boot from there in future. Select Enter to continue.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-3.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-3.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-3.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-install-3.png alt loading=lazy decoding=async width=491 height=221>
+</picture>
+</figure>
 </p>
 <p>Just like all good administrators do, have a read of the EULA and accept them if you do, by pressing F11.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-4.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-4.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-4.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-install-4.png alt loading=lazy decoding=async width=523 height=379>
+</picture>
+</figure>
 </p>
 <p>The installer will then scan for available storage attached to the server...</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-5.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-5.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-5.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-install-5.png alt loading=lazy decoding=async width=532 height=89>
+</picture>
+</figure>
 </p>
 <p>Once the scan has finished it will show you the available drives. For this example, there is an 8GB disk for the ESXi installation, a 512GB SSD for vSAN Capacity Tier and a 256GB SSD for vSAN Cache Tier. Select the appropriate drive, and select Enter.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-6.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-6.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-6.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-install-6.png alt loading=lazy decoding=async width=599 height=312>
+</picture>
+</figure>
 </p>
 <p>Select the appropriate Language and select Enter.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-7.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-7.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-7.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-install-7.png alt loading=lazy decoding=async width=402 height=252>
+</picture>
+</figure>
 </p>
 <p>Enter a password for the root user. This should be a complex password and I recommend using a <a href=http://passwordsgenerator.net/>Password Generator</a> to create a long and complex password, without special characters, to avoid issues. Ensure that the passwords match and select Enter.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-8.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-8.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-8.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-install-8.png alt loading=lazy decoding=async width=441 height=201>
+</picture>
+</figure>
 </p>
 <p>One final confirmation screen. Select F11 and the installation will begin.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-9.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-9.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-9.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-install-9.png alt loading=lazy decoding=async width=530 height=185>
+</picture>
+</figure>
 </p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-10.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-10.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-10.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-install-10.png alt loading=lazy decoding=async width=409 height=90>
+</picture>
+</figure>
 </p>
 <p>Once the installation is complete you will see the below screen. Ensure that the installation media is removed (the mounted ISO or the attached USB if you haven't used the USB as the boot device) and select Enter to restart the server.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-11.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-11.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-install-11.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-install-11.png alt loading=lazy decoding=async width=488 height=311>
+</picture>
+</figure>
 </p>
 <p>Once the server has restarted, check the console screen and select F2 to load the login dialog box. Enter the password you set for the root user and select Enter.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-1.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-1.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-1.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-configure-1.png alt loading=lazy decoding=async width=1023 height=761>
+</picture>
+</figure>
 </p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-2.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-2.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-2.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-configure-2.png alt loading=lazy decoding=async width=487 height=216>
+</picture>
+</figure>
 </p>
 <p>Once you have successfully logged in, we need to configure the networking. Scroll down to Configure Management Networking, and select Enter.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-3.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-3.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-3.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-configure-3.png alt loading=lazy decoding=async width=501 height=328>
+</picture>
+</figure>
 </p>
 <p>Select Network Adapters and you will notice that if you have multiple NICs connected to the server, only NIC1 is selected. To ensure management network redundancy, highlight NIC2 and select Space to toggle the connection status. With both NICs selected, select Enter.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-4.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-4.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-4.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-configure-4.png alt loading=lazy decoding=async width=631 height=346>
+</picture>
+</figure>
 </p>
 <p>Navigate to VLAN and enter your VLAN ID for the management network if you have one, otherwise leave this blank.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-7.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-7.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-7.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-configure-7.png alt loading=lazy decoding=async width=1012 height=226>
+</picture>
+</figure>
 </p>
 <p>Navigate to IPv4 Configuration and press Enter. Navigate to "Set static IPv4 address and network configuration" and select Space. Navigate and enter the appropriate IPv4 address, subnet mask and default gateway. Press Enter to Save the configuration</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-5.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-5.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-5.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-configure-5.png alt loading=lazy decoding=async width=630 height=310>
+</picture>
+</figure>
 </p>
 <p>Navigate to IPv6 Configuration and select Enter. Navigate to "Disable IPv6" and select Space and Enter to Save the configuration. Note that a restart of the server will be required for this setting to be applied.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-6.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-6.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-6.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-configure-6.png alt loading=lazy decoding=async width=632 height=343>
+</picture>
+</figure>
 </p>
 <p>Navigate to DNS Configuration and select |Use the following settings" by selecting Space and enter your DNS servers and the hostname of the server. Select Enter to save.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-8.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-8.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-8.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-configure-8.png alt loading=lazy decoding=async width=630 height=279>
+</picture>
+</figure>
 </p>
 <p>Navigate to Custom DNS Suffixes and enter your domain name. Select Enter to Save.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-9.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-9.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-9.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-configure-9.png alt loading=lazy decoding=async width=563 height=212>
+</picture>
+</figure>
 </p>
 <p>With all of the configuration done, select Esc and select Y to restart the host when prompted.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-10.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-10.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-10.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-configure-10.png alt loading=lazy decoding=async width=565 height=246>
+</picture>
+</figure>
 </p>
 <p>Once the host has been restarted, the network will now be available and you should be able to access the Host UI available at https://<ip address>/ui/ where you can log in with the root username and password set during the installation.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-11.png title="Open this web path in a new tab" target=_blank class=warning-link>https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-11.png</a></p>
-<p>Disk path: /static/https://gazflynn.com/wp-content/uploads/2018/08/esxi-configure-11.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/esxi-configure-11.png alt loading=lazy decoding=async width=686 height=530>
+</picture>
+</figure>
 </p>
 </div>
 <div class=post_comments>
@@ -347,7 +303,7 @@ Share on:
 <h2>Gary Flynn</h2>
 </div>
 <div class=author_bio>
-GaryFlynn.com started out in 2016 as a way for me to share my experiences working in IT across the UK and Australia with others. Consider this my brain dumping ground for anything I think could be useful. Find out more about the site here.<br><h2>Achievements</h2><a href=https://www.credly.com/badges/a7b80dc8-2db3-4e75-9fbf-96261da93561><img src=/images/vcp-cma-2021.png alt=Achievement></a> <a href=https://www.credly.com/badges/a72c24d6-2674-4aef-beca-5b24b4a56c7a><img src=/images/vcap-cma-deploy-2021.png alt=Achievement></a><br><a href=https://vexpert.vmware.com/directory/4818><img src=/images/vexpert-cloud-management-badge.png alt=Achievement></a> <a href=https://vexpert.vmware.com/directory/4818><img src=/images/vexpert-2-star.png alt=Achievement></a> <a href=https://vexpert.vmware.com/directory/4818><img src=/images/vexpert-2021.png alt=Achievement></a><br><a href=https://www.credly.com/badges/25777ce7-1628-45eb-bc4b-b4d5bfde3ea0><img src=/images/terraform-associate.png alt=Achievement></a> <a href=https://www.credly.com/badges/a0183b64-d002-4703-ac95-0a57e0bd840e><img src=/images/terraform-chip.png alt=Achievement></a> <img src=/images/hc-ambassador-2021.png alt=Achievement>
+GaryFlynn.com started out in 2016 as a way for me to share my experiences working in IT across the UK and Australia with others. Consider this my brain dumping ground for anything I think could be useful. Find out more about the site <a href=/about/>here</a>.<br><h2>Achievements</h2><a href=https://www.credly.com/badges/a7b80dc8-2db3-4e75-9fbf-96261da93561><img src=/images/vcp-cma-2021.png alt=Achievement></a> <a href=https://www.credly.com/badges/a72c24d6-2674-4aef-beca-5b24b4a56c7a><img src=/images/vcap-cma-deploy-2021.png alt=Achievement></a><br><a href=https://vexpert.vmware.com/directory/4818><img src=/images/vexpert-cloud-management-badge.png alt=Achievement></a> <a href=https://vexpert.vmware.com/directory/4818><img src=/images/vexpert-2-star.png alt=Achievement></a> <a href=https://vexpert.vmware.com/directory/4818><img src=/images/vexpert-2021.png alt=Achievement></a><br><a href=https://www.credly.com/badges/25777ce7-1628-45eb-bc4b-b4d5bfde3ea0><img src=/images/terraform-associate.png alt=Achievement></a> <a href=https://www.credly.com/badges/a0183b64-d002-4703-ac95-0a57e0bd840e><img src=/images/terraform-chip.png alt=Achievement></a> <img src=/images/hc-ambassador-2021.png alt=Achievement>
 </div>
 <a href=https://garyflynn.github.io/about/ class="button mt-1" role=button title="Read More">Read More</a>
 <h2 class=mt-4>Recent Posts</h2>
@@ -356,118 +312,107 @@ GaryFlynn.com started out in 2016 as a way for me to share my experiences workin
 <a href=https://garyflynn.github.io/post/vmworld-2021-vrealize-announcements/ class=nav-link title="VMworld 2021 vRealize Announcements">VMworld 2021 vRealize Announcements</a>
 </li>
 <li>
-<a href=https://garyflynn.github.io/post/vrealize-automation-85-increase-session-timeout-comments/ class=nav-link title="vRealize Automation 8.5+ - Increase Session Timeout">vRealize Automation 8.5+ - Increase Session Timeout</a>
-</li>
-<li>
-<a href=https://garyflynn.github.io/post/vrealize-automation-85-increase-session-timeout/ class=nav-link title="vRealize Automation 8.5+ – Increase Session Timeout">vRealize Automation 8.5+ – Increase Session Timeout</a>
-</li>
-<li>
-<a href=https://garyflynn.github.io/post/setup-vrealize-automation-using-terraform-comments/ class=nav-link title="Setup vRealize Automation using Terraform">Setup vRealize Automation using Terraform</a>
+<a href=https://garyflynn.github.io/post/vrealize-automation-85-increase-session-timeout/ class=nav-link title="vRealize Automation 8.5+ - Increase Session Timeout">vRealize Automation 8.5+ - Increase Session Timeout</a>
 </li>
 <li>
 <a href=https://garyflynn.github.io/post/setup-vrealize-automation-using-terraform/ class=nav-link title="Setup vRealize Automation using Terraform">Setup vRealize Automation using Terraform</a>
 </li>
 <li>
-<a href=https://garyflynn.github.io/post/create-your-first-vsphere-terraform-configuration-comments/ class=nav-link title="Create Your First vSphere Terraform Configuration">Create Your First vSphere Terraform Configuration</a>
-</li>
-<li>
 <a href=https://garyflynn.github.io/post/create-your-first-vsphere-terraform-configuration/ class=nav-link title="Create Your First vSphere Terraform Configuration">Create Your First vSphere Terraform Configuration</a>
 </li>
 <li>
-<a href=https://garyflynn.github.io/post/vra-and-terraform-a-new-way-to-deploy-comments/ class=nav-link title="vRA & Terraform: A New Way to Deploy">vRA & Terraform: A New Way to Deploy</a>
+<a href=https://garyflynn.github.io/post/vra-and-terraform-a-new-way-to-deploy/ class=nav-link title="vRA & Terraform: A New Way to Deploy">vRA & Terraform: A New Way to Deploy</a>
+</li>
+<li>
+<a href=https://garyflynn.github.io/post/vrealize-automation-8x-change-internal-kubernetes-ip-range/ class=nav-link title="vRealize Automation 8.x – Change Internal Kubernetes IP Range">vRealize Automation 8.x – Change Internal Kubernetes IP Range</a>
+</li>
+<li>
+<a href=https://garyflynn.github.io/post/vrealize-automation-8x-vra-not-starting-if-k8s-ip-range-is-changed/ class=nav-link title="vRealize Automation 8.x - vRA Not Starting if K8s IP Range is Changed">vRealize Automation 8.x - vRA Not Starting if K8s IP Range is Changed</a>
+</li>
+<li>
+<a href=https://garyflynn.github.io/post/vrealize-automation-82-terraform-configurations/ class=nav-link title="vRealize Automation 8.2 - Terraform Configurations">vRealize Automation 8.2 - Terraform Configurations</a>
 </li>
 </ul>
-<div>
-<h2 class="mt-4 taxonomy" id=categories-section>Categories</h2>
-<nav class=tags_nav>
-<a href=https://garyflynn.github.io/categories/vmware/ class="post_tag button button_translucent" title=vmware>
-VMWARE
-<span class=button_tally>1</span>
-</a>
-</nav>
-</div>
 <div>
 <h2 class="mt-4 taxonomy" id=tags-section>Tags</h2>
 <nav class=tags_nav>
 <a href=https://garyflynn.github.io/tags/vmware/ class="post_tag button button_translucent" title=vmware>
 VMWARE
-<span class=button_tally>62</span>
+<span class=button_tally>43</span>
 </a>
 <a href=https://garyflynn.github.io/tags/homelab/ class="post_tag button button_translucent" title=homelab>
 HOMELAB
-<span class=button_tally>37</span>
-</a>
-<a href=https://garyflynn.github.io/tags/vra/ class="post_tag button button_translucent" title=vra>
-VRA
-<span class=button_tally>33</span>
+<span class=button_tally>23</span>
 </a>
 <a href=https://garyflynn.github.io/tags/vrealize/ class="post_tag button button_translucent" title=vrealize>
 VREALIZE
-<span class=button_tally>33</span>
+<span class=button_tally>22</span>
+</a>
+<a href=https://garyflynn.github.io/tags/vra/ class="post_tag button button_translucent" title=vra>
+VRA
+<span class=button_tally>21</span>
 </a>
 <a href=https://garyflynn.github.io/tags/automation/ class="post_tag button button_translucent" title=automation>
 AUTOMATION
-<span class=button_tally>27</span>
+<span class=button_tally>17</span>
 </a>
 <a href=https://garyflynn.github.io/tags/8.x/ class="post_tag button button_translucent" title=8.x>
 8.X
-<span class=button_tally>14</span>
-</a>
-<a href=https://garyflynn.github.io/tags/vra-8/ class="post_tag button button_translucent" title=vra-8>
-VRA-8
-<span class=button_tally>12</span>
-</a>
-<a href=https://garyflynn.github.io/tags/vsphere/ class="post_tag button button_translucent" title=vsphere>
-VSPHERE
-<span class=button_tally>11</span>
+<span class=button_tally>9</span>
 </a>
 <a href=https://garyflynn.github.io/tags/configure/ class="post_tag button button_translucent" title=configure>
 CONFIGURE
-<span class=button_tally>10</span>
+<span class=button_tally>8</span>
 </a>
 <a href=https://garyflynn.github.io/tags/vro/ class="post_tag button button_translucent" title=vro>
 VRO
-<span class=button_tally>10</span>
+<span class=button_tally>7</span>
 </a>
-<a href=https://garyflynn.github.io/tags/terraform/ class="post_tag button button_translucent" title=terraform>
-TERRAFORM
-<span class=button_tally>8</span>
-</a>
-<a href=https://garyflynn.github.io/tags/vrslcm/ class="post_tag button button_translucent" title=vrslcm>
-VRSLCM
-<span class=button_tally>8</span>
+<a href=https://garyflynn.github.io/tags/vsphere/ class="post_tag button button_translucent" title=vsphere>
+VSPHERE
+<span class=button_tally>7</span>
 </a>
 <a href=https://garyflynn.github.io/tags/getting-started/ class="post_tag button button_translucent" title=getting-started>
 GETTING-STARTED
-<span class=button_tally>7</span>
+<span class=button_tally>6</span>
 </a>
 <a href=https://garyflynn.github.io/tags/install/ class="post_tag button button_translucent" title=install>
 INSTALL
-<span class=button_tally>7</span>
+<span class=button_tally>6</span>
+</a>
+<a href=https://garyflynn.github.io/tags/vra-8/ class="post_tag button button_translucent" title=vra-8>
+VRA-8
+<span class=button_tally>6</span>
+</a>
+<a href=https://garyflynn.github.io/tags/vrslcm/ class="post_tag button button_translucent" title=vrslcm>
+VRSLCM
+<span class=button_tally>6</span>
+</a>
+<a href=https://garyflynn.github.io/tags/lifecycle-manager/ class="post_tag button button_translucent" title=lifecycle-manager>
+LIFECYCLE-MANAGER
+<span class=button_tally>5</span>
 </a>
 <br>
 <div class="post_tags_toggle button">All Tags</div>
 <div class=post_tags>
 <div class=tags_list>
-<a href=https://garyflynn.github.io/tags/8.x/ class="post_tag button button_translucent" data-position=14 title=8.x>8.X<span class=button_tally>14</span>
+<a href=https://garyflynn.github.io/tags/8.x/ class="post_tag button button_translucent" data-position=9 title=8.x>8.X<span class=button_tally>9</span>
 </a>
-<a href=https://garyflynn.github.io/tags/8x/ class="post_tag button button_translucent" data-position=1 title=8x>8X<span class=button_tally>1</span>
-</a>
-<a href=https://garyflynn.github.io/tags/active-directory/ class="post_tag button button_translucent" data-position=2 title=active-directory>ACTIVE-DIRECTORY<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/active-directory/ class="post_tag button button_translucent" data-position=1 title=active-directory>ACTIVE-DIRECTORY<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/alarms/ class="post_tag button button_translucent" data-position=1 title=alarms>ALARMS<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/alerts/ class="post_tag button button_translucent" data-position=1 title=alerts>ALERTS<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/automation/ class="post_tag button button_translucent" data-position=27 title=automation>AUTOMATION<span class=button_tally>27</span>
+<a href=https://garyflynn.github.io/tags/automation/ class="post_tag button button_translucent" data-position=17 title=automation>AUTOMATION<span class=button_tally>17</span>
 </a>
-<a href=https://garyflynn.github.io/tags/aws/ class="post_tag button button_translucent" data-position=2 title=aws>AWS<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/aws/ class="post_tag button button_translucent" data-position=1 title=aws>AWS<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/azure/ class="post_tag button button_translucent" data-position=2 title=azure>AZURE<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/blogs/ class="post_tag button button_translucent" data-position=1 title=blogs>BLOGS<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/code/ class="post_tag button button_translucent" data-position=4 title=code>CODE<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/code/ class="post_tag button button_translucent" data-position=2 title=code>CODE<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/collection/ class="post_tag button button_translucent" data-position=1 title=collection>COLLECTION<span class=button_tally>1</span>
 </a>
@@ -475,17 +420,17 @@ INSTALL
 </a>
 <a href=https://garyflynn.github.io/tags/configuration-manager/ class="post_tag button button_translucent" data-position=1 title=configuration-manager>CONFIGURATION-MANAGER<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/configure/ class="post_tag button button_translucent" data-position=10 title=configure>CONFIGURE<span class=button_tally>10</span>
+<a href=https://garyflynn.github.io/tags/configure/ class="post_tag button button_translucent" data-position=8 title=configure>CONFIGURE<span class=button_tally>8</span>
 </a>
 <a href=https://garyflynn.github.io/tags/control-center/ class="post_tag button button_translucent" data-position=1 title=control-center>CONTROL-CENTER<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/dashboard/ class="post_tag button button_translucent" data-position=1 title=dashboard>DASHBOARD<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/dfw/ class="post_tag button button_translucent" data-position=3 title=dfw>DFW<span class=button_tally>3</span>
+<a href=https://garyflynn.github.io/tags/dfw/ class="post_tag button button_translucent" data-position=2 title=dfw>DFW<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/downgrade/ class="post_tag button button_translucent" data-position=1 title=downgrade>DOWNGRADE<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/esxi/ class="post_tag button button_translucent" data-position=6 title=esxi>ESXI<span class=button_tally>6</span>
+<a href=https://garyflynn.github.io/tags/esxi/ class="post_tag button button_translucent" data-position=4 title=esxi>ESXI<span class=button_tally>4</span>
 </a>
 <a href=https://garyflynn.github.io/tags/export/ class="post_tag button button_translucent" data-position=1 title=export>EXPORT<span class=button_tally>1</span>
 </a>
@@ -493,69 +438,69 @@ INSTALL
 </a>
 <a href=https://garyflynn.github.io/tags/file-share/ class="post_tag button button_translucent" data-position=1 title=file-share>FILE-SHARE<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/firewall/ class="post_tag button button_translucent" data-position=3 title=firewall>FIREWALL<span class=button_tally>3</span>
+<a href=https://garyflynn.github.io/tags/firewall/ class="post_tag button button_translucent" data-position=2 title=firewall>FIREWALL<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/gaz-top-tips/ class="post_tag button button_translucent" data-position=1 title=gaz-top-tips>GAZ-TOP-TIPS<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/gcp/ class="post_tag button button_translucent" data-position=1 title=gcp>GCP<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/getting-started/ class="post_tag button button_translucent" data-position=7 title=getting-started>GETTING-STARTED<span class=button_tally>7</span>
+<a href=https://garyflynn.github.io/tags/getting-started/ class="post_tag button button_translucent" data-position=6 title=getting-started>GETTING-STARTED<span class=button_tally>6</span>
 </a>
-<a href=https://garyflynn.github.io/tags/github/ class="post_tag button button_translucent" data-position=2 title=github>GITHUB<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/github/ class="post_tag button button_translucent" data-position=1 title=github>GITHUB<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/google-cloud/ class="post_tag button button_translucent" data-position=1 title=google-cloud>GOOGLE-CLOUD<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/guide/ class="post_tag button button_translucent" data-position=6 title=guide>GUIDE<span class=button_tally>6</span>
+<a href=https://garyflynn.github.io/tags/guide/ class="post_tag button button_translucent" data-position=4 title=guide>GUIDE<span class=button_tally>4</span>
 </a>
-<a href=https://garyflynn.github.io/tags/hashicorp/ class="post_tag button button_translucent" data-position=5 title=hashicorp>HASHICORP<span class=button_tally>5</span>
+<a href=https://garyflynn.github.io/tags/hashicorp/ class="post_tag button button_translucent" data-position=3 title=hashicorp>HASHICORP<span class=button_tally>3</span>
 </a>
-<a href=https://garyflynn.github.io/tags/homelab/ class="post_tag button button_translucent" data-position=37 title=homelab>HOMELAB<span class=button_tally>37</span>
+<a href=https://garyflynn.github.io/tags/homelab/ class="post_tag button button_translucent" data-position=23 title=homelab>HOMELAB<span class=button_tally>23</span>
 </a>
-<a href=https://garyflynn.github.io/tags/iac/ class="post_tag button button_translucent" data-position=2 title=iac>IAC<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/iac/ class="post_tag button button_translucent" data-position=1 title=iac>IAC<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/index/ class="post_tag button button_translucent" data-position=1 title=index>INDEX<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/install/ class="post_tag button button_translucent" data-position=7 title=install>INSTALL<span class=button_tally>7</span>
+<a href=https://garyflynn.github.io/tags/install/ class="post_tag button button_translucent" data-position=6 title=install>INSTALL<span class=button_tally>6</span>
 </a>
-<a href=https://garyflynn.github.io/tags/integration/ class="post_tag button button_translucent" data-position=4 title=integration>INTEGRATION<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/integration/ class="post_tag button button_translucent" data-position=2 title=integration>INTEGRATION<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/intel/ class="post_tag button button_translucent" data-position=4 title=intel>INTEL<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/intel/ class="post_tag button button_translucent" data-position=2 title=intel>INTEL<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/iso/ class="post_tag button button_translucent" data-position=1 title=iso>ISO<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/kerberos/ class="post_tag button button_translucent" data-position=2 title=kerberos>KERBEROS<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/kerberos/ class="post_tag button button_translucent" data-position=1 title=kerberos>KERBEROS<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/key/ class="post_tag button button_translucent" data-position=1 title=key>KEY<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/krb5.conf/ class="post_tag button button_translucent" data-position=2 title=krb5.conf>KRB5.CONF<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/krb5.conf/ class="post_tag button button_translucent" data-position=1 title=krb5.conf>KRB5.CONF<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/kubernetes/ class="post_tag button button_translucent" data-position=4 title=kubernetes>KUBERNETES<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/kubernetes/ class="post_tag button button_translucent" data-position=2 title=kubernetes>KUBERNETES<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/license/ class="post_tag button button_translucent" data-position=1 title=license>LICENSE<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/lifecycle-manager/ class="post_tag button button_translucent" data-position=6 title=lifecycle-manager>LIFECYCLE-MANAGER<span class=button_tally>6</span>
+<a href=https://garyflynn.github.io/tags/lifecycle-manager/ class="post_tag button button_translucent" data-position=5 title=lifecycle-manager>LIFECYCLE-MANAGER<span class=button_tally>5</span>
 </a>
 <a href=https://garyflynn.github.io/tags/log-insight/ class="post_tag button button_translucent" data-position=1 title=log-insight>LOG-INSIGHT<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/management/ class="post_tag button button_translucent" data-position=1 title=management>MANAGEMENT<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/memory/ class="post_tag button button_translucent" data-position=3 title=memory>MEMORY<span class=button_tally>3</span>
+<a href=https://garyflynn.github.io/tags/memory/ class="post_tag button button_translucent" data-position=2 title=memory>MEMORY<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/metrics/ class="post_tag button button_translucent" data-position=3 title=metrics>METRICS<span class=button_tally>3</span>
+<a href=https://garyflynn.github.io/tags/metrics/ class="post_tag button button_translucent" data-position=2 title=metrics>METRICS<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/microsoft/ class="post_tag button button_translucent" data-position=5 title=microsoft>MICROSOFT<span class=button_tally>5</span>
+<a href=https://garyflynn.github.io/tags/microsoft/ class="post_tag button button_translucent" data-position=4 title=microsoft>MICROSOFT<span class=button_tally>4</span>
 </a>
-<a href=https://garyflynn.github.io/tags/nsx/ class="post_tag button button_translucent" data-position=3 title=nsx>NSX<span class=button_tally>3</span>
+<a href=https://garyflynn.github.io/tags/nsx/ class="post_tag button button_translucent" data-position=2 title=nsx>NSX<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/nuc/ class="post_tag button button_translucent" data-position=4 title=nuc>NUC<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/nuc/ class="post_tag button button_translucent" data-position=2 title=nuc>NUC<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/orchestrator/ class="post_tag button button_translucent" data-position=1 title=orchestrator>ORCHESTRATOR<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/powercli/ class="post_tag button button_translucent" data-position=1 title=powercli>POWERCLI<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/powershell/ class="post_tag button button_translucent" data-position=5 title=powershell>POWERSHELL<span class=button_tally>5</span>
+<a href=https://garyflynn.github.io/tags/powershell/ class="post_tag button button_translucent" data-position=4 title=powershell>POWERSHELL<span class=button_tally>4</span>
 </a>
-<a href=https://garyflynn.github.io/tags/prelude/ class="post_tag button button_translucent" data-position=2 title=prelude>PRELUDE<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/prelude/ class="post_tag button button_translucent" data-position=1 title=prelude>PRELUDE<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/query/ class="post_tag button button_translucent" data-position=1 title=query>QUERY<span class=button_tally>1</span>
 </a>
@@ -563,79 +508,79 @@ INSTALL
 </a>
 <a href=https://garyflynn.github.io/tags/rufus/ class="post_tag button button_translucent" data-position=1 title=rufus>RUFUS<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/samples/ class="post_tag button button_translucent" data-position=4 title=samples>SAMPLES<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/samples/ class="post_tag button button_translucent" data-position=2 title=samples>SAMPLES<span class=button_tally>2</span>
 </a>
 <a href=https://garyflynn.github.io/tags/sccm/ class="post_tag button button_translucent" data-position=1 title=sccm>SCCM<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/services/ class="post_tag button button_translucent" data-position=2 title=services>SERVICES<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/services/ class="post_tag button button_translucent" data-position=1 title=services>SERVICES<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/setup/ class="post_tag button button_translucent" data-position=2 title=setup>SETUP<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/setup/ class="post_tag button button_translucent" data-position=1 title=setup>SETUP<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/smb/ class="post_tag button button_translucent" data-position=1 title=smb>SMB<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/snapshot/ class="post_tag button button_translucent" data-position=1 title=snapshot>SNAPSHOT<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/storage/ class="post_tag button button_translucent" data-position=2 title=storage>STORAGE<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/storage/ class="post_tag button button_translucent" data-position=1 title=storage>STORAGE<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/system-center/ class="post_tag button button_translucent" data-position=1 title=system-center>SYSTEM-CENTER<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/terraform/ class="post_tag button button_translucent" data-position=8 title=terraform>TERRAFORM<span class=button_tally>8</span>
+<a href=https://garyflynn.github.io/tags/terraform/ class="post_tag button button_translucent" data-position=4 title=terraform>TERRAFORM<span class=button_tally>4</span>
 </a>
 <a href=https://garyflynn.github.io/tags/thresholds/ class="post_tag button button_translucent" data-position=1 title=thresholds>THRESHOLDS<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/troubleshoot/ class="post_tag button button_translucent" data-position=2 title=troubleshoot>TROUBLESHOOT<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/troubleshoot/ class="post_tag button button_translucent" data-position=1 title=troubleshoot>TROUBLESHOOT<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/upgrade/ class="post_tag button button_translucent" data-position=2 title=upgrade>UPGRADE<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/upgrade/ class="post_tag button button_translucent" data-position=1 title=upgrade>UPGRADE<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/usage/ class="post_tag button button_translucent" data-position=1 title=usage>USAGE<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/usb/ class="post_tag button button_translucent" data-position=1 title=usb>USB<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vcenter/ class="post_tag button button_translucent" data-position=6 title=vcenter>VCENTER<span class=button_tally>6</span>
+<a href=https://garyflynn.github.io/tags/vcenter/ class="post_tag button button_translucent" data-position=4 title=vcenter>VCENTER<span class=button_tally>4</span>
 </a>
 <a href=https://garyflynn.github.io/tags/vidm/ class="post_tag button button_translucent" data-position=1 title=vidm>VIDM<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vmware/ class="post_tag button button_translucent" data-position=62 title=vmware>VMWARE<span class=button_tally>62</span>
+<a href=https://garyflynn.github.io/tags/vmware/ class="post_tag button button_translucent" data-position=43 title=vmware>VMWARE<span class=button_tally>43</span>
 </a>
 <a href=https://garyflynn.github.io/tags/vmworld/ class="post_tag button button_translucent" data-position=1 title=vmworld>VMWORLD<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vra/ class="post_tag button button_translucent" data-position=33 title=vra>VRA<span class=button_tally>33</span>
+<a href=https://garyflynn.github.io/tags/vra/ class="post_tag button button_translucent" data-position=21 title=vra>VRA<span class=button_tally>21</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vra-8/ class="post_tag button button_translucent" data-position=12 title=vra-8>VRA-8<span class=button_tally>12</span>
+<a href=https://garyflynn.github.io/tags/vra-8/ class="post_tag button button_translucent" data-position=6 title=vra-8>VRA-8<span class=button_tally>6</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vra-8.1/ class="post_tag button button_translucent" data-position=2 title=vra-8.1>VRA-8.1<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vra-8.1/ class="post_tag button button_translucent" data-position=1 title=vra-8.1>VRA-8.1<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vra-8.2/ class="post_tag button button_translucent" data-position=4 title=vra-8.2>VRA-8.2<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/vra-8.2/ class="post_tag button button_translucent" data-position=2 title=vra-8.2>VRA-8.2<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrealize/ class="post_tag button button_translucent" data-position=33 title=vrealize>VREALIZE<span class=button_tally>33</span>
+<a href=https://garyflynn.github.io/tags/vrealize/ class="post_tag button button_translucent" data-position=22 title=vrealize>VREALIZE<span class=button_tally>22</span>
 </a>
 <a href=https://garyflynn.github.io/tags/vrli/ class="post_tag button button_translucent" data-position=2 title=vrli>VRLI<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vro/ class="post_tag button button_translucent" data-position=10 title=vro>VRO<span class=button_tally>10</span>
+<a href=https://garyflynn.github.io/tags/vro/ class="post_tag button button_translucent" data-position=7 title=vro>VRO<span class=button_tally>7</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vro-7/ class="post_tag button button_translucent" data-position=2 title=vro-7>VRO-7<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vro-7/ class="post_tag button button_translucent" data-position=1 title=vro-7>VRO-7<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vro-8/ class="post_tag button button_translucent" data-position=3 title=vro-8>VRO-8<span class=button_tally>3</span>
+<a href=https://garyflynn.github.io/tags/vro-8/ class="post_tag button button_translucent" data-position=2 title=vro-8>VRO-8<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vro-8.1/ class="post_tag button button_translucent" data-position=2 title=vro-8.1>VRO-8.1<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vro-8.1/ class="post_tag button button_translucent" data-position=1 title=vro-8.1>VRO-8.1<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrops/ class="post_tag button button_translucent" data-position=7 title=vrops>VROPS<span class=button_tally>7</span>
+<a href=https://garyflynn.github.io/tags/vrops/ class="post_tag button button_translucent" data-position=5 title=vrops>VROPS<span class=button_tally>5</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrops-6.7/ class="post_tag button button_translucent" data-position=2 title=vrops-6.7>VROPS-6.7<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vrops-6.7/ class="post_tag button button_translucent" data-position=1 title=vrops-6.7>VROPS-6.7<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrops-7.0/ class="post_tag button button_translucent" data-position=2 title=vrops-7.0>VROPS-7.0<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vrops-7.0/ class="post_tag button button_translucent" data-position=1 title=vrops-7.0>VROPS-7.0<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrops-8.1/ class="post_tag button button_translucent" data-position=2 title=vrops-8.1>VROPS-8.1<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vrops-8.1/ class="post_tag button button_translucent" data-position=1 title=vrops-8.1>VROPS-8.1<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrslcm/ class="post_tag button button_translucent" data-position=8 title=vrslcm>VRSLCM<span class=button_tally>8</span>
+<a href=https://garyflynn.github.io/tags/vrslcm/ class="post_tag button button_translucent" data-position=6 title=vrslcm>VRSLCM<span class=button_tally>6</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vrslcm-8.1/ class="post_tag button button_translucent" data-position=2 title=vrslcm-8.1>VRSLCM-8.1<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/vrslcm-8.1/ class="post_tag button button_translucent" data-position=1 title=vrslcm-8.1>VRSLCM-8.1<span class=button_tally>1</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vsan/ class="post_tag button button_translucent" data-position=4 title=vsan>VSAN<span class=button_tally>4</span>
+<a href=https://garyflynn.github.io/tags/vsan/ class="post_tag button button_translucent" data-position=2 title=vsan>VSAN<span class=button_tally>2</span>
 </a>
-<a href=https://garyflynn.github.io/tags/vsphere/ class="post_tag button button_translucent" data-position=11 title=vsphere>VSPHERE<span class=button_tally>11</span>
+<a href=https://garyflynn.github.io/tags/vsphere/ class="post_tag button button_translucent" data-position=7 title=vsphere>VSPHERE<span class=button_tally>7</span>
 </a>
-<a href=https://garyflynn.github.io/tags/windows/ class="post_tag button button_translucent" data-position=2 title=windows>WINDOWS<span class=button_tally>2</span>
+<a href=https://garyflynn.github.io/tags/windows/ class="post_tag button button_translucent" data-position=1 title=windows>WINDOWS<span class=button_tally>1</span>
 </a>
 <a href=https://garyflynn.github.io/tags/winrm/ class="post_tag button button_translucent" data-position=1 title=winrm>WINRM<span class=button_tally>1</span>
 </a>
