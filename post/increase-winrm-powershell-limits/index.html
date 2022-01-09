@@ -106,11 +106,7 @@ Share on:
 </span>
 </div>
 <div class=post_body><p>For many organisations, PowerShell remoting is done through a scripthost server where maximum concurrent session limits and maximum connected user limits can be reached. As explained in <a href=https://blogs.msdn.microsoft.com/powershell/2010/05/02/configuring-wsman-limits/>this Microsoft blog</a>, the following error might be encountered.</p>
-<p>PS> New-PSSession<br>
-[localhost] Connecting to remote server failed with the following error message : The WS-Management service cannot process the request. This user is allowed a maximum number of 5 concurrent shells, which has been exceeded. Close existing shells or raise the quota for this user. For more information, see the about_Remote_Troubleshooting Help topic.<br>
-+ CategoryInfo          : OpenError: (System.Manageme….RemoteRunspa<br>
-ce:RemoteRunspace) [], PSRemotingTransportException<br>
-+ FullyQualifiedErrorId : PSSessionOpenFailed</p>
+<p><code>PS> New-PSSession \[localhost\] Connecting to remote server failed with the following error message : The WS-Management service cannot process the request. This user is allowed a maximum number of 5 concurrent shells, which has been exceeded. Close existing shells or raise the quota for this user. For more information, see the about\_Remote\_Troubleshooting Help topic. \+ CategoryInfo          : OpenError: (System.Manageme….RemoteRunspa ce:RemoteRunspace) \[\], PSRemotingTransportException \+ FullyQualifiedErrorId : PSSessionOpenFailed</code></p>
 <p>Open a PowerShell session and run the following commands to get the current config.</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln>1</span>PS&gt; cd WSMan:\localhost\Shell
 <span class=ln>2</span>PS&gt; dir
