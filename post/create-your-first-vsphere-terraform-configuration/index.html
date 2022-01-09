@@ -116,7 +116,7 @@ Share on:
 </div>
 </span>
 </div>
-<div class=post_body><p>To get started with HashiCorp Terraform, you can download the simple executable file from HashiCorp <a href=https://www.terraform.io/downloads.html>here</a>. To understand the basics of Infrastructure as Code and Terraform, have a read of the post available <a href=https://garyflynn.com/technology/hashicorp/vra-and-terraform-a-new-way-to-deploy/>here</a>.</p>
+<div class=post_body><p>To get started with HashiCorp Terraform, you can download the simple executable file from HashiCorp <a href=https://www.terraform.io/downloads.html>here</a>. To understand the basics of Infrastructure as Code and Terraform, have a read of the post available <a href=https://garyflynn.github.io/post/vra-and-terraform-a-new-way-to-deploy/>here</a>.</p>
 <p>Terraform configuration files are text files with a .tf file extension. To get started, create a new folder for this configuration, along with a file called <em>vsphere.tf</em>. The first part to creating a Terraform configuration file is to define the provider you will interact with. In this example, it will create a virtual machine using the vSphere provider. The vSphere provider has some required fields like the user, password and server name. Create the provider block referring to "vsphere" and set the required fields with valid values for your environment.</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln>1</span>provider &#34;vsphere&#34; {
 <span class=ln>2</span>  # If you use a domain, set your login like this &#34;Domain\\User&#34;
@@ -212,7 +212,7 @@ Share on:
 <span class=ln>50</span>  }
 <span class=ln>51</span>}
 </code></pre></div><p>The final vsphere.tf file will look like this. It will contain the provider, data and resource elements.</p>
-<p><a href=https://gist.github.com/GaryFlynn/307fea7d87a958c32a1074616a9e9298>View this gist on GitHub</a></p>
+<script src=https://gist.github.com/GaryFlynn/307fea7d87a958c32a1074616a9e9298.js></script>
 <p>Note: Do not store your configuration in a version control system such as GitHub or GitLab as this example stores your credentials in the file. Instead, these would typically be stored in variables, where the variables are excluded from your git commits.</p>
 <p>Once your file is complete, run the "terraform init" command in the folder which contains your <em>vsphere.tf</em> file. This will automatically download any providers that are referenced in your Terraform configuration file. Next, run the "terraform plan" command which will show you exactly what resources are to be created. In this example, it will be one vsphere_virtual_machine. If the plan looks correct, run the command "terraform apply --auto-approve" to provision your virtual machine. Congratulations! You should now have your new VM deployed in your vSphere environment.</p>
 </div>
