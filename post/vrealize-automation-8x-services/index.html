@@ -129,33 +129,26 @@ Share on:
 <tbody>
 <tr>
 <td>Project</td>
-<td>Tenant<br></td>
+<td>Tenant<br>Business Group</td>
 <td>The simplified construct used to group users with blueprints, templates and other content.</td>
-</tr>
-<tr>
-<td></td>
-<td>Business Group</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr>
 <td>Cloud Account</td>
 <td>Infrastructure Endpoint</td>
 <td>The construct used to connect to infrastructure such as AWS, Azure, GCP, NSX-T, NSX-V, VMware Cloud on AWS and vCenter.</td>
 </tr>
+<tr>
+<td>Cloud Zone</td>
+<td>Compute Resource<br>Reservation</td>
+<td>The construct used to map infrastructure such as vSphere endpoints, public cloud accounts and placement policies.</td>
+</tr>
+<tr>
+<td>Integrations</td>
+<td>Endpoints</td>
+<td>This is where other products are integrated such as Active Directory, Ansible, VMware PKS, GitHub, GitLab, IPAM, Puppet, vRO and vROps</td>
+</tr>
 </tbody>
 </table>
-<p>Cloud Zone</p>
-<p>Compute Resource<br>
-Reservation</p>
-<p>The construct used to map infrastructure such as vSphere endpoints, public cloud accounts and placement policies</p>
-<p>Integrations</p>
-<p>Endpoints</p>
-<p>This is where other products are integrated such as Active Directory, Ansible, VMware PKS, GitHub, GitLab, IPAM, Puppet, vRO and vROps</p>
 <p>The final sections in Cloud Assembly are the Extensibility and Marketplace tabs. The Marketplace tab enables you to easily download blueprints and images while the extensibility tab is where all of the custom workflows and actions are completed. The extensibility tab combines the power of the vRA 7.x Event Based Subscriptions (EBS) along with several new features including lightweight node.js and python scripts instead of entire vRO workflows.</p>
 <h3 id=service-broker>Service Broker</h3>
 <p>The Service Broker service is the storefront presented to users to consume catalog items along with providing governance around the usage of templates and services through policy definition and configuration. The Catalog tab shows the catalog items you are entitled to. The Deployments tab shows the existing deployments which you have access to and you can provision day-2 resources. The Content & Policies tab is where Blueprints are imported from vRO and Custom Forms can be created, along with Lease Policies. The final tab, Infrastructure, is another location where Projects, Cloud Zones, Cloud Accounts and other Integrations are created, the same as in Cloud Assembly. One feature to note that is missing is Approval Policies. They do not exist in 8.0 but hopefully they will make a return soon!</p>
