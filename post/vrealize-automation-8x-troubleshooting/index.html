@@ -116,17 +116,17 @@ Share on:
 </div>
 <div class=post_body><p>With the introduction of vRealize Automation (vRA) 8.0, the traditional appliance VAMI page is gone. This is replaced with the vRA CLI and the kubernetes command line tools. This post will show some of the more common CLI commands you may need. To use all of the commands below, use SSH to connect to the appliance and log in with the root username and password.</p>
 <ul>
-<li><a href=#check-pods-services-status-b4c193a6-c3e7-46e0-8863-27c1300e504c>Check Pods / 'Services' Status</a></li>
-<li><a href=#display-vra-cluster-status-c4a93158-a368-4a42-84ec-855714f675a6>Display vRA Cluster Status</a></li>
-<li><a href=#verify-the-vra-deployment-status-89f1f77e-40c2-4eb6-896d-b5a47d90f50c>Verify the vRA Deployment Status</a></li>
-<li><a href=#check-deployment-log-file-c7982c23-8d66-469f-b9e8-45ef5fed4998>Check Deployment Log File</a></li>
-<li><a href=#generate-a-log-bundle-c13e884f-7870-4e7b-ba76-4737abd049db>Generate a Log Bundle</a></li>
-<li><a href=#stopping-shut-down-vra-cluster-06df6433-a176-46ff-b3a6-0e05835d8a15>Stopping / Shut down vRA Cluster</a></li>
-<li><a href=#starting-vra-cluster-320f9b35-600c-4496-ab53-f83908ddf0b1>Starting vRA Cluster</a></li>
-<li><a href=#vra-8-x-error-bad-gateway-d336c022-fec2-40f3-88c5-edc157ccc0a1>vRA 8.x Error - Bad Gateway</a></li>
-<li><a href=#vra-just-not-working--fc794b5b-52a1-4b7f-8c29-a57c4beef61d>vRA just not working...</a></li>
-<li><a href=#remove-vm-from-inventory-without-deleting-the-vm-720c6295-af30-4938-a0f2-d64b900fdf0e>Remove VM from Inventory without deleting the VM</a></li>
-<li><a href=#remove-vra-integration-with-vrealize-log-insight-bd70ef2c-914c-432e-b939-27626de09680>Remove vRA integration with vRealize Log Insight</a></li>
+<li><a href=#check-pods-services-status>Check Pods / 'Services' Status</a></li>
+<li><a href=#display-vra-cluster-status>Display vRA Cluster Status</a></li>
+<li><a href=#verify-the-vra-deployment-status>Verify the vRA Deployment Status</a></li>
+<li><a href=#check-deployment-log-file>Check Deployment Log File</a></li>
+<li><a href=#generate-a-log-bundle>Generate a Log Bundle</a></li>
+<li><a href=#stopping-shut-down-vra-cluster>Stopping / Shut down vRA Cluster</a></li>
+<li><a href=#starting-vra-cluster>Starting vRA Cluster</a></li>
+<li><a href=#vra-8-x-error-bad-gateway>vRA 8.x Error - Bad Gateway</a></li>
+<li><a href=#vra-just-not-working>vRA just not working...</a></li>
+<li><a href=#remove-vm-from-inventory-without-deleting-the-vm>Remove VM from Inventory without deleting the VM</a></li>
+<li><a href=#remove-vra-integration-with-vrealize-log-insight>Remove vRA integration with vRealize Log Insight</a></li>
 </ul>
 <h2 id=check-pods--services-status>Check Pods / 'Services' Status</h2>
 <p>Although the traditional vRA services are replaced with kubernetes containers, you can still check the running status of them using the command below. This command will show the running status, the age and the number of restarts for each pod or 'service'.</p>
