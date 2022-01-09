@@ -119,13 +119,13 @@ Share on:
 <div class=post_body><p>vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Microsoft Azure environment, select Cloud Assembly > Infrastructure > Connections > Cloud Accounts and create each of the cloud integrations you require. For Azure, there is some preparation we need to do on the Azure Portal, so head over to <a href=https://portal.azure.com>portal.azure.com</a> and authenticate with the account which has access to the Subscription you want to integrate with.</p>
 <p>To integrate vRA 8.x with Azure, there are 4 main configuration IDs and some permissions need to be set which we need to complete and provide to the vRA portal. These are covered in the sections listed below.</p>
 <ul>
-<li><a href=#subscription-id-06d0ff1e-6c8c-4271-a844-c4294002ed75>Subscription ID</a></li>
-<li><a href=#tenant-id-9b6ef0ad-d1ce-4112-a3a3-1d8bed4fc0d4>Tenant ID</a></li>
-<li><a href=#client-application-id-9e86faae-6d72-4b71-b0d7-e55ea57947cc>Client Application ID</a></li>
-<li><a href=#client-application-secret-key-51034089-3cd3-44b3-b969-38fb74f34920>Client Application Secret Key</a></li>
-<li><a href=#app-registration-permissions-853a0bfc-c11d-46ae-a550-e640fc335a8f>App Registration Permissions</a></li>
-<li><a href=#register-compute-provider-to-subscription-ef7aa3ad-f492-489d-9abf-c96bdd0b0b28>Register Compute Provider to Subscription</a></li>
-<li><a href=#vra-portal-configuration-73c9918d-944a-4938-8c0b-30f1ae545b9b>vRA Portal Configuration</a></li>
+<li><a href=#subscription-id>Subscription ID</a></li>
+<li><a href=#tenant-id>Tenant ID</a></li>
+<li><a href=#client-application-id>Client Application ID</a></li>
+<li><a href=#client-application-secret-key>Client Application Secret Key</a></li>
+<li><a href=#app-registration-permissions>App Registration Permissions</a></li>
+<li><a href=#register-compute-provider-to-subscription>Register Compute Provider to Subscription</a></li>
+<li><a href=#vra-portal-configuration>vRA Portal Configuration</a></li>
 </ul>
 <h2 id=subscription-id>Subscription ID</h2>
 <p>To locate the subscription ID, log into the Azure Portal and ensure you have selected the correct Directory. If you have multiple directories, you can select the correct one from the menu option below.</p>
@@ -144,7 +144,14 @@ Share on:
 </picture>
 </figure>
 </p>
-<p>Subscription ID: c607c082-45ef-4f15-97f2-937038d67333</p>
+<table>
+<thead>
+<tr>
+<th>:memo:</th>
+<th style=text-align:left>Subscription ID: c607c082-45ef-4f15-97f2-937038d67333</th>
+</tr>
+</thead>
+</table>
 <h2 id=tenant-id>Tenant ID</h2>
 <p>To locate the tenant ID, log into the Azure Portal and ensure you are still logged in with the correct directory. From the Azure Portal homepage, search for or select Azure Active Directory. This will load the directory you are currently in and from the overview page we can grab the Tenant ID. Copy this to a notepad along with the previous Subscription ID.</p>
 <p>
