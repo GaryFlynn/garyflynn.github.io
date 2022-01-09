@@ -117,8 +117,14 @@ Share on:
 </span>
 </div>
 <div class=post_body><p>vRealize Automation 8.x can integrate with several cloud providers, and to do this for your vSphere environment, select Cloud Assembly > Infrastructure > Connections > Cloud Accounts and create each of the cloud integrations you require. For vSphere, enter the vCenter FQDN / IP address, the credentials to authenticate with and select a logical name. Under capabilities, enter "cloud:vsphere" as this will enable us to use tagging in the blueprint request forms. Validate the credentials and once they are validated, select which datacenters to allow provisioning to, followed by selecting Add.</p>
-<p>Tip: Make sure the vCenter IP address / FQDN matches the vCenter server certificate or you will receive the error below...</p>
+<div class="notices tip">
+<div class=label>Tip</div>
+<p>Make sure the vCenter IP address / FQDN matches the vCenter server certificate or you will receive the error below...</p>
+</div>
+<div class="notices warning">
+<div class=label>Error</div>
 <p>"Unable to validate the provided access credentials: Failed to validate credentials. Error: Failed to connect to vCenter: Your certificate may be untrusted. To trust the certificate validate your account credentials and accept the untrusted certificate."</p>
+</div>
 <p>
 <figure>
 <picture>
