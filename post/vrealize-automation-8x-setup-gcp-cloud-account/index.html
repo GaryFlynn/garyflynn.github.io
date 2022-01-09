@@ -120,10 +120,10 @@ Share on:
 <div class=post_body><p>vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Google Cloud Platform (GCP) environment, select Cloud Assembly > Infrastructure > Connections > Cloud Accounts and create each of the cloud integrations you require. For GCP, there is some preparation we need to do on the GCP Console, so head over to <a href=http://console.cloud.google.com>console.cloud.google.com</a> and authenticate with the account which has access to the Project you want to integrate with.</p>
 <p>To integrate vRA 8.x with GCP, there are a few configurations we need to complete and provide to the vRA portal. These are covered in the sections listed below.</p>
 <ul>
-<li><a href=#project-id-cf3dc5c1-2143-4fdb-bf44-46684043bb5c>Project ID</a></li>
-<li><a href=#enable-the-api-4f3ec3f3-2ce7-414e-b4fb-3430874d196c>Enable the API</a></li>
-<li><a href=#subscription-id-06d0ff1e-6c8c-4271-a844-c4294002ed75>Service Account</a></li>
-<li><a href=#vra-portal-configuration-fb1ece9c-c5af-4c27-ab43-a916c14637c0>vRA Portal Configuration</a></li>
+<li><a href=#project-id>Project ID</a></li>
+<li><a href=#enable-the-api>Enable the API</a></li>
+<li><a href=#subscription-id>Service Account</a></li>
+<li><a href=#vra-portal-configuration>vRA Portal Configuration</a></li>
 </ul>
 <h2 id=project-id>Project ID</h2>
 <p>To retrieve the project ID, log into the GCP Console and select the appropriate Project. On the Home Dashboard under Project info, copy the Project ID and take note of it to validate it later in the vRA Portal.</p>
@@ -154,7 +154,10 @@ Share on:
 </figure>
 </p>
 <p>For the new service account, give it a logical name such as such as "svc-vra8" and the Service account ID will be auto-generated, however it can be amended.</p>
+<div class="notices note">
+<div class=label>Note</div>
 <p>Note: A long service account name will fail vRA validation with an error stating incorrect permissions, when the details are entered in the vRA Add Cloud Account page. Save yourself some pain and choose a short and simple account name.</p>
+</div>
 <p>Give the service account a description, such as "Service account used for connecting GCP to the Homelab vRealize Automation 8.x environment".</p>
 <p>
 <figure>
@@ -198,23 +201,19 @@ Share on:
 <h2 id=vra-portal-configuration>vRA Portal Configuration</h2>
 <p>Back in the vRA portal, select Cloud Assembly > Infrastructure > Connections > Cloud Accounts > Add Cloud Account > Google Cloud Platform</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://garyflynn.github.io/images/vra8-azure-new-cloud-account-1024x253.png title="Open this web path in a new tab" target=_blank class=warning-link>https://garyflynn.github.io/images/vra8-azure-new-cloud-account-1024x253.png</a></p>
-<p>Disk path: /static/images/vra8-azure-new-cloud-account-1024x253.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/vra8-azure-new-cloud-account.png alt loading=lazy decoding=async width=1618 height=400>
+</picture>
+</figure>
 </p>
 <p>In the New Cloud Account page, select the Import JSON Key button up the top and navigate to the previously downloaded JSON file. This will then auto-fill the next sections for you. Once this is loaded, confirm it all looks correct and select Validate.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://garyflynn.github.io/images/vra8-gcp-new-cloud-account-gcp-credentials-1024x597.png title="Open this web path in a new tab" target=_blank class=warning-link>https://garyflynn.github.io/images/vra8-gcp-new-cloud-account-gcp-credentials-1024x597.png</a></p>
-<p>Disk path: /static/images/vra8-gcp-new-cloud-account-gcp-credentials-1024x597.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/vra8-gcp-new-cloud-account-gcp-credentials.png alt loading=lazy decoding=async width=1075 height=627>
+</picture>
+</figure>
 </p>
 <p>Enter a name for the Cloud Account and optionally a description. Under Configuration, select the GCP regions to allow provisioning to, ensure the checkbox is select to create a cloud zone for each of the selected regions, and under Capability tags, enter “cloud:azure”. This enable us to use tagging in the blueprint request forms to select the appropriate cloud account / endpoint to provision to. Once done, select Add.</p>
 <p>
@@ -234,13 +233,11 @@ Share on:
 </p>
 <p>In more complex environments, you can Open the Cloud Zone and select the Compute tab, and for each availability zone, assign capability tags. If for example you have separate availability zones for dev, test and prod, you could assign the capability tag “environment:dev” to europe-west2-c, “environment:test” to europe-west2-b & “environment:prod” to europe-west2-a, to ensure that different workload environments are placed in different availability zones. The second part of this configuration is done in the blueprint request form.</p>
 <p>
-<div class="notices warning image-warning">
-<div class=label>Image not found</div>
-<style>a.warning-link{color:inherit!important;font-weight:inherit!important;text-decoration:underline!important;border-bottom:none!important}</style>
-<p>Web path: <a href=https://garyflynn.github.io/images/vra8-gcp-availability-zone-tags-1024x480.png title="Open this web path in a new tab" target=_blank class=warning-link>https://garyflynn.github.io/images/vra8-gcp-availability-zone-tags-1024x480.png</a></p>
-<p>Disk path: /static/images/vra8-gcp-availability-zone-tags-1024x480.png</p>
-<p>Using <a href=https://gohugo.io/content-management/page-bundles/ title="Information about Hugo Page Bundles" target=_blank class=warning-link>Page Bundles</a>: false</p>
-</div>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.github.io/images/vra8-gcp-availability-zone-tags.png alt loading=lazy decoding=async width=1315 height=617>
+</picture>
+</figure>
 </p>
 </div>
 <div class=post_comments>
