@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://garyflynn.github.io/post/homelab-setup-part-2-vsan-configuration/">
 <meta property="og:title" content="Homelab Setup Part 2 - vSAN Configuration">
 <meta property="og:description" content="To setup the NUC and install ESXi, follow part one of this guide. The following is the process to bootstrap loading the vCenter Server Appliance onto a vSAN …">
-<meta property="og:image" content="https://garyflynn.github.io/images/thumbnail.png">
+<meta property="og:image" content="https://garyflynn.github.io/post/homelab-setup-part-2-vsan-configuration/images/vsphere-client.png">
 <link rel=apple-touch-icon sizes=180x180 href=https://garyflynn.github.io/icons/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=https://garyflynn.github.io/icons/favicon-32x32.png>
 <link rel=manifest href=https://garyflynn.github.io/icons/site.webmanifest>
@@ -91,7 +91,6 @@ Aug 28, 2018</span>
 </a><a href=https://garyflynn.github.io/tags/storage title=Storage class="post_tag button button_translucent">Storage
 </a><a href=https://garyflynn.github.io/tags/vcenter title=vCenter class="post_tag button button_translucent">vCenter
 </a><a href=https://garyflynn.github.io/tags/vmware title=VMware class="post_tag button button_translucent">VMware
-</a><a href=https://garyflynn.github.io/tags/vmware title=VMware class="post_tag button button_translucent">VMware
 </a><a href=https://garyflynn.github.io/tags/vsan title=vSAN class="post_tag button button_translucent">vSAN
 </a><a href=https://garyflynn.github.io/tags/vsphere title=vSphere class="post_tag button button_translucent">vSphere
 </a>
@@ -110,7 +109,7 @@ Share on:
 </div>
 </span>
 </div>
-<div class=post_body><p>To setup the NUC and install ESXi, follow <a href=https://garyflynn.com/technology/vmware/homelab-setup-part-1-intel-nuc/>part one</a> of this guide. The following is the process to bootstrap loading the vCenter Server Appliance onto a vSAN datastore. This process was replaced in vCenter 6.7 which provides this capability natively through the installer. <strong>If you are deploying vCenter 6.7+, skip through to</strong> <a href=https://garyflynn.com/technology/vmware/homelab-setup-part-3-vcenter-install-configure/><strong>part three</strong></a><strong>.</strong></p>
+<div class=post_body><p>To setup the NUC and install ESXi, follow <a href=https://garyflynn.github.io/post/homelab-setup-part-1-intel-nuc/>part one</a> of this guide. The following is the process to bootstrap loading the vCenter Server Appliance onto a vSAN datastore. This process was replaced in vCenter 6.7 which provides this capability natively through the installer. <strong>If you are deploying vCenter 6.7+, skip through to</strong> <a href=https://garyflynn.github.io/post/homelab-setup-part-3-vcenter-install-configure/><strong>part three</strong></a><strong>.</strong></p>
 <h2 id=vsan-configuration>vSAN Configuration</h2>
 <p>To install vCenter you need the datastore in place, which for my environment is vSAN. However to configure vSAN, this is done through vCenter. A classic chicken and egg scenario which thankfully VMware have the solution for. You can bootstrap the vSAN datastore which William Lam has documented over at <a href=https://www.virtuallyghetto.com/2013/09/how-to-bootstrap-vcenter-server-onto_9.html>virtuallyghetto.com</a> and my configuration steps are below. On the first host, <a href=https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.html.hostclient.doc/GUID-B649CB74-832F-467B-B6A4-8BA67AD5C1F0.html>enable SSH</a> and SSH into the host. Modify the default vSAN policy to enable force provisioning.</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln>1</span>esxcli vsan policy setdefault -c vdisk -p &#34;((\&#34;hostFailuresToTolerate\&#34; i1) (\&#34;forceProvisioning\&#34; i1))&#34;
@@ -141,7 +140,7 @@ Share on:
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln>1</span>esxcli vsan storage add -s t10.NVMe____Samsung_SSD_960_EVO_250GB_______________4301B18154382500 -d t10.ATA_____Samsung_SSD_860_EVO_500GB_______________S3Z2NB0K329187Z_____
 </code></pre></div><p>To verify the vSAN cluster has been created and the disks have been added, run the below command and check the output</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln>1</span>esxcli vsan storage list
-</code></pre></div><p>Part 3 of this guide will cover the initial vCenter Server Configuration and is available <a href=https://garyflynn.com/technology/vmware/homelab-setup-part-3-vcenter-install-configure/>here</a>.</p>
+</code></pre></div><p>Part 3 of this guide will cover the initial vCenter Server Configuration and is available <a href=https://garyflynn.github.io/post/homelab-setup-part-3-vcenter-install-configure/>here</a>.</p>
 <p>Note: If you get stuck with vSAN and need to remove all of the partitions, run the commands below to format all of your data and start your homelab from scratch!</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln>1</span>esxcli vsan cluster leave
 <span class=ln>2</span>reboot
