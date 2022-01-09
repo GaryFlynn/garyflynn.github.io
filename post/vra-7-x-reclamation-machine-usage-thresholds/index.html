@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://garyflynn.github.io/post/vra-7-x-reclamation-machine-usage-thresholds/">
 <meta property="og:title" content="vRA 7.x Reclamation Machine Usage Thresholds">
 <meta property="og:description" content="In vRealize Automation 7.x, you can discover Deployments for reclamation in the Administration > Reclamation > Deployments (Tenant Administrator) view or …">
-<meta property="og:image" content="https://garyflynn.github.io/images/thumbnail.png">
+<meta property="og:image" content="https://garyflynn.github.io/post/vra-7-x-reclamation-machine-usage-thresholds/images/vra7.png">
 <link rel=apple-touch-icon sizes=180x180 href=https://garyflynn.github.io/icons/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=https://garyflynn.github.io/icons/favicon-32x32.png>
 <link rel=manifest href=https://garyflynn.github.io/icons/site.webmanifest>
@@ -108,29 +108,42 @@ Share on:
 </span>
 </div>
 <div class=post_body><p>In vRealize Automation 7.x, you can discover Deployments for reclamation in the <strong>Administration > Reclamation > Deployments</strong> (Tenant Administrator) view or the <strong>Administration > Reclamation > Tenant Machines</strong> (IaaS Administrator) view. The Advanced Search feature can be selected clicking <strong>></strong> in the top right corner and you can search for VMs with Low or High CPU usage along with several other options. But what are the actual thresholds that vRA uses when you select "Low CPU"? The table below describes exactly what each of the metrics are, for each advanced search option.</p>
-<p>Resource</p>
-<p>Metrics</p>
-<p>Value</p>
-<p>CPU</p>
-<p>High CPU utilization<br>
-Low CPU utilization</p>
-<p>Average Usage > 80%<br>
-Average Usage &lt; 5%</p>
-<p>Memory</p>
-<p>High Memory utilization<br>
-Low Memory utilization</p>
-<p>Average Usage > 80%<br>
-Average Usage &lt; 10%</p>
-<p>Disk</p>
-<p>Low Hard Disk utilization</p>
-<p>Average Disk Usage &lt; 2KB/s</p>
-<p>Network</p>
-<p>Low Network utilization</p>
-<p>Average Network Usage &lt; 1KB/s</p>
-<p>Complex Metric</p>
-<p>Idle</p>
-<p>Powered-on machines below 20% for<br>
-CPU, memory, disk, and network usage.</p>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Metrics</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>High CPU utilization<br>Low CPU utilization</td>
+<td>Average Usage > 80%<br>Average Usage &lt; 5%</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>High Memory utilization<br>Low Memory utilization</td>
+<td>Average Usage > 80%<br>Average Usage &lt; 10%</td>
+</tr>
+<tr>
+<td>Disk</td>
+<td>Low Hard Disk utilization</td>
+<td>Average Disk Usage &lt; 2KB/s</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>Low Network utilization</td>
+<td>Average Network Usage &lt; 1KB/s</td>
+</tr>
+<tr>
+<td>Complex Metric</td>
+<td>Idle</td>
+<td>Powered-on machines below 20% for<br>CPU, memory, disk, and network usage.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class=post_comments>
 <div id=disqus_thread></div>
