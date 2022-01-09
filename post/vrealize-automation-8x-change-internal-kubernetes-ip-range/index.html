@@ -117,7 +117,9 @@ Share on:
 </div>
 <div class=post_body><p>vRealize Automation (vRA) 8.2 added support for changing the IP address range used by the internal Kubernetes cluster, which is great news as many organisation already use the 10.244.0.0/21 address space. Unfortunately if your network already uses the ranges 10.244.0.0/22 or 10.244.4.0/22, you will likely encounter issues, such a provisioning timeouts.</p>
 <p>To resolve this issue in vRA 8.2, run the below commands to view your current configuration, and to update to a new range.</p>
-<p>Please note, this is specifically for vRA 8.2. For any other version, please change the Internal Kubernetes IP range through vRealize Suite Lifecycle Manager.</p>
+<hr>
+<h2 id=please-note-this-is-specifically-for-vra-82-for-any-other-version-please-change-the-internal-kubernetes-ip-range-through-vrealize-suite-lifecycle-manager><strong>NOTE</strong>
+Please note, this is specifically for vRA 8.2. For any other version, please change the Internal Kubernetes IP range through vRealize Suite Lifecycle Manager.</h2>
 <h3 id=view-your-current-configuration>View your Current Configuration</h3>
 <p>View your current configuration by running the command below. Two /22 subnets are shown, the cluster CIDR and the service CIDR.</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln>1</span>vracli network k8s-subnets
