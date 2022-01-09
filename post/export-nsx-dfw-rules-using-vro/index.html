@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://garyflynn.github.io/post/export-nsx-dfw-rules-using-vro/">
 <meta property="og:title" content="Export NSX DFW Rules using vRO">
 <meta property="og:description" content="Many organisations are seeing the value of NSX-v in SDDC environments, however there is no easy way to export the NSX Distributed Firewall (DFW) rules from NSX …">
-<meta property="og:image" content="https://garyflynn.github.io/images/thumbnail.png">
+<meta property="og:image" content="https://garyflynn.github.io/post/export-nsx-dfw-rules-using-vro/images/vro8.png">
 <link rel=apple-touch-icon sizes=180x180 href=https://garyflynn.github.io/icons/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=https://garyflynn.github.io/icons/favicon-32x32.png>
 <link rel=manifest href=https://garyflynn.github.io/icons/site.webmanifest>
@@ -145,7 +145,7 @@ Password: ****************</p>
 <li>NSX DFW Rule Hit Count - This workflow will export a list of all firewall rules with the hit count for each rule.</li>
 <li>NSX DFW Security Groups Export - This workflow will export a list of IP Addresses defined in each Security Group.</li>
 </ul>
-<p>Before running each workflow, edit the workflow and adjust the <em>email_xxxxxx</em> attributes to suit your environment. You will need to enter a <em>email_smtpHost</em>, <em>email_fromAddress</em> etc. Once the attributes are set, run the workflow you wish. You are prompted to select if you want to email the CSV and if so, enter the recipients email addresses, and then select Submit. This will run the workflow and email the CSV file to the email addresses provided if selected. If you selected no to emailing the CSV file, it can be accessed from the vRO Server at the location /var/lib/vco/app-server/temp/&lt;<filename>>.csv</p>
+<p>Before running each workflow, edit the workflow and adjust the <em>email_xxxxxx</em> attributes to suit your environment. You will need to enter a <em>email_smtpHost</em>, <em>email_fromAddress</em> etc. Once the attributes are set, run the workflow you wish. You are prompted to select if you want to email the CSV and if so, enter the recipients email addresses, and then select Submit. This will run the workflow and email the CSV file to the email addresses provided if selected. If you selected no to emailing the CSV file, it can be accessed from the vRO Server at the location /var/lib/vco/app-server/temp/&lt;&lt;filename>>.csv</p>
 <p>
 <figure>
 <picture>
