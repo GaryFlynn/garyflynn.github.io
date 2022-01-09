@@ -135,13 +135,13 @@ Share on:
 </figure>
 </p>
 <p>Now the router is on the network with a static IP address, login via the TP-Link SCU, select System Info and confirm the hardware version (my unit is TL-SG108E 3.0). Head over to the support page and download the latest firmware version for your hardware version & model number from <a href=https://www.tp-link.com/uk/download/TL-SG108E.html#Firmware>tp-link.com</a> and upload the .BIN file in the SCU under System, Firmware Upgrade and complete the upgrade.</p>
-<p>Now the network is up again, download the latest BIOS update for your Intel NUC and copy the .BIN file to the SanDisk Cruzer USB. Boot up each Intel NUC and select F7 to open the BIOS Update menu and follow <a href=https://www.intel.co.uk/content/www/uk/en/support/articles/000005850/mini-pcs.html>this guide</a> how to install the update. Select the .BIN ISO file and let the Intel NUC reboot. With the BIOS updated, time to install ESXi. Download the ESXi installer (<a href="https://my.vmware.com/web/vmware/details?downloadGroup=ESXI670&productId=742&rPId=24862">ESXi 6.7</a>) and <a href=https://rufus.akeo.ie/>Rufus</a> which is used to create a bootable USB with the ESXi ISO. Once the ESXi ISO is downloaded, plug in the SanDisk Cruzer USB to your PC, open Rufus, select the ISO and create the bootable USB. For the full guide, check out my full guide <a href=https://garyflynn.com/technology/vmware/create-a-bootable-usb-esxi-installer/>here</a>.</p>
+<p>Now the network is up again, download the latest BIOS update for your Intel NUC and copy the .BIN file to the SanDisk Cruzer USB. Boot up each Intel NUC and select F7 to open the BIOS Update menu and follow <a href=https://www.intel.co.uk/content/www/uk/en/support/articles/000005850/mini-pcs.html>this guide</a> how to install the update. Select the .BIN ISO file and let the Intel NUC reboot. With the BIOS updated, time to install ESXi. Download the ESXi installer (<a href="https://my.vmware.com/web/vmware/details?downloadGroup=ESXI670&productId=742&rPId=24862">ESXi 6.7</a>) and <a href=https://rufus.akeo.ie/>Rufus</a> which is used to create a bootable USB with the ESXi ISO. Once the ESXi ISO is downloaded, plug in the SanDisk Cruzer USB to your PC, open Rufus, select the ISO and create the bootable USB. For the full guide, check out my full guide <a href=https://garyflynn.github.io/post/create-a-bootable-usb-esxi-installer/>here</a>.</p>
 <p>Once the bootable image is created, boot up the Intel NUC and <em>quickly</em> select F10 at boot time to load the BIOS Settings. Select Advanced to switch to the Advanced settings and select the Security tab. To resolve the below two alarms preemptively, untick "Intel Platform Trust Technology" and Save & Exit.</p>
 <ul>
 <li>Host TPM attestation alarm</li>
 <li>TPM 2 device detected but a connection cannot be established</li>
 </ul>
-<p>With the bootable USB ESXi installer ready, plug it into the first Intel NUC, select F10 to open the boot menu and select USB device. The ESXi installer is loaded into memory so as you progress through the installer, you can install ESXi to the same USB which has the installer. Pretty cool right? To run through the installer and set up the network configuration, check out my full guide available <a href=https://garyflynn.com/technology/vmware/esxi-install-and-configure/>here</a>. The configuration of my ESXi hosts are below but keep in mind we will change the DNS settings and domain name once we have an Active Directory (AD) server up and running.</p>
+<p>With the bootable USB ESXi installer ready, plug it into the first Intel NUC, select F10 to open the boot menu and select USB device. The ESXi installer is loaded into memory so as you progress through the installer, you can install ESXi to the same USB which has the installer. Pretty cool right? To run through the installer and set up the network configuration, check out my full guide available <a href=https://garyflynn.github.io/post/esxi-install-and-configure/>here</a>. The configuration of my ESXi hosts are below but keep in mind we will change the DNS settings and domain name once we have an Active Directory (AD) server up and running.</p>
 <ul>
 <li>Hostname: esx-1; esx-2; esx-3</li>
 <li>IP Address: 192.168.0.100; 192.168.0.101</li>
@@ -149,18 +149,48 @@ Share on:
 <li>DNS Server: 192.168.0.1</li>
 </ul>
 <p>The environment so far...</p>
-<p><strong>ISP Router</strong></p>
-<p><strong>192.168.0.1</strong></p>
-<p><strong>DHCP Clients (Home PCs & Laptops)</strong></p>
-<p><strong>192.168.0.10 - 192.168.0.98</strong></p>
-<p><strong>TP-Link Switch</strong></p>
-<p><strong>192.168.0.99</strong></p>
-<p><strong>Intel NUC (esx-1)</strong></p>
-<p><strong>192.168.0.100</strong></p>
-<p><strong>Intel NUC (esx-2)</strong></p>
-<p><strong>192.168.0.101</strong></p>
-<p><strong>Intel NUC (esx-3)</strong></p>
-<p><strong>192.168.0.102</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>IP Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISP Router</td>
+<td>192.168.0.1</td>
+</tr>
+<tr>
+<td>DHCP Clients (Home PCs & Laptops)</td>
+<td>192.168.0.10 - 192.168.0.98</td>
+</tr>
+<tr>
+<td>TP-Link Switch</td>
+<td>192.168.0.99</td>
+</tr>
+<tr>
+<td>Intel NUC (esx-1)</td>
+<td>192.168.0.100</td>
+</tr>
+<tr>
+<td>Intel NUC (esx-2)</td>
+<td>192.168.0.101</td>
+</tr>
+<tr>
+<td>vSAN Witness (esx-3)</td>
+<td>192.168.0.102 (management)<br>192.168.0.103 (vsan witness)</td>
+</tr>
+<tr>
+<td>vCenter Server (vcsa)</td>
+<td>192.168.0.110</td>
+</tr>
+<tr>
+<td>AD Domain Controller (dc-1)</td>
+<td>192.168.0.120 (homelab.local)</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Part 2 of this guide will cover the initial vSAN Configuration and is available</strong> <a href=https://garyflynn.github.io/post/homelab-setup-part-2-vsan-configuration/><strong>here</strong></a><strong>.</strong></p>
 </div>
 <div class=post_comments>
