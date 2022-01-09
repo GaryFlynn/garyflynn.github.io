@@ -213,7 +213,6 @@ Share on:
 <span class=ln>51</span>}
 </code></pre></div><p>The final vsphere.tf file will look like this. It will contain the provider, data and resource elements.</p>
 <script type=application/javascript src=https://gist.github.com/GaryFlynn/307fea7d87a958c32a1074616a9e9298.js></script>
-<script src=https://gist.github.com/GaryFlynn/307fea7d87a958c32a1074616a9e9298.js></script>
 <p>Note: Do not store your configuration in a version control system such as GitHub or GitLab as this example stores your credentials in the file. Instead, these would typically be stored in variables, where the variables are excluded from your git commits.</p>
 <p>Once your file is complete, run the "terraform init" command in the folder which contains your <em>vsphere.tf</em> file. This will automatically download any providers that are referenced in your Terraform configuration file. Next, run the "terraform plan" command which will show you exactly what resources are to be created. In this example, it will be one vsphere_virtual_machine. If the plan looks correct, run the command "terraform apply --auto-approve" to provision your virtual machine. Congratulations! You should now have your new VM deployed in your vSphere environment.</p>
 </div>
