@@ -1,6 +1,6 @@
 <!doctype html><html lang=en data-figures class=page>
 <head>
-<title>Create Your First vSphere Terraform Configuration | Gary Flynn</title>
+<title>Elevate Your vRealize Automation Environment | Gary Flynn</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta http-equiv=x-ua-compatible content="IE=edge">
@@ -8,18 +8,18 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-87692784-3')</script>
 <meta property="og:locale" content="en">
 <meta property="og:type" content="article">
-<meta name=description content="To get started with HashiCorp Terraform, you can download the simple executable file from HashiCorp here. To understand the basics of Infrastructure as Code and …">
+<meta name=description content="vRealize Automation (vRA) is a very feature-rich product, but what if there were even more features you could enable? Introducing Configuration Properties. …">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:creator content="@GaryFlynnAU">
-<meta name=twitter:title content="Create Your First vSphere Terraform Configuration">
-<meta property="og:url" content="https://garyflynn.com/post/create-your-first-vsphere-terraform-configuration/">
-<meta property="og:title" content="Create Your First vSphere Terraform Configuration">
-<meta property="og:description" content="To get started with HashiCorp Terraform, you can download the simple executable file from HashiCorp here. To understand the basics of Infrastructure as Code and …">
-<meta property="og:image" content="https://garyflynn.com/post/create-your-first-vsphere-terraform-configuration/images/terraform_logo.png">
+<meta name=twitter:title content="Elevate Your vRealize Automation Environment">
+<meta property="og:url" content="https://garyflynn.com/post/elevate-your-vrealize-automation-environment/">
+<meta property="og:title" content="Elevate Your vRealize Automation Environment">
+<meta property="og:description" content="vRealize Automation (vRA) is a very feature-rich product, but what if there were even more features you could enable? Introducing Configuration Properties. …">
+<meta property="og:image" content="https://garyflynn.com/post/elevate-your-vrealize-automation-environment/images/vra8-logo.png">
 <link rel=apple-touch-icon sizes=180x180 href=https://garyflynn.com/icons/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=https://garyflynn.com/icons/favicon-32x32.png>
 <link rel=manifest href=https://garyflynn.com/icons/site.webmanifest>
-<link rel=canonical href=https://garyflynn.com/post/create-your-first-vsphere-terraform-configuration/>
+<link rel=canonical href=https://garyflynn.com/post/elevate-your-vrealize-automation-environment/>
 <link rel=preload href=https://garyflynn.com/css/styles.cff2992c8b0c2a228d640bfcd9dfbae1869331e622a51147ddc053e575d1d14f1c007b60666ce4b254349056058551f54128d8a824be135dbf5f478ecc156baf.css integrity="sha512-z/KZLIsMKiKNZAv82d+64YaTMeYipRFH3cBT5XXR0U8cAHtgZmzkslQ0kFYFhVH1QSjYqCS+E12/X0eOzBVrrw==" as=style crossorigin=anonymous>
 <link rel=preload href=https://garyflynn.com/js/bundle.min.061d04727b51b0a8fafe2f15b9370a961f33306e7af52abd00d69c906f5d825f1599306159d7756d7d2b4f359767a170625ae541d1f37d05c1daa4d5c7feec25.js as=script integrity="sha512-Bh0EcntRsKj6/i8VuTcKlh8zMG569Sq9ANackG9dgl8VmTBhWdd1bX0rTzWXZ6FwYlrlQdHzfQXB2qTVx/7sJQ==" crossorigin=anonymous>
 <link rel=stylesheet type=text/css href=https://garyflynn.com/css/styles.cff2992c8b0c2a228d640bfcd9dfbae1869331e622a51147ddc053e575d1d14f1c007b60666ce4b254349056058551f54128d8a824be135dbf5f478ecc156baf.css integrity="sha512-z/KZLIsMKiKNZAv82d+64YaTMeYipRFH3cBT5XXR0U8cAHtgZmzkslQ0kFYFhVH1QSjYqCS+E12/X0eOzBVrrw==" crossorigin=anonymous>
@@ -80,133 +80,129 @@
 <main>
 <div class="grid-inverse wrap content">
 <article class=post_content>
-<h1 class=post_title>Create Your First vSphere Terraform Configuration</h1>
+<h1 class=post_title>Elevate Your vRealize Automation Environment</h1>
 <div class=post_meta>
 <span><svg class="icon"><use xlink:href="#calendar"/></svg></span>
 <span class=post_date>
-Feb 1, 2021</span>
-<span class=post_time> · 5 min read</span><span>&nbsp;· <a href=https://garyflynn.com/tags/iac title=IaC class="post_tag button button_translucent">IaC
-</a><a href=https://garyflynn.com/tags/hashicorp title=HashiCorp class="post_tag button button_translucent">HashiCorp
-</a><a href=https://garyflynn.com/tags/homelab title=Homelab class="post_tag button button_translucent">Homelab
-</a><a href=https://garyflynn.com/tags/samples title=Samples class="post_tag button button_translucent">Samples
-</a><a href=https://garyflynn.com/tags/terraform title=Terraform class="post_tag button button_translucent">Terraform
+Jan 13, 2022</span>
+<span class=post_time> · 2 min read</span><span>&nbsp;· <a href=https://garyflynn.com/tags/automation title=Automation class="post_tag button button_translucent">Automation
 </a><a href=https://garyflynn.com/tags/vmware title=VMware class="post_tag button button_translucent">VMware
-</a><a href=https://garyflynn.com/tags/vsphere title=vSphere class="post_tag button button_translucent">vSphere
+</a><a href=https://garyflynn.com/tags/vra title=vRA class="post_tag button button_translucent">vRA
+</a><a href=https://garyflynn.com/tags/vrealize title=vRealize class="post_tag button button_translucent">vRealize
 </a>
 </span>
 <span class=page_only>&nbsp;·
 <div class=post_share>
 Share on:
-<a href="https://twitter.com/intent/tweet?text=Create%20Your%20First%20vSphere%20Terraform%20Configuration&url=https%3a%2f%2fgaryflynn.com%2fpost%2fcreate-your-first-vsphere-terraform-configuration%2f&tw_p=tweetbutton" class=twitter title="Share on Twitter" target=_blank rel=nofollow><svg class="icon"><use xlink:href="#twitter"/></svg>
+<a href="https://twitter.com/intent/tweet?text=Elevate%20Your%20vRealize%20Automation%20Environment&url=https%3a%2f%2fgaryflynn.com%2fpost%2felevate-your-vrealize-automation-environment%2f&tw_p=tweetbutton" class=twitter title="Share on Twitter" target=_blank rel=nofollow><svg class="icon"><use xlink:href="#twitter"/></svg>
 </a>
-<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fgaryflynn.com%2fpost%2fcreate-your-first-vsphere-terraform-configuration%2f&t=Create%20Your%20First%20vSphere%20Terraform%20Configuration" class=facebook title="Share on Facebook" target=_blank rel=nofollow><svg class="icon"><use xlink:href="#facebook"/></svg>
+<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fgaryflynn.com%2fpost%2felevate-your-vrealize-automation-environment%2f&t=Elevate%20Your%20vRealize%20Automation%20Environment" class=facebook title="Share on Facebook" target=_blank rel=nofollow><svg class="icon"><use xlink:href="#facebook"/></svg>
 </a>
 <a href=#linkedinshare id=linkedinshare class=linkedin title="Share on LinkedIn" rel=nofollow><svg class="icon"><use xlink:href="#linkedin"/></svg>
 </a>
-<a href=https://garyflynn.com/post/create-your-first-vsphere-terraform-configuration/ title="Copy Link" class="link link_yank"><svg class="icon"><use xlink:href="#copy"/></svg>
+<a href=https://garyflynn.com/post/elevate-your-vrealize-automation-environment/ title="Copy Link" class="link link_yank"><svg class="icon"><use xlink:href="#copy"/></svg>
 </a>
 </div>
 </span>
 </div>
-<div class=post_body><p>To get started with HashiCorp Terraform, you can download the simple executable file from HashiCorp <a href=https://www.terraform.io/downloads.html>here</a>. To understand the basics of Infrastructure as Code and Terraform, have a read of the post available <a href=https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/>here</a>.</p>
-<p>Terraform configuration files are text files with a .tf file extension. To get started, create a new folder for this configuration, along with a file called <em>vsphere.tf</em>. The first part to creating a Terraform configuration file is to define the provider you will interact with. In this example, it will create a virtual machine using the vSphere provider. The vSphere provider has some required fields like the user, password and server name. Create the provider block referring to "vsphere" and set the required fields with valid values for your environment.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln>1</span>provider &#34;vsphere&#34; {
-<span class=ln>2</span>  # If you use a domain, set your login like this &#34;Domain\\User&#34;
-<span class=ln>3</span>  user           = &#34;administrator@vsphere.local&#34;
-<span class=ln>4</span>  password       = &#34;VMware1!&#34;
-<span class=ln>5</span>  vsphere_server = &#34;vcenter-1.homelab.local&#34;
-<span class=ln>6</span>
-<span class=ln>7</span>  # If you have a self-signed cert
-<span class=ln>8</span>  allow_unverified_ssl = true
-<span class=ln>9</span>}
-</code></pre></div><p>Following the provider, define any "data" sources needed, which are used to retrieve existing objects. In this example of creating a vSphere virtual machine, reference the existing data center, cluster, datastore, VM network and template objects. This is defined in the code below. You can see that the "name" values are used to locate each of the objects. These will be referenced later to retrieve the ID values, as you can also see in the "vsphere_resource_pool" data source.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln> 1</span>data &#34;vsphere_datacenter&#34; &#34;dc&#34; {
-<span class=ln> 2</span>  name = &#34;vSAN Datacenter&#34;
-<span class=ln> 3</span>}
-<span class=ln> 4</span>
-<span class=ln> 5</span># If you don&#39;t have any resource pools, put &#34;/Resources&#34; after cluster name
-<span class=ln> 6</span>data &#34;vsphere_resource_pool&#34; &#34;pool&#34; {
-<span class=ln> 7</span>  name          = &#34;vSAN Cluster/Resources&#34;
-<span class=ln> 8</span>  datacenter_id = data.vsphere_datacenter.dc.id
-<span class=ln> 9</span>}
-<span class=ln>10</span>
-<span class=ln>11</span># Retrieve datastore information on vsphere
-<span class=ln>12</span>data &#34;vsphere_datastore&#34; &#34;datastore&#34; {
-<span class=ln>13</span>  name          = &#34;vsanDatastore&#34;
-<span class=ln>14</span>  datacenter_id = data.vsphere_datacenter.dc.id
-<span class=ln>15</span>}
-<span class=ln>16</span>
-<span class=ln>17</span># Retrieve network information on vsphere
-<span class=ln>18</span>data &#34;vsphere_network&#34; &#34;network&#34; {
-<span class=ln>19</span>  name          = &#34;VM_Network-DPortGroup&#34;
-<span class=ln>20</span>  datacenter_id = data.vsphere_datacenter.dc.id
-<span class=ln>21</span>}
-<span class=ln>22</span>
-<span class=ln>23</span># Retrieve template information on vsphere
-<span class=ln>24</span>data &#34;vsphere_virtual_machine&#34; &#34;template&#34; {
-<span class=ln>25</span>  name          = &#34;centos-8&#34;
-<span class=ln>26</span>  datacenter_id = data.vsphere_datacenter.dc.id
-<span class=ln>27</span>} 
-</code></pre></div><p>Once you have all of the required data sources, define the "resource" that is to be created. In this case, it will be the "vsphere_virtual_machine" type, where the configuration of the virtual machine is defined. Start by defining the VM name, along with how many CPUs and the amount of memory to be assigned (in MB). There are a few required fields such as the datastore_ID and resource_pool_ID, which are referred to using the "data" sources created earlier. Then set the guest_ID and scsi_type to reference the guest_id and scsi_type of the template VM by referencing the "data" source.</p>
-<p>The network_id in the network_interface block is set to match the "data" source of the vSphere network.</p>
-<p>The disk block is then defined where the VMDK label is defined, along with the size of the disk to be deployed (in GB).</p>
-<p>The clone block is next, where the template VM is defined, referring to the "data" source of the template. The customization options are then set where the host_name, domain and IP configuration is set.</p>
-<p>The final block in the "resource" is the remote-exec provisioner. A remote-exec provisioner is used to run a command or script on the provisioned resource. The script to be called is specified along with how to connect to the VM. In this case, a connection is made using the root credentials to the default IP address of the provisioned VM. The contents of the example script are also shown below.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln> 1</span># Set vm parameters
-<span class=ln> 2</span>resource &#34;vsphere_virtual_machine&#34; &#34;demo&#34; {
-<span class=ln> 3</span>  name             = &#34;vm-one&#34;
-<span class=ln> 4</span>  num_cpus         = 2
-<span class=ln> 5</span>  memory           = 4096
-<span class=ln> 6</span>  datastore_id     = data.vsphere_datastore.datastore.id
-<span class=ln> 7</span>  resource_pool_id = data.vsphere_resource_pool.pool.id
-<span class=ln> 8</span>  guest_id         = data.vsphere_virtual_machine.template.guest_id
-<span class=ln> 9</span>  scsi_type        = data.vsphere_virtual_machine.template.scsi_type
-<span class=ln>10</span>
-<span class=ln>11</span>  # Set network parameters
-<span class=ln>12</span>  network_interface {
-<span class=ln>13</span>    network_id = data.vsphere_network.network.id
-<span class=ln>14</span>  }
-<span class=ln>15</span>
-<span class=ln>16</span>  # Use a predefined vmware template as main disk
-<span class=ln>17</span>  disk {
-<span class=ln>18</span>    label = &#34;vm-one.vmdk&#34;
-<span class=ln>19</span>    size = &#34;30&#34;
-<span class=ln>20</span>  }
-<span class=ln>21</span>
-<span class=ln>22</span>  clone {
-<span class=ln>23</span>    template_uuid = data.vsphere_virtual_machine.template.id
-<span class=ln>24</span>
-<span class=ln>25</span>    customize {
-<span class=ln>26</span>      linux_options {
-<span class=ln>27</span>        host_name = &#34;vm-one&#34;
-<span class=ln>28</span>        domain    = &#34;vm-one.homelab.local&#34;
-<span class=ln>29</span>      }
-<span class=ln>30</span>
-<span class=ln>31</span>      network_interface {
-<span class=ln>32</span>        ipv4_address    = &#34;192.168.0.240&#34;
-<span class=ln>33</span>        ipv4_netmask    = 24
-<span class=ln>34</span>        dns_server_list = [&#34;192.168.0.120&#34;, &#34;192.168.0.121&#34;]
-<span class=ln>35</span>      }
-<span class=ln>36</span>
-<span class=ln>37</span>      ipv4_gateway = &#34;192.168.0.1&#34;
-<span class=ln>38</span>    }
-<span class=ln>39</span>  }
-<span class=ln>40</span>
-<span class=ln>41</span>  # Execute script on remote vm after this creation
-<span class=ln>42</span>  provisioner &#34;remote-exec&#34; {
-<span class=ln>43</span>    script = &#34;scripts/example-script.sh&#34;
-<span class=ln>44</span>    connection {
-<span class=ln>45</span>      type     = &#34;ssh&#34;
-<span class=ln>46</span>      user     = &#34;root&#34;
-<span class=ln>47</span>      password = &#34;VMware1!&#34;
-<span class=ln>48</span>      host     = vsphere_virtual_machine.demo.default_ip_address 
-<span class=ln>49</span>    }
-<span class=ln>50</span>  }
-<span class=ln>51</span>}
-</code></pre></div><p>The final vsphere.tf file will look like this. It will contain the provider, data and resource elements.</p>
-<script type=application/javascript src=https://gist.github.com/GaryFlynn/307fea7d87a958c32a1074616a9e9298.js></script>
-<p>Note: Do not store your configuration in a version control system such as GitHub or GitLab as this example stores your credentials in the file. Instead, these would typically be stored in variables, where the variables are excluded from your git commits.</p>
-<p>Once your file is complete, run the "terraform init" command in the folder which contains your <em>vsphere.tf</em> file. This will automatically download any providers that are referenced in your Terraform configuration file. Next, run the "terraform plan" command which will show you exactly what resources are to be created. In this example, it will be one vsphere_virtual_machine. If the plan looks correct, run the command "terraform apply --auto-approve" to provision your virtual machine. Congratulations! You should now have your new VM deployed in your vSphere environment.</p>
+<div class=post_body><p>vRealize Automation (vRA) is a very feature-rich product, but what if there were even more features you could enable? Introducing Configuration Properties. Configuration Properties are available in any vRA 8.5+ environment and allow you to enable Beta features not yet released to the product. That sounds cool right? Obviously, this is completely unsupported, but for your homelab environment, this could be a nice addition.</p>
+<p>To access the available Configuration Properties, navigate to...</p>
+<p>https://&lt;&lt; vRA FQDN >>/automation-ui/#/provisioning-ui;ash=%2FconfigurationProperties
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.com/images/vra8-configuration-property-empty.png alt loading=lazy decoding=async width=970 height=168>
+</picture>
+</figure>
+</p>
+<p>On this page you're able to add new Configuration Properties and the Key field will provide the list of options. The list below is a few of the options that you might be interested in.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>allow.all.load.balancer.types</code></td>
+<td>Allows load balancers on network profiles for NSX-P and AWS</td>
+</tr>
+<tr>
+<td><code>allow.ui.admin.menu</code></td>
+<td>Enables 'Configuration Property' side menu item</td>
+</tr>
+<tr>
+<td><code>cloud.zones.overlapping.enabled</code></td>
+<td>Enable overlapping of cloud zone computes.</td>
+</tr>
+<tr>
+<td><code>cooldown.ui.image.sync.minutes </code></td>
+<td>E2E test for Sync Images button</td>
+</tr>
+<tr>
+<td><code>disable.deployment.sharing.ui</code></td>
+<td>Disables deployment sharing between all users in the project</td>
+</tr>
+<tr>
+<td><code>disable.tenant.management</code></td>
+<td>Hide the Tenant Management Tab</td>
+</tr>
+<tr>
+<td><code>disable.ui.machines.infrastructure.view</code></td>
+<td>Hide the Machines view in Infrastructure tab.</td>
+</tr>
+<tr>
+<td><code>disable.ui.onboarding.menu</code></td>
+<td>Disables onboarding UI which is enabled by default.</td>
+</tr>
+<tr>
+<td><code>disable.ui.workloads.view</code></td>
+<td>Disables the side navigation in Workloads and rename them to Deployments</td>
+</tr>
+<tr>
+<td><code>enable.cloud.specific.load.balancers</code></td>
+<td>Enables cloud-specific 'Load Balancers' resource types for Azure and NSX endpoints</td>
+</tr>
+<tr>
+<td><code>enable.dark.mode</code></td>
+<td>Enables CLarity dark mode!!!</td>
+</tr>
+<tr>
+<td><code>enable.global.search</code></td>
+<td>Enables global search in navigation header</td>
+</tr>
+<tr>
+<td><code>enable.migration.ui</code></td>
+<td>Enables the MIgration tab</td>
+</tr>
+<tr>
+<td><code>enable.spot.machine</code></td>
+<td>Enables option to allow spot machine in AWS cloud zones</td>
+</tr>
+<tr>
+<td><code>enable.ui.remote.desktop</code></td>
+<td>Enables the 'remote desktop' button on machines page</td>
+</tr>
+<tr>
+<td><code>enable.ui.remote.ssh</code></td>
+<td>Enables the 'ssh' button on machines page</td>
+</tr>
+<tr>
+<td><code>vro.encryption.enabled</code></td>
+<td>Use encryption when sending secure property values to vRO server</td>
+</tr>
+<tr>
+<td><code>quickstart.ui.disabled</code></td>
+<td>Follow the blog <a href=https://garyflynn.com/post/vrealize-automation-8x-hide-quickstart-ui/>here</a> to disable the Quickstart UI</td>
+</tr>
+<tr>
+<td><code>SESSION_TIMEOUT_DURATION_MINUTES</code></td>
+<td>Follow the blog <a href=https://garyflynn.com/post/vrealize-automation-85-increase-session-timeout/>here</a> to increase the Session Timeout</td>
+</tr>
+</tbody>
+</table>
+<p>As you can see from the extensive list above, there are a few very neat features! The first thing I would recommend is the light / dark mode toggle and enabling the Configuration Property side menu. Personally, I appreciate the longer session timeouts and really miss the Remote Desktop and SSH to machine options, so I'll be adding them back in.</p>
+<p>And that's about it. Have a look throught he different options, and if there are any you recommend, leave a comment below or like this article to show your support!</p>
 </div>
 <div class=post_comments>
 <div id=disqus_thread></div>
@@ -228,9 +224,6 @@ GaryFlynn.com started out in 2016 as a way for me to share my experiences workin
 <h2 class=mt-4>Recent Posts</h2>
 <ul class=flex-column>
 <li>
-<a href=https://garyflynn.com/post/elevate-your-vrealize-automation-environment/ class=nav-link title="Elevate Your vRealize Automation Environment">Elevate Your vRealize Automation Environment</a>
-</li>
-<li>
 <a href=https://garyflynn.com/post/vrealize-automation-8x-hide-quickstart-ui/ class=nav-link title="vRealize Automation 8.x - Hide Quickstart UI">vRealize Automation 8.x - Hide Quickstart UI</a>
 </li>
 <li>
@@ -241,6 +234,9 @@ GaryFlynn.com started out in 2016 as a way for me to share my experiences workin
 </li>
 <li>
 <a href=https://garyflynn.com/post/setup-vrealize-automation-using-terraform/ class=nav-link title="Setup vRealize Automation using Terraform">Setup vRealize Automation using Terraform</a>
+</li>
+<li>
+<a href=https://garyflynn.com/post/create-your-first-vsphere-terraform-configuration/ class=nav-link title="Create Your First vSphere Terraform Configuration">Create Your First vSphere Terraform Configuration</a>
 </li>
 <li>
 <a href=https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/ class=nav-link title="vRA & Terraform: A New Way to Deploy">vRA & Terraform: A New Way to Deploy</a>
