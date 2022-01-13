@@ -84,7 +84,7 @@
 <div class=post_meta>
 <span><svg class="icon"><use xlink:href="#calendar"/></svg></span>
 <span class=post_date>
-Jan 12, 2022</span>
+Jan 13, 2022</span>
 <span class=post_time> · 3 min read</span><span>&nbsp;· <a href=https://garyflynn.com/tags/automation title=Automation class="post_tag button button_translucent">Automation
 </a><a href=https://garyflynn.com/tags/configure title=Configure class="post_tag button button_translucent">Configure
 </a><a href=https://garyflynn.com/tags/homelab title=Homelab class="post_tag button button_translucent">Homelab
@@ -111,7 +111,13 @@ Share on:
 <div class=post_body><p>By default, a vRealize Automation 8.x session log you into the Services page, when you and your users are greeted with the Quickstart banner. The easiest way to remove this is to configure a vSphere Cloud Account, however for some environments, vSphere isn't an endpoint used. In this case, to remove the banner, a simple API call or change in the UI is required.</p>
 <ul>
 <li><a href=#change-via-the-api>Change via the API</a></li>
-<li><a href=#change-via-the-user-interface>Change via the User Interface</a></li>
+<li><a href=#change-via-the-user-interface>Change via the User Interface</a>
+<figure>
+<picture>
+<img class="image_figure image_internal" src=https://garyflynn.com/images/vra8-quickstart.png alt loading=lazy decoding=async width=1551 height=339>
+</picture>
+</figure>
+</li>
 </ul>
 <h2 id=change-via-the-api>Change via the API</h2>
 <p>The below code can be run from either the appliance directly, or from your desktop PC using cURL. Another option would be to run the same API calls in Postman.</p>
