@@ -85,7 +85,7 @@
 <span><svg class="icon"><use xlink:href="#calendar"/></svg></span>
 <span class=post_date>
 Jan 13, 2022</span>
-<span class=post_time> · 3 min read</span><span>&nbsp;· <a href=https://garyflynn.com/tags/automation title=Automation class="post_tag button button_translucent">Automation
+<span class=post_time> · 2 min read</span><span>&nbsp;· <a href=https://garyflynn.com/tags/automation title=Automation class="post_tag button button_translucent">Automation
 </a><a href=https://garyflynn.com/tags/configure title=Configure class="post_tag button button_translucent">Configure
 </a><a href=https://garyflynn.com/tags/homelab title=Homelab class="post_tag button button_translucent">Homelab
 </a><a href=https://garyflynn.com/tags/vmware title=VMware class="post_tag button button_translucent">VMware
@@ -108,20 +108,7 @@ Share on:
 </div>
 </span>
 </div>
-<div class=post_body><p>By default, a vRealize Automation 8.x session log you into the Services page, when you and your users are greeted with the Quickstart banner. The easiest way to remove this is to configure a vSphere Cloud Account, however for some environments, vSphere isn't an endpoint used. In this case, to remove the banner, a simple API call or change in the UI is required.</p>
-<p>Huge shoutout to <a href=https://twitter.com/virtualhobbit/status/1481611458576330754>Mark Brookfield</a> for revealing the UI option.</p>
-<ul>
-<li><a href=#change-via-the-api>Change via the API</a></li>
-<li><a href=#change-via-the-user-interface>Change via the User Interface</a>
-<figure>
-<picture>
-<img class="image_figure image_internal" src=https://garyflynn.com/images/vra8-quickstart.png alt loading=lazy decoding=async width=1551 height=339>
-</picture>
-</figure>
-</li>
-</ul>
-<h2 id=change-via-the-api>Change via the API</h2>
-<p>The below code can be run from either the appliance directly, or from your desktop PC using cURL. Another option would be to run the same API calls in Postman.</p>
+<div class=post_body><p>By default, a vRealize Automation 8.x session log you into the Services page, when you and your users are greeted with the Quickstart banner. The easiest way to remove this is to configure a vSphere Cloud Account, however for some environments, vSphere isn't an endpoint used. In this case, to remove the banner, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL. Another option would be to run the same API calls in Postman.</p>
 <h3 id=create-refresh-token>Create Refresh Token</h3>
 <p>Create the refresh token by running either of the code blocks below, depending on if you're using a local account or a domain user account.</p>
 <p>Local Account - Generate the access token by running the commands below, after updating the url, username and password variables.</p>
@@ -167,30 +154,6 @@ Share on:
 </code></pre></div><p>The output from the above command will show the newly applied setting.</p>
 <p><code>{"key":"quickstart.ui.disabled","value":"true"}</code></p>
 <p>Once this has run, the Quickstart banner will not be shown for any new sessions. There is no need to restart the server or any services / pods.</p>
-<p>Note: If you upgrade or patch vRealize Automation, the changes <em>may</em> be lost and need to be completed again.</p>
-<h2 id=change-via-the-user-interface>Change via the User Interface</h2>
-<p>Navigate to the URL https://&lt;&lt;vRA FQDN>>/automation-ui/#/provisioning-ui;ash=%2FconfigurationProperties</p>
-<div class="notices note">
-<div class=label>Note</div>
-<p>This URL is not available from any menu and must be entered in the browser URL field instead.</p>
-</div>
-<p>Select New Configuration Property
-<figure>
-<picture>
-<img class="image_figure image_internal" src=https://garyflynn.com/images/vra8-configuration-property-empty.png alt loading=lazy decoding=async width=970 height=168>
-</picture>
-</figure>
-</p>
-<p>Enter the Key <code>"quickstart.ui.disabled"</code>.</p>
-<p>Enter the Value of your choice. <code>true</code></p>
-<p>Select Create
-<figure>
-<picture>
-<img class="image_figure image_internal" src=https://garyflynn.com/images/vra8-configuration-property-quickstart-banner-key-value.png alt loading=lazy decoding=async width=583 height=248>
-</picture>
-</figure>
-</p>
-<p>Once this has run, any new user sessions created will no longer show the Quickstart banner. There is no need to restart the server or any services / pods.</p>
 <p>Note: If you upgrade or patch vRealize Automation, the changes <em>may</em> be lost and need to be completed again.</p>
 </div>
 <div class=post_comments>
