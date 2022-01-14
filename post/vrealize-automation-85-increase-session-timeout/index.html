@@ -109,15 +109,7 @@ Share on:
 </span>
 </div>
 <div class=post_body><p>By default, a vRealize Automation 8.x session will timeout after 30 minutes of inactivity. For those looking to increase the session timeout value, this hasn't been possible before vRealize Automation 8.5. This all changes with the release of vRealize Automation 8.5, as documented in the release notes <a href=https://docs.vmware.com/en/VMware-vRealize-Automation/8.5/rn/vmware-vrealize-automation-85-release-notes.html>here</a>.</p>
-<p>To increase the session timeout from the default 30 minutes, a simple API call or change in the UI is required.</p>
-<p>Huge shoutout to <a href=https://twitter.com/virtualhobbit/status/1481611458576330754>Mark Brookfield</a> for revealing the UI option.</p>
-<ul>
-<li><a href=#change-via-the-api>Change via the API</a></li>
-<li><a href=#change-via-the-user-interface>Change via the User Interface</a></li>
-</ul>
-<p>Note: From my testing, the embedded Orchestrator session timeout value is not updated. This may be intentional or a bug.</p>
-<h2 id=change-via-the-api>Change via the API</h2>
-<p>The below code can be run from either the appliance directly, or from your desktop PC using cURL. Another option would be to run the same API calls in Postman.</p>
+<p>To increase the session timeout from the default 30 minutes, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL. Another option would be to run the same API calls in Postman.</p>
 <p>Note: From my testing, the embedded Orchestrator session timeout value is not updated. This may be intentional or a bug.</p>
 <h3 id=create-refresh-token>Create Refresh Token</h3>
 <p>Create the refresh token by running either of the code blocks below, depending on if you're using a local account or a domain user account.</p>
@@ -163,30 +155,6 @@ Share on:
 <span class=ln>3</span>-d &#39;{&#34;key&#34;:&#34;SESSION_TIMEOUT_DURATION_MINUTES&#34;, &#34;value&#34;:&#34;360&#34;}&#39;
 </code></pre></div><p>The output from the above command will show the newly applied setting.</p>
 <p><code>{"key":"SESSION\_TIMEOUT\_DURATION\_MINUTES","value":"360"}</code></p>
-<p>Once this has run, any new user sessions created will have the updated timeout value. There is no need to restart the server or any services / pods.</p>
-<p>Note: If you upgrade or patch vRealize Automation, the changes <em>may</em> be lost and need to be completed again.</p>
-<h2 id=change-via-the-user-interface>Change via the User Interface</h2>
-<p>Navigate to the URL https://&lt;&lt;vRA FQDN>>/automation-ui/#/provisioning-ui;ash=%2FconfigurationProperties</p>
-<div class="notices note">
-<div class=label>Note</div>
-<p>This URL is not available from any menu and must be entered in the browser URL field instead.</p>
-</div>
-<p>Select New Configuration Property
-<figure>
-<picture>
-<img class="image_figure image_internal" src=https://garyflynn.com/images/vra8-configuration-property-empty.png alt loading=lazy decoding=async width=970 height=168>
-</picture>
-</figure>
-</p>
-<p>Enter the Key <code>"SESSION_TIMEOUT_DURATION_MINUTES"</code>.</p>
-<p>Enter the Value of your choice. <code>360</code> (For example, <code>360</code> would be 6 hours)</p>
-<p>Select Create
-<figure>
-<picture>
-<img class="image_figure image_internal" src=https://garyflynn.com/images/vra8-configuration-property-session-timeout-key-value.png alt loading=lazy decoding=async width=524 height=223>
-</picture>
-</figure>
-</p>
 <p>Once this has run, any new user sessions created will have the updated timeout value. There is no need to restart the server or any services / pods.</p>
 <p>Note: If you upgrade or patch vRealize Automation, the changes <em>may</em> be lost and need to be completed again.</p>
 </div>
