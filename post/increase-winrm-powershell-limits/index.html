@@ -20,9 +20,9 @@
 <link rel=icon type=image/png sizes=32x32 href=https://garyflynn.com/icons/favicon-32x32.png>
 <link rel=manifest href=https://garyflynn.com/icons/site.webmanifest>
 <link rel=canonical href=https://garyflynn.com/post/increase-winrm-powershell-limits/>
-<link rel=preload href=https://garyflynn.com/css/styles.3b036736a1d66ba1240f4ced9c1c77ecc196d517165631497baea12abdeeb1f77324aa3981c060c56799008f4895729978e4a012198480c645eac4f790893257.css integrity="sha512-OwNnNqHWa6EkD0ztnBx37MGW1RcWVjFJe66hKr3usfdzJKo5gcBgxWeZAI9IlXKZeOSgEhmEgMZF6sT3kIkyVw==" as=style crossorigin=anonymous>
-<link rel=preload href=https://garyflynn.com/en/js/bundle.a7e29fae500d5aa0b137ab7f9ecfd16d0097f9aa642ebaa2e50088be505404a8995af89844f4456b23bc5b90b9387e95dc08247598a2bd7d816f88bfe4d7bceb.js as=script integrity="sha512-p+KfrlANWqCxN6t/ns/RbQCX+apkLrqi5QCIvlBUBKiZWviYRPRFayO8W5C5OH6V3AgkdZiivX2Bb4i/5Ne86w==" crossorigin=anonymous>
-<link rel=stylesheet type=text/css href=https://garyflynn.com/css/styles.3b036736a1d66ba1240f4ced9c1c77ecc196d517165631497baea12abdeeb1f77324aa3981c060c56799008f4895729978e4a012198480c645eac4f790893257.css integrity="sha512-OwNnNqHWa6EkD0ztnBx37MGW1RcWVjFJe66hKr3usfdzJKo5gcBgxWeZAI9IlXKZeOSgEhmEgMZF6sT3kIkyVw==" crossorigin=anonymous>
+<link rel=preload href=https://garyflynn.com/css/styles.be24f7004378517040689db6978f6a90034ab20a9dedc0122a3b9c31e61580f25d51c9a3120c53fe20970d8039d35dec7c49a3e442c85a9f6673cf263c88dd15.css integrity="sha512-viT3AEN4UXBAaJ22l49qkANKsgqd7cASKjucMeYVgPJdUcmjEgxT/iCXDYA5013sfEmj5ELIWp9mc88mPIjdFQ==" as=style crossorigin=anonymous>
+<link rel=preload href=https://garyflynn.com/en/js/bundle.7f647092ffab6102858ab92bae4e65bbeae89d4ff6e29aace780277762afcb3c86ab88f9ff22e3a54b6db55e549b9d2d26560e67a29a3cf9dca00c77bffd16fc.js as=script integrity="sha512-f2Rwkv+rYQKFirkrrk5lu+ronU/24pqs54And2KvyzyGq4j5/yLjpUtttV5Um50tJlYOZ6KaPPncoAx3v/0W/A==" crossorigin=anonymous>
+<link rel=stylesheet type=text/css href=https://garyflynn.com/css/styles.be24f7004378517040689db6978f6a90034ab20a9dedc0122a3b9c31e61580f25d51c9a3120c53fe20970d8039d35dec7c49a3e442c85a9f6673cf263c88dd15.css integrity="sha512-viT3AEN4UXBAaJ22l49qkANKsgqd7cASKjucMeYVgPJdUcmjEgxT/iCXDYA5013sfEmj5ELIWp9mc88mPIjdFQ==" crossorigin=anonymous>
 </head>
 <body data-code=1000000000000000 data-lines=false id=documentTop>
 <header class=nav_header>
@@ -115,7 +115,7 @@ Share on:
 </code></pre></div><p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/wsman.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Run the command below to increase the number of maximum shells per user</p>
@@ -123,7 +123,7 @@ Share on:
 </code></pre></div><p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/wsman-1.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Run the command below to set the maximum number of concurrent users</p>
@@ -131,7 +131,7 @@ Share on:
 </code></pre></div><p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/wsman-2.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Check the configurations have been updated</p>
@@ -139,7 +139,7 @@ Share on:
 </code></pre></div><p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/wsman-3.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>For the configurations changed above, I would recommend a minimum of 2 vCPU and 4 GB Memory.</p>
@@ -154,6 +154,12 @@ Share on:
 <aside class=sidebar>
 <section class=sidebar_inner>
 <br>
+<div class=search>
+<input type=search class="search_field form_field" placeholder=Search... id=find autocomplete=off data-scope=post>
+<label for=find class=search_label><svg class="icon"><title>search</title><use xlink:href="#search"/></svg>
+</label>
+<div class="search_results results"></div>
+</div>
 <div class=author_header>
 <img src=https://garyflynn.com/images/garyflynn-avatar.png alt="Gary Flynn photo">
 <h2>Gary Flynn</h2>
@@ -436,6 +442,7 @@ LIFECYCLE-MANAGER
 </a>
 </div>
 </footer>
-<script type=text/javascript src=https://garyflynn.com/en/js/bundle.a7e29fae500d5aa0b137ab7f9ecfd16d0097f9aa642ebaa2e50088be505404a8995af89844f4456b23bc5b90b9387e95dc08247598a2bd7d816f88bfe4d7bceb.js integrity="sha512-p+KfrlANWqCxN6t/ns/RbQCX+apkLrqi5QCIvlBUBKiZWviYRPRFayO8W5C5OH6V3AgkdZiivX2Bb4i/5Ne86w==" crossorigin=anonymous></script>
+<script type=text/javascript src=https://garyflynn.com/en/js/bundle.7f647092ffab6102858ab92bae4e65bbeae89d4ff6e29aace780277762afcb3c86ab88f9ff22e3a54b6db55e549b9d2d26560e67a29a3cf9dca00c77bffd16fc.js integrity="sha512-f2Rwkv+rYQKFirkrrk5lu+ronU/24pqs54And2KvyzyGq4j5/yLjpUtttV5Um50tJlYOZ6KaPPncoAx3v/0W/A==" crossorigin=anonymous></script>
+<script src=https://garyflynn.com/js/search.min.38771d8ed95e1e561b19921a119d373822062db39cace708b5c6801558e550af98714755a398df22f361f68deeacb1c464f0ff53210779a471c0b2153693cbc8.js></script>
 </body>
 </html>

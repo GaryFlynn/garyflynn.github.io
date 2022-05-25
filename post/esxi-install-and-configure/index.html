@@ -20,9 +20,9 @@
 <link rel=icon type=image/png sizes=32x32 href=https://garyflynn.com/icons/favicon-32x32.png>
 <link rel=manifest href=https://garyflynn.com/icons/site.webmanifest>
 <link rel=canonical href=https://garyflynn.com/post/esxi-install-and-configure/>
-<link rel=preload href=https://garyflynn.com/css/styles.3b036736a1d66ba1240f4ced9c1c77ecc196d517165631497baea12abdeeb1f77324aa3981c060c56799008f4895729978e4a012198480c645eac4f790893257.css integrity="sha512-OwNnNqHWa6EkD0ztnBx37MGW1RcWVjFJe66hKr3usfdzJKo5gcBgxWeZAI9IlXKZeOSgEhmEgMZF6sT3kIkyVw==" as=style crossorigin=anonymous>
-<link rel=preload href=https://garyflynn.com/en/js/bundle.a7e29fae500d5aa0b137ab7f9ecfd16d0097f9aa642ebaa2e50088be505404a8995af89844f4456b23bc5b90b9387e95dc08247598a2bd7d816f88bfe4d7bceb.js as=script integrity="sha512-p+KfrlANWqCxN6t/ns/RbQCX+apkLrqi5QCIvlBUBKiZWviYRPRFayO8W5C5OH6V3AgkdZiivX2Bb4i/5Ne86w==" crossorigin=anonymous>
-<link rel=stylesheet type=text/css href=https://garyflynn.com/css/styles.3b036736a1d66ba1240f4ced9c1c77ecc196d517165631497baea12abdeeb1f77324aa3981c060c56799008f4895729978e4a012198480c645eac4f790893257.css integrity="sha512-OwNnNqHWa6EkD0ztnBx37MGW1RcWVjFJe66hKr3usfdzJKo5gcBgxWeZAI9IlXKZeOSgEhmEgMZF6sT3kIkyVw==" crossorigin=anonymous>
+<link rel=preload href=https://garyflynn.com/css/styles.be24f7004378517040689db6978f6a90034ab20a9dedc0122a3b9c31e61580f25d51c9a3120c53fe20970d8039d35dec7c49a3e442c85a9f6673cf263c88dd15.css integrity="sha512-viT3AEN4UXBAaJ22l49qkANKsgqd7cASKjucMeYVgPJdUcmjEgxT/iCXDYA5013sfEmj5ELIWp9mc88mPIjdFQ==" as=style crossorigin=anonymous>
+<link rel=preload href=https://garyflynn.com/en/js/bundle.7f647092ffab6102858ab92bae4e65bbeae89d4ff6e29aace780277762afcb3c86ab88f9ff22e3a54b6db55e549b9d2d26560e67a29a3cf9dca00c77bffd16fc.js as=script integrity="sha512-f2Rwkv+rYQKFirkrrk5lu+ronU/24pqs54And2KvyzyGq4j5/yLjpUtttV5Um50tJlYOZ6KaPPncoAx3v/0W/A==" crossorigin=anonymous>
+<link rel=stylesheet type=text/css href=https://garyflynn.com/css/styles.be24f7004378517040689db6978f6a90034ab20a9dedc0122a3b9c31e61580f25d51c9a3120c53fe20970d8039d35dec7c49a3e442c85a9f6673cf263c88dd15.css integrity="sha512-viT3AEN4UXBAaJ22l49qkANKsgqd7cASKjucMeYVgPJdUcmjEgxT/iCXDYA5013sfEmj5ELIWp9mc88mPIjdFQ==" crossorigin=anonymous>
 </head>
 <body data-code=1000000000000000 data-lines=false id=documentTop>
 <header class=nav_header>
@@ -113,151 +113,151 @@ Share on:
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-install-1.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-install-2.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Once the installer has launched the wizard below, the installer is now loaded to memory and the installation media can be removed. If you are using a USB, you can leave the USB drive attached and install ESXi onto the USB and boot from there in future. Select Enter to continue.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-install-3.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Just like all good administrators do, have a read of the EULA and accept them if you do, by pressing F11.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-install-4.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>The installer will then scan for available storage attached to the server...</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-install-5.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Once the scan has finished it will show you the available drives. For this example, there is an 8GB disk for the ESXi installation, a 512GB SSD for vSAN Capacity Tier and a 256GB SSD for vSAN Cache Tier. Select the appropriate drive, and select Enter.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-install-6.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Select the appropriate Language and select Enter.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-install-7.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Enter a password for the root user. This should be a complex password and I recommend using a <a href=http://passwordsgenerator.net/>Password Generator</a> to create a long and complex password, without special characters, to avoid issues. Ensure that the passwords match and select Enter.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-install-8.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>One final confirmation screen. Select F11 and the installation will begin.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-install-9.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-install-10.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Once the installation is complete you will see the below screen. Ensure that the installation media is removed (the mounted ISO or the attached USB if you haven't used the USB as the boot device) and select Enter to restart the server.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-install-11.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Once the server has restarted, check the console screen and select F2 to load the login dialog box. Enter the password you set for the root user and select Enter.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-configure-1.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-configure-2.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Once you have successfully logged in, we need to configure the networking. Scroll down to Configure Management Networking, and select Enter.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-configure-3.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Select Network Adapters and you will notice that if you have multiple NICs connected to the server, only NIC1 is selected. To ensure management network redundancy, highlight NIC2 and select Space to toggle the connection status. With both NICs selected, select Enter.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-configure-4.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Navigate to VLAN and enter your VLAN ID for the management network if you have one, otherwise leave this blank.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-configure-7.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Navigate to IPv4 Configuration and press Enter. Navigate to "Set static IPv4 address and network configuration" and select Space. Navigate and enter the appropriate IPv4 address, subnet mask and default gateway. Press Enter to Save the configuration</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-configure-5.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Navigate to IPv6 Configuration and select Enter. Navigate to "Disable IPv6" and select Space and Enter to Save the configuration. Note that a restart of the server will be required for this setting to be applied.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-configure-6.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Navigate to DNS Configuration and select |Use the following settings" by selecting Space and enter your DNS servers and the hostname of the server. Select Enter to save.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-configure-8.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Navigate to Custom DNS Suffixes and enter your domain name. Select Enter to Save.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-configure-9.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>With all of the configuration done, select Esc and select Y to restart the host when prompted.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-configure-10.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Once the host has been restarted, the network will now be available and you should be able to access the Host UI available at https://<ip address>/ui/ where you can log in with the root username and password set during the installation.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/esxi-configure-11.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 </div>
@@ -271,6 +271,12 @@ Share on:
 <aside class=sidebar>
 <section class=sidebar_inner>
 <br>
+<div class=search>
+<input type=search class="search_field form_field" placeholder=Search... id=find autocomplete=off data-scope=post>
+<label for=find class=search_label><svg class="icon"><title>search</title><use xlink:href="#search"/></svg>
+</label>
+<div class="search_results results"></div>
+</div>
 <div class=author_header>
 <img src=https://garyflynn.com/images/garyflynn-avatar.png alt="Gary Flynn photo">
 <h2>Gary Flynn</h2>
@@ -553,6 +559,7 @@ LIFECYCLE-MANAGER
 </a>
 </div>
 </footer>
-<script type=text/javascript src=https://garyflynn.com/en/js/bundle.a7e29fae500d5aa0b137ab7f9ecfd16d0097f9aa642ebaa2e50088be505404a8995af89844f4456b23bc5b90b9387e95dc08247598a2bd7d816f88bfe4d7bceb.js integrity="sha512-p+KfrlANWqCxN6t/ns/RbQCX+apkLrqi5QCIvlBUBKiZWviYRPRFayO8W5C5OH6V3AgkdZiivX2Bb4i/5Ne86w==" crossorigin=anonymous></script>
+<script type=text/javascript src=https://garyflynn.com/en/js/bundle.7f647092ffab6102858ab92bae4e65bbeae89d4ff6e29aace780277762afcb3c86ab88f9ff22e3a54b6db55e549b9d2d26560e67a29a3cf9dca00c77bffd16fc.js integrity="sha512-f2Rwkv+rYQKFirkrrk5lu+ronU/24pqs54And2KvyzyGq4j5/yLjpUtttV5Um50tJlYOZ6KaPPncoAx3v/0W/A==" crossorigin=anonymous></script>
+<script src=https://garyflynn.com/js/search.min.38771d8ed95e1e561b19921a119d373822062db39cace708b5c6801558e550af98714755a398df22f361f68deeacb1c464f0ff53210779a471c0b2153693cbc8.js></script>
 </body>
 </html>

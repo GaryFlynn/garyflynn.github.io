@@ -20,9 +20,9 @@
 <link rel=icon type=image/png sizes=32x32 href=https://garyflynn.com/icons/favicon-32x32.png>
 <link rel=manifest href=https://garyflynn.com/icons/site.webmanifest>
 <link rel=canonical href=https://garyflynn.com/post/vrealize-lifecycle-manager-part-1-install-configure/>
-<link rel=preload href=https://garyflynn.com/css/styles.3b036736a1d66ba1240f4ced9c1c77ecc196d517165631497baea12abdeeb1f77324aa3981c060c56799008f4895729978e4a012198480c645eac4f790893257.css integrity="sha512-OwNnNqHWa6EkD0ztnBx37MGW1RcWVjFJe66hKr3usfdzJKo5gcBgxWeZAI9IlXKZeOSgEhmEgMZF6sT3kIkyVw==" as=style crossorigin=anonymous>
-<link rel=preload href=https://garyflynn.com/en/js/bundle.a7e29fae500d5aa0b137ab7f9ecfd16d0097f9aa642ebaa2e50088be505404a8995af89844f4456b23bc5b90b9387e95dc08247598a2bd7d816f88bfe4d7bceb.js as=script integrity="sha512-p+KfrlANWqCxN6t/ns/RbQCX+apkLrqi5QCIvlBUBKiZWviYRPRFayO8W5C5OH6V3AgkdZiivX2Bb4i/5Ne86w==" crossorigin=anonymous>
-<link rel=stylesheet type=text/css href=https://garyflynn.com/css/styles.3b036736a1d66ba1240f4ced9c1c77ecc196d517165631497baea12abdeeb1f77324aa3981c060c56799008f4895729978e4a012198480c645eac4f790893257.css integrity="sha512-OwNnNqHWa6EkD0ztnBx37MGW1RcWVjFJe66hKr3usfdzJKo5gcBgxWeZAI9IlXKZeOSgEhmEgMZF6sT3kIkyVw==" crossorigin=anonymous>
+<link rel=preload href=https://garyflynn.com/css/styles.be24f7004378517040689db6978f6a90034ab20a9dedc0122a3b9c31e61580f25d51c9a3120c53fe20970d8039d35dec7c49a3e442c85a9f6673cf263c88dd15.css integrity="sha512-viT3AEN4UXBAaJ22l49qkANKsgqd7cASKjucMeYVgPJdUcmjEgxT/iCXDYA5013sfEmj5ELIWp9mc88mPIjdFQ==" as=style crossorigin=anonymous>
+<link rel=preload href=https://garyflynn.com/en/js/bundle.7f647092ffab6102858ab92bae4e65bbeae89d4ff6e29aace780277762afcb3c86ab88f9ff22e3a54b6db55e549b9d2d26560e67a29a3cf9dca00c77bffd16fc.js as=script integrity="sha512-f2Rwkv+rYQKFirkrrk5lu+ronU/24pqs54And2KvyzyGq4j5/yLjpUtttV5Um50tJlYOZ6KaPPncoAx3v/0W/A==" crossorigin=anonymous>
+<link rel=stylesheet type=text/css href=https://garyflynn.com/css/styles.be24f7004378517040689db6978f6a90034ab20a9dedc0122a3b9c31e61580f25d51c9a3120c53fe20970d8039d35dec7c49a3e442c85a9f6673cf263c88dd15.css integrity="sha512-viT3AEN4UXBAaJ22l49qkANKsgqd7cASKjucMeYVgPJdUcmjEgxT/iCXDYA5013sfEmj5ELIWp9mc88mPIjdFQ==" crossorigin=anonymous>
 </head>
 <body data-code=1000000000000000 data-lines=false id=documentTop>
 <header class=nav_header>
@@ -134,42 +134,42 @@ Share on:
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt=vlcm-install-1.png class="image_figure image_internal image_unprocessed" src=images/vrlcm-configure-1.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Scroll down the page a little and you will see the list of applications which can be deployed by vRLCM and the different versions. Select the versions you will deploy in your environment and download them.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt=vlcm-install-2 class="image_figure image_internal image_unprocessed" src=images/vlcm-install-2.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>This will initiate the download requests which you can track in the Requests tab on the left hand menu. Once this has completed, select Settings, Certificate and enter the information to create a generic self signed certificate which will be deployed to each of the applications deployed by vRLCM.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt=vlcm-install-3 class="image_figure image_internal image_unprocessed" src=images/vlcm-install-3.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Once all of the applications have been downloaded, select Settings, Product Binaries, Add Product Binaries. Select My VMware Downloads and Discover. This will then map those downloads to the correct products and you can select to import the Install and/or Upgrade binaries.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt=vlcm-install-4 class="image_figure image_internal image_unprocessed" src=images/vlcm-install-4.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>With the products added, from the left hand menu, select Data Centers, Add Data Center. Enter a name for your Data Center and select an appropriate location.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt=vlcm-install-4 class="image_figure image_internal image_unprocessed" src=images/vlcm-install-6.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Once the data center has been added, select Manage vCenter Servers and add your existing vCenter Server details. A data collection will be requested which you can verify has been successful from the Requests page.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt=vlcm-install-5 class="image_figure image_internal image_unprocessed" src=images/vlcm-install-5.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Once the data collection has completed, you have successfully installed and configured vRealize Lifecycle Manager. <a href=https://garyflynn.com/post/vrealize-lifecycle-manager-part-2-deploying-an-application/>Part two</a> of this blog will cover deploying your first application.</p>
@@ -184,6 +184,12 @@ Share on:
 <aside class=sidebar>
 <section class=sidebar_inner>
 <br>
+<div class=search>
+<input type=search class="search_field form_field" placeholder=Search... id=find autocomplete=off data-scope=post>
+<label for=find class=search_label><svg class="icon"><title>search</title><use xlink:href="#search"/></svg>
+</label>
+<div class="search_results results"></div>
+</div>
 <div class=author_header>
 <img src=https://garyflynn.com/images/garyflynn-avatar.png alt="Gary Flynn photo">
 <h2>Gary Flynn</h2>
@@ -466,6 +472,7 @@ LIFECYCLE-MANAGER
 </a>
 </div>
 </footer>
-<script type=text/javascript src=https://garyflynn.com/en/js/bundle.a7e29fae500d5aa0b137ab7f9ecfd16d0097f9aa642ebaa2e50088be505404a8995af89844f4456b23bc5b90b9387e95dc08247598a2bd7d816f88bfe4d7bceb.js integrity="sha512-p+KfrlANWqCxN6t/ns/RbQCX+apkLrqi5QCIvlBUBKiZWviYRPRFayO8W5C5OH6V3AgkdZiivX2Bb4i/5Ne86w==" crossorigin=anonymous></script>
+<script type=text/javascript src=https://garyflynn.com/en/js/bundle.7f647092ffab6102858ab92bae4e65bbeae89d4ff6e29aace780277762afcb3c86ab88f9ff22e3a54b6db55e549b9d2d26560e67a29a3cf9dca00c77bffd16fc.js integrity="sha512-f2Rwkv+rYQKFirkrrk5lu+ronU/24pqs54And2KvyzyGq4j5/yLjpUtttV5Um50tJlYOZ6KaPPncoAx3v/0W/A==" crossorigin=anonymous></script>
+<script src=https://garyflynn.com/js/search.min.38771d8ed95e1e561b19921a119d373822062db39cace708b5c6801558e550af98714755a398df22f361f68deeacb1c464f0ff53210779a471c0b2153693cbc8.js></script>
 </body>
 </html>

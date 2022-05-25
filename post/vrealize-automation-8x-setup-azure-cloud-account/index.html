@@ -20,9 +20,9 @@
 <link rel=icon type=image/png sizes=32x32 href=https://garyflynn.com/icons/favicon-32x32.png>
 <link rel=manifest href=https://garyflynn.com/icons/site.webmanifest>
 <link rel=canonical href=https://garyflynn.com/post/vrealize-automation-8x-setup-azure-cloud-account/>
-<link rel=preload href=https://garyflynn.com/css/styles.3b036736a1d66ba1240f4ced9c1c77ecc196d517165631497baea12abdeeb1f77324aa3981c060c56799008f4895729978e4a012198480c645eac4f790893257.css integrity="sha512-OwNnNqHWa6EkD0ztnBx37MGW1RcWVjFJe66hKr3usfdzJKo5gcBgxWeZAI9IlXKZeOSgEhmEgMZF6sT3kIkyVw==" as=style crossorigin=anonymous>
-<link rel=preload href=https://garyflynn.com/en/js/bundle.a7e29fae500d5aa0b137ab7f9ecfd16d0097f9aa642ebaa2e50088be505404a8995af89844f4456b23bc5b90b9387e95dc08247598a2bd7d816f88bfe4d7bceb.js as=script integrity="sha512-p+KfrlANWqCxN6t/ns/RbQCX+apkLrqi5QCIvlBUBKiZWviYRPRFayO8W5C5OH6V3AgkdZiivX2Bb4i/5Ne86w==" crossorigin=anonymous>
-<link rel=stylesheet type=text/css href=https://garyflynn.com/css/styles.3b036736a1d66ba1240f4ced9c1c77ecc196d517165631497baea12abdeeb1f77324aa3981c060c56799008f4895729978e4a012198480c645eac4f790893257.css integrity="sha512-OwNnNqHWa6EkD0ztnBx37MGW1RcWVjFJe66hKr3usfdzJKo5gcBgxWeZAI9IlXKZeOSgEhmEgMZF6sT3kIkyVw==" crossorigin=anonymous>
+<link rel=preload href=https://garyflynn.com/css/styles.be24f7004378517040689db6978f6a90034ab20a9dedc0122a3b9c31e61580f25d51c9a3120c53fe20970d8039d35dec7c49a3e442c85a9f6673cf263c88dd15.css integrity="sha512-viT3AEN4UXBAaJ22l49qkANKsgqd7cASKjucMeYVgPJdUcmjEgxT/iCXDYA5013sfEmj5ELIWp9mc88mPIjdFQ==" as=style crossorigin=anonymous>
+<link rel=preload href=https://garyflynn.com/en/js/bundle.7f647092ffab6102858ab92bae4e65bbeae89d4ff6e29aace780277762afcb3c86ab88f9ff22e3a54b6db55e549b9d2d26560e67a29a3cf9dca00c77bffd16fc.js as=script integrity="sha512-f2Rwkv+rYQKFirkrrk5lu+ronU/24pqs54And2KvyzyGq4j5/yLjpUtttV5Um50tJlYOZ6KaPPncoAx3v/0W/A==" crossorigin=anonymous>
+<link rel=stylesheet type=text/css href=https://garyflynn.com/css/styles.be24f7004378517040689db6978f6a90034ab20a9dedc0122a3b9c31e61580f25d51c9a3120c53fe20970d8039d35dec7c49a3e442c85a9f6673cf263c88dd15.css integrity="sha512-viT3AEN4UXBAaJ22l49qkANKsgqd7cASKjucMeYVgPJdUcmjEgxT/iCXDYA5013sfEmj5ELIWp9mc88mPIjdFQ==" crossorigin=anonymous>
 </head>
 <body data-code=1000000000000000 data-lines=false id=documentTop>
 <header class=nav_header>
@@ -126,14 +126,14 @@ Share on:
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-directory.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Navigate to Subscriptions where you will see all subscriptions in this directory. Select the subscription you want to integrate with vRA and copy the Subscription ID to a notepad.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-subscription.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <div class="notices note">
@@ -145,7 +145,7 @@ Subscription ID: c607c082-45ef-4f15-97f2-937038d67333
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-tenant.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <div class="notices note">
@@ -158,21 +158,21 @@ Tenant ID: c73dcac0-7bc9-48be-9985-9f3622452904</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-app-registrations.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Enter a logical name for the application registration, such as "vRealize Automation 8.x Homelab". For the supported account types, select the option applicable to your environment. For a single directory, the first option will be sufficient, however if your environment has multiple organizational directories, select the second option so that the single app registration can be used across all directories. The redirect URL should be left blank.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-new-app-registration.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Once the app is registered, copy the Application (client) ID to your notepad. The Directory (tenant) ID should be the same as we previously retrieved.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-client-id.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <div class="notices note">
@@ -186,21 +186,21 @@ Client Application ID: 7e07512b-3db4-4dce-bfc5-5da4c5b260d3<br></p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-client-secrets.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Enter a description for the client secret, such as "vRealize Automation 8.x Homelab Client Secret" and set the expiry per your security policy, followed by Add.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-add-client-secret.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Once this is created, copy the Value from the client secret to your notepad. Be very careful, once you perform another operation, or navigate away from this page, the secret key can <strong><em>never be retrieved again</em></strong>. Ensure you have it recorded somewhere safe and backed up!</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-client-secret.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <div class="notices note">
@@ -214,21 +214,21 @@ Client Application Secret Key: c6zf/Yr/.y/4VNfy8C9s8jgFYU0JxPq8<br></p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-client-app-permission.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>From the Select an API screen, select Azure Service Management under Commonly used Microsoft APIs.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-api-service-management.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Select Delegated permissions and tick user_impersonation, followed by Add permissions.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-api-permissions.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <h2 id=app-registration-permissions>App Registration Permissions</h2>
@@ -236,14 +236,14 @@ Client Application Secret Key: c6zf/Yr/.y/4VNfy8C9s8jgFYU0JxPq8<br></p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-subscription.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Select Add, Add Role Assignment and select the Role as Contributor. This will give the app registration access to create and manage all resources, except access to resources. For Assign access to, leave this as the default "Azure AD user, group, or service principal". In the select field, search for the name of your app registration (vRealize Automation 8.x Homelab) and select the correct object. Once selected, ensure the object exists under Selected members and click Save.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-subscription-add-role-assignments.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <h2 id=register-compute-provider-to-subscription>Register Compute Provider to Subscription</h2>
@@ -251,21 +251,21 @@ Client Application Secret Key: c6zf/Yr/.y/4VNfy8C9s8jgFYU0JxPq8<br></p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-subscription-resource-providers.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>In the Filter by name... search box, enter Compute and Register the Microsoft.Compute resource provider.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-subscription-resource-provider-registering.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>The registration will take a few minutes but will eventually show as Registered. You can refresh the status with the Refresh button.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-subscription-resource-provider-registered.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <h2 id=vra-portal-configuration>vRA Portal Configuration</h2>
@@ -273,41 +273,41 @@ Client Application Secret Key: c6zf/Yr/.y/4VNfy8C9s8jgFYU0JxPq8<br></p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-new-cloud-account.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>In the New Cloud Account page, copy in the four values we obtained from the Azure Portal earlier, and select Validate to confirm the credentials are correct.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-new-cloud-account-azure-credentials.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Enter a name for the Cloud Account and optionally a description. Under Configuration, select the Azure regions to allow provisioning to, ensure the checkbox is selected to create a cloud zone for each of the selected regions, and under Capability tags, enter "cloud:azure". This enable us to use tagging in the blueprint request forms to select the appropriate cloud account / endpoint to provision to. Once done, select Add.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-new-cloud-account-azure-config.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>Once the Cloud Account has been created, under Configure > Cloud Zones, you will see your selected regions each having their own Cloud Zones.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-cloud-zones.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p>In more complex environments, you can Open the Cloud Zone and select the Compute tab, and for the region, assign capability tags. If for example you have separate regions for dev, test and prod, you could assign the capability tag “environment:dev” to UK West, and "environment:test" & "environment:prod" to UK South, to ensure that dev workloads are placed only in the UK West region, and the rest in UK South. The second part of this configuration is done in the blueprint request form.</p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-uk-west-tags.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 <p><figure>
 <picture>
 <img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-uk-south-tags.png>
-<figcaption></figcaption></picture>
+</picture>
 </figure>
 </p>
 </div>
@@ -321,6 +321,12 @@ Client Application Secret Key: c6zf/Yr/.y/4VNfy8C9s8jgFYU0JxPq8<br></p>
 <aside class=sidebar>
 <section class=sidebar_inner>
 <br>
+<div class=search>
+<input type=search class="search_field form_field" placeholder=Search... id=find autocomplete=off data-scope=post>
+<label for=find class=search_label><svg class="icon"><title>search</title><use xlink:href="#search"/></svg>
+</label>
+<div class="search_results results"></div>
+</div>
 <div class=author_header>
 <img src=https://garyflynn.com/images/garyflynn-avatar.png alt="Gary Flynn photo">
 <h2>Gary Flynn</h2>
@@ -603,6 +609,7 @@ LIFECYCLE-MANAGER
 </a>
 </div>
 </footer>
-<script type=text/javascript src=https://garyflynn.com/en/js/bundle.a7e29fae500d5aa0b137ab7f9ecfd16d0097f9aa642ebaa2e50088be505404a8995af89844f4456b23bc5b90b9387e95dc08247598a2bd7d816f88bfe4d7bceb.js integrity="sha512-p+KfrlANWqCxN6t/ns/RbQCX+apkLrqi5QCIvlBUBKiZWviYRPRFayO8W5C5OH6V3AgkdZiivX2Bb4i/5Ne86w==" crossorigin=anonymous></script>
+<script type=text/javascript src=https://garyflynn.com/en/js/bundle.7f647092ffab6102858ab92bae4e65bbeae89d4ff6e29aace780277762afcb3c86ab88f9ff22e3a54b6db55e549b9d2d26560e67a29a3cf9dca00c77bffd16fc.js integrity="sha512-f2Rwkv+rYQKFirkrrk5lu+ronU/24pqs54And2KvyzyGq4j5/yLjpUtttV5Um50tJlYOZ6KaPPncoAx3v/0W/A==" crossorigin=anonymous></script>
+<script src=https://garyflynn.com/js/search.min.38771d8ed95e1e561b19921a119d373822062db39cace708b5c6801558e550af98714755a398df22f361f68deeacb1c464f0ff53210779a471c0b2153693cbc8.js></script>
 </body>
 </html>
