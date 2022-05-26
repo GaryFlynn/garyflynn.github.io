@@ -113,25 +113,25 @@ Share on:
 <div class=post_body><p>With access to vCenter or vRealize Automation comes great responsibility. Clients often require a quick and easy way to take a short term snapshot of a server so that they can quick and easily rollback application changes. VMware provides a robust snapshot function, however when things go well these snapshots are often left behind or forgotten about.</p>
 <p>Run PowerCLI and run the below commands to get a list of all VMs with a Snapshot</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln>1</span>Get-VM | Get-Snapshot
-</code></pre></div><p><a href=images/snapshots-1.png><figure>
+</code></pre></div><p><a href=/images/snapshots-1.png><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/snapshots-1.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/snapshots-1.png>
 </picture>
 </figure>
 </a></p>
 <p>To make the output a little nicer on the eye, run the following command</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln>1</span>Get-VM | Get-Snapshot | Select VM,Name,Description,{[int]$_.SizeMB},Created
-</code></pre></div><p><a href=images/snapshots-2.png><figure>
+</code></pre></div><p><a href=/images/snapshots-2.png><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/snapshots-2.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/snapshots-2.png>
 </picture>
 </figure>
 </a></p>
 <p>To limit the results to only snapshots that are greater than 7 days old, run the following command</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln>1</span>Get-VM | Get-Snapshot | Where { $_.Created -lt (Get-Date).AddDays(-7)} | Select VM,Name,Description,{[int]$_.SizeMB},Created
-</code></pre></div><p><a href=images/snapshots-3.png><figure>
+</code></pre></div><p><a href=/images/snapshots-3.png><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/snapshots-3.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/snapshots-3.png>
 </picture>
 </figure>
 </a></p>
@@ -140,7 +140,7 @@ Share on:
 </code></pre></div><p>I have also written a basic PowerShell tool to manage Snapshots. If you encounter any issues with it, just let me know via the Contact page and I will happily provide assistance.</p>
 <p><a href=scripts/SnapshotManagement.ps1><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/powershell_file.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/powershell_file.png>
 </picture>
 </figure>
 </a></p>

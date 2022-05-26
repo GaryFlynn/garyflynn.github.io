@@ -120,14 +120,14 @@ Share on:
 <p>To provide the vRA portal access to your GitHub.com repositories, you must create a Personal Access Token and provide the token to the vRA portal. To create a Personal Access Token, log into your GitHub.com account and navigate to Settings > Developer Settings > Personal access tokens (or click <a href=https://github.com/settings/tokens/>here</a>). Select the Generate new token button and you may be asked to confirm your password again. On the New personal access token page, in the Note field select a meaningful name, such as "vRA 8 Repo Access" and select the permissions you require. For my environment, I have only provided the "Full control of private repositories" checkbox as I require access to my private and public repos.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-github-token-permissions.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-github-token-permissions.png>
 </picture>
 </figure>
 </p>
 <p>Once selected, click Generate Token and copy the token that is generated and record it somewhere safe. It can not be retrieved later, but can be regenerated if required.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-github-token.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-github-token.png>
 </picture>
 </figure>
 </p>
@@ -136,7 +136,7 @@ Share on:
 <p>To set up this integration, log into the vRA Portal, and select Cloud Assembly > Infrastructure > Connections > Integrations. Select Add Integration > GitHub. The Server URL must remain untouched as <a href=https://api.github.com>https://api.github.com</a> and the Token field should be filled with the Token you just generated. Note that GitHub Enterprise is not supported in vRA 8.0. Validate the credentials, provide a meaningful name and click Add.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-github-new-integration.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-github-new-integration.png>
 </picture>
 </figure>
 </p>
@@ -152,14 +152,14 @@ Type: Action based scripts</p>
 <p>Once both have been added, a sync will automatically run and you should see the below.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-github-repos-sync.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-github-repos-sync.png>
 </picture>
 </figure>
 </p>
 <p>As you can see from the above image, the sync has found 2 ABX actions on my GitHub repo and has synced this to vRA. These ABX scripts are now available for consumption in the Extensibility > Library > Actions view.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-github-imported-abx.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-github-imported-abx.png>
 </picture>
 </figure>
 </p>

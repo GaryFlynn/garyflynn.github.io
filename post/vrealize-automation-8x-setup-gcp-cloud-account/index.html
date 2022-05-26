@@ -123,7 +123,7 @@ Share on:
 <p>To retrieve the project ID, log into the GCP Console and select the appropriate Project. On the Home Dashboard under Project info, copy the Project ID and take note of it to validate it later in the vRA Portal.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-gcp-project-id.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-gcp-project-id.png>
 </picture>
 </figure>
 </p>
@@ -131,7 +131,7 @@ Share on:
 <p>The GCP project you have created for your environment, must have the Compute Engine API enable. Log into the GCP Console and select your project. From the menu, select APIs & Services > Enable APIs and Services. In the Search for APIs & Services box, type Compute Engine API and select the Compute Engine API.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-gcp-compute-engine-api.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-gcp-compute-engine-api.png>
 </picture>
 </figure>
 </p>
@@ -140,7 +140,7 @@ Share on:
 <p>To create a service account, log into the GCP Console and ensure that you have selected the correct Project that you are working in. From the menu, select IAM & Admin > Service accounts > Create Service Account.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-gcp-service-accounts-1024x215.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-gcp-service-accounts-1024x215.png>
 </picture>
 </figure>
 </p>
@@ -152,7 +152,7 @@ Share on:
 <p>Give the service account a description, such as "Service account used for connecting GCP to the Homelab vRealize Automation 8.x environment".</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-gcp-new-service-account-svc-vra8.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-gcp-new-service-account-svc-vra8.png>
 </picture>
 </figure>
 </p>
@@ -166,7 +166,7 @@ Share on:
 <p>Once the roles are selected, click Continue.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-gcp-service-account-new-permissions.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-gcp-service-account-new-permissions.png>
 </picture>
 </figure>
 </p>
@@ -174,14 +174,14 @@ Share on:
 <p>Select the Key type as JSON and select Create.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-gcp-service-account-create-key.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-gcp-service-account-create-key.png>
 </picture>
 </figure>
 </p>
 <p>This will create a JSON file and your browser will download the file. Save it somewhere you can retrieve later. Once stored somewhere securely, select Done.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-gcp-service-account-key-id.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-gcp-service-account-key-id.png>
 </picture>
 </figure>
 </p>
@@ -189,35 +189,35 @@ Share on:
 <p>Back in the vRA portal, select Cloud Assembly > Infrastructure > Connections > Cloud Accounts > Add Cloud Account > Google Cloud Platform</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-new-cloud-account.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-new-cloud-account.png>
 </picture>
 </figure>
 </p>
 <p>In the New Cloud Account page, select the Import JSON Key button up the top and navigate to the previously downloaded JSON file. This will then auto-fill the next sections for you. Once this is loaded, confirm it all looks correct and select Validate.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-gcp-new-cloud-account-gcp-credentials.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-gcp-new-cloud-account-gcp-credentials.png>
 </picture>
 </figure>
 </p>
 <p>Enter a name for the Cloud Account and optionally a description. Under Configuration, select the GCP regions to allow provisioning to, ensure the checkbox is select to create a cloud zone for each of the selected regions, and under Capability tags, enter “cloud:azure”. This enable us to use tagging in the blueprint request forms to select the appropriate cloud account / endpoint to provision to. Once done, select Add.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-gcp-new-cloud-account-gcp-config.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-gcp-new-cloud-account-gcp-config.png>
 </picture>
 </figure>
 </p>
 <p>Once the Cloud Account has been created, under Configure > Cloud Zones, you will see your selected regions each having their own Cloud Zones.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-gcp-cloud-zones.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-gcp-cloud-zones.png>
 </picture>
 </figure>
 </p>
 <p>In more complex environments, you can Open the Cloud Zone and select the Compute tab, and for each availability zone, assign capability tags. If for example you have separate availability zones for dev, test and prod, you could assign the capability tag “environment:dev” to europe-west2-c, “environment:test” to europe-west2-b & “environment:prod” to europe-west2-a, to ensure that different workload environments are placed in different availability zones. The second part of this configuration is done in the blueprint request form.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-gcp-availability-zone-tags.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-gcp-availability-zone-tags.png>
 </picture>
 </figure>
 </p>

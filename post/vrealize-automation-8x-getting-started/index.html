@@ -114,7 +114,7 @@ Share on:
 <div class=post_body><p>In the previous <a href=https://garyflynn.com/post/vrealize-suite-2019-deploy-using-vrslcm/>post</a> we deployed all of the vRealize Suite products and we are now ready to log into vRA and configure it for use. vRA 8.0 is a fundamental change from 7.x and it now consists of four main components, Cloud Assembly, Service Broker, Code Stream and Orchestrator. Let's get vRA 8.0 configured! Load up the vRA homepage https://&lt;vRA FDQN>/ where you are greeted with the welcome page. One thing to note is that the new vRA 8.0 appliance does not contain a VAMI, instead non-UI configuration is done using the "vracli" commands on the appliance shell.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt=vra8-welcome class="image_figure image_internal image_unprocessed" src=images/vra8-welcome.png>
+<img loading=lazy decoding=async alt=vra8-welcome class="image_figure image_internal image_unprocessed" src=/images/vra8-welcome.png>
 </picture>
 </figure>
 </p>
@@ -122,54 +122,54 @@ Share on:
 <p>Enter your vCenter FQDN / IP address along with the username and password with appropriate permissions. Validate the credentials, select the Datacenter where provisioning is allowed, and select "Create and go to next step".</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt=vra8-quickstart-vcenter class="image_figure image_internal image_unprocessed" src=images/vra8-quickstart-vcenter.png>
+<img loading=lazy decoding=async alt=vra8-quickstart-vcenter class="image_figure image_internal image_unprocessed" src=/images/vra8-quickstart-vcenter.png>
 </picture>
 </figure>
 </p>
 <p>Optionally configure your NSX-V / NSX-T environment with FDQN / IP address, username and password, validate the credentials and select "Create and go to next step".</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt=vra8-quickstart-nsx class="image_figure image_internal image_unprocessed" src=images/vra8-quickstart-nsx.png>
+<img loading=lazy decoding=async alt=vra8-quickstart-nsx class="image_figure image_internal image_unprocessed" src=/images/vra8-quickstart-nsx.png>
 </picture>
 </figure>
 </p>
 <p>The Basic Configuration section is where you select a vCenter template, and the quickstart wizard will create your first blueprint, release it to a catalog and then deploy it for the first time. Select the vCenter template, datastore and network before choosing between DHCP and Static IP. If choosing Static IP, provide details of the network IP range, default gateway, DNS servers and optionally a Customization Spec to use. Select Save and Next Step.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt=vra8-quickstart-basic class="image_figure image_internal image_unprocessed" src=images/vra8-quickstart-basic.png>
+<img loading=lazy decoding=async alt=vra8-quickstart-basic class="image_figure image_internal image_unprocessed" src=/images/vra8-quickstart-basic.png>
 </picture>
 </figure>
 </p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt=vra8-quickstart-basic-network class="image_figure image_internal image_unprocessed" src=images/vra8-quickstart-basic-network.png>
+<img loading=lazy decoding=async alt=vra8-quickstart-basic-network class="image_figure image_internal image_unprocessed" src=/images/vra8-quickstart-basic-network.png>
 </picture>
 </figure>
 </p>
 <p>Governance Policies are critical for any environment and this is where you select the Default Lease duration along with the machine naming standard. By default, the lease will be 1 week and we will keep this as is. Select Edit next to the Machine Name and change the Machine Name Prefix from Requestor Name - 001 to Project Name - 001, then select Next Step.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt=vra8-quickstart-policies class="image_figure image_internal image_unprocessed" src=images/vra8-quickstart-policies.png>
+<img loading=lazy decoding=async alt=vra8-quickstart-policies class="image_figure image_internal image_unprocessed" src=/images/vra8-quickstart-policies.png>
 </picture>
 </figure>
 </p>
 <p>Confirm the Summary page looks correct and optionally disable the "Automatically deploy my template when Quickstart completes" option along with optionally disabling the "Add sample NSX-V blueprints to the catalog". Now run the Quickstart!</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt=vra8-quickstart-summary class="image_figure image_internal image_unprocessed" src=images/vra8-quickstart-summary.png>
+<img loading=lazy decoding=async alt=vra8-quickstart-summary class="image_figure image_internal image_unprocessed" src=/images/vra8-quickstart-summary.png>
 </picture>
 </figure>
 </p>
 <p>Once the wizard is complete, verify everything is successful before closing the wizard and moving on. Congratulations, you have the basic vRA 8.0 constructs in place now for your existing vSphere template. The page will redirect you back to the vRA Services page. Check out the <a href=https://garyflynn.com/post/vrealize-automation-8x-services/>next post</a> to learn about the different Services.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt=vra8-quickstart-success class="image_figure image_internal image_unprocessed" src=images/vra8-quickstart-success.png>
+<img loading=lazy decoding=async alt=vra8-quickstart-success class="image_figure image_internal image_unprocessed" src=/images/vra8-quickstart-success.png>
 </picture>
 </figure>
 </p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt=vra8-services class="image_figure image_internal image_unprocessed" src=images/vra8-services.png>
+<img loading=lazy decoding=async alt=vra8-services class="image_figure image_internal image_unprocessed" src=/images/vra8-services.png>
 </picture>
 </figure>
 </p>

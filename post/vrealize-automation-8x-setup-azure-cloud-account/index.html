@@ -126,14 +126,14 @@ Share on:
 <p>To locate the subscription ID, log into the Azure Portal and ensure you have selected the correct Directory. If you have multiple directories, you can select the correct one from the menu option below.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-directory.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-directory.png>
 </picture>
 </figure>
 </p>
 <p>Navigate to Subscriptions where you will see all subscriptions in this directory. Select the subscription you want to integrate with vRA and copy the Subscription ID to a notepad.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-subscription.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-subscription.png>
 </picture>
 </figure>
 </p>
@@ -145,7 +145,7 @@ Subscription ID: c607c082-45ef-4f15-97f2-937038d67333
 <p>To locate the tenant ID, log into the Azure Portal and ensure you are still logged in with the correct directory. From the Azure Portal homepage, search for or select Azure Active Directory. This will load the directory you are currently in and from the overview page we can grab the Tenant ID. Copy this to a notepad along with the previous Subscription ID.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-tenant.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-tenant.png>
 </picture>
 </figure>
 </p>
@@ -158,21 +158,21 @@ Tenant ID: c73dcac0-7bc9-48be-9985-9f3622452904</p>
 <p>From with the Azure Active Directory interface, under the Manage menu, select App registrations > New registration.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-app-registrations.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-app-registrations.png>
 </picture>
 </figure>
 </p>
 <p>Enter a logical name for the application registration, such as "vRealize Automation 8.x Homelab". For the supported account types, select the option applicable to your environment. For a single directory, the first option will be sufficient, however if your environment has multiple organizational directories, select the second option so that the single app registration can be used across all directories. The redirect URL should be left blank.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-new-app-registration.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-new-app-registration.png>
 </picture>
 </figure>
 </p>
 <p>Once the app is registered, copy the Application (client) ID to your notepad. The Directory (tenant) ID should be the same as we previously retrieved.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-client-id.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-client-id.png>
 </picture>
 </figure>
 </p>
@@ -186,21 +186,21 @@ Client Application ID: 7e07512b-3db4-4dce-bfc5-5da4c5b260d3<br></p>
 <p>The Client Application Secret Key is the "password" used by the client application to authenticate to Azure. Think of the Client Application ID as the username and the Client Application Secret Key as the password. To generate the secret key, select your app registration (vRealize Automation 8.x Homelab) and under Manage, select Certificates and Secrets > New client secret.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-client-secrets.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-client-secrets.png>
 </picture>
 </figure>
 </p>
 <p>Enter a description for the client secret, such as "vRealize Automation 8.x Homelab Client Secret" and set the expiry per your security policy, followed by Add.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-add-client-secret.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-add-client-secret.png>
 </picture>
 </figure>
 </p>
 <p>Once this is created, copy the Value from the client secret to your notepad. Be very careful, once you perform another operation, or navigate away from this page, the secret key can <strong><em>never be retrieved again</em></strong>. Ensure you have it recorded somewhere safe and backed up!</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-client-secret.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-client-secret.png>
 </picture>
 </figure>
 </p>
@@ -214,21 +214,21 @@ Client Application Secret Key: c6zf/Yr/.y/4VNfy8C9s8jgFYU0JxPq8<br></p>
 <p>From the menu on the left, select API permissions, Add a permission.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-client-app-permission.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-client-app-permission.png>
 </picture>
 </figure>
 </p>
 <p>From the Select an API screen, select Azure Service Management under Commonly used Microsoft APIs.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-api-service-management.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-api-service-management.png>
 </picture>
 </figure>
 </p>
 <p>Select Delegated permissions and tick user_impersonation, followed by Add permissions.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-api-permissions.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-api-permissions.png>
 </picture>
 </figure>
 </p>
@@ -236,14 +236,14 @@ Client Application Secret Key: c6zf/Yr/.y/4VNfy8C9s8jgFYU0JxPq8<br></p>
 <p>Now that we have an account to connect to Azure, the next step is to give it the required permissions to the subscription. Navigate back to Subscriptions, select the subscription you are adding to vRA and on the menu, select Access control (IAM).</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-subscription.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-subscription.png>
 </picture>
 </figure>
 </p>
 <p>Select Add, Add Role Assignment and select the Role as Contributor. This will give the app registration access to create and manage all resources, except access to resources. For Assign access to, leave this as the default "Azure AD user, group, or service principal". In the select field, search for the name of your app registration (vRealize Automation 8.x Homelab) and select the correct object. Once selected, ensure the object exists under Selected members and click Save.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-subscription-add-role-assignments.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-subscription-add-role-assignments.png>
 </picture>
 </figure>
 </p>
@@ -251,21 +251,21 @@ Client Application Secret Key: c6zf/Yr/.y/4VNfy8C9s8jgFYU0JxPq8<br></p>
 <p>The final step to complete in Azure is to navigate to your Subscription in the Azure portal, and on the menu, scroll down and select Settings, Resource providers.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-subscription-resource-providers.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-subscription-resource-providers.png>
 </picture>
 </figure>
 </p>
 <p>In the Filter by name... search box, enter Compute and Register the Microsoft.Compute resource provider.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-subscription-resource-provider-registering.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-subscription-resource-provider-registering.png>
 </picture>
 </figure>
 </p>
 <p>The registration will take a few minutes but will eventually show as Registered. You can refresh the status with the Refresh button.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-subscription-resource-provider-registered.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-subscription-resource-provider-registered.png>
 </picture>
 </figure>
 </p>
@@ -273,41 +273,41 @@ Client Application Secret Key: c6zf/Yr/.y/4VNfy8C9s8jgFYU0JxPq8<br></p>
 <p>Back in the vRA portal, select Cloud Assembly > Infrastructure > Connections > Cloud Accounts > Add Cloud Account > Microsoft Azure.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-new-cloud-account.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-new-cloud-account.png>
 </picture>
 </figure>
 </p>
 <p>In the New Cloud Account page, copy in the four values we obtained from the Azure Portal earlier, and select Validate to confirm the credentials are correct.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-new-cloud-account-azure-credentials.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-new-cloud-account-azure-credentials.png>
 </picture>
 </figure>
 </p>
 <p>Enter a name for the Cloud Account and optionally a description. Under Configuration, select the Azure regions to allow provisioning to, ensure the checkbox is selected to create a cloud zone for each of the selected regions, and under Capability tags, enter "cloud:azure". This enable us to use tagging in the blueprint request forms to select the appropriate cloud account / endpoint to provision to. Once done, select Add.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-new-cloud-account-azure-config.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-new-cloud-account-azure-config.png>
 </picture>
 </figure>
 </p>
 <p>Once the Cloud Account has been created, under Configure > Cloud Zones, you will see your selected regions each having their own Cloud Zones.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-cloud-zones.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-cloud-zones.png>
 </picture>
 </figure>
 </p>
 <p>In more complex environments, you can Open the Cloud Zone and select the Compute tab, and for the region, assign capability tags. If for example you have separate regions for dev, test and prod, you could assign the capability tag “environment:dev” to UK West, and "environment:test" & "environment:prod" to UK South, to ensure that dev workloads are placed only in the UK West region, and the rest in UK South. The second part of this configuration is done in the blueprint request form.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-uk-west-tags.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-uk-west-tags.png>
 </picture>
 </figure>
 </p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/vra8-azure-uk-south-tags.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/vra8-azure-uk-south-tags.png>
 </picture>
 </figure>
 </p>

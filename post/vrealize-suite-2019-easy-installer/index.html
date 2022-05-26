@@ -126,7 +126,7 @@ Share on:
 <p>The first part of deployment is done with the new "<strong>vRealize Easy Installer</strong>" which is downloaded from the vRSLCM download page <a href="https://my.vmware.com/group/vmware/details?downloadGroup=VRSLCM-800&productId=938">here</a>. This is a huge download because it contains the installers for vRLSCM, vRA and VMware Identity Manager (vIDM). Extract the ISO and run the vrlcm-ui-installer\win32\installer.exe file where you will be greeted with the Install and Migrate options.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/easy-installer-install-or-migrate.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/easy-installer-install-or-migrate.png>
 </picture>
 </figure>
 </p>
@@ -143,7 +143,7 @@ Share on:
 <p>The install option is the single pane of glass installer for vRealize Automation, vRealize Suite Lifecycle Manager and VMware Identity Manager.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/easy-installer-introduction.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/easy-installer-introduction.png>
 </picture>
 </figure>
 </p>
@@ -151,35 +151,35 @@ Share on:
 <p>On the 'Appliance Deployment Target' page, enter the deployment target of either the vCenter Server IP or an ESXi host IP address along with the appropriate credentials. Select next and accept the target certificate if it's correct. Select the target location, compute resource, storage location, network configuration and enter a default password. On the 'Lifecycle Manager Configuration' page enter the VM name, IP address and hostname.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/easy-installer-vrslcm-config.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/easy-installer-vrslcm-config.png>
 </picture>
 </figure>
 </p>
 <p>A key difference to the vRealize Suite 2019 compared to 2018, is that all of the products now integrate with VMware Identity Manager!! A huge benefit and the next step in the Easy Installer. If you have an existing vIDM instance, enter the details to import it, otherwise provide the details of a new vIDM instance and the installer will deploy and integrate it for you. This step can't be skipped as the vIDM integration is mandatory. Enter a Default Configuration Admin user and this user will be created automatically and used while integrating other products with vIDM.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/easy-installer-vidm.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/easy-installer-vidm.png>
 </picture>
 </figure>
 </p>
 <p>On the 'vRealize Automation Configuration' page, optionally enter the details to deploy vRA 8.0. If you deploying as a PoC or demo environment, this option is perfectely okay, however it will deploy the datacenter and environment in vRSLCM automatically and some of the configurations can't be altered, so I found it best to deploy it later and skip it now. If you wish to deploy vRA using custom certificates, select 'Skip vRealize Automation installation' and deploy it using the vRSLCM UI.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/easy-installer-vra8.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/easy-installer-vra8.png>
 </picture>
 </figure>
 </p>
 <p>On the Summary, verify your configuration and select Submit. Once the installation process is initialized, the Easy Installer will install vRSLCM 8.0, vIDM 8.0 and optionally vRA 8.0.</p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/easy-installer-in-progress.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/easy-installer-in-progress.png>
 </picture>
 </figure>
 </p>
 <p><strong>All done!!!</strong></p>
 <p><figure>
 <picture>
-<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=images/easy-installer-complete.png>
+<img loading=lazy decoding=async alt class="image_figure image_internal image_unprocessed" src=/images/easy-installer-complete.png>
 </picture>
 </figure>
 </p>
