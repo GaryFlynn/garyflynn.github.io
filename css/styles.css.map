@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "styles.css",
-	"sourceRoot": "C:/Users/Gary/Documents/GitHub/garyflynn.com-source",
+	"sourceRoot": "/home/runner/work/garyflynn.com-source/garyflynn.com-source",
 	"sources": [
 		"themes/hugo-clarity/assets/sass/main.sass",
 		"themes/hugo-clarity/assets/sass/_variables.sass",
