@@ -1,10 +1,95 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vROps on Gary Flynn</title><link>https://garyflynn.com/tags/vrops/</link><description>Recent content in vROps on Gary Flynn</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Tue, 10 Mar 2020 13:52:21 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vrops/index.xml" rel="self" type="application/rss+xml"/><item><title>vRealize Suite Announcement - March 2020</title><link>https://garyflynn.com/post/vrealize-suite-announcement-march-2020/</link><pubDate>Tue, 10 Mar 2020 13:52:21 +0000</pubDate><guid>https://garyflynn.com/post/vrealize-suite-announcement-march-2020/</guid><description>
-Today is a significant day for VMware with the announcements coming out primarily around vSphere 7 and the implementation of Project Tanzu. The vSphere client will now natively support running containers and VMs within the same unified console, the vSphere Client. One very interesting new feature is the VMware Lifecycle Manager (vLCM) that will be introduced to simplify the management of firmware, drivers and ESXi bundles. For more information on today's announcements, check out the blog here.</description></item><item><title>vRealize Suite 2019 - Easy Installer</title><link>https://garyflynn.com/post/vrealize-suite-2019-easy-installer/</link><pubDate>Fri, 18 Oct 2019 13:58:08 +0000</pubDate><guid>https://garyflynn.com/post/vrealize-suite-2019-easy-installer/</guid><description>
-VMware has just announced the latest release of the vRealize Suite (2019) and with it comes vRealize Automation 8.0 (vRA), vRealize Log Insight 8.0 (vRLI), vRealize Operations Manager 8.0 (vROps) and vRealize Suite Lifecycle Manager 8.0 (vRSLCM). Noticeably absent is vRealize Business for Cloud (vRBC), as this product has been deprecated and the functionality has been migrated to vROps.
-Announcing General Availability of vRealize Suite 2019, vCloud Suite 2019, and vCloud Suite 2019 Platinum!</description></item><item><title>vROps - Alerts and Alarms Count</title><link>https://garyflynn.com/post/vrops-alerts-and-alarms-count/</link><pubDate>Thu, 10 Oct 2019 14:55:22 +0000</pubDate><guid>https://garyflynn.com/post/vrops-alerts-and-alarms-count/</guid><description>
-vRealize Operations Manager (vROps) stores all symptoms and alerts in an internal database where they are called Alerts and Alarms. To understand how the internal alerts and alarms correlate to symptoms and alerts, have a read of the excellent explanation by James Gill of VirtualCloudIT (https://virtualcloudit.net/2017/06/08/270/).
-Once you understand the terminology of alerts and alarms, how can we ensure that our environment doesn't breach the recommended values for each? Well thankfully, vROps collects these metrics automatically, so we can create a dashboard to display the information needed.</description></item><item><title>vROps Memory Metric Collection Changes in 6.7 &amp; 7.0+</title><link>https://garyflynn.com/post/vrops-memory-metric-collection-changes-in-6-7-7-0/</link><pubDate>Thu, 14 Feb 2019 09:52:08 +0000</pubDate><guid>https://garyflynn.com/post/vrops-memory-metric-collection-changes-in-6-7-7-0/</guid><description>
-With vROps prior to 6.7, Memory metrics have caused confusion when comparing the memory metrics generated from vSphere to the metrics generated from the Ep Ops management agent installed on the guest OS. Currently, the metrics shown from the vSphere data collection are memory metrics as seen from the ESXi host layer / VMkernel. This value is at times largely different to the guest OS memory metrics, as explained below. I have a blog post here which explains the different memory metrics in vROps prior to 6.</description></item><item><title>vROps Memory Metrics - Prior to vROps 6.7+</title><link>https://garyflynn.com/post/vrops-memory-metrics-prior-to-vrops-6-7/</link><pubDate>Thu, 14 Feb 2019 09:43:28 +0000</pubDate><guid>https://garyflynn.com/post/vrops-memory-metrics-prior-to-vrops-6-7/</guid><description>
-Memory metrics in vROps have caused many customers confusion and I hope this post will explain the different metrics available and why the values don't necessarily reflect what you might think. Let's start with a few definitions to help set the context.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vROps on Gary Flynn</title>
+    <link>https://garyflynn.com/tags/vrops/</link>
+    <description>Recent content in vROps on Gary Flynn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 10 Mar 2020 13:52:21 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vrops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vRealize Suite Announcement - March 2020</title>
+      <link>https://garyflynn.com/post/vrealize-suite-announcement-march-2020/</link>
+      <pubDate>Tue, 10 Mar 2020 13:52:21 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-suite-announcement-march-2020/</guid>
+      <description>
+        
+          
+            Today is a significant day for VMware with the announcements coming out primarily around vSphere 7 and the implementation of Project Tanzu. The vSphere client will now natively support running containers and VMs within the same unified console, the vSphere Client. One very interesting new feature is the VMware Lifecycle Manager (vLCM) that will be introduced to simplify the management of firmware, drivers and ESXi bundles. For more information on today&#39;s announcements, check out the blog here.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>vRealize Suite 2019 - Easy Installer</title>
+      <link>https://garyflynn.com/post/vrealize-suite-2019-easy-installer/</link>
+      <pubDate>Fri, 18 Oct 2019 13:58:08 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-suite-2019-easy-installer/</guid>
+      <description>
+        
+          
+            VMware has just announced the latest release of the vRealize Suite (2019) and with it comes vRealize Automation 8.0 (vRA), vRealize Log Insight 8.0 (vRLI), vRealize Operations Manager 8.0 (vROps) and vRealize Suite Lifecycle Manager 8.0 (vRSLCM). Noticeably absent is vRealize Business for Cloud (vRBC), as this product has been deprecated and the functionality has been migrated to vROps.
+ Announcing General Availability of vRealize Suite 2019, vCloud Suite 2019, and vCloud Suite 2019 Platinum!
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>vROps - Alerts and Alarms Count</title>
+      <link>https://garyflynn.com/post/vrops-alerts-and-alarms-count/</link>
+      <pubDate>Thu, 10 Oct 2019 14:55:22 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrops-alerts-and-alarms-count/</guid>
+      <description>
+        
+          
+            vRealize Operations Manager (vROps) stores all symptoms and alerts in an internal database where they are called Alerts and Alarms. To understand how the internal alerts and alarms correlate to symptoms and alerts, have a read of the excellent explanation by James Gill of VirtualCloudIT (https://virtualcloudit.net/2017/06/08/270/).
+Once you understand the terminology of alerts and alarms, how can we ensure that our environment doesn&#39;t breach the recommended values for each? Well thankfully, vROps collects these metrics automatically, so we can create a dashboard to display the information needed.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>vROps Memory Metric Collection Changes in 6.7 &amp; 7.0&#43;</title>
+      <link>https://garyflynn.com/post/vrops-memory-metric-collection-changes-in-6-7-7-0/</link>
+      <pubDate>Thu, 14 Feb 2019 09:52:08 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrops-memory-metric-collection-changes-in-6-7-7-0/</guid>
+      <description>
+        
+          
+            With vROps prior to 6.7, Memory metrics have caused confusion when comparing the memory metrics generated from vSphere to the metrics generated from the Ep Ops management agent installed on the guest OS. Currently, the metrics shown from the vSphere data collection are memory metrics as seen from the ESXi host layer / VMkernel. This value is at times largely different to the guest OS memory metrics, as explained below. I have a blog post here which explains the different memory metrics in vROps prior to 6.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>vROps Memory Metrics - Prior to vROps 6.7&#43;</title>
+      <link>https://garyflynn.com/post/vrops-memory-metrics-prior-to-vrops-6-7/</link>
+      <pubDate>Thu, 14 Feb 2019 09:43:28 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrops-memory-metrics-prior-to-vrops-6-7/</guid>
+      <description>
+        
+          
+            Memory metrics in vROps have caused many customers confusion and I hope this post will explain the different metrics available and why the values don&#39;t necessarily reflect what you might think. Let&#39;s start with a few definitions to help set the context.
 Virtual Machine / Guest: The virtual operating system object where the guest OS such as Windows Server is installed.
-Host: The physical blade/rack mount server where ESXi is installed.</description></item></channel></rss>
+Host: The physical blade/rack mount server where ESXi is installed.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

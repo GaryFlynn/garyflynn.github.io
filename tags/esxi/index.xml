@@ -1,8 +1,78 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ESXi on Gary Flynn</title><link>https://garyflynn.com/tags/esxi/</link><description>Recent content in ESXi on Gary Flynn</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Wed, 05 Sep 2018 10:41:21 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/esxi/index.xml" rel="self" type="application/rss+xml"/><item><title>Homelab Setup Part 3 - vCenter Install &amp; Configure</title><link>https://garyflynn.com/post/homelab-setup-part-3-vcenter-install-configure/</link><pubDate>Wed, 05 Sep 2018 10:41:21 +0000</pubDate><guid>https://garyflynn.com/post/homelab-setup-part-3-vcenter-install-configure/</guid><description>
-To setup the NUC and install ESXi, follow part one of this guide. To configure the basic vSAN configuration for deployments pre vCenter 6.7, follow part two of this guide.
-vCenter Appliance Installation With the Intel NUCs set up (and a vSAN datastore created if running pre 6.7 vCenter), it is time to install the vCenter Server Appliance (vCSA). As you probably know, the Windows vCenter Server is deprecated, so the vCSA will be deployed.</description></item><item><title>ESXi Install and Configure</title><link>https://garyflynn.com/post/esxi-install-and-configure/</link><pubDate>Wed, 29 Aug 2018 09:25:13 +0000</pubDate><guid>https://garyflynn.com/post/esxi-install-and-configure/</guid><description>
-This guide will cover the ESXi installation and configuration process. If installing ESXi onto a bare-metal server from a USB, follow my guide here on how to create a bootable USB installer. Once you have your installation media ready, either a USB installer or the downloaded ISO, insert / attach the media and power on your server. If you are doing this in a nested ESXi environment, attach the media via the VMware Remote Console.</description></item><item><title>Create a Bootable USB ESXi Installer</title><link>https://garyflynn.com/post/create-a-bootable-usb-esxi-installer/</link><pubDate>Fri, 24 Aug 2018 19:39:29 +0000</pubDate><guid>https://garyflynn.com/post/create-a-bootable-usb-esxi-installer/</guid><description>
-To install ESXi onto a bare metal server without a CD/DVD drive or a KVM console, the simplest way is to create a bootable USB drive with the ESXi installer. To do this, we will use a tool called Rufus.
-Download the latest portable release of Rufus Download the ESXi ISO image (.iso file type) ESXi 6.7 ESXi 6.5 Connect the USB device to your Computer Open Rufus Select the USB device Select the ESXi installer ISO Ensure 'MBR partition' &amp;amp; 'BIOS or EUFI' are selected Select Start Select Yes to replace menu.</description></item><item><title>Homelab Setup Part 1 - Intel NUC</title><link>https://garyflynn.com/post/homelab-setup-part-1-intel-nuc/</link><pubDate>Fri, 24 Aug 2018 16:52:58 +0000</pubDate><guid>https://garyflynn.com/post/homelab-setup-part-1-intel-nuc/</guid><description>
-I have recently decided to purchase a homelab for myself to assist with getting my certifications up to date and after much research and procrastinating I have gone with the setup below. Overall I have been very happy with the performance and compatibility of everything and I have tried to link to all of the useful blogs that helped me along the way.
-Hardware 1 x TP-Link TL-SG108E 8 Port Switch (Amazon UK)</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ESXi on Gary Flynn</title>
+    <link>https://garyflynn.com/tags/esxi/</link>
+    <description>Recent content in ESXi on Gary Flynn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 05 Sep 2018 10:41:21 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/esxi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homelab Setup Part 3 - vCenter Install &amp; Configure</title>
+      <link>https://garyflynn.com/post/homelab-setup-part-3-vcenter-install-configure/</link>
+      <pubDate>Wed, 05 Sep 2018 10:41:21 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/homelab-setup-part-3-vcenter-install-configure/</guid>
+      <description>
+        
+          
+            To setup the NUC and install ESXi, follow part one of this guide. To configure the basic vSAN configuration for deployments pre vCenter 6.7, follow part two of this guide.
+vCenter Appliance Installation With the Intel NUCs set up (and a vSAN datastore created if running pre 6.7 vCenter), it is time to install the vCenter Server Appliance (vCSA). As you probably know, the Windows vCenter Server is deprecated, so the vCSA will be deployed.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>ESXi Install and Configure</title>
+      <link>https://garyflynn.com/post/esxi-install-and-configure/</link>
+      <pubDate>Wed, 29 Aug 2018 09:25:13 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/esxi-install-and-configure/</guid>
+      <description>
+        
+          
+            This guide will cover the ESXi installation and configuration process. If installing ESXi onto a bare-metal server from a USB, follow my guide here on how to create a bootable USB installer. Once you have your installation media ready, either a USB installer or the downloaded ISO, insert / attach the media and power on your server. If you are doing this in a nested ESXi environment, attach the media via the VMware Remote Console.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Create a Bootable USB ESXi Installer</title>
+      <link>https://garyflynn.com/post/create-a-bootable-usb-esxi-installer/</link>
+      <pubDate>Fri, 24 Aug 2018 19:39:29 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/create-a-bootable-usb-esxi-installer/</guid>
+      <description>
+        
+          
+            To install ESXi onto a bare metal server without a CD/DVD drive or a KVM console, the simplest way is to create a bootable USB drive with the ESXi installer. To do this, we will use a tool called Rufus.
+ Download the latest portable release of Rufus Download the ESXi ISO image (.iso file type)  ESXi 6.7 ESXi 6.5   Connect the USB device to your Computer Open Rufus Select the USB device Select the ESXi installer ISO Ensure &#39;MBR partition&#39; &amp;amp; &#39;BIOS or EUFI&#39; are selected Select Start Select Yes to replace menu.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Homelab Setup Part 1 - Intel NUC</title>
+      <link>https://garyflynn.com/post/homelab-setup-part-1-intel-nuc/</link>
+      <pubDate>Fri, 24 Aug 2018 16:52:58 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/homelab-setup-part-1-intel-nuc/</guid>
+      <description>
+        
+          
+            I have recently decided to purchase a homelab for myself to assist with getting my certifications up to date and after much research and procrastinating I have gone with the setup below. Overall I have been very happy with the performance and compatibility of everything and I have tried to link to all of the useful blogs that helped me along the way.
+Hardware 1 x TP-Link TL-SG108E 8 Port Switch (Amazon UK)
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

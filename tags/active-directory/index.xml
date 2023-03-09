@@ -1,4 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Active Directory on Gary Flynn</title><link>https://garyflynn.com/tags/active-directory/</link><description>Recent content in Active Directory on Gary Flynn</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Wed, 29 Aug 2018 13:17:09 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/active-directory/index.xml" rel="self" type="application/rss+xml"/><item><title>Create Active Directory Forest via PowerShell</title><link>https://garyflynn.com/post/create-active-directory-forest-via-powershell/</link><pubDate>Wed, 29 Aug 2018 13:17:09 +0000</pubDate><guid>https://garyflynn.com/post/create-active-directory-forest-via-powershell/</guid><description>
-This blog covers creating a new Active Directory forest and adding a secondary domain controller to the domain via PowerShell.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Active Directory on Gary Flynn</title>
+    <link>https://garyflynn.com/tags/active-directory/</link>
+    <description>Recent content in Active Directory on Gary Flynn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 29 Aug 2018 13:17:09 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/active-directory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create Active Directory Forest via PowerShell</title>
+      <link>https://garyflynn.com/post/create-active-directory-forest-via-powershell/</link>
+      <pubDate>Wed, 29 Aug 2018 13:17:09 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/create-active-directory-forest-via-powershell/</guid>
+      <description>
+        
+          
+            This blog covers creating a new Active Directory forest and adding a secondary domain controller to the domain via PowerShell.
 Create Active Directory Forest To create a new Active Directory (AD) forest, the below PowerShell commands can be run to simplify the process. To start off, run the below command to install the appropriate Windows Feature.
-1Install-WindowsFeature AD-Domain-Services -IncludeManagementTools Run the below command to add the AD module into PowerShell now that it has been installed.</description></item></channel></rss>
+1Install-WindowsFeature AD-Domain-Services -IncludeManagementTools     Run the below command to add the AD module into PowerShell now that it has been installed.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

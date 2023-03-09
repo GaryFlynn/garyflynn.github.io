@@ -1,9 +1,64 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Guide on Gary Flynn</title><link>https://garyflynn.com/tags/guide/</link><description>Recent content in Guide on Gary Flynn</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Tue, 17 Mar 2020 20:01:23 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/guide/index.xml" rel="self" type="application/rss+xml"/><item><title>vRealize Automation 8.x - Setup GitHub Integration</title><link>https://garyflynn.com/post/vrealize-automation-8x-setup-github-integration/</link><pubDate>Tue, 17 Mar 2020 20:01:23 +0000</pubDate><guid>https://garyflynn.com/post/vrealize-automation-8x-setup-github-integration/</guid><description>
-vRealize Automation (vRA) 8.x provides native integration to GitHub.com to share and sync your Blueprints and Action Based Extensibility (ABX) scripts. This integration is provided as a way to edit your blueprints and ABX scripts as Infrastructure as Code (IaC) objects and for vRA to then consume the changes once they are updated and committed to your repository. This integration is not designed as a way to backup or export your content to GitHub.</description></item><item><title>vRealize Orchestrator 8.x - Accessing Control Center UI</title><link>https://garyflynn.com/post/vrealize-orchestrator-8x-accessing-control-center-ui/</link><pubDate>Sat, 14 Mar 2020 13:24:02 +0000</pubDate><guid>https://garyflynn.com/post/vrealize-orchestrator-8x-accessing-control-center-ui/</guid><description>
-In both vRealize Automation and Orchestrator 8.x, the appliances have been rebuilt using a kubernetes architecture. For this reason, the location of the different Orchestrator user interfaces has changed.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guide on Gary Flynn</title>
+    <link>https://garyflynn.com/tags/guide/</link>
+    <description>Recent content in Guide on Gary Flynn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 17 Mar 2020 20:01:23 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/guide/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vRealize Automation 8.x - Setup GitHub Integration</title>
+      <link>https://garyflynn.com/post/vrealize-automation-8x-setup-github-integration/</link>
+      <pubDate>Tue, 17 Mar 2020 20:01:23 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-automation-8x-setup-github-integration/</guid>
+      <description>
+        
+          
+            vRealize Automation (vRA) 8.x provides native integration to GitHub.com to share and sync your Blueprints and Action Based Extensibility (ABX) scripts. This integration is provided as a way to edit your blueprints and ABX scripts as Infrastructure as Code (IaC) objects and for vRA to then consume the changes once they are updated and committed to your repository. This integration is not designed as a way to backup or export your content to GitHub.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>vRealize Orchestrator 8.x - Accessing Control Center UI</title>
+      <link>https://garyflynn.com/post/vrealize-orchestrator-8x-accessing-control-center-ui/</link>
+      <pubDate>Sat, 14 Mar 2020 13:24:02 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-orchestrator-8x-accessing-control-center-ui/</guid>
+      <description>
+        
+          
+            In both vRealize Automation and Orchestrator 8.x, the appliances have been rebuilt using a kubernetes architecture. For this reason, the location of the different Orchestrator user interfaces has changed.
 Orchestrator Client UI - https://FQDN_or_IP_address:443/orchestration-ui
 Orchestrator Client Java UI - deprecated from vRO 8.0 onwards
 Orchestrator Control Center UI - https://FQDN_or_IP_address:443/vco-controlcenter
-To login to the Orchestrator Control Center UI, the username is 'root' and the password is the same as the appliance 'root' password.</description></item><item><title>vRA 7.x vs vRA 8.x - Which Version to Deploy?</title><link>https://garyflynn.com/post/which-version-of-vra-to-deploy/</link><pubDate>Sat, 30 Nov 2019 16:43:40 +0000</pubDate><guid>https://garyflynn.com/post/which-version-of-vra-to-deploy/</guid><description>
-VMware has recently released vRealize Automation 8.0 and with this comes a complete redesign of the vRealize Automation product. Are you just starting out on your Cloud Management Platform (CMP) journey and not quite sure which version to deploy? Hopefully this blog will help you understand some of the key differences between vRA 7.x and vRA 8.x and some familiar features which are missing from vRA 8.x.
-The first place to start is by reading this excellent blog post by Chip Zoller (daphnissov) on the VMware Community Forums.</description></item></channel></rss>
+To login to the Orchestrator Control Center UI, the username is &#39;root&#39; and the password is the same as the appliance &#39;root&#39; password.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>vRA 7.x vs vRA 8.x - Which Version to Deploy?</title>
+      <link>https://garyflynn.com/post/which-version-of-vra-to-deploy/</link>
+      <pubDate>Sat, 30 Nov 2019 16:43:40 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/which-version-of-vra-to-deploy/</guid>
+      <description>
+        
+          
+            VMware has recently released vRealize Automation 8.0 and with this comes a complete redesign of the vRealize Automation product. Are you just starting out on your Cloud Management Platform (CMP) journey and not quite sure which version to deploy? Hopefully this blog will help you understand some of the key differences between vRA 7.x and vRA 8.x and some familiar features which are missing from vRA 8.x.
+The first place to start is by reading this excellent blog post by Chip Zoller (daphnissov) on the VMware Community Forums.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

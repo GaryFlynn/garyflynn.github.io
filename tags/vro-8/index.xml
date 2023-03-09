@@ -1,8 +1,48 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vRO 8 on Gary Flynn</title><link>https://garyflynn.com/tags/vro-8/</link><description>Recent content in vRO 8 on Gary Flynn</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Mon, 16 Mar 2020 11:02:50 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vro-8/index.xml" rel="self" type="application/rss+xml"/><item><title>vRealize Orchestrator - Kerberos Configuration File</title><link>https://garyflynn.com/post/vrealize-orchestrator-kerberos-configuration-file/</link><pubDate>Mon, 16 Mar 2020 11:02:50 +0000</pubDate><guid>https://garyflynn.com/post/vrealize-orchestrator-kerberos-configuration-file/</guid><description>
-To configure Kerberos authentication with vRealize Orchestrator (vRO), the krb5.conf file must be set up for your specific environment and the domain you are connecting to. The location of the krb5.conf file is different for different versions and deployments of vRO, so the below list shows the locations of the krb5.conf file for vRO 7 vs vRO 8 and standalone deployments vs embedded with vRA deployments.
-In vRO 7.x standalone, the krb5.</description></item><item><title>vRealize Orchestrator 8.x - Accessing Control Center UI</title><link>https://garyflynn.com/post/vrealize-orchestrator-8x-accessing-control-center-ui/</link><pubDate>Sat, 14 Mar 2020 13:24:02 +0000</pubDate><guid>https://garyflynn.com/post/vrealize-orchestrator-8x-accessing-control-center-ui/</guid><description>
-In both vRealize Automation and Orchestrator 8.x, the appliances have been rebuilt using a kubernetes architecture. For this reason, the location of the different Orchestrator user interfaces has changed.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vRO 8 on Gary Flynn</title>
+    <link>https://garyflynn.com/tags/vro-8/</link>
+    <description>Recent content in vRO 8 on Gary Flynn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 16 Mar 2020 11:02:50 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vro-8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vRealize Orchestrator - Kerberos Configuration File</title>
+      <link>https://garyflynn.com/post/vrealize-orchestrator-kerberos-configuration-file/</link>
+      <pubDate>Mon, 16 Mar 2020 11:02:50 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-orchestrator-kerberos-configuration-file/</guid>
+      <description>
+        
+          
+            To configure Kerberos authentication with vRealize Orchestrator (vRO), the krb5.conf file must be set up for your specific environment and the domain you are connecting to. The location of the krb5.conf file is different for different versions and deployments of vRO, so the below list shows the locations of the krb5.conf file for vRO 7 vs vRO 8 and standalone deployments vs embedded with vRA deployments.
+In vRO 7.x standalone, the krb5.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>vRealize Orchestrator 8.x - Accessing Control Center UI</title>
+      <link>https://garyflynn.com/post/vrealize-orchestrator-8x-accessing-control-center-ui/</link>
+      <pubDate>Sat, 14 Mar 2020 13:24:02 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-orchestrator-8x-accessing-control-center-ui/</guid>
+      <description>
+        
+          
+            In both vRealize Automation and Orchestrator 8.x, the appliances have been rebuilt using a kubernetes architecture. For this reason, the location of the different Orchestrator user interfaces has changed.
 Orchestrator Client UI - https://FQDN_or_IP_address:443/orchestration-ui
 Orchestrator Client Java UI - deprecated from vRO 8.0 onwards
 Orchestrator Control Center UI - https://FQDN_or_IP_address:443/vco-controlcenter
-To login to the Orchestrator Control Center UI, the username is 'root' and the password is the same as the appliance 'root' password.</description></item></channel></rss>
+To login to the Orchestrator Control Center UI, the username is &#39;root&#39; and the password is the same as the appliance &#39;root&#39; password.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

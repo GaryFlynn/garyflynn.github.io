@@ -1,13 +1,128 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vSphere on Gary Flynn</title><link>https://garyflynn.com/tags/vsphere/</link><description>Recent content in vSphere on Gary Flynn</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Mon, 01 Feb 2021 19:36:37 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vsphere/index.xml" rel="self" type="application/rss+xml"/><item><title>Create Your First vSphere Terraform Configuration</title><link>https://garyflynn.com/post/create-your-first-vsphere-terraform-configuration/</link><pubDate>Mon, 01 Feb 2021 19:36:37 +0000</pubDate><guid>https://garyflynn.com/post/create-your-first-vsphere-terraform-configuration/</guid><description>
-To get started with HashiCorp Terraform, you can download the simple executable file from HashiCorp here. To understand the basics of Infrastructure as Code and Terraform, have a read of the post available here.
-Terraform configuration files are text files with a .tf file extension. To get started, create a new folder for this configuration, along with a file called vsphere.tf. The first part to creating a Terraform configuration file is to define the provider you will interact with.</description></item><item><title>vRealize Automation 8.x - Setup vSphere Cloud Account</title><link>https://garyflynn.com/post/vrealize-automation-8x-setup-vsphere-cloud-account/</link><pubDate>Sat, 14 Mar 2020 15:06:06 +0000</pubDate><guid>https://garyflynn.com/post/vrealize-automation-8x-setup-vsphere-cloud-account/</guid><description>
-vRealize Automation 8.x can integrate with several cloud providers, and to do this for your vSphere environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For vSphere, enter the vCenter FQDN / IP address, the credentials to authenticate with and select a logical name. Under capabilities, enter &amp;quot;cloud:vsphere&amp;quot; as this will enable us to use tagging in the blueprint request forms.</description></item><item><title>vRealize Suite Announcement - March 2020</title><link>https://garyflynn.com/post/vrealize-suite-announcement-march-2020/</link><pubDate>Tue, 10 Mar 2020 13:52:21 +0000</pubDate><guid>https://garyflynn.com/post/vrealize-suite-announcement-march-2020/</guid><description>
-Today is a significant day for VMware with the announcements coming out primarily around vSphere 7 and the implementation of Project Tanzu. The vSphere client will now natively support running containers and VMs within the same unified console, the vSphere Client. One very interesting new feature is the VMware Lifecycle Manager (vLCM) that will be introduced to simplify the management of firmware, drivers and ESXi bundles. For more information on today's announcements, check out the blog here.</description></item><item><title>Homelab Setup Part 3 - vCenter Install &amp; Configure</title><link>https://garyflynn.com/post/homelab-setup-part-3-vcenter-install-configure/</link><pubDate>Wed, 05 Sep 2018 10:41:21 +0000</pubDate><guid>https://garyflynn.com/post/homelab-setup-part-3-vcenter-install-configure/</guid><description>
-To setup the NUC and install ESXi, follow part one of this guide. To configure the basic vSAN configuration for deployments pre vCenter 6.7, follow part two of this guide.
-vCenter Appliance Installation With the Intel NUCs set up (and a vSAN datastore created if running pre 6.7 vCenter), it is time to install the vCenter Server Appliance (vCSA). As you probably know, the Windows vCenter Server is deprecated, so the vCSA will be deployed.</description></item><item><title>Homelab Setup Part 2 - vSAN Configuration</title><link>https://garyflynn.com/post/homelab-setup-part-2-vsan-configuration/</link><pubDate>Tue, 28 Aug 2018 10:36:31 +0000</pubDate><guid>https://garyflynn.com/post/homelab-setup-part-2-vsan-configuration/</guid><description>
-To setup the NUC and install ESXi, follow part one of this guide. The following is the process to bootstrap loading the vCenter Server Appliance onto a vSAN datastore. This process was replaced in vCenter 6.7 which provides this capability natively through the installer. If you are deploying vCenter 6.7+, skip through to part three.
-vSAN Configuration To install vCenter you need the datastore in place, which for my environment is vSAN.</description></item><item><title>Get memory allocated based on OS</title><link>https://garyflynn.com/post/get-memory-allocated-based-on-os/</link><pubDate>Thu, 23 Nov 2017 04:50:18 +0000</pubDate><guid>https://garyflynn.com/post/get-memory-allocated-based-on-os/</guid><description>
-The following Power-CLI command will evaluate a specific cluster and return the ratio of memory utilisation between Windows and Red Hat Linux virtual machines.
-1# Variable settings 2$clusterName = &amp;#34;insert cluster name&amp;#34; 34$winVMs = Get-Cluster $clusterName | Get-VM | ? {$_.Guest.OSFullName -like &amp;#39;Microsoft Windows Server*&amp;#39;} | Select Name, PowerState, MemoryGB 56$lnxVMs = Get-Cluster $clusterName | Get-VM | ? {$_.Guest.OSFullName -like &amp;#39;Red Hat*&amp;#39;} | Select Name, PowerState, MemoryGB 78foreach($winVM in $winVMs){ $winMemTotal += $winVM.</description></item><item><title>Managing Snapshots with PowerCLI</title><link>https://garyflynn.com/post/managing-snapshots-with-powercli/</link><pubDate>Fri, 03 Mar 2017 05:20:53 +0000</pubDate><guid>https://garyflynn.com/post/managing-snapshots-with-powercli/</guid><description>
-With access to vCenter or vRealize Automation comes great responsibility. Clients often require a quick and easy way to take a short term snapshot of a server so that they can quick and easily rollback application changes. VMware provides a robust snapshot function, however when things go well these snapshots are often left behind or forgotten about.
-Run PowerCLI and run the below commands to get a list of all VMs with a Snapshot</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vSphere on Gary Flynn</title>
+    <link>https://garyflynn.com/tags/vsphere/</link>
+    <description>Recent content in vSphere on Gary Flynn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 01 Feb 2021 19:36:37 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vsphere/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create Your First vSphere Terraform Configuration</title>
+      <link>https://garyflynn.com/post/create-your-first-vsphere-terraform-configuration/</link>
+      <pubDate>Mon, 01 Feb 2021 19:36:37 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/create-your-first-vsphere-terraform-configuration/</guid>
+      <description>
+        
+          
+            To get started with HashiCorp Terraform, you can download the simple executable file from HashiCorp here. To understand the basics of Infrastructure as Code and Terraform, have a read of the post available here.
+Terraform configuration files are text files with a .tf file extension. To get started, create a new folder for this configuration, along with a file called vsphere.tf. The first part to creating a Terraform configuration file is to define the provider you will interact with.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>vRealize Automation 8.x - Setup vSphere Cloud Account</title>
+      <link>https://garyflynn.com/post/vrealize-automation-8x-setup-vsphere-cloud-account/</link>
+      <pubDate>Sat, 14 Mar 2020 15:06:06 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-automation-8x-setup-vsphere-cloud-account/</guid>
+      <description>
+        
+          
+            vRealize Automation 8.x can integrate with several cloud providers, and to do this for your vSphere environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For vSphere, enter the vCenter FQDN / IP address, the credentials to authenticate with and select a logical name. Under capabilities, enter &amp;quot;cloud:vsphere&amp;quot; as this will enable us to use tagging in the blueprint request forms.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>vRealize Suite Announcement - March 2020</title>
+      <link>https://garyflynn.com/post/vrealize-suite-announcement-march-2020/</link>
+      <pubDate>Tue, 10 Mar 2020 13:52:21 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-suite-announcement-march-2020/</guid>
+      <description>
+        
+          
+            Today is a significant day for VMware with the announcements coming out primarily around vSphere 7 and the implementation of Project Tanzu. The vSphere client will now natively support running containers and VMs within the same unified console, the vSphere Client. One very interesting new feature is the VMware Lifecycle Manager (vLCM) that will be introduced to simplify the management of firmware, drivers and ESXi bundles. For more information on today&#39;s announcements, check out the blog here.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Homelab Setup Part 3 - vCenter Install &amp; Configure</title>
+      <link>https://garyflynn.com/post/homelab-setup-part-3-vcenter-install-configure/</link>
+      <pubDate>Wed, 05 Sep 2018 10:41:21 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/homelab-setup-part-3-vcenter-install-configure/</guid>
+      <description>
+        
+          
+            To setup the NUC and install ESXi, follow part one of this guide. To configure the basic vSAN configuration for deployments pre vCenter 6.7, follow part two of this guide.
+vCenter Appliance Installation With the Intel NUCs set up (and a vSAN datastore created if running pre 6.7 vCenter), it is time to install the vCenter Server Appliance (vCSA). As you probably know, the Windows vCenter Server is deprecated, so the vCSA will be deployed.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Homelab Setup Part 2 - vSAN Configuration</title>
+      <link>https://garyflynn.com/post/homelab-setup-part-2-vsan-configuration/</link>
+      <pubDate>Tue, 28 Aug 2018 10:36:31 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/homelab-setup-part-2-vsan-configuration/</guid>
+      <description>
+        
+          
+            To setup the NUC and install ESXi, follow part one of this guide. The following is the process to bootstrap loading the vCenter Server Appliance onto a vSAN datastore. This process was replaced in vCenter 6.7 which provides this capability natively through the installer. If you are deploying vCenter 6.7+, skip through to part three.
+vSAN Configuration To install vCenter you need the datastore in place, which for my environment is vSAN.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Get memory allocated based on OS</title>
+      <link>https://garyflynn.com/post/get-memory-allocated-based-on-os/</link>
+      <pubDate>Thu, 23 Nov 2017 04:50:18 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/get-memory-allocated-based-on-os/</guid>
+      <description>
+        
+          
+            The following Power-CLI command will evaluate a specific cluster and return the ratio of memory utilisation between Windows and Red Hat Linux virtual machines.
+1# Variable settings 2$clusterName = &amp;#34;insert cluster name&amp;#34; 34$winVMs = Get-Cluster $clusterName | Get-VM | ? {$_.Guest.OSFullName -like &amp;#39;Microsoft Windows Server*&amp;#39;} | Select Name, PowerState, MemoryGB 56$lnxVMs = Get-Cluster $clusterName | Get-VM | ? {$_.Guest.OSFullName -like &amp;#39;Red Hat*&amp;#39;} | Select Name, PowerState, MemoryGB 78foreach($winVM in $winVMs){ $winMemTotal += $winVM.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Managing Snapshots with PowerCLI</title>
+      <link>https://garyflynn.com/post/managing-snapshots-with-powercli/</link>
+      <pubDate>Fri, 03 Mar 2017 05:20:53 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/managing-snapshots-with-powercli/</guid>
+      <description>
+        
+          
+            With access to vCenter or vRealize Automation comes great responsibility. Clients often require a quick and easy way to take a short term snapshot of a server so that they can quick and easily rollback application changes. VMware provides a robust snapshot function, however when things go well these snapshots are often left behind or forgotten about.
+Run PowerCLI and run the below commands to get a list of all VMs with a Snapshot
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

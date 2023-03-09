@@ -1,17 +1,192 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Automation on Gary Flynn</title><link>https://garyflynn.com/tags/automation/</link><description>Recent content in Automation on Gary Flynn</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Thu, 13 Jan 2022 08:00:00 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/automation/index.xml" rel="self" type="application/rss+xml"/><item><title>vRealize Automation 8.x - Hide Quickstart UI</title><link>https://garyflynn.com/post/vrealize-automation-8x-hide-quickstart-ui/</link><pubDate>Thu, 13 Jan 2022 08:00:00 +0000</pubDate><guid>https://garyflynn.com/post/vrealize-automation-8x-hide-quickstart-ui/</guid><description>
-By default, a vRealize Automation 8.x session log you into the Services page, when you and your users are greeted with the Quickstart banner. The easiest way to remove this is to configure a vSphere Cloud Account, however for some environments, vSphere isn't an endpoint used. In this case, to remove the banner, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL.</description></item><item><title>VMworld 2021 vRealize Announcements</title><link>https://garyflynn.com/post/vmworld-2021-vrealize-announcements/</link><pubDate>Sat, 09 Oct 2021 00:00:00 +0000</pubDate><guid>https://garyflynn.com/post/vmworld-2021-vrealize-announcements/</guid><description>
-VMworld 2021 was still held online only this year, which meant there was no shortage of announcements and information available for anyone interested. With a few large announcements including the Project Ensemble Tech Preview and Skyline Advisor Pro, there is plenty to keep an eye on in this space. Below I've listed a few things for each of the vRealize Suite products which caught my attention. Leave a comment below on what you're looking forward to in this next release!</description></item><item><title>vRealize Automation 8.5+ - Increase Session Timeout</title><link>https://garyflynn.com/post/vrealize-automation-85-increase-session-timeout/</link><pubDate>Thu, 19 Aug 2021 15:25:00 +0000</pubDate><guid>https://garyflynn.com/post/vrealize-automation-85-increase-session-timeout/</guid><description>
-By default, a vRealize Automation 8.x session will timeout after 30 minutes of inactivity. For those looking to increase the session timeout value, this hasn't been possible before vRealize Automation 8.5. This all changes with the release of vRealize Automation 8.5, as documented in the release notes here.
-To increase the session timeout from the default 30 minutes, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL.</description></item><item><title>vRealize Automation 8.x - Setup Amazon Web Services Cloud Account</title><link>https://garyflynn.com/post/vrealize-automation-8x-setup-aws-cloud-account/</link><pubDate>Sat, 04 Apr 2020 13:19:53 +0000</pubDate><guid>https://garyflynn.com/post/vrealize-automation-8x-setup-aws-cloud-account/</guid><description>
-vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Amazon Web Services (AWS) environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For AWS, we simply need to head over to the AWS Console console.aws.amazon.com and authenticate with the account which has access to the AWS account you want to integrate with.
-To integrate vRA 8.</description></item><item><title>vRealize Automation 8.x - Setup Azure Cloud Account</title><link>https://garyflynn.com/post/vrealize-automation-8x-setup-azure-cloud-account/</link><pubDate>Sat, 14 Mar 2020 17:12:00 +0000</pubDate><guid>https://garyflynn.com/post/vrealize-automation-8x-setup-azure-cloud-account/</guid><description>
-vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Microsoft Azure environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For Azure, there is some preparation we need to do on the Azure Portal, so head over to portal.azure.com and authenticate with the account which has access to the Subscription you want to integrate with.</description></item><item><title>vRealize Automation 8.x - Setup vSphere Cloud Account</title><link>https://garyflynn.com/post/vrealize-automation-8x-setup-vsphere-cloud-account/</link><pubDate>Sat, 14 Mar 2020 15:06:06 +0000</pubDate><guid>https://garyflynn.com/post/vrealize-automation-8x-setup-vsphere-cloud-account/</guid><description>
-vRealize Automation 8.x can integrate with several cloud providers, and to do this for your vSphere environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For vSphere, enter the vCenter FQDN / IP address, the credentials to authenticate with and select a logical name. Under capabilities, enter &amp;quot;cloud:vsphere&amp;quot; as this will enable us to use tagging in the blueprint request forms.</description></item><item><title>vRA 7.x vs vRA 8.x - Which Version to Deploy?</title><link>https://garyflynn.com/post/which-version-of-vra-to-deploy/</link><pubDate>Sat, 30 Nov 2019 16:43:40 +0000</pubDate><guid>https://garyflynn.com/post/which-version-of-vra-to-deploy/</guid><description>
-VMware has recently released vRealize Automation 8.0 and with this comes a complete redesign of the vRealize Automation product. Are you just starting out on your Cloud Management Platform (CMP) journey and not quite sure which version to deploy? Hopefully this blog will help you understand some of the key differences between vRA 7.x and vRA 8.x and some familiar features which are missing from vRA 8.x.
-The first place to start is by reading this excellent blog post by Chip Zoller (daphnissov) on the VMware Community Forums.</description></item><item><title>vRealize Automation 8.x - Troubleshooting</title><link>https://garyflynn.com/post/vrealize-automation-8x-troubleshooting/</link><pubDate>Sat, 23 Nov 2019 16:42:39 +0000</pubDate><guid>https://garyflynn.com/post/vrealize-automation-8x-troubleshooting/</guid><description>
-With the introduction of vRealize Automation (vRA) 8.0, the traditional appliance VAMI page is gone. This is replaced with the vRA CLI and the kubernetes command line tools. This post will show some of the more common CLI commands you may need. To use all of the commands below, use SSH to connect to the appliance and log in with the root username and password.
-Check Pods / 'Services' Status Display vRA Cluster Status Verify the vRA Deployment Status Check Deployment Log File Generate a Log Bundle Stopping / Shut down vRA Cluster Starting vRA Cluster vRA 8.</description></item><item><title>vRealize Automation 8.x - Services</title><link>https://garyflynn.com/post/vrealize-automation-8x-services/</link><pubDate>Mon, 21 Oct 2019 17:47:04 +0000</pubDate><guid>https://garyflynn.com/post/vrealize-automation-8x-services/</guid><description>
-In the previous post we configured vRA 8.0 with a vSphere endpoint and in this post we are going to cover the different Services which are available. vRA 8.0 has four main components or services, Cloud Assembly, Service Broker, Code Stream and Orchestrator. Great, but what is the role of each service?
-Cloud Assembly The Cloud Assembly service is the multi-cloud provisioning service and is where the bulk of your time will be spent.</description></item><item><title>vRealize Automation 8.x - Getting Started (Quickstart)</title><link>https://garyflynn.com/post/vrealize-automation-8x-getting-started/</link><pubDate>Mon, 21 Oct 2019 17:41:15 +0000</pubDate><guid>https://garyflynn.com/post/vrealize-automation-8x-getting-started/</guid><description>
-In the previous post we deployed all of the vRealize Suite products and we are now ready to log into vRA and configure it for use. vRA 8.0 is a fundamental change from 7.x and it now consists of four main components, Cloud Assembly, Service Broker, Code Stream and Orchestrator. Let's get vRA 8.0 configured! Load up the vRA homepage https://&amp;lt;vRA FDQN&amp;gt;/ where you are greeted with the welcome page. One thing to note is that the new vRA 8.</description></item><item><title>Downgrade / Remove vRA License</title><link>https://garyflynn.com/post/downgrade-remove-vra-license/</link><pubDate>Fri, 11 Jan 2019 16:09:45 +0000</pubDate><guid>https://garyflynn.com/post/downgrade-remove-vra-license/</guid><description>
-I recently had the requirement to remove an existing vRealize Suite Enterprise key from vRealize Automation 7.3.1 and replace it with a vRealize Suite Advanced key. When you try to replace the license key from the VAMI, you will receive an error stating that you cannot downgrade license keys &amp;quot;Unable to downgrade existing license edition&amp;quot;. To replace the license you must do the following. Note, this is 100% not supported by VMware so use it at your own risk and always do it first in a test environment, and always ensure you have backups.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Automation on Gary Flynn</title>
+    <link>https://garyflynn.com/tags/automation/</link>
+    <description>Recent content in Automation on Gary Flynn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 13 Jan 2022 08:00:00 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vRealize Automation 8.x - Hide Quickstart UI</title>
+      <link>https://garyflynn.com/post/vrealize-automation-8x-hide-quickstart-ui/</link>
+      <pubDate>Thu, 13 Jan 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-automation-8x-hide-quickstart-ui/</guid>
+      <description>
+        
+          
+            By default, a vRealize Automation 8.x session log you into the Services page, when you and your users are greeted with the Quickstart banner. The easiest way to remove this is to configure a vSphere Cloud Account, however for some environments, vSphere isn&#39;t an endpoint used. In this case, to remove the banner, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>VMworld 2021 vRealize Announcements</title>
+      <link>https://garyflynn.com/post/vmworld-2021-vrealize-announcements/</link>
+      <pubDate>Sat, 09 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vmworld-2021-vrealize-announcements/</guid>
+      <description>
+        
+          
+            VMworld 2021 was still held online only this year, which meant there was no shortage of announcements and information available for anyone interested. With a few large announcements including the Project Ensemble Tech Preview and Skyline Advisor Pro, there is plenty to keep an eye on in this space. Below I&#39;ve listed a few things for each of the vRealize Suite products which caught my attention. Leave a comment below on what you&#39;re looking forward to in this next release!
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>vRealize Automation 8.5&#43; - Increase Session Timeout</title>
+      <link>https://garyflynn.com/post/vrealize-automation-85-increase-session-timeout/</link>
+      <pubDate>Thu, 19 Aug 2021 15:25:00 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-automation-85-increase-session-timeout/</guid>
+      <description>
+        
+          
+            By default, a vRealize Automation 8.x session will timeout after 30 minutes of inactivity. For those looking to increase the session timeout value, this hasn&#39;t been possible before vRealize Automation 8.5. This all changes with the release of vRealize Automation 8.5, as documented in the release notes here.
+To increase the session timeout from the default 30 minutes, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>vRealize Automation 8.x - Setup Amazon Web Services Cloud Account</title>
+      <link>https://garyflynn.com/post/vrealize-automation-8x-setup-aws-cloud-account/</link>
+      <pubDate>Sat, 04 Apr 2020 13:19:53 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-automation-8x-setup-aws-cloud-account/</guid>
+      <description>
+        
+          
+            vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Amazon Web Services (AWS) environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For AWS, we simply need to head over to the AWS Console console.aws.amazon.com and authenticate with the account which has access to the AWS account you want to integrate with.
+To integrate vRA 8.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>vRealize Automation 8.x - Setup Azure Cloud Account</title>
+      <link>https://garyflynn.com/post/vrealize-automation-8x-setup-azure-cloud-account/</link>
+      <pubDate>Sat, 14 Mar 2020 17:12:00 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-automation-8x-setup-azure-cloud-account/</guid>
+      <description>
+        
+          
+            vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Microsoft Azure environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For Azure, there is some preparation we need to do on the Azure Portal, so head over to portal.azure.com and authenticate with the account which has access to the Subscription you want to integrate with.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>vRealize Automation 8.x - Setup vSphere Cloud Account</title>
+      <link>https://garyflynn.com/post/vrealize-automation-8x-setup-vsphere-cloud-account/</link>
+      <pubDate>Sat, 14 Mar 2020 15:06:06 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-automation-8x-setup-vsphere-cloud-account/</guid>
+      <description>
+        
+          
+            vRealize Automation 8.x can integrate with several cloud providers, and to do this for your vSphere environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For vSphere, enter the vCenter FQDN / IP address, the credentials to authenticate with and select a logical name. Under capabilities, enter &amp;quot;cloud:vsphere&amp;quot; as this will enable us to use tagging in the blueprint request forms.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>vRA 7.x vs vRA 8.x - Which Version to Deploy?</title>
+      <link>https://garyflynn.com/post/which-version-of-vra-to-deploy/</link>
+      <pubDate>Sat, 30 Nov 2019 16:43:40 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/which-version-of-vra-to-deploy/</guid>
+      <description>
+        
+          
+            VMware has recently released vRealize Automation 8.0 and with this comes a complete redesign of the vRealize Automation product. Are you just starting out on your Cloud Management Platform (CMP) journey and not quite sure which version to deploy? Hopefully this blog will help you understand some of the key differences between vRA 7.x and vRA 8.x and some familiar features which are missing from vRA 8.x.
+The first place to start is by reading this excellent blog post by Chip Zoller (daphnissov) on the VMware Community Forums.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>vRealize Automation 8.x - Troubleshooting</title>
+      <link>https://garyflynn.com/post/vrealize-automation-8x-troubleshooting/</link>
+      <pubDate>Sat, 23 Nov 2019 16:42:39 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-automation-8x-troubleshooting/</guid>
+      <description>
+        
+          
+            With the introduction of vRealize Automation (vRA) 8.0, the traditional appliance VAMI page is gone. This is replaced with the vRA CLI and the kubernetes command line tools. This post will show some of the more common CLI commands you may need. To use all of the commands below, use SSH to connect to the appliance and log in with the root username and password.
+ Check Pods / &#39;Services&#39; Status Display vRA Cluster Status Verify the vRA Deployment Status Check Deployment Log File Generate a Log Bundle Stopping / Shut down vRA Cluster Starting vRA Cluster vRA 8.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>vRealize Automation 8.x - Services</title>
+      <link>https://garyflynn.com/post/vrealize-automation-8x-services/</link>
+      <pubDate>Mon, 21 Oct 2019 17:47:04 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-automation-8x-services/</guid>
+      <description>
+        
+          
+            In the previous post we configured vRA 8.0 with a vSphere endpoint and in this post we are going to cover the different Services which are available. vRA 8.0 has four main components or services, Cloud Assembly, Service Broker, Code Stream and Orchestrator. Great, but what is the role of each service?
+    Cloud Assembly The Cloud Assembly service is the multi-cloud provisioning service and is where the bulk of your time will be spent.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>vRealize Automation 8.x - Getting Started (Quickstart)</title>
+      <link>https://garyflynn.com/post/vrealize-automation-8x-getting-started/</link>
+      <pubDate>Mon, 21 Oct 2019 17:41:15 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-automation-8x-getting-started/</guid>
+      <description>
+        
+          
+            In the previous post we deployed all of the vRealize Suite products and we are now ready to log into vRA and configure it for use. vRA 8.0 is a fundamental change from 7.x and it now consists of four main components, Cloud Assembly, Service Broker, Code Stream and Orchestrator. Let&#39;s get vRA 8.0 configured! Load up the vRA homepage https://&amp;lt;vRA FDQN&amp;gt;/ where you are greeted with the welcome page. One thing to note is that the new vRA 8.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Downgrade / Remove vRA License</title>
+      <link>https://garyflynn.com/post/downgrade-remove-vra-license/</link>
+      <pubDate>Fri, 11 Jan 2019 16:09:45 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/downgrade-remove-vra-license/</guid>
+      <description>
+        
+          
+            I recently had the requirement to remove an existing vRealize Suite Enterprise key from vRealize Automation 7.3.1 and replace it with a vRealize Suite Advanced key. When you try to replace the license key from the VAMI, you will receive an error stating that you cannot downgrade license keys &amp;quot;Unable to downgrade existing license edition&amp;quot;. To replace the license you must do the following. Note, this is 100% not supported by VMware so use it at your own risk and always do it first in a test environment, and always ensure you have backups.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

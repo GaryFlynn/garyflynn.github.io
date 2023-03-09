@@ -1,3 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Services on Gary Flynn</title><link>https://garyflynn.com/tags/services/</link><description>Recent content in Services on Gary Flynn</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Mon, 21 Oct 2019 17:47:04 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/services/index.xml" rel="self" type="application/rss+xml"/><item><title>vRealize Automation 8.x - Services</title><link>https://garyflynn.com/post/vrealize-automation-8x-services/</link><pubDate>Mon, 21 Oct 2019 17:47:04 +0000</pubDate><guid>https://garyflynn.com/post/vrealize-automation-8x-services/</guid><description>
-In the previous post we configured vRA 8.0 with a vSphere endpoint and in this post we are going to cover the different Services which are available. vRA 8.0 has four main components or services, Cloud Assembly, Service Broker, Code Stream and Orchestrator. Great, but what is the role of each service?
-Cloud Assembly The Cloud Assembly service is the multi-cloud provisioning service and is where the bulk of your time will be spent.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services on Gary Flynn</title>
+    <link>https://garyflynn.com/tags/services/</link>
+    <description>Recent content in Services on Gary Flynn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 21 Oct 2019 17:47:04 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/services/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vRealize Automation 8.x - Services</title>
+      <link>https://garyflynn.com/post/vrealize-automation-8x-services/</link>
+      <pubDate>Mon, 21 Oct 2019 17:47:04 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-automation-8x-services/</guid>
+      <description>
+        
+          
+            In the previous post we configured vRA 8.0 with a vSphere endpoint and in this post we are going to cover the different Services which are available. vRA 8.0 has four main components or services, Cloud Assembly, Service Broker, Code Stream and Orchestrator. Great, but what is the role of each service?
+    Cloud Assembly The Cloud Assembly service is the multi-cloud provisioning service and is where the bulk of your time will be spent.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

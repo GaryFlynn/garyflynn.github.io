@@ -1,6 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Control Center on Gary Flynn</title><link>https://garyflynn.com/tags/control-center/</link><description>Recent content in Control Center on Gary Flynn</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sat, 14 Mar 2020 13:24:02 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/control-center/index.xml" rel="self" type="application/rss+xml"/><item><title>vRealize Orchestrator 8.x - Accessing Control Center UI</title><link>https://garyflynn.com/post/vrealize-orchestrator-8x-accessing-control-center-ui/</link><pubDate>Sat, 14 Mar 2020 13:24:02 +0000</pubDate><guid>https://garyflynn.com/post/vrealize-orchestrator-8x-accessing-control-center-ui/</guid><description>
-In both vRealize Automation and Orchestrator 8.x, the appliances have been rebuilt using a kubernetes architecture. For this reason, the location of the different Orchestrator user interfaces has changed.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Control Center on Gary Flynn</title>
+    <link>https://garyflynn.com/tags/control-center/</link>
+    <description>Recent content in Control Center on Gary Flynn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 14 Mar 2020 13:24:02 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/control-center/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vRealize Orchestrator 8.x - Accessing Control Center UI</title>
+      <link>https://garyflynn.com/post/vrealize-orchestrator-8x-accessing-control-center-ui/</link>
+      <pubDate>Sat, 14 Mar 2020 13:24:02 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-orchestrator-8x-accessing-control-center-ui/</guid>
+      <description>
+        
+          
+            In both vRealize Automation and Orchestrator 8.x, the appliances have been rebuilt using a kubernetes architecture. For this reason, the location of the different Orchestrator user interfaces has changed.
 Orchestrator Client UI - https://FQDN_or_IP_address:443/orchestration-ui
 Orchestrator Client Java UI - deprecated from vRO 8.0 onwards
 Orchestrator Control Center UI - https://FQDN_or_IP_address:443/vco-controlcenter
-To login to the Orchestrator Control Center UI, the username is 'root' and the password is the same as the appliance 'root' password.</description></item></channel></rss>
+To login to the Orchestrator Control Center UI, the username is &#39;root&#39; and the password is the same as the appliance &#39;root&#39; password.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
