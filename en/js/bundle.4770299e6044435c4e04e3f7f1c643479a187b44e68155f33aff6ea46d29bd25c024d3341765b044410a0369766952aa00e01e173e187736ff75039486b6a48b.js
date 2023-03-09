@@ -889,6 +889,9 @@ function fileClosure(){
         // Insert caption
         image.insertAdjacentHTML('afterend', desc.outerHTML);
       }
+
+      // Persist modified alt to image element
+      image.alt = alt
     });
 
     hljs.initHighlightingOnLoad();
