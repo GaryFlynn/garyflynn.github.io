@@ -6,7 +6,23 @@
     <description>Recent content in VMware on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 16 Nov 2022 09:00:00 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vmware/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Feb 2023 08:00:00 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vmware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vRealize Automation 8.x - Hide Quickstart UI</title>
+      <link>https://garyflynn.com/post/vrealize-automation-8x-hide-quickstart-ui/</link>
+      <pubDate>Sat, 11 Feb 2023 08:00:00 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-automation-8x-hide-quickstart-ui/</guid>
+      <description>
+        
+          
+            By default, a vRealize Automation 8.x session log you into the Services page, when you and your users are greeted with the Quickstart banner. The easiest way to remove this is to configure a vSphere Cloud Account, however for some environments, vSphere isn&#39;t an endpoint used. In this case, to remove the banner, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL.
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>Takeaways from VMware Explore EU 2022</title>
       <link>https://garyflynn.com/post/takeaways-from-vmware-explore-eu-2022/</link>
@@ -33,22 +49,6 @@
         
           
             VMware Explore 2022 was set to be a big event for VMware, with the infamous VMworld branding being changed to VMware Explore along with this being the first in person event since 2019, due to COVID-19. Sure enough, there was no shortage of announcements and information available for everyone this year. Last year at VMworld 2021 we had the announcement of Project Ensemble Tech Preview and this year we saw this formalise into VMware Aria Hub.
-          
-          
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>vRealize Automation 8.x - Hide Quickstart UI</title>
-      <link>https://garyflynn.com/post/vrealize-automation-8x-hide-quickstart-ui/</link>
-      <pubDate>Thu, 13 Jan 2022 08:00:00 +0000</pubDate>
-      
-      <guid>https://garyflynn.com/post/vrealize-automation-8x-hide-quickstart-ui/</guid>
-      <description>
-        
-          
-            By default, a vRealize Automation 8.x session log you into the Services page, when you and your users are greeted with the Quickstart banner. The easiest way to remove this is to configure a vSphere Cloud Account, however for some environments, vSphere isn&#39;t an endpoint used. In this case, to remove the banner, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL.
           
           
         

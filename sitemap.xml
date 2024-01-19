@@ -3,7 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://garyflynn.com/</loc>
-    <lastmod>2022-11-16T09:00:00+00:00</lastmod>
+    <lastmod>2023-02-11T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/tags/automation/</loc>
+    <lastmod>2023-02-11T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/tags/configure/</loc>
+    <lastmod>2023-02-11T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/tags/homelab/</loc>
+    <lastmod>2023-02-11T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/post/</loc>
+    <lastmod>2023-02-11T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/tags/</loc>
+    <lastmod>2023-02-11T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/tags/vmware/</loc>
+    <lastmod>2023-02-11T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/tags/vra/</loc>
+    <lastmod>2023-02-11T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/tags/vra-8/</loc>
+    <lastmod>2023-02-11T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/tags/vrealize/</loc>
+    <lastmod>2023-02-11T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/post/vrealize-automation-8x-hide-quickstart-ui/</loc>
+    <lastmod>2023-02-11T08:00:00+00:00</lastmod>
   </url><url>
     <loc>https://garyflynn.com/tags/aria/</loc>
     <lastmod>2022-11-16T09:00:00+00:00</lastmod>
@@ -11,41 +41,11 @@
     <loc>https://garyflynn.com/tags/explore/</loc>
     <lastmod>2022-11-16T09:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://garyflynn.com/post/</loc>
-    <lastmod>2022-11-16T09:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://garyflynn.com/tags/</loc>
-    <lastmod>2022-11-16T09:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://garyflynn.com/post/takeaways-from-vmware-explore-eu-2022/</loc>
-    <lastmod>2022-11-16T09:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://garyflynn.com/tags/vmware/</loc>
-    <lastmod>2022-11-16T09:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://garyflynn.com/tags/vrealize/</loc>
     <lastmod>2022-11-16T09:00:00+00:00</lastmod>
   </url><url>
     <loc>https://garyflynn.com/post/vmware-explore-2022-cloud-management-announcements/</loc>
     <lastmod>2022-09-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://garyflynn.com/tags/automation/</loc>
-    <lastmod>2022-01-13T08:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://garyflynn.com/tags/configure/</loc>
-    <lastmod>2022-01-13T08:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://garyflynn.com/tags/homelab/</loc>
-    <lastmod>2022-01-13T08:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://garyflynn.com/tags/vra/</loc>
-    <lastmod>2022-01-13T08:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://garyflynn.com/tags/vra-8/</loc>
-    <lastmod>2022-01-13T08:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://garyflynn.com/post/vrealize-automation-8x-hide-quickstart-ui/</loc>
-    <lastmod>2022-01-13T08:00:00+00:00</lastmod>
   </url><url>
     <loc>https://garyflynn.com/tags/vmworld/</loc>
     <lastmod>2021-10-09T00:00:00+00:00</lastmod>
