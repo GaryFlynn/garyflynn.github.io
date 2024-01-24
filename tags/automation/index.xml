@@ -6,7 +6,24 @@
     <description>Recent content in Automation on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 11 Feb 2023 08:00:00 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Aug 2023 15:25:00 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vRealize Automation 8.5&#43; - Increase Session Timeout</title>
+      <link>https://garyflynn.com/post/vrealize-automation-85-increase-session-timeout/</link>
+      <pubDate>Sat, 19 Aug 2023 15:25:00 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-automation-85-increase-session-timeout/</guid>
+      <description>
+        
+          
+            By default, a vRealize Automation 8.x session will timeout after 30 minutes of inactivity. For those looking to increase the session timeout value, this hasn&#39;t been possible before vRealize Automation 8.5. This all changes with the release of vRealize Automation 8.5, as documented in the release notes here.
+To increase the session timeout from the default 30 minutes, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL.
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>vRealize Automation 8.x - Hide Quickstart UI</title>
       <link>https://garyflynn.com/post/vrealize-automation-8x-hide-quickstart-ui/</link>
@@ -33,23 +50,6 @@
         
           
             VMworld 2021 was still held online only this year, which meant there was no shortage of announcements and information available for anyone interested. With a few large announcements including the Project Ensemble Tech Preview and Skyline Advisor Pro, there is plenty to keep an eye on in this space. Below I&#39;ve listed a few things for each of the vRealize Suite products which caught my attention. Leave a comment below on what you&#39;re looking forward to in this next release!
-          
-          
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>vRealize Automation 8.5&#43; - Increase Session Timeout</title>
-      <link>https://garyflynn.com/post/vrealize-automation-85-increase-session-timeout/</link>
-      <pubDate>Thu, 19 Aug 2021 15:25:00 +0000</pubDate>
-      
-      <guid>https://garyflynn.com/post/vrealize-automation-85-increase-session-timeout/</guid>
-      <description>
-        
-          
-            By default, a vRealize Automation 8.x session will timeout after 30 minutes of inactivity. For those looking to increase the session timeout value, this hasn&#39;t been possible before vRealize Automation 8.5. This all changes with the release of vRealize Automation 8.5, as documented in the release notes here.
-To increase the session timeout from the default 30 minutes, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL.
           
           
         

@@ -6,7 +6,58 @@
     <description>Recent content in vRealize on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 11 Feb 2023 08:00:00 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vrealize/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Dec 2023 14:57:40 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vrealize/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vRealize Automation 8.x – Change Internal Kubernetes IP Range</title>
+      <link>https://garyflynn.com/post/vrealize-automation-8x-change-internal-kubernetes-ip-range/</link>
+      <pubDate>Sun, 03 Dec 2023 14:57:40 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-automation-8x-change-internal-kubernetes-ip-range/</guid>
+      <description>
+        
+          
+            vRealize Automation (vRA) 8.2 added support for changing the IP address range used by the internal Kubernetes cluster, which is great news as many organisation already use the 10.244.0.0/21 address space. Unfortunately if your network already uses the ranges 10.244.0.0/22 or 10.244.4.0/22, you will likely encounter issues, such a provisioning timeouts.
+To resolve this issue in vRA 8.2, run the below commands to view your current configuration, and to update to a new range.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>vRealize Automation 8.5&#43; - Increase Session Timeout</title>
+      <link>https://garyflynn.com/post/vrealize-automation-85-increase-session-timeout/</link>
+      <pubDate>Sat, 19 Aug 2023 15:25:00 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/vrealize-automation-85-increase-session-timeout/</guid>
+      <description>
+        
+          
+            By default, a vRealize Automation 8.x session will timeout after 30 minutes of inactivity. For those looking to increase the session timeout value, this hasn&#39;t been possible before vRealize Automation 8.5. This all changes with the release of vRealize Automation 8.5, as documented in the release notes here.
+To increase the session timeout from the default 30 minutes, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Setup vRealize Automation using Terraform</title>
+      <link>https://garyflynn.com/post/setup-vrealize-automation-using-terraform/</link>
+      <pubDate>Wed, 03 May 2023 15:00:57 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/setup-vrealize-automation-using-terraform/</guid>
+      <description>
+        
+          
+            VMware has created a HashiCorp Terraform provider which can be used to set up your vRealize Automation (vRA) infrastructure, along with requesting deployments and consuming XaaS resources. This post will cover the basics of setting up vRA using Terraform.
+The first two posts in this series cover the basics of Infrastructure as Code with vRA and Terraform along with creating your first Terraform configuration to deploy a vSphere virtual machine. To get started, have a read of the documentation available for either vRA 8 or vRA 7.
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>vRealize Automation 8.x - Hide Quickstart UI</title>
       <link>https://garyflynn.com/post/vrealize-automation-8x-hide-quickstart-ui/</link>
@@ -65,57 +116,6 @@
         
           
             VMworld 2021 was still held online only this year, which meant there was no shortage of announcements and information available for anyone interested. With a few large announcements including the Project Ensemble Tech Preview and Skyline Advisor Pro, there is plenty to keep an eye on in this space. Below I&#39;ve listed a few things for each of the vRealize Suite products which caught my attention. Leave a comment below on what you&#39;re looking forward to in this next release!
-          
-          
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>vRealize Automation 8.5&#43; - Increase Session Timeout</title>
-      <link>https://garyflynn.com/post/vrealize-automation-85-increase-session-timeout/</link>
-      <pubDate>Thu, 19 Aug 2021 15:25:00 +0000</pubDate>
-      
-      <guid>https://garyflynn.com/post/vrealize-automation-85-increase-session-timeout/</guid>
-      <description>
-        
-          
-            By default, a vRealize Automation 8.x session will timeout after 30 minutes of inactivity. For those looking to increase the session timeout value, this hasn&#39;t been possible before vRealize Automation 8.5. This all changes with the release of vRealize Automation 8.5, as documented in the release notes here.
-To increase the session timeout from the default 30 minutes, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL.
-          
-          
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Setup vRealize Automation using Terraform</title>
-      <link>https://garyflynn.com/post/setup-vrealize-automation-using-terraform/</link>
-      <pubDate>Mon, 03 May 2021 15:00:57 +0000</pubDate>
-      
-      <guid>https://garyflynn.com/post/setup-vrealize-automation-using-terraform/</guid>
-      <description>
-        
-          
-            VMware has created a HashiCorp Terraform provider which can be used to set up your vRealize Automation (vRA) infrastructure, along with requesting deployments and consuming XaaS resources. This post will cover the basics of setting up vRA using Terraform.
-The first two posts in this series cover the basics of Infrastructure as Code with vRA and Terraform along with creating your first Terraform configuration to deploy a vSphere virtual machine. To get started, have a read of the documentation available for either vRA 8 or vRA 7.
-          
-          
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>vRealize Automation 8.x – Change Internal Kubernetes IP Range</title>
-      <link>https://garyflynn.com/post/vrealize-automation-8x-change-internal-kubernetes-ip-range/</link>
-      <pubDate>Thu, 03 Dec 2020 14:57:40 +0000</pubDate>
-      
-      <guid>https://garyflynn.com/post/vrealize-automation-8x-change-internal-kubernetes-ip-range/</guid>
-      <description>
-        
-          
-            vRealize Automation (vRA) 8.2 added support for changing the IP address range used by the internal Kubernetes cluster, which is great news as many organisation already use the 10.244.0.0/21 address space. Unfortunately if your network already uses the ranges 10.244.0.0/22 or 10.244.4.0/22, you will likely encounter issues, such a provisioning timeouts.
-To resolve this issue in vRA 8.2, run the below commands to view your current configuration, and to update to a new range.
           
           
         
