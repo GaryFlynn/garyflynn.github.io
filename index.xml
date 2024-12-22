@@ -6,7 +6,24 @@
     <description>Recent content on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 Dec 2023 14:57:40 +0000</lastBuildDate><atom:link href="https://garyflynn.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Jul 2024 21:00:00 +1000</lastBuildDate><atom:link href="https://garyflynn.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Started with Aria Automation &amp; Terraform</title>
+      <link>https://garyflynn.com/post/aria-automation-and-terraform-part-one/</link>
+      <pubDate>Sat, 20 Jul 2024 21:00:00 +1000</pubDate>
+      
+      <guid>https://garyflynn.com/post/aria-automation-and-terraform-part-one/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Using Terraform to consume Aria Automation / VCF Automation is easy to configure and to get started, have a read of the below code snippets. This guide will cover the initial setup and configuration of the Aria Automation Terraform provider and assumes that you have the Terraform executable installed locally. If not, install locally following the &lt;a href=&#34;https://developer.hashicorp.com/terraform/install&#34;&gt;HashiCorp documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Part One of this guide will cover authenticating to the Aria Automation / VCF Automation instance.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>vRealize Automation 8.x – Change Internal Kubernetes IP Range</title>
       <link>https://garyflynn.com/post/vrealize-automation-8x-change-internal-kubernetes-ip-range/</link>
