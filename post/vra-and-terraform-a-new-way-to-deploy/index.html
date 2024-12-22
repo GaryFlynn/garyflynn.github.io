@@ -8,22 +8,12 @@
   
   
   >
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 <title>vRA &amp; Terraform: A New Way to Deploy | Gary Flynn</title>
 <meta charset="utf-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-87692784-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-87692784-3');
-</script>
-
-
-
 
 
 <meta property="og:locale" content="en" />
@@ -33,30 +23,30 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@GaryFlynnAU">
 <meta name="twitter:title" content="vRA &amp; Terraform: A New Way to Deploy" />
-<meta name="twitter:image" content="https://garyflynn.com/images/vra_terraform.png"/>
-<meta property="og:url" content="https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/" />
+<meta name="twitter:image" content="http://localhost:1313/images/vra_terraform.png"/>
+<meta property="og:url" content="http://localhost:1313/post/vra-and-terraform-a-new-way-to-deploy/" />
 <meta property="og:title" content="vRA &amp; Terraform: A New Way to Deploy" />
 <meta property="og:description" content="On January 28th 2021, I presented at the Automation User Group about vRealize Automation and Terraform and how they work together to provide a new way to deploy …" />
-<meta property="og:image" content="https://garyflynn.com/images/vra_terraform.png" />
+<meta property="og:image" content="http://localhost:1313/images/vra_terraform.png" />
   <meta name="keywords" content="gary flynn,vmware,hashicorp,IaC,HashiCorp,Homelab,Samples,Terraform,VMware,vRA" />
 
-<link rel="apple-touch-icon" sizes="180x180" href="https://garyflynn.com/icons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://garyflynn.com/icons/favicon-32x32.png">
-<link rel="manifest" href="https://garyflynn.com/icons/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/icons/favicon-32x32.png">
+<link rel="manifest" href="http://localhost:1313/icons/site.webmanifest">
 
-<link rel="canonical" href="https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/">
-
-
-
-<link rel="preload" href="https://garyflynn.com/css/styles.9911cd13cd1e40aaa5ed050665b157b140f390da9c2e4c643b26ad5670c70825748b631e320d99c1533525717144fade765cc88fc482728f4a09d60945b7ee50.css" integrity = "sha512-mRHNE80eQKql7QUGZbFXsUDzkNqcLkxkOyatVnDHCCV0i2MeMg2ZwVM1JXFxRPredlzIj8SCco9KCdYJRbfuUA==" as="style" crossorigin="anonymous">
+<link rel="canonical" href="http://localhost:1313/post/vra-and-terraform-a-new-way-to-deploy/">
 
 
 
-<link rel="preload" href="https://garyflynn.com/en/js/bundle.74fa340d0dd8f8ef8e568e31e18c7ee248a5bbdb4994902559fadf13ad7c59770ab9280cf1ba717076aa34469007d4b68aded3deecd6e37f38d55f2c22f31ab1.js" as="script" integrity=
-"sha512-dPo0DQ3Y&#43;O&#43;OVo4x4Yx&#43;4kilu9tJlJAlWfrfE618WXcKuSgM8bpxcHaqNEaQB9S2it7T3uzW43841V8sIvMasQ==" crossorigin="anonymous">
+<link rel="preload" href="http://localhost:1313/css/styles.9911cd13cd1e40aaa5ed050665b157b140f390da9c2e4c643b26ad5670c70825748b631e320d99c1533525717144fade765cc88fc482728f4a09d60945b7ee50.css" integrity = "sha512-mRHNE80eQKql7QUGZbFXsUDzkNqcLkxkOyatVnDHCCV0i2MeMg2ZwVM1JXFxRPredlzIj8SCco9KCdYJRbfuUA==" as="style" crossorigin="anonymous">
 
 
-<link rel="stylesheet" type="text/css" href="https://garyflynn.com/css/styles.9911cd13cd1e40aaa5ed050665b157b140f390da9c2e4c643b26ad5670c70825748b631e320d99c1533525717144fade765cc88fc482728f4a09d60945b7ee50.css" integrity="sha512-mRHNE80eQKql7QUGZbFXsUDzkNqcLkxkOyatVnDHCCV0i2MeMg2ZwVM1JXFxRPredlzIj8SCco9KCdYJRbfuUA==" crossorigin="anonymous">
+
+<link rel="preload" href="http://localhost:1313/en/js/bundle.87dbb5dcb9b79f2e50edd77169c94aeffb077baba572c9f8cd8ad00a915746806a094a92faf3260583ba67bb34f338769506da3d21abb10780c392d032524bae.js" as="script" integrity=
+"sha512-h9u13Lm3ny5Q7ddxaclK7/sHe6ulcsn4zYrQCpFXRoBqCUqS&#43;vMmBYO6Z7s08zh2lQbaPSGrsQeAw5LQMlJLrg==" crossorigin="anonymous">
+
+
+<link rel="stylesheet" type="text/css" href="http://localhost:1313/css/styles.9911cd13cd1e40aaa5ed050665b157b140f390da9c2e4c643b26ad5670c70825748b631e320d99c1533525717144fade765cc88fc482728f4a09d60945b7ee50.css" integrity="sha512-mRHNE80eQKql7QUGZbFXsUDzkNqcLkxkOyatVnDHCCV0i2MeMg2ZwVM1JXFxRPredlzIj8SCco9KCdYJRbfuUA==" crossorigin="anonymous">
 
   </head>
   <body
@@ -67,7 +57,7 @@
   >
 
 <header class="nav_header" >
-  <nav class="nav"><a href='https://garyflynn.com/' class="nav_brand nav_item" title="Gary Flynn">Gary Flynn
+  <nav class="nav"><a href='http://localhost:1313/' class="nav_brand nav_item" title="Gary Flynn">Gary Flynn
   <div class="nav_close">
     <div><svg class="icon">
   <title>open-menu</title>
@@ -88,31 +78,31 @@
         
 
   <div class="nav_parent">
-    <a href="https://garyflynn.com/" class="nav_item" title="Blog">Blog </a>
+    <a href="http://localhost:1313/" class="nav_item" title="Blog">Blog </a>
   </div>
   <div class="nav_parent">
-    <a href="https://garyflynn.com/" class="nav_item" title="VMware">VMware <img src='https://garyflynn.com/icons/caret-icon.svg' alt="icon" class="nav_icon"></a>
+    <a href="http://localhost:1313/" class="nav_item" title="VMware">VMware <img src='http://localhost:1313/icons/caret-icon.svg' alt="icon" class="nav_icon"></a>
     <div class="nav_sub">
       <span class="nav_child"></span>
-        <a href="https://garyflynn.com/tags/vra/" class="nav_child nav_item" title="Aria Automation">Aria Automation</a>
-        <a href="https://garyflynn.com/tags/vro/" class="nav_child nav_item" title="Aria Automation Orchestrator">Aria Automation Orchestrator</a>
-        <a href="https://garyflynn.com/tags/vrops/" class="nav_child nav_item" title="Aria Operations">Aria Operations</a>
-        <a href="https://garyflynn.com/tags/vrli/" class="nav_child nav_item" title="Aria Operations for Logs">Aria Operations for Logs</a>
-        <a href="https://garyflynn.com/tags/vrslcm/" class="nav_child nav_item" title="Aria Suite Lifecycle">Aria Suite Lifecycle</a>
+        <a href="http://localhost:1313/tags/vra/" class="nav_child nav_item" title="Aria Automation">Aria Automation</a>
+        <a href="http://localhost:1313/tags/vro/" class="nav_child nav_item" title="Aria Automation Orchestrator">Aria Automation Orchestrator</a>
+        <a href="http://localhost:1313/tags/vrops/" class="nav_child nav_item" title="Aria Operations">Aria Operations</a>
+        <a href="http://localhost:1313/tags/vrli/" class="nav_child nav_item" title="Aria Operations for Logs">Aria Operations for Logs</a>
+        <a href="http://localhost:1313/tags/vrslcm/" class="nav_child nav_item" title="Aria Suite Lifecycle">Aria Suite Lifecycle</a>
     </div>
   </div>
   <div class="nav_parent">
-    <a href="https://garyflynn.com/" class="nav_item" title="HashiCorp">HashiCorp <img src='https://garyflynn.com/icons/caret-icon.svg' alt="icon" class="nav_icon"></a>
+    <a href="http://localhost:1313/" class="nav_item" title="HashiCorp">HashiCorp <img src='http://localhost:1313/icons/caret-icon.svg' alt="icon" class="nav_icon"></a>
     <div class="nav_sub">
       <span class="nav_child"></span>
-        <a href="https://garyflynn.com/tags/terraform/" class="nav_child nav_item" title="Terraform">Terraform</a>
+        <a href="http://localhost:1313/tags/terraform/" class="nav_child nav_item" title="Terraform">Terraform</a>
     </div>
   </div>
   <div class="nav_parent">
-    <a href="https://garyflynn.com/tags/microsoft/" class="nav_item" title="Microsoft">Microsoft </a>
+    <a href="http://localhost:1313/tags/microsoft/" class="nav_item" title="Microsoft">Microsoft </a>
   </div>
   <div class="nav_parent">
-    <a href="https://garyflynn.com/about/" class="nav_item" title="About">About </a>
+    <a href="http://localhost:1313/about/" class="nav_item" title="About">About </a>
   </div>
       
 <div class='follow'>
@@ -145,7 +135,7 @@
 
   </a>
     
-  <a href="https://garyflynn.com/index.xml">
+  <a href="http://localhost:1313/index.xml">
     <svg class="icon">
   <title>rss</title>
   <use xlink:href="#rss"></use>
@@ -174,27 +164,27 @@
 </svg>
 </span>
     <span class="post_date">
-      Jan 29, 2021</span>
-    <span class="post_time"> · 3 min read</span><span>&nbsp;· <a href='https://garyflynn.com/tags/iac/' title="IaC" class="post_tag button button_translucent">IaC
-        </a><a href='https://garyflynn.com/tags/hashicorp/' title="HashiCorp" class="post_tag button button_translucent">HashiCorp
-        </a><a href='https://garyflynn.com/tags/homelab/' title="Homelab" class="post_tag button button_translucent">Homelab
-        </a><a href='https://garyflynn.com/tags/samples/' title="Samples" class="post_tag button button_translucent">Samples
-        </a><a href='https://garyflynn.com/tags/terraform/' title="Terraform" class="post_tag button button_translucent">Terraform
-        </a><a href='https://garyflynn.com/tags/vmware/' title="VMware" class="post_tag button button_translucent">VMware
-        </a><a href='https://garyflynn.com/tags/vra/' title="vRA" class="post_tag button button_translucent">vRA
+      Jun 29, 2024</span>
+    <span class="post_time"> · 2 min read</span><span>&nbsp;· <a href='http://localhost:1313/tags/iac/' title="IaC" class="post_tag button button_translucent">IaC
+        </a><a href='http://localhost:1313/tags/hashicorp/' title="HashiCorp" class="post_tag button button_translucent">HashiCorp
+        </a><a href='http://localhost:1313/tags/homelab/' title="Homelab" class="post_tag button button_translucent">Homelab
+        </a><a href='http://localhost:1313/tags/samples/' title="Samples" class="post_tag button button_translucent">Samples
+        </a><a href='http://localhost:1313/tags/terraform/' title="Terraform" class="post_tag button button_translucent">Terraform
+        </a><a href='http://localhost:1313/tags/vmware/' title="VMware" class="post_tag button button_translucent">VMware
+        </a><a href='http://localhost:1313/tags/vra/' title="vRA" class="post_tag button button_translucent">vRA
         </a>
     </span>
     <span class="page_only">&nbsp;·
   <div class="post_share">
     Share on:
-    <a href="https://twitter.com/intent/tweet?text=vRA%20%26%20Terraform%3a%20A%20New%20Way%20to%20Deploy&url=https%3a%2f%2fgaryflynn.com%2fpost%2fvra-and-terraform-a-new-way-to-deploy%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
+    <a href="https://twitter.com/intent/tweet?text=vRA%20%26%20Terraform%3a%20A%20New%20Way%20to%20Deploy&url=http%3a%2f%2flocalhost%3a1313%2fpost%2fvra-and-terraform-a-new-way-to-deploy%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
       <svg class="icon">
   <title>twitter</title>
   <use xlink:href="#twitter"></use>
 </svg>
 
     </a>
-    <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fgaryflynn.com%2fpost%2fvra-and-terraform-a-new-way-to-deploy%2f&t=vRA%20%26%20Terraform%3a%20A%20New%20Way%20to%20Deploy" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
+    <a href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fpost%2fvra-and-terraform-a-new-way-to-deploy%2f&t=vRA%20%26%20Terraform%3a%20A%20New%20Way%20to%20Deploy" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
       <svg class="icon">
   <title>facebook</title>
   <use xlink:href="#facebook"></use>
@@ -208,7 +198,7 @@
 </svg>
 
     </a>
-    <a href="https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/" title="Copy Link" class="link link_yank">
+    <a href="http://localhost:1313/post/vra-and-terraform-a-new-way-to-deploy/" title="Copy Link" class="link link_yank">
       <svg class="icon">
   <title>copy</title>
   <use xlink:href="#copy"></use>
@@ -219,23 +209,12 @@
   </span>
   </div>
 
-    <div class="post_body"><p>On January 28th 2021, I presented at the <a href="https://www.autoug.io/">Automation User Group</a> about vRealize Automation and Terraform and how they work together to provide a new way to deploy your infrastructure. The recording of the session will be available <a href="https://youtu.be/Q1XcuxTL6CQ">here</a> and the slides are available from <a href="https://garyflynn.com/wp-content/uploads/2021/01/vRA-and-Terraform-A-New-Way-to-Deploy.pdf">here</a>.</p>
+    <div class="post_body"><p>On January 28th 2021, I presented at the <a href="https://www.autoug.io/">Automation User Group</a> about vRealize Automation and Terraform and how they work together to provide a new way to deploy your infrastructure. The recording of the session is available <a href="https://youtu.be/Q1XcuxTL6CQ">here</a> and the slides are available from <a href="https://garyflynn.com/wp-content/uploads/2021/01/vRA-and-Terraform-A-New-Way-to-Deploy.pdf">here</a>.</p>
 <ul>
-<li><a href="/post/vra-and-terraform-a-new-way-to-deploy/#vrealize-automation-cloud">vRealize Automation Cloud</a></li>
 <li><a href="/post/vra-and-terraform-a-new-way-to-deploy/#what-is-infrastructure-as-code">What is Infrastructure as Code?</a></li>
 <li><a href="/post/vra-and-terraform-a-new-way-to-deploy/#two-approaches-imperative-vs-declarative">Two Approaches: Imperative vs Declarative</a></li>
 <li><a href="/post/vra-and-terraform-a-new-way-to-deploy/#what-is-terraform-oss">What is Terraform (OSS)?</a></li>
 <li><a href="/post/vra-and-terraform-a-new-way-to-deploy/#additional-resources">Additional Resources</a></li>
-</ul>
-<h3 id="vrealize-automation-cloud">vRealize Automation Cloud</h3>
-<p>VMware vRealize Automation (vRA) Cloud allows you to provide multi-cloud infrastructure and application delivery to your end-users. It enhances the visibility of your machines across your different private and public cloud providers, enables collaboration and provides continuous delivery and release automation.</p>
-<p>vRealize Automation Cloud is comprised of three services: Cloud Assembly, Service Broker and Code Stream. To understand these services more, have a read of this <a href="https://garyflynn.com/post/vrealize-automation-8x-services/">post</a>.</p>
-<ul>
-<li>Available on-premises (vRA 8) or SaaS (vRA Cloud)</li>
-<li>Easy to Get Started –  All you need is a Credit Card</li>
-<li>Cheap to Learn – List Price ($ per Node) $0.03555/hour <a href="https://cloud.vmware.com/vrealize-automation-cloud/pricing">*</a></li>
-<li>Available Globally – US, Frankfurt, Sydney and Singapore</li>
-<li>Familiar to vRA 8 – Same code base, updated monthly</li>
 </ul>
 <h3 id="what-is-infrastructure-as-code"><strong>What is Infrastructure as Code?</strong></h3>
 <p>Infrastructure as Code (IaC) is a way to manage and provision your infrastructure by using machine-readable configuration files. These configuration files can then be stored in a version control system like GitHub or GitLab which enables you to share these configurations across your team.</p>
@@ -249,12 +228,13 @@
 <h3 id="additional-resources">Additional Resources</h3>
 <p>Below is a list of blog posts in this series and they will be linked here once they are published in the coming week.</p>
 <ul>
-<li><a href="https://garyflynn.com/post/create-your-first-vsphere-terraform-configuration/">Create Your First vSphere Terraform Configuration</a></li>
-<li><a href="https://garyflynn.com/post/setup-vrealize-automation-using-terraform/">Setup vRealize Automation using Terraform</a></li>
-<li>Create vRA Deployment using Terraform</li>
-<li>Extending vRA with Terraform Configurations</li>
+<li><a href="http://localhost:1313/post/create-your-first-vsphere-terraform-configuration/">Create Your First vSphere Terraform Configuration</a></li>
+<li><a href="http://localhost:1313/post/aria-automation-and-terraform-part-one/">Getting Started with Aria Automation and Terraform</a></li>
+<li><a href="http://localhost:1313/post/aria-automation-and-terraform-part-two/">Create Cloud Accounts and Cloud Zones</a></li>
+<li>Create Aria Automation Projects</li>
+<li>Create a Deployment using Terraform</li>
 <li>Deploy a GCP Auto-Scaling Web Server</li>
-<li>Import Terraform Configurations to vRA</li>
+<li>Import Terraform Configurations to Aria Automation</li>
 </ul>
 
     </div>
@@ -308,13 +288,13 @@
   </div>
 
         <div class="author_header">
-          <img src="https://garyflynn.com/images/garyflynn-avatar.png" alt="Gary Flynn photo">
+          <img src="http://localhost:1313/images/garyflynn-avatar.png" alt="Gary Flynn photo">
           <h2>Gary Flynn</h2>
         </div>
       <div class="author_bio">
         GaryFlynn.com started out in 2016 as a way for me to share my experiences working in IT across the UK and Australia with others. Consider this my brain dumping ground for anything I think could be useful. Find out more about the site <a href="/about/">here</a>.<br><h2>Achievements</h2><table id='achievements' style='border-collapse: collapse; width: 100%; background: none'><tbody><tr id='achievements' style='background: none;'><td id='achievements' style='width: 50%;'><a href='https://www.credly.com/badges/a7b80dc8-2db3-4e75-9fbf-96261da93561' target='_blank'><img style='display: block; margin-left: auto; margin-right: auto;' src='/images/vcp-cma-2021.png' /></a></td><td id='achievements' style='width: 50%;'><a href='https://www.credly.com/badges/a72c24d6-2674-4aef-beca-5b24b4a56c7a' target='_blank'><img style='display: block; margin-left: auto; margin-right: auto;' src='/images/vcap-cma-deploy-2021.png' /></a></td></tr><tr id='achievements' style='background: none;'><td id='achievements' style='width: 50%;'><a href='https://vexpert.vmware.com/directory/4818' target='_blank'><img style='display: block; margin-left: auto; margin-right: auto;' src='/images/vexpert-2023.png' /></a></td><td id='achievements' style='width: 50%;'><a href='https://vexpert.vmware.com/directory/4818' target='_blank'><img style='display: block; margin-left: auto; margin-right: auto;' src='/images/vexpert-cloud-management-2023-badge.png' /></a></td></tr><tr id='achievements' style='background: none;'><td id='achievements' style='width: 50%;'><a href='https://vexpert.vmware.com/directory/4818' target='_blank'><img style='display: block; margin-left: auto; margin-right: auto;' src='/images/vexpert-pro-2023-badge.png' /></a></td><td id='achievements' style='width: 50%;'><a href='https://vexpert.vmware.com/directory/4818' target='_blank'><img style='display: block; margin-left: auto; margin-right: auto;' src='/images/vexpert-4-stars.png' /></a></td></tr><tr id='achievements' style='background: none;'><td id='achievements' style='width: 50%;'><a href='https://www.credly.com/badges/25777ce7-1628-45eb-bc4b-b4d5bfde3ea0' target='_blank'><img style='display: block; margin-left: auto; margin-right: auto;' src='/images/terraform-associate.png' /></a></td><td id='achievements' style='width: 50%;'><a href='https://www.credly.com/badges/a0183b64-d002-4703-ac95-0a57e0bd840e' target='_blank'><img style='display: block; margin-left: auto; margin-right: auto;' src='/images/terraform-chip.png' /></a></td></tr><tr id='achievements' style='background: none;'><td id='achievements' style='width: 50%;'><a href='https://www.credly.com/badges/22adb251-e3d9-4231-ba7d-535984ddf278' target='_blank'><img style='display: block; margin-left: auto; margin-right: auto;' src='/images/hc-ambassador-2023.png' /></a></td></tr></tbody></table>
       </div>
-      <a href='https://garyflynn.com/about/' class="button mt-1" role="button" title='Read More'>Read More</a>
+      <a href='http://localhost:1313/about/' class="button mt-1" role="button" title='Read More'>Read More</a>
 
     
       <div class="sidebardisclaimer">
@@ -326,100 +306,100 @@
     <h2 class="mt-4">Recent Posts</h2>
     <ul class="flex-column">
       <li>
-        <a href="https://garyflynn.com/post/aria-automation-and-terraform-part-one/" class="nav-link" title="Getting Started with Aria Automation &amp; Terraform">Getting Started with Aria Automation &amp; Terraform</a>
+        <a href="http://localhost:1313/post/aria-automation-and-terraform-part-two/" class="nav-link" title="Aria Automation &amp; Terraform - Part 2">Aria Automation &amp; Terraform - Part 2</a>
       </li>
       <li>
-        <a href="https://garyflynn.com/post/vrealize-automation-8x-change-internal-kubernetes-ip-range/" class="nav-link" title="vRealize Automation 8.x – Change Internal Kubernetes IP Range">vRealize Automation 8.x – Change Internal Kubernetes IP Range</a>
+        <a href="http://localhost:1313/post/aria-automation-and-terraform-part-one/" class="nav-link" title="Getting Started with Aria Automation &amp; Terraform">Getting Started with Aria Automation &amp; Terraform</a>
       </li>
       <li>
-        <a href="https://garyflynn.com/post/vrealize-automation-85-increase-session-timeout/" class="nav-link" title="vRealize Automation 8.5&#43; - Increase Session Timeout">vRealize Automation 8.5+ - Increase Session Timeout</a>
+        <a href="http://localhost:1313/post/vra-and-terraform-a-new-way-to-deploy/" class="nav-link" title="vRA &amp; Terraform: A New Way to Deploy">vRA &amp; Terraform: A New Way to Deploy</a>
       </li>
       <li>
-        <a href="https://garyflynn.com/post/setup-vrealize-automation-using-terraform/" class="nav-link" title="Setup vRealize Automation using Terraform">Setup vRealize Automation using Terraform</a>
+        <a href="http://localhost:1313/post/vrealize-automation-8x-change-internal-kubernetes-ip-range/" class="nav-link" title="vRealize Automation 8.x – Change Internal Kubernetes IP Range">vRealize Automation 8.x – Change Internal Kubernetes IP Range</a>
       </li>
       <li>
-        <a href="https://garyflynn.com/post/vrealize-automation-8x-hide-quickstart-ui/" class="nav-link" title="vRealize Automation 8.x - Hide Quickstart UI">vRealize Automation 8.x - Hide Quickstart UI</a>
+        <a href="http://localhost:1313/post/vrealize-automation-85-increase-session-timeout/" class="nav-link" title="vRealize Automation 8.5&#43; - Increase Session Timeout">vRealize Automation 8.5+ - Increase Session Timeout</a>
       </li>
       <li>
-        <a href="https://garyflynn.com/post/takeaways-from-vmware-explore-eu-2022/" class="nav-link" title="Takeaways from VMware Explore EU 2022">Takeaways from VMware Explore EU 2022</a>
+        <a href="http://localhost:1313/post/vrealize-automation-8x-hide-quickstart-ui/" class="nav-link" title="vRealize Automation 8.x - Hide Quickstart UI">vRealize Automation 8.x - Hide Quickstart UI</a>
       </li>
       <li>
-        <a href="https://garyflynn.com/post/vmware-explore-2022-cloud-management-announcements/" class="nav-link" title="VMware Explore US 2022 Cloud Management Announcements">VMware Explore US 2022 Cloud Management Announcements</a>
+        <a href="http://localhost:1313/post/takeaways-from-vmware-explore-eu-2022/" class="nav-link" title="Takeaways from VMware Explore EU 2022">Takeaways from VMware Explore EU 2022</a>
       </li>
       <li>
-        <a href="https://garyflynn.com/post/vmworld-2021-vrealize-announcements/" class="nav-link" title="VMworld 2021 vRealize Announcements">VMworld 2021 vRealize Announcements</a>
+        <a href="http://localhost:1313/post/vmware-explore-2022-cloud-management-announcements/" class="nav-link" title="VMware Explore US 2022 Cloud Management Announcements">VMware Explore US 2022 Cloud Management Announcements</a>
       </li>
     </ul>
     <div>
       <h2 class="mt-4 taxonomy" id="tags-section">Tags</h2>
       <nav class="tags_nav">
-        <a href='https://garyflynn.com/tags/vmware/' class="post_tag button button_translucent" title="vmware">
+        <a href='http://localhost:1313/tags/vmware/' class="post_tag button button_translucent" title="vmware">
           VMWARE
-          <span class="button_tally">46</span>
+          <span class="button_tally">45</span>
         </a>
         
-        <a href='https://garyflynn.com/tags/vrealize/' class="post_tag button button_translucent" title="vrealize">
+        <a href='http://localhost:1313/tags/vrealize/' class="post_tag button button_translucent" title="vrealize">
           VREALIZE
-          <span class="button_tally">25</span>
-        </a>
-        
-        <a href='https://garyflynn.com/tags/homelab/' class="post_tag button button_translucent" title="homelab">
-          HOMELAB
           <span class="button_tally">24</span>
         </a>
         
-        <a href='https://garyflynn.com/tags/vra/' class="post_tag button button_translucent" title="vra">
+        <a href='http://localhost:1313/tags/homelab/' class="post_tag button button_translucent" title="homelab">
+          HOMELAB
+          <span class="button_tally">23</span>
+        </a>
+        
+        <a href='http://localhost:1313/tags/vra/' class="post_tag button button_translucent" title="vra">
           VRA
-          <span class="button_tally">22</span>
+          <span class="button_tally">21</span>
         </a>
         
-        <a href='https://garyflynn.com/tags/automation/' class="post_tag button button_translucent" title="automation">
+        <a href='http://localhost:1313/tags/automation/' class="post_tag button button_translucent" title="automation">
           AUTOMATION
-          <span class="button_tally">12</span>
+          <span class="button_tally">13</span>
         </a>
         
-        <a href='https://garyflynn.com/tags/getting-started/' class="post_tag button button_translucent" title="getting started">
+        <a href='http://localhost:1313/tags/getting-started/' class="post_tag button button_translucent" title="getting started">
           GETTING STARTED
-          <span class="button_tally">7</span>
+          <span class="button_tally">8</span>
         </a>
         
-        <a href='https://garyflynn.com/tags/vro/' class="post_tag button button_translucent" title="vro">
+        <a href='http://localhost:1313/tags/vro/' class="post_tag button button_translucent" title="vro">
           VRO
           <span class="button_tally">7</span>
         </a>
         
-        <a href='https://garyflynn.com/tags/vsphere/' class="post_tag button button_translucent" title="vsphere">
+        <a href='http://localhost:1313/tags/vsphere/' class="post_tag button button_translucent" title="vsphere">
           VSPHERE
           <span class="button_tally">7</span>
         </a>
         
-        <a href='https://garyflynn.com/tags/configure/' class="post_tag button button_translucent" title="configure">
+        <a href='http://localhost:1313/tags/configure/' class="post_tag button button_translucent" title="configure">
           CONFIGURE
           <span class="button_tally">6</span>
         </a>
         
-        <a href='https://garyflynn.com/tags/install/' class="post_tag button button_translucent" title="install">
+        <a href='http://localhost:1313/tags/install/' class="post_tag button button_translucent" title="install">
           INSTALL
           <span class="button_tally">6</span>
         </a>
         
-        <a href='https://garyflynn.com/tags/vrslcm/' class="post_tag button button_translucent" title="vrslcm">
+        <a href='http://localhost:1313/tags/vrslcm/' class="post_tag button button_translucent" title="vrslcm">
           VRSLCM
           <span class="button_tally">6</span>
         </a>
         
-        <a href='https://garyflynn.com/tags/terraform/' class="post_tag button button_translucent" title="terraform">
+        <a href='http://localhost:1313/tags/terraform/' class="post_tag button button_translucent" title="terraform">
           TERRAFORM
           <span class="button_tally">5</span>
         </a>
         
-        <a href='https://garyflynn.com/tags/vrops/' class="post_tag button button_translucent" title="vrops">
+        <a href='http://localhost:1313/tags/vrops/' class="post_tag button button_translucent" title="vrops">
           VROPS
           <span class="button_tally">5</span>
         </a>
         
-        <a href='https://garyflynn.com/tags/esxi/' class="post_tag button button_translucent" title="esxi">
-          ESXI
+        <a href='http://localhost:1313/tags/aria/' class="post_tag button button_translucent" title="aria">
+          ARIA
           <span class="button_tally">4</span>
         </a>
         
@@ -429,347 +409,347 @@
         <div class="post_tags">
           <div class="tags_list">
             
-            <a href='https://garyflynn.com/tags/active-directory/' class=" post_tag button button_translucent" data-position=1 title="active directory">ACTIVE DIRECTORY<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/active-directory/' class=" post_tag button button_translucent" data-position=1 title="active directory">ACTIVE DIRECTORY<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/alarms/' class=" post_tag button button_translucent" data-position=1 title="alarms">ALARMS<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/alarms/' class=" post_tag button button_translucent" data-position=1 title="alarms">ALARMS<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/alerts/' class=" post_tag button button_translucent" data-position=1 title="alerts">ALERTS<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/alerts/' class=" post_tag button button_translucent" data-position=1 title="alerts">ALERTS<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/aria/' class=" post_tag button button_translucent" data-position=3 title="aria">ARIA<span class="button_tally">3</span>
+            <a href='http://localhost:1313/tags/aria/' class=" post_tag button button_translucent" data-position=4 title="aria">ARIA<span class="button_tally">4</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/automation/' class=" post_tag button button_translucent" data-position=12 title="automation">AUTOMATION<span class="button_tally">12</span>
+            <a href='http://localhost:1313/tags/automation/' class=" post_tag button button_translucent" data-position=13 title="automation">AUTOMATION<span class="button_tally">13</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/aws/' class=" post_tag button button_translucent" data-position=1 title="aws">AWS<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/aws/' class=" post_tag button button_translucent" data-position=1 title="aws">AWS<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/azure/' class=" post_tag button button_translucent" data-position=2 title="azure">AZURE<span class="button_tally">2</span>
+            <a href='http://localhost:1313/tags/azure/' class=" post_tag button button_translucent" data-position=2 title="azure">AZURE<span class="button_tally">2</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/blogs/' class=" post_tag button button_translucent" data-position=1 title="blogs">BLOGS<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/blogs/' class=" post_tag button button_translucent" data-position=1 title="blogs">BLOGS<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/comparison/' class=" post_tag button button_translucent" data-position=1 title="comparison">COMPARISON<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/comparison/' class=" post_tag button button_translucent" data-position=1 title="comparison">COMPARISON<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/configuration-manager/' class=" post_tag button button_translucent" data-position=1 title="configuration manager">CONFIGURATION MANAGER<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/configuration-manager/' class=" post_tag button button_translucent" data-position=1 title="configuration manager">CONFIGURATION MANAGER<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/configure/' class=" post_tag button button_translucent" data-position=6 title="configure">CONFIGURE<span class="button_tally">6</span>
+            <a href='http://localhost:1313/tags/configure/' class=" post_tag button button_translucent" data-position=6 title="configure">CONFIGURE<span class="button_tally">6</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/control-center/' class=" post_tag button button_translucent" data-position=1 title="control center">CONTROL CENTER<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/control-center/' class=" post_tag button button_translucent" data-position=1 title="control center">CONTROL CENTER<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/dashboard/' class=" post_tag button button_translucent" data-position=1 title="dashboard">DASHBOARD<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/dashboard/' class=" post_tag button button_translucent" data-position=1 title="dashboard">DASHBOARD<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/dfw/' class=" post_tag button button_translucent" data-position=2 title="dfw">DFW<span class="button_tally">2</span>
+            <a href='http://localhost:1313/tags/dfw/' class=" post_tag button button_translucent" data-position=2 title="dfw">DFW<span class="button_tally">2</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/downgrade/' class=" post_tag button button_translucent" data-position=1 title="downgrade">DOWNGRADE<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/downgrade/' class=" post_tag button button_translucent" data-position=1 title="downgrade">DOWNGRADE<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/esxi/' class=" post_tag button button_translucent" data-position=4 title="esxi">ESXI<span class="button_tally">4</span>
+            <a href='http://localhost:1313/tags/esxi/' class=" post_tag button button_translucent" data-position=4 title="esxi">ESXI<span class="button_tally">4</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/explore/' class=" post_tag button button_translucent" data-position=2 title="explore">EXPLORE<span class="button_tally">2</span>
+            <a href='http://localhost:1313/tags/explore/' class=" post_tag button button_translucent" data-position=2 title="explore">EXPLORE<span class="button_tally">2</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/export/' class=" post_tag button button_translucent" data-position=1 title="export">EXPORT<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/export/' class=" post_tag button button_translucent" data-position=1 title="export">EXPORT<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/file-server/' class=" post_tag button button_translucent" data-position=1 title="file server">FILE SERVER<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/file-server/' class=" post_tag button button_translucent" data-position=1 title="file server">FILE SERVER<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/file-share/' class=" post_tag button button_translucent" data-position=1 title="file share">FILE SHARE<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/file-share/' class=" post_tag button button_translucent" data-position=1 title="file share">FILE SHARE<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/firewall/' class=" post_tag button button_translucent" data-position=2 title="firewall">FIREWALL<span class="button_tally">2</span>
+            <a href='http://localhost:1313/tags/firewall/' class=" post_tag button button_translucent" data-position=2 title="firewall">FIREWALL<span class="button_tally">2</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/gaz-top-tips/' class=" post_tag button button_translucent" data-position=1 title="gaz top tips">GAZ TOP TIPS<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/gaz-top-tips/' class=" post_tag button button_translucent" data-position=1 title="gaz top tips">GAZ TOP TIPS<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/gcp/' class=" post_tag button button_translucent" data-position=1 title="gcp">GCP<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/gcp/' class=" post_tag button button_translucent" data-position=1 title="gcp">GCP<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/getting-started/' class=" post_tag button button_translucent" data-position=7 title="getting started">GETTING STARTED<span class="button_tally">7</span>
+            <a href='http://localhost:1313/tags/getting-started/' class=" post_tag button button_translucent" data-position=8 title="getting started">GETTING STARTED<span class="button_tally">8</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/github/' class=" post_tag button button_translucent" data-position=1 title="github">GITHUB<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/github/' class=" post_tag button button_translucent" data-position=1 title="github">GITHUB<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/google-cloud/' class=" post_tag button button_translucent" data-position=1 title="google cloud">GOOGLE CLOUD<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/google-cloud/' class=" post_tag button button_translucent" data-position=1 title="google cloud">GOOGLE CLOUD<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/guide/' class=" post_tag button button_translucent" data-position=3 title="guide">GUIDE<span class="button_tally">3</span>
+            <a href='http://localhost:1313/tags/guide/' class=" post_tag button button_translucent" data-position=3 title="guide">GUIDE<span class="button_tally">3</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/hashicorp/' class=" post_tag button button_translucent" data-position=3 title="hashicorp">HASHICORP<span class="button_tally">3</span>
+            <a href='http://localhost:1313/tags/hashicorp/' class=" post_tag button button_translucent" data-position=2 title="hashicorp">HASHICORP<span class="button_tally">2</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/homelab/' class=" post_tag button button_translucent" data-position=24 title="homelab">HOMELAB<span class="button_tally">24</span>
+            <a href='http://localhost:1313/tags/homelab/' class=" post_tag button button_translucent" data-position=23 title="homelab">HOMELAB<span class="button_tally">23</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/iac/' class=" post_tag button button_translucent" data-position=3 title="iac">IAC<span class="button_tally">3</span>
+            <a href='http://localhost:1313/tags/iac/' class=" post_tag button button_translucent" data-position=2 title="iac">IAC<span class="button_tally">2</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/index/' class=" post_tag button button_translucent" data-position=1 title="index">INDEX<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/index/' class=" post_tag button button_translucent" data-position=1 title="index">INDEX<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/install/' class=" post_tag button button_translucent" data-position=6 title="install">INSTALL<span class="button_tally">6</span>
+            <a href='http://localhost:1313/tags/install/' class=" post_tag button button_translucent" data-position=6 title="install">INSTALL<span class="button_tally">6</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/integration/' class=" post_tag button button_translucent" data-position=2 title="integration">INTEGRATION<span class="button_tally">2</span>
+            <a href='http://localhost:1313/tags/integration/' class=" post_tag button button_translucent" data-position=2 title="integration">INTEGRATION<span class="button_tally">2</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/intel/' class=" post_tag button button_translucent" data-position=2 title="intel">INTEL<span class="button_tally">2</span>
+            <a href='http://localhost:1313/tags/intel/' class=" post_tag button button_translucent" data-position=2 title="intel">INTEL<span class="button_tally">2</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/iso/' class=" post_tag button button_translucent" data-position=1 title="iso">ISO<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/iso/' class=" post_tag button button_translucent" data-position=1 title="iso">ISO<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/kerberos/' class=" post_tag button button_translucent" data-position=1 title="kerberos">KERBEROS<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/kerberos/' class=" post_tag button button_translucent" data-position=1 title="kerberos">KERBEROS<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/key/' class=" post_tag button button_translucent" data-position=1 title="key">KEY<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/key/' class=" post_tag button button_translucent" data-position=1 title="key">KEY<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/krb5.conf/' class=" post_tag button button_translucent" data-position=1 title="krb5.conf">KRB5.CONF<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/krb5.conf/' class=" post_tag button button_translucent" data-position=1 title="krb5.conf">KRB5.CONF<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/kubernetes/' class=" post_tag button button_translucent" data-position=2 title="kubernetes">KUBERNETES<span class="button_tally">2</span>
+            <a href='http://localhost:1313/tags/kubernetes/' class=" post_tag button button_translucent" data-position=2 title="kubernetes">KUBERNETES<span class="button_tally">2</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/license/' class=" post_tag button button_translucent" data-position=1 title="license">LICENSE<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/license/' class=" post_tag button button_translucent" data-position=1 title="license">LICENSE<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/lifecycle-manager/' class=" post_tag button button_translucent" data-position=4 title="lifecycle manager">LIFECYCLE MANAGER<span class="button_tally">4</span>
+            <a href='http://localhost:1313/tags/lifecycle-manager/' class=" post_tag button button_translucent" data-position=4 title="lifecycle manager">LIFECYCLE MANAGER<span class="button_tally">4</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/log-insight/' class=" post_tag button button_translucent" data-position=1 title="log insight">LOG INSIGHT<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/log-insight/' class=" post_tag button button_translucent" data-position=1 title="log insight">LOG INSIGHT<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/memory/' class=" post_tag button button_translucent" data-position=2 title="memory">MEMORY<span class="button_tally">2</span>
+            <a href='http://localhost:1313/tags/memory/' class=" post_tag button button_translucent" data-position=2 title="memory">MEMORY<span class="button_tally">2</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/metrics/' class=" post_tag button button_translucent" data-position=2 title="metrics">METRICS<span class="button_tally">2</span>
+            <a href='http://localhost:1313/tags/metrics/' class=" post_tag button button_translucent" data-position=2 title="metrics">METRICS<span class="button_tally">2</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/microsoft/' class=" post_tag button button_translucent" data-position=4 title="microsoft">MICROSOFT<span class="button_tally">4</span>
+            <a href='http://localhost:1313/tags/microsoft/' class=" post_tag button button_translucent" data-position=4 title="microsoft">MICROSOFT<span class="button_tally">4</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/nsx/' class=" post_tag button button_translucent" data-position=2 title="nsx">NSX<span class="button_tally">2</span>
+            <a href='http://localhost:1313/tags/nsx/' class=" post_tag button button_translucent" data-position=2 title="nsx">NSX<span class="button_tally">2</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/nuc/' class=" post_tag button button_translucent" data-position=2 title="nuc">NUC<span class="button_tally">2</span>
+            <a href='http://localhost:1313/tags/nuc/' class=" post_tag button button_translucent" data-position=2 title="nuc">NUC<span class="button_tally">2</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/orchestrator/' class=" post_tag button button_translucent" data-position=1 title="orchestrator">ORCHESTRATOR<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/orchestrator/' class=" post_tag button button_translucent" data-position=1 title="orchestrator">ORCHESTRATOR<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/powercli/' class=" post_tag button button_translucent" data-position=1 title="powercli">POWERCLI<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/powercli/' class=" post_tag button button_translucent" data-position=1 title="powercli">POWERCLI<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/powershell/' class=" post_tag button button_translucent" data-position=4 title="powershell">POWERSHELL<span class="button_tally">4</span>
+            <a href='http://localhost:1313/tags/powershell/' class=" post_tag button button_translucent" data-position=4 title="powershell">POWERSHELL<span class="button_tally">4</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/prelude/' class=" post_tag button button_translucent" data-position=1 title="prelude">PRELUDE<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/prelude/' class=" post_tag button button_translucent" data-position=1 title="prelude">PRELUDE<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/query/' class=" post_tag button button_translucent" data-position=1 title="query">QUERY<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/query/' class=" post_tag button button_translucent" data-position=1 title="query">QUERY<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/reclamation/' class=" post_tag button button_translucent" data-position=1 title="reclamation">RECLAMATION<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/reclamation/' class=" post_tag button button_translucent" data-position=1 title="reclamation">RECLAMATION<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/rufus/' class=" post_tag button button_translucent" data-position=1 title="rufus">RUFUS<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/rufus/' class=" post_tag button button_translucent" data-position=1 title="rufus">RUFUS<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/samples/' class=" post_tag button button_translucent" data-position=2 title="samples">SAMPLES<span class="button_tally">2</span>
+            <a href='http://localhost:1313/tags/samples/' class=" post_tag button button_translucent" data-position=2 title="samples">SAMPLES<span class="button_tally">2</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/sccm/' class=" post_tag button button_translucent" data-position=1 title="sccm">SCCM<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/sccm/' class=" post_tag button button_translucent" data-position=1 title="sccm">SCCM<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/services/' class=" post_tag button button_translucent" data-position=1 title="services">SERVICES<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/services/' class=" post_tag button button_translucent" data-position=1 title="services">SERVICES<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/setup/' class=" post_tag button button_translucent" data-position=1 title="setup">SETUP<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/setup/' class=" post_tag button button_translucent" data-position=1 title="setup">SETUP<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/smb/' class=" post_tag button button_translucent" data-position=1 title="smb">SMB<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/smb/' class=" post_tag button button_translucent" data-position=1 title="smb">SMB<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/snapshot/' class=" post_tag button button_translucent" data-position=1 title="snapshot">SNAPSHOT<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/snapshot/' class=" post_tag button button_translucent" data-position=1 title="snapshot">SNAPSHOT<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/storage/' class=" post_tag button button_translucent" data-position=1 title="storage">STORAGE<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/storage/' class=" post_tag button button_translucent" data-position=1 title="storage">STORAGE<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/system-center/' class=" post_tag button button_translucent" data-position=1 title="system center">SYSTEM CENTER<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/system-center/' class=" post_tag button button_translucent" data-position=1 title="system center">SYSTEM CENTER<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/terraform/' class=" post_tag button button_translucent" data-position=5 title="terraform">TERRAFORM<span class="button_tally">5</span>
+            <a href='http://localhost:1313/tags/terraform/' class=" post_tag button button_translucent" data-position=5 title="terraform">TERRAFORM<span class="button_tally">5</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/thresholds/' class=" post_tag button button_translucent" data-position=1 title="thresholds">THRESHOLDS<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/thresholds/' class=" post_tag button button_translucent" data-position=1 title="thresholds">THRESHOLDS<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/troubleshoot/' class=" post_tag button button_translucent" data-position=1 title="troubleshoot">TROUBLESHOOT<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/troubleshoot/' class=" post_tag button button_translucent" data-position=1 title="troubleshoot">TROUBLESHOOT<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/upgrade/' class=" post_tag button button_translucent" data-position=1 title="upgrade">UPGRADE<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/upgrade/' class=" post_tag button button_translucent" data-position=1 title="upgrade">UPGRADE<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/usage/' class=" post_tag button button_translucent" data-position=1 title="usage">USAGE<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/usage/' class=" post_tag button button_translucent" data-position=1 title="usage">USAGE<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/usb/' class=" post_tag button button_translucent" data-position=1 title="usb">USB<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/usb/' class=" post_tag button button_translucent" data-position=1 title="usb">USB<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/vcenter/' class=" post_tag button button_translucent" data-position=4 title="vcenter">VCENTER<span class="button_tally">4</span>
+            <a href='http://localhost:1313/tags/vcenter/' class=" post_tag button button_translucent" data-position=4 title="vcenter">VCENTER<span class="button_tally">4</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/vcf/' class=" post_tag button button_translucent" data-position=1 title="vcf">VCF<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/vcf/' class=" post_tag button button_translucent" data-position=2 title="vcf">VCF<span class="button_tally">2</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/vidm/' class=" post_tag button button_translucent" data-position=1 title="vidm">VIDM<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/vidm/' class=" post_tag button button_translucent" data-position=1 title="vidm">VIDM<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/vmware/' class=" post_tag button button_translucent" data-position=46 title="vmware">VMWARE<span class="button_tally">46</span>
+            <a href='http://localhost:1313/tags/vmware/' class=" post_tag button button_translucent" data-position=45 title="vmware">VMWARE<span class="button_tally">45</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/vmworld/' class=" post_tag button button_translucent" data-position=1 title="vmworld">VMWORLD<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/vmworld/' class=" post_tag button button_translucent" data-position=1 title="vmworld">VMWORLD<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/vra/' class=" post_tag button button_translucent" data-position=22 title="vra">VRA<span class="button_tally">22</span>
+            <a href='http://localhost:1313/tags/vra/' class=" post_tag button button_translucent" data-position=21 title="vra">VRA<span class="button_tally">21</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/vra-8/' class=" post_tag button button_translucent" data-position=3 title="vra 8">VRA 8<span class="button_tally">3</span>
+            <a href='http://localhost:1313/tags/vra-8/' class=" post_tag button button_translucent" data-position=3 title="vra 8">VRA 8<span class="button_tally">3</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/vrealize/' class=" post_tag button button_translucent" data-position=25 title="vrealize">VREALIZE<span class="button_tally">25</span>
+            <a href='http://localhost:1313/tags/vrealize/' class=" post_tag button button_translucent" data-position=24 title="vrealize">VREALIZE<span class="button_tally">24</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/vrli/' class=" post_tag button button_translucent" data-position=2 title="vrli">VRLI<span class="button_tally">2</span>
+            <a href='http://localhost:1313/tags/vrli/' class=" post_tag button button_translucent" data-position=2 title="vrli">VRLI<span class="button_tally">2</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/vro/' class=" post_tag button button_translucent" data-position=7 title="vro">VRO<span class="button_tally">7</span>
+            <a href='http://localhost:1313/tags/vro/' class=" post_tag button button_translucent" data-position=7 title="vro">VRO<span class="button_tally">7</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/vro-7/' class=" post_tag button button_translucent" data-position=1 title="vro 7">VRO 7<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/vro-7/' class=" post_tag button button_translucent" data-position=1 title="vro 7">VRO 7<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/vro-8/' class=" post_tag button button_translucent" data-position=2 title="vro 8">VRO 8<span class="button_tally">2</span>
+            <a href='http://localhost:1313/tags/vro-8/' class=" post_tag button button_translucent" data-position=2 title="vro 8">VRO 8<span class="button_tally">2</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/vrops/' class=" post_tag button button_translucent" data-position=5 title="vrops">VROPS<span class="button_tally">5</span>
+            <a href='http://localhost:1313/tags/vrops/' class=" post_tag button button_translucent" data-position=5 title="vrops">VROPS<span class="button_tally">5</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/vrslcm/' class=" post_tag button button_translucent" data-position=6 title="vrslcm">VRSLCM<span class="button_tally">6</span>
+            <a href='http://localhost:1313/tags/vrslcm/' class=" post_tag button button_translucent" data-position=6 title="vrslcm">VRSLCM<span class="button_tally">6</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/vsan/' class=" post_tag button button_translucent" data-position=2 title="vsan">VSAN<span class="button_tally">2</span>
+            <a href='http://localhost:1313/tags/vsan/' class=" post_tag button button_translucent" data-position=2 title="vsan">VSAN<span class="button_tally">2</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/vsphere/' class=" post_tag button button_translucent" data-position=7 title="vsphere">VSPHERE<span class="button_tally">7</span>
+            <a href='http://localhost:1313/tags/vsphere/' class=" post_tag button button_translucent" data-position=7 title="vsphere">VSPHERE<span class="button_tally">7</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/windows/' class=" post_tag button button_translucent" data-position=1 title="windows">WINDOWS<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/windows/' class=" post_tag button button_translucent" data-position=1 title="windows">WINDOWS<span class="button_tally">1</span>
             </a>
             
             
-            <a href='https://garyflynn.com/tags/winrm/' class=" post_tag button button_translucent" data-position=1 title="winrm">WINRM<span class="button_tally">1</span>
+            <a href='http://localhost:1313/tags/winrm/' class=" post_tag button button_translucent" data-position=1 title="winrm">WINRM<span class="button_tally">1</span>
             </a>
             
             <div class="tags_sort"><span title="sort alphabetically">[A~Z]</span><span title="sort by count">[0~9]</span>
@@ -864,7 +844,7 @@
 
 <footer class="footer">
   <div class="footer_inner wrap pale">
-    <img src='https://garyflynn.com/icons/apple-touch-icon.png' class="icon icon_2 transparent" alt="Gary Flynn">
+    <img src='http://localhost:1313/icons/apple-touch-icon.png' class="icon icon_2 transparent" alt="Gary Flynn">
     <p>Copyright&nbsp;2018-&nbsp;<span class="year"></span>&nbsp;GARY FLYNN. All Rights Reserved</p><a class="to_top" href="#documentTop">
   <svg class="icon">
   <title>to-top</title>
@@ -876,9 +856,9 @@
   </div>
 </footer>
 
-<script type="text/javascript" src="https://garyflynn.com/en/js/bundle.74fa340d0dd8f8ef8e568e31e18c7ee248a5bbdb4994902559fadf13ad7c59770ab9280cf1ba717076aa34469007d4b68aded3deecd6e37f38d55f2c22f31ab1.js" integrity="sha512-dPo0DQ3Y&#43;O&#43;OVo4x4Yx&#43;4kilu9tJlJAlWfrfE618WXcKuSgM8bpxcHaqNEaQB9S2it7T3uzW43841V8sIvMasQ==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://localhost:1313/en/js/bundle.87dbb5dcb9b79f2e50edd77169c94aeffb077baba572c9f8cd8ad00a915746806a094a92faf3260583ba67bb34f338769506da3d21abb10780c392d032524bae.js" integrity="sha512-h9u13Lm3ny5Q7ddxaclK7/sHe6ulcsn4zYrQCpFXRoBqCUqS&#43;vMmBYO6Z7s08zh2lQbaPSGrsQeAw5LQMlJLrg==" crossorigin="anonymous"></script>
 
-  <script src="https://garyflynn.com/js/search.min.73cb82d8f274395dd220d6594053cd3d3d8ac8c97d874b5142a60b9744f3704d765551e0ade104d5803c66b731f5a7a00ac2cff33c8c9090ff8100169a3e2574.js"></script>
+  <script src="http://localhost:1313/js/search.min.73cb82d8f274395dd220d6594053cd3d3d8ac8c97d874b5142a60b9744f3704d765551e0ade104d5803c66b731f5a7a00ac2cff33c8c9090ff8100169a3e2574.js"></script>
 
   </body>
 </html>

@@ -3,48 +3,63 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://garyflynn.com/</loc>
-    <lastmod>2024-07-20T21:00:00+10:00</lastmod>
+    <lastmod>2024-08-18T21:00:00+10:00</lastmod>
   </url><url>
     <loc>https://garyflynn.com/tags/aria/</loc>
-    <lastmod>2024-07-20T21:00:00+10:00</lastmod>
+    <lastmod>2024-08-18T21:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/post/aria-automation-and-terraform-part-two/</loc>
+    <lastmod>2024-08-18T21:00:00+10:00</lastmod>
   </url><url>
     <loc>https://garyflynn.com/tags/automation/</loc>
-    <lastmod>2024-07-20T21:00:00+10:00</lastmod>
+    <lastmod>2024-08-18T21:00:00+10:00</lastmod>
   </url><url>
     <loc>https://garyflynn.com/tags/getting-started/</loc>
-    <lastmod>2024-07-20T21:00:00+10:00</lastmod>
+    <lastmod>2024-08-18T21:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/tags/index/</loc>
+    <lastmod>2024-08-18T21:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/post/</loc>
+    <lastmod>2024-08-18T21:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/tags/</loc>
+    <lastmod>2024-08-18T21:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/tags/terraform/</loc>
+    <lastmod>2024-08-18T21:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/tags/vcf/</loc>
+    <lastmod>2024-08-18T21:00:00+10:00</lastmod>
   </url><url>
     <loc>https://garyflynn.com/post/aria-automation-and-terraform-part-one/</loc>
     <lastmod>2024-07-20T21:00:00+10:00</lastmod>
   </url><url>
-    <loc>https://garyflynn.com/tags/index/</loc>
-    <lastmod>2024-07-20T21:00:00+10:00</lastmod>
+    <loc>https://garyflynn.com/post/aria-automation-and-terraform-a-new-way-to-deploy/</loc>
+    <lastmod>2024-06-29T10:10:05+00:00</lastmod>
   </url><url>
-    <loc>https://garyflynn.com/post/</loc>
-    <lastmod>2024-07-20T21:00:00+10:00</lastmod>
-  </url><url>
-    <loc>https://garyflynn.com/tags/</loc>
-    <lastmod>2024-07-20T21:00:00+10:00</lastmod>
-  </url><url>
-    <loc>https://garyflynn.com/tags/terraform/</loc>
-    <lastmod>2024-07-20T21:00:00+10:00</lastmod>
-  </url><url>
-    <loc>https://garyflynn.com/tags/vcf/</loc>
-    <lastmod>2024-07-20T21:00:00+10:00</lastmod>
+    <loc>https://garyflynn.com/tags/hashicorp/</loc>
+    <lastmod>2024-06-29T10:10:05+00:00</lastmod>
   </url><url>
     <loc>https://garyflynn.com/tags/homelab/</loc>
-    <lastmod>2023-12-03T14:57:40+00:00</lastmod>
+    <lastmod>2024-06-29T10:10:05+00:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/tags/iac/</loc>
+    <lastmod>2024-06-29T10:10:05+00:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/tags/samples/</loc>
+    <lastmod>2024-06-29T10:10:05+00:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/tags/vmware/</loc>
+    <lastmod>2024-06-29T10:10:05+00:00</lastmod>
+  </url><url>
+    <loc>https://garyflynn.com/tags/vra/</loc>
+    <lastmod>2024-06-29T10:10:05+00:00</lastmod>
   </url><url>
     <loc>https://garyflynn.com/tags/integration/</loc>
     <lastmod>2023-12-03T14:57:40+00:00</lastmod>
   </url><url>
     <loc>https://garyflynn.com/tags/kubernetes/</loc>
-    <lastmod>2023-12-03T14:57:40+00:00</lastmod>
-  </url><url>
-    <loc>https://garyflynn.com/tags/vmware/</loc>
-    <lastmod>2023-12-03T14:57:40+00:00</lastmod>
-  </url><url>
-    <loc>https://garyflynn.com/tags/vra/</loc>
     <lastmod>2023-12-03T14:57:40+00:00</lastmod>
   </url><url>
     <loc>https://garyflynn.com/tags/vrealize/</loc>
@@ -61,15 +76,6 @@
   </url><url>
     <loc>https://garyflynn.com/post/vrealize-automation-85-increase-session-timeout/</loc>
     <lastmod>2023-08-19T15:25:00+00:00</lastmod>
-  </url><url>
-    <loc>https://garyflynn.com/tags/hashicorp/</loc>
-    <lastmod>2023-05-03T15:00:57+00:00</lastmod>
-  </url><url>
-    <loc>https://garyflynn.com/tags/iac/</loc>
-    <lastmod>2023-05-03T15:00:57+00:00</lastmod>
-  </url><url>
-    <loc>https://garyflynn.com/post/setup-vrealize-automation-using-terraform/</loc>
-    <lastmod>2023-05-03T15:00:57+00:00</lastmod>
   </url><url>
     <loc>https://garyflynn.com/post/vrealize-automation-8x-hide-quickstart-ui/</loc>
     <lastmod>2023-02-11T08:00:00+00:00</lastmod>
@@ -95,14 +101,8 @@
     <loc>https://garyflynn.com/post/create-your-first-vsphere-terraform-configuration/</loc>
     <lastmod>2021-02-01T19:36:37+00:00</lastmod>
   </url><url>
-    <loc>https://garyflynn.com/tags/samples/</loc>
-    <lastmod>2021-02-01T19:36:37+00:00</lastmod>
-  </url><url>
     <loc>https://garyflynn.com/tags/vsphere/</loc>
     <lastmod>2021-02-01T19:36:37+00:00</lastmod>
-  </url><url>
-    <loc>https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/</loc>
-    <lastmod>2021-01-29T10:10:05+00:00</lastmod>
   </url><url>
     <loc>https://garyflynn.com/tags/prelude/</loc>
     <lastmod>2020-11-25T17:59:06+00:00</lastmod>

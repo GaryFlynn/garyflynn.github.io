@@ -6,7 +6,24 @@
     <description>Recent content in Automation on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Jul 2024 21:00:00 +1000</lastBuildDate><atom:link href="https://garyflynn.com/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Aug 2024 21:00:00 +1000</lastBuildDate><atom:link href="https://garyflynn.com/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aria Automation &amp; Terraform - Part 2</title>
+      <link>https://garyflynn.com/post/aria-automation-and-terraform-part-two/</link>
+      <pubDate>Sun, 18 Aug 2024 21:00:00 +1000</pubDate>
+      
+      <guid>https://garyflynn.com/post/aria-automation-and-terraform-part-two/</guid>
+      <description>
+        
+          
+            &lt;p&gt;This guide will cover the creation of the Aria Automation Cloud Accounts and Cloud Zones. Before getting started, follow &lt;a href=&#34;https://garyflynn.com/post/aria-automation-and-terraform-part-one/&#34;&gt;Part 1&lt;/a&gt; to configure the Aria Automation / VCF Automation provider for terraform.&lt;/p&gt;
+&lt;p&gt;The first terraform resource to create is the Cloud Accounts. Create a new file called &amp;quot;cloud_accounts.tf&amp;quot; and add the code below. The first account to be added is to a vSphere environment. The resource is of type &#39;vra_cloud_account_vsphere&#39; and called &#39;homelab&#39; in this example. A second data source is required to enumerate the available regions within the vSphere environment.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>Getting Started with Aria Automation &amp; Terraform</title>
       <link>https://garyflynn.com/post/aria-automation-and-terraform-part-one/</link>

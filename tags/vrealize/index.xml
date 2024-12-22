@@ -42,23 +42,6 @@
     </item>
     
     <item>
-      <title>Setup vRealize Automation using Terraform</title>
-      <link>https://garyflynn.com/post/setup-vrealize-automation-using-terraform/</link>
-      <pubDate>Wed, 03 May 2023 15:00:57 +0000</pubDate>
-      
-      <guid>https://garyflynn.com/post/setup-vrealize-automation-using-terraform/</guid>
-      <description>
-        
-          
-            &lt;p&gt;VMware has created a HashiCorp Terraform provider which can be used to set up your vRealize Automation (vRA) infrastructure, along with requesting deployments and consuming XaaS resources. This post will cover the basics of setting up vRA using Terraform.&lt;/p&gt;
-&lt;p&gt;The first two posts in this series cover the basics of &lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/&#34;&gt;Infrastructure as Code with vRA and Terraform&lt;/a&gt; along with &lt;a href=&#34;https://garyflynn.com/post/create-your-first-vsphere-terraform-configuration/&#34;&gt;creating your first Terraform configuration to deploy a vSphere virtual machine&lt;/a&gt;. To get started, have a read of the documentation available for either &lt;a href=&#34;https://registry.terraform.io/providers/vmware/vra/latest/docs&#34;&gt;vRA 8&lt;/a&gt; or &lt;a href=&#34;https://registry.terraform.io/providers/vmware/vra7/latest/docs&#34;&gt;vRA 7&lt;/a&gt;.&lt;/p&gt;
-          
-          
-        
-      </description>
-    </item>
-    
-    <item>
       <title>vRealize Automation 8.x - Hide Quickstart UI</title>
       <link>https://garyflynn.com/post/vrealize-automation-8x-hide-quickstart-ui/</link>
       <pubDate>Sat, 11 Feb 2023 08:00:00 +0000</pubDate>

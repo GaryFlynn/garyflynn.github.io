@@ -16,7 +16,7 @@
       <description>
         
           
-            &lt;p&gt;To get started with HashiCorp Terraform, you can download the simple executable file from HashiCorp &lt;a href=&#34;https://www.terraform.io/downloads.html&#34;&gt;here&lt;/a&gt;. To understand the basics of Infrastructure as Code and Terraform, have a read of the post available &lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+            &lt;p&gt;To get started with HashiCorp Terraform, you can download the simple executable file from HashiCorp &lt;a href=&#34;https://www.terraform.io/downloads.html&#34;&gt;here&lt;/a&gt;. To understand the basics of Infrastructure as Code and Terraform, have a read of the post available &lt;a href=&#34;https://garyflynn.com/post/aria-automation-and-terraform-a-new-way-to-deploy/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Terraform configuration files are text files with a .tf file extension. To get started, create a new folder for this configuration, along with a file called &lt;em&gt;vsphere.tf&lt;/em&gt;. The first part to creating a Terraform configuration file is to define the provider you will interact with. In this example, it will create a virtual machine using the vSphere provider. The vSphere provider has some required fields like the user, password and server name. Create the provider block referring to &amp;quot;vsphere&amp;quot; and set the required fields with valid values for your environment.&lt;/p&gt;
           
           

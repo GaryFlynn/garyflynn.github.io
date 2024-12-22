@@ -6,7 +6,31 @@
     <description>Recent content in VRA on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 Dec 2023 14:57:40 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vra/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Jun 2024 10:10:05 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aria Automation &amp; Terraform: A New Way to Deploy</title>
+      <link>https://garyflynn.com/post/aria-automation-and-terraform-a-new-way-to-deploy/</link>
+      <pubDate>Sat, 29 Jun 2024 10:10:05 +0000</pubDate>
+      
+      <guid>https://garyflynn.com/post/aria-automation-and-terraform-a-new-way-to-deploy/</guid>
+      <description>
+        
+          
+            &lt;p&gt;A few years ago now, back on January 28th 2021, I presented at the &lt;a href=&#34;https://www.autoug.io/&#34;&gt;Automation User Group&lt;/a&gt; about vRealize Automation and Terraform and how they work together to provide a new way to deploy your infrastructure. The recording of the session is available &lt;a href=&#34;https://youtu.be/Q1XcuxTL6CQ&#34;&gt;here&lt;/a&gt; and the slides are available from &lt;a href=&#34;https://garyflynn.com/wp-content/uploads/2021/01/vRA-and-Terraform-A-New-Way-to-Deploy.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/aria-automation-and-terraform-a-new-way-to-deploy/#what-is-infrastructure-as-code&#34;&gt;What is Infrastructure as Code?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/aria-automation-and-terraform-a-new-way-to-deploy/#two-approaches-imperative-vs-declarative&#34;&gt;Two Approaches: Imperative vs Declarative&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/aria-automation-and-terraform-a-new-way-to-deploy/#what-is-terraform-oss&#34;&gt;What is Terraform (OSS)?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/aria-automation-and-terraform-a-new-way-to-deploy/#additional-resources&#34;&gt;Additional Resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;what-is-infrastructure-as-code&#34;&gt;&lt;strong&gt;What is Infrastructure as Code?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Infrastructure as Code (IaC) is a way to manage and provision your infrastructure by using machine-readable configuration files. These configuration files can then be stored in a version control system like GitHub or GitLab which enables you to share these configurations across your team.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>vRealize Automation 8.x – Change Internal Kubernetes IP Range</title>
       <link>https://garyflynn.com/post/vrealize-automation-8x-change-internal-kubernetes-ip-range/</link>
@@ -42,23 +66,6 @@
     </item>
     
     <item>
-      <title>Setup vRealize Automation using Terraform</title>
-      <link>https://garyflynn.com/post/setup-vrealize-automation-using-terraform/</link>
-      <pubDate>Wed, 03 May 2023 15:00:57 +0000</pubDate>
-      
-      <guid>https://garyflynn.com/post/setup-vrealize-automation-using-terraform/</guid>
-      <description>
-        
-          
-            &lt;p&gt;VMware has created a HashiCorp Terraform provider which can be used to set up your vRealize Automation (vRA) infrastructure, along with requesting deployments and consuming XaaS resources. This post will cover the basics of setting up vRA using Terraform.&lt;/p&gt;
-&lt;p&gt;The first two posts in this series cover the basics of &lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/&#34;&gt;Infrastructure as Code with vRA and Terraform&lt;/a&gt; along with &lt;a href=&#34;https://garyflynn.com/post/create-your-first-vsphere-terraform-configuration/&#34;&gt;creating your first Terraform configuration to deploy a vSphere virtual machine&lt;/a&gt;. To get started, have a read of the documentation available for either &lt;a href=&#34;https://registry.terraform.io/providers/vmware/vra/latest/docs&#34;&gt;vRA 8&lt;/a&gt; or &lt;a href=&#34;https://registry.terraform.io/providers/vmware/vra7/latest/docs&#34;&gt;vRA 7&lt;/a&gt;.&lt;/p&gt;
-          
-          
-        
-      </description>
-    </item>
-    
-    <item>
       <title>vRealize Automation 8.x - Hide Quickstart UI</title>
       <link>https://garyflynn.com/post/vrealize-automation-8x-hide-quickstart-ui/</link>
       <pubDate>Sat, 11 Feb 2023 08:00:00 +0000</pubDate>
@@ -68,31 +75,6 @@
         
           
             &lt;p&gt;By default, a vRealize Automation 8.x session log you into the Services page, when you and your users are greeted with the Quickstart banner. The easiest way to remove this is to configure a vSphere Cloud Account, however for some environments, vSphere isn&#39;t an endpoint used. In this case, to remove the banner, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL. Another option would be to run the same API calls in Postman.&lt;/p&gt;
-          
-          
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>vRA &amp; Terraform: A New Way to Deploy</title>
-      <link>https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/</link>
-      <pubDate>Fri, 29 Jan 2021 10:10:05 +0000</pubDate>
-      
-      <guid>https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/</guid>
-      <description>
-        
-          
-            &lt;p&gt;On January 28th 2021, I presented at the &lt;a href=&#34;https://www.autoug.io/&#34;&gt;Automation User Group&lt;/a&gt; about vRealize Automation and Terraform and how they work together to provide a new way to deploy your infrastructure. The recording of the session will be available &lt;a href=&#34;https://youtu.be/Q1XcuxTL6CQ&#34;&gt;here&lt;/a&gt; and the slides are available from &lt;a href=&#34;https://garyflynn.com/wp-content/uploads/2021/01/vRA-and-Terraform-A-New-Way-to-Deploy.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/#vrealize-automation-cloud&#34;&gt;vRealize Automation Cloud&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/#what-is-infrastructure-as-code&#34;&gt;What is Infrastructure as Code?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/#two-approaches-imperative-vs-declarative&#34;&gt;Two Approaches: Imperative vs Declarative&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/#what-is-terraform-oss&#34;&gt;What is Terraform (OSS)?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/#additional-resources&#34;&gt;Additional Resources&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;vrealize-automation-cloud&#34;&gt;vRealize Automation Cloud&lt;/h3&gt;
-&lt;p&gt;VMware vRealize Automation (vRA) Cloud allows you to provide multi-cloud infrastructure and application delivery to your end-users. It enhances the visibility of your machines across your different private and public cloud providers, enables collaboration and provides continuous delivery and release automation.&lt;/p&gt;
           
           
         
