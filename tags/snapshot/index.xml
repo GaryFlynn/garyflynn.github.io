@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/snapshot/</link>
     <description>Recent content in Snapshot on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Fri, 03 Mar 2017 05:20:53 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/snapshot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Managing Snapshots with PowerCLI</title>
@@ -16,8 +16,8 @@
       <description>
         
           
-            With access to vCenter or vRealize Automation comes great responsibility. Clients often require a quick and easy way to take a short term snapshot of a server so that they can quick and easily rollback application changes. VMware provides a robust snapshot function, however when things go well these snapshots are often left behind or forgotten about.
-Run PowerCLI and run the below commands to get a list of all VMs with a Snapshot
+            &lt;p&gt;With access to vCenter or vRealize Automation comes great responsibility. Clients often require a quick and easy way to take a short term snapshot of a server so that they can quick and easily rollback application changes. VMware provides a robust snapshot function, however when things go well these snapshots are often left behind or forgotten about.&lt;/p&gt;
+&lt;p&gt;Run PowerCLI and run the below commands to get a list of all VMs with a Snapshot&lt;/p&gt;
           
           
         

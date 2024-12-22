@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vRA 8 on Gary Flynn</title>
+    <title>VRA 8 on Gary Flynn</title>
     <link>https://garyflynn.com/tags/vra-8/</link>
-    <description>Recent content in vRA 8 on Gary Flynn</description>
+    <description>Recent content in VRA 8 on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Sat, 19 Aug 2023 15:25:00 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vra-8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vRealize Automation 8.5&#43; - Increase Session Timeout</title>
@@ -16,8 +16,8 @@
       <description>
         
           
-            By default, a vRealize Automation 8.x session will timeout after 30 minutes of inactivity. For those looking to increase the session timeout value, this hasn&#39;t been possible before vRealize Automation 8.5. This all changes with the release of vRealize Automation 8.5, as documented in the release notes here.
-To increase the session timeout from the default 30 minutes, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL.
+            &lt;p&gt;By default, a vRealize Automation 8.x session will timeout after 30 minutes of inactivity. For those looking to increase the session timeout value, this hasn&#39;t been possible before vRealize Automation 8.5. This all changes with the release of vRealize Automation 8.5, as documented in the release notes &lt;a href=&#34;https://docs.vmware.com/en/VMware-vRealize-Automation/8.5/rn/vmware-vrealize-automation-85-release-notes.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To increase the session timeout from the default 30 minutes, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL. Another option would be to run the same API calls in Postman.&lt;/p&gt;
           
           
         
@@ -33,7 +33,7 @@ To increase the session timeout from the default 30 minutes, a simple API call i
       <description>
         
           
-            By default, a vRealize Automation 8.x session log you into the Services page, when you and your users are greeted with the Quickstart banner. The easiest way to remove this is to configure a vSphere Cloud Account, however for some environments, vSphere isn&#39;t an endpoint used. In this case, to remove the banner, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL.
+            &lt;p&gt;By default, a vRealize Automation 8.x session log you into the Services page, when you and your users are greeted with the Quickstart banner. The easiest way to remove this is to configure a vSphere Cloud Account, however for some environments, vSphere isn&#39;t an endpoint used. In this case, to remove the banner, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL. Another option would be to run the same API calls in Postman.&lt;/p&gt;
           
           
         
@@ -49,7 +49,7 @@ To increase the session timeout from the default 30 minutes, a simple API call i
       <description>
         
           
-            vRealize Automation (vRA) 8.x provides native integration to GitHub.com to share and sync your Blueprints and Action Based Extensibility (ABX) scripts. This integration is provided as a way to edit your blueprints and ABX scripts as Infrastructure as Code (IaC) objects and for vRA to then consume the changes once they are updated and committed to your repository. This integration is not designed as a way to backup or export your content to GitHub.
+            &lt;p&gt;vRealize Automation (vRA) 8.x provides native integration to GitHub.com to share and sync your Blueprints and Action Based Extensibility (ABX) scripts. This integration is provided as a way to edit your blueprints and ABX scripts as Infrastructure as Code (IaC) objects and for vRA to then consume the changes once they are updated and committed to your repository. This integration is not designed as a way to backup or export your content to GitHub. Integration in vRA 8.0 / vRA 8.0.1 is only available to GitHub.com and not GitHub Enterprise Cloud or GitHub Enterprise Self-Hosted.&lt;/p&gt;
           
           
         

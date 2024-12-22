@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/kerberos/</link>
     <description>Recent content in Kerberos on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Mon, 16 Mar 2020 11:02:50 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/kerberos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vRealize Orchestrator - Kerberos Configuration File</title>
@@ -16,8 +16,9 @@
       <description>
         
           
-            To configure Kerberos authentication with vRealize Orchestrator (vRO), the krb5.conf file must be set up for your specific environment and the domain you are connecting to. The location of the krb5.conf file is different for different versions and deployments of vRO, so the below list shows the locations of the krb5.conf file for vRO 7 vs vRO 8 and standalone deployments vs embedded with vRA deployments.
-In vRO 7.x standalone, the krb5.
+            &lt;p&gt;To configure Kerberos authentication with vRealize Orchestrator (vRO), the krb5.conf file must be set up for your specific environment and the domain you are connecting to. The location of the krb5.conf file is different for different versions and deployments of vRO, so the below list shows the locations of the krb5.conf file for vRO 7 vs vRO 8 and standalone deployments vs embedded with vRA deployments.&lt;/p&gt;
+&lt;p&gt;In vRO 7.x standalone, the krb5.conf file is located in /usr/java/jre-vmware/lib/security/krb5.conf&lt;br&gt;
+In vRO 8.x standalone, the krb5.conf file is located in /data/vco/usr/lib/vco/app-server/conf/krb5.conf&lt;/p&gt;
           
           
         

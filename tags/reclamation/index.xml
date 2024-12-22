@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/reclamation/</link>
     <description>Recent content in Reclamation on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Thu, 26 Sep 2019 15:32:52 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/reclamation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vRA 7.x Reclamation Machine Usage Thresholds</title>
@@ -16,7 +16,7 @@
       <description>
         
           
-            In vRealize Automation 7.x, you can discover Deployments for reclamation in the Administration &amp;gt; Reclamation &amp;gt; Deployments (Tenant Administrator) view or the Administration &amp;gt; Reclamation &amp;gt; Tenant Machines (IaaS Administrator) view. The Advanced Search feature can be selected clicking &amp;gt; in the top right corner and you can search for VMs with Low or High CPU usage along with several other options. But what are the actual thresholds that vRA uses when you select &amp;quot;Low CPU&amp;quot;?
+            &lt;p&gt;In vRealize Automation 7.x, you can discover Deployments for reclamation in the &lt;strong&gt;Administration &amp;gt; Reclamation &amp;gt; Deployments&lt;/strong&gt; (Tenant Administrator) view or the &lt;strong&gt;Administration &amp;gt; Reclamation &amp;gt; Tenant Machines&lt;/strong&gt; (IaaS Administrator) view. The Advanced Search feature can be selected clicking &lt;strong&gt;&amp;gt;&lt;/strong&gt; in the top right corner and you can search for VMs with Low or High CPU usage along with several other options. But what are the actual thresholds that vRA uses when you select &amp;quot;Low CPU&amp;quot;? The table below describes exactly what each of the metrics are, for each advanced search option.&lt;/p&gt;
           
           
         

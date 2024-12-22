@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vSphere on Gary Flynn</title>
+    <title>VSphere on Gary Flynn</title>
     <link>https://garyflynn.com/tags/vsphere/</link>
-    <description>Recent content in vSphere on Gary Flynn</description>
+    <description>Recent content in VSphere on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Mon, 01 Feb 2021 19:36:37 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vsphere/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create Your First vSphere Terraform Configuration</title>
@@ -16,8 +16,8 @@
       <description>
         
           
-            To get started with HashiCorp Terraform, you can download the simple executable file from HashiCorp here. To understand the basics of Infrastructure as Code and Terraform, have a read of the post available here.
-Terraform configuration files are text files with a .tf file extension. To get started, create a new folder for this configuration, along with a file called vsphere.tf. The first part to creating a Terraform configuration file is to define the provider you will interact with.
+            &lt;p&gt;To get started with HashiCorp Terraform, you can download the simple executable file from HashiCorp &lt;a href=&#34;https://www.terraform.io/downloads.html&#34;&gt;here&lt;/a&gt;. To understand the basics of Infrastructure as Code and Terraform, have a read of the post available &lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Terraform configuration files are text files with a .tf file extension. To get started, create a new folder for this configuration, along with a file called &lt;em&gt;vsphere.tf&lt;/em&gt;. The first part to creating a Terraform configuration file is to define the provider you will interact with. In this example, it will create a virtual machine using the vSphere provider. The vSphere provider has some required fields like the user, password and server name. Create the provider block referring to &amp;quot;vsphere&amp;quot; and set the required fields with valid values for your environment.&lt;/p&gt;
           
           
         
@@ -33,7 +33,7 @@ Terraform configuration files are text files with a .tf file extension. To get s
       <description>
         
           
-            vRealize Automation 8.x can integrate with several cloud providers, and to do this for your vSphere environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For vSphere, enter the vCenter FQDN / IP address, the credentials to authenticate with and select a logical name. Under capabilities, enter &amp;quot;cloud:vsphere&amp;quot; as this will enable us to use tagging in the blueprint request forms.
+            &lt;p&gt;vRealize Automation 8.x can integrate with several cloud providers, and to do this for your vSphere environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For vSphere, enter the vCenter FQDN / IP address, the credentials to authenticate with and select a logical name. Under capabilities, enter &amp;quot;cloud:vsphere&amp;quot; as this will enable us to use tagging in the blueprint request forms. Validate the credentials and once they are validated, select which datacenters to allow provisioning to, followed by selecting Add.&lt;/p&gt;
           
           
         
@@ -49,7 +49,7 @@ Terraform configuration files are text files with a .tf file extension. To get s
       <description>
         
           
-            Today is a significant day for VMware with the announcements coming out primarily around vSphere 7 and the implementation of Project Tanzu. The vSphere client will now natively support running containers and VMs within the same unified console, the vSphere Client. One very interesting new feature is the VMware Lifecycle Manager (vLCM) that will be introduced to simplify the management of firmware, drivers and ESXi bundles. For more information on today&#39;s announcements, check out the blog here.
+            &lt;p&gt;Today is a significant day for VMware with the announcements coming out primarily around vSphere 7 and the implementation of Project Tanzu. The vSphere client will now natively support running containers and VMs within the same unified console, the vSphere Client. One very interesting new feature is the VMware Lifecycle Manager (vLCM) that will be introduced to simplify the management of firmware, drivers and ESXi bundles. For more information on today&#39;s announcements, check out the blog &lt;a href=&#34;https://blogs.vmware.com/vsphere/2020/03/vsphere-7.html&#34;&gt;here&lt;/a&gt;. But what about the vRealize Suite announcements? That&#39;s what we are really interested in!&lt;/p&gt;
           
           
         
@@ -65,8 +65,9 @@ Terraform configuration files are text files with a .tf file extension. To get s
       <description>
         
           
-            To setup the NUC and install ESXi, follow part one of this guide. To configure the basic vSAN configuration for deployments pre vCenter 6.7, follow part two of this guide.
-vCenter Appliance Installation With the Intel NUCs set up (and a vSAN datastore created if running pre 6.7 vCenter), it is time to install the vCenter Server Appliance (vCSA). As you probably know, the Windows vCenter Server is deprecated, so the vCSA will be deployed.
+            &lt;p&gt;To setup the NUC and install ESXi, follow &lt;a href=&#34;https://garyflynn.com/post/homelab-setup-part-1-intel-nuc/&#34;&gt;part one&lt;/a&gt; of this guide. To configure the basic vSAN configuration for deployments pre vCenter 6.7, follow &lt;a href=&#34;https://garyflynn.com/post/homelab-setup-part-2-vsan-configuration/&#34;&gt;part two&lt;/a&gt; of this guide.&lt;/p&gt;
+&lt;h2 id=&#34;vcenter-appliance-installation&#34;&gt;vCenter Appliance Installation&lt;/h2&gt;
+&lt;p&gt;With the Intel NUCs set up (and a vSAN datastore created if running pre 6.7 vCenter), it is time to install the vCenter Server Appliance (vCSA). As you probably know, the Windows vCenter Server is deprecated, so the vCSA will be deployed. Download the &lt;a href=&#34;https://my.vmware.com/web/vmware/details?downloadGroup=VC670&amp;amp;productId=742&amp;amp;rPId=22644&#34;&gt;ISO&lt;/a&gt;, mount it to your PC and run the UI installer located in &amp;quot;Drive:\vcsa-ui-installer\win32\installer.exe&amp;quot;. The process to deploy vCSA has been documented extensively on many blogs including this one from &lt;a href=&#34;http://www.vstellar.com/2018/04/18/exploring-vsphere-6-7-part-2-installing-and-configuring-vcsa/&#34;&gt;Virtual Reality&lt;/a&gt;. For reference, I am installing the vcsa with the following configuration. Note that we don&#39;t have working DNS, so the FQDN and DNS Server should be the IP Address of the vCSA and the IP address of the default gateway (&lt;a href=&#34;https://www.virtuallyghetto.com/2018/12/is-a-dns-server-still-required-when-using-a-static-ip-for-vcsa.html&#34;&gt;Virtually Ghetto&lt;/a&gt;).&lt;/p&gt;
           
           
         
@@ -82,8 +83,9 @@ vCenter Appliance Installation With the Intel NUCs set up (and a vSAN datastore 
       <description>
         
           
-            To setup the NUC and install ESXi, follow part one of this guide. The following is the process to bootstrap loading the vCenter Server Appliance onto a vSAN datastore. This process was replaced in vCenter 6.7 which provides this capability natively through the installer. If you are deploying vCenter 6.7+, skip through to part three.
-vSAN Configuration To install vCenter you need the datastore in place, which for my environment is vSAN.
+            &lt;p&gt;To setup the NUC and install ESXi, follow &lt;a href=&#34;https://garyflynn.com/post/homelab-setup-part-1-intel-nuc/&#34;&gt;part one&lt;/a&gt; of this guide. The following is the process to bootstrap loading the vCenter Server Appliance onto a vSAN datastore. This process was replaced in vCenter 6.7 which provides this capability natively through the installer. &lt;strong&gt;If you are deploying vCenter 6.7+, skip through to&lt;/strong&gt; &lt;a href=&#34;https://garyflynn.com/post/homelab-setup-part-3-vcenter-install-configure/&#34;&gt;&lt;strong&gt;part three&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;vsan-configuration&#34;&gt;vSAN Configuration&lt;/h2&gt;
+&lt;p&gt;To install vCenter you need the datastore in place, which for my environment is vSAN. However to configure vSAN, this is done through vCenter. A classic chicken and egg scenario which thankfully VMware have the solution for. You can bootstrap the vSAN datastore which William Lam has documented over at &lt;a href=&#34;https://www.virtuallyghetto.com/2013/09/how-to-bootstrap-vcenter-server-onto_9.html&#34;&gt;virtuallyghetto.com&lt;/a&gt; and my configuration steps are below. On the first host, &lt;a href=&#34;https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.html.hostclient.doc/GUID-B649CB74-832F-467B-B6A4-8BA67AD5C1F0.html&#34;&gt;enable SSH&lt;/a&gt; and SSH into the host. Modify the default vSAN policy to enable force provisioning.&lt;/p&gt;
           
           
         
@@ -99,8 +101,29 @@ vSAN Configuration To install vCenter you need the datastore in place, which for
       <description>
         
           
-            The following Power-CLI command will evaluate a specific cluster and return the ratio of memory utilisation between Windows and Red Hat Linux virtual machines.
-1# Variable settings 2$clusterName = &amp;#34;insert cluster name&amp;#34; 34$winVMs = Get-Cluster $clusterName | Get-VM | ? {$_.Guest.OSFullName -like &amp;#39;Microsoft Windows Server*&amp;#39;} | Select Name, PowerState, MemoryGB 56$lnxVMs = Get-Cluster $clusterName | Get-VM | ? {$_.Guest.OSFullName -like &amp;#39;Red Hat*&amp;#39;} | Select Name, PowerState, MemoryGB 78foreach($winVM in $winVMs){ $winMemTotal += $winVM.
+            &lt;p&gt;The following Power-CLI command will evaluate a specific cluster and return the ratio of memory utilisation between Windows and Red Hat Linux virtual machines.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;# Variable settings
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$clusterName = &amp;#34;insert cluster name&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$winVMs = Get-Cluster $clusterName | Get-VM | ? {$_.Guest.OSFullName -like &amp;#39;Microsoft Windows Server*&amp;#39;} | Select Name, PowerState, MemoryGB
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$lnxVMs = Get-Cluster $clusterName | Get-VM | ? {$_.Guest.OSFullName -like &amp;#39;Red Hat*&amp;#39;} | Select Name, PowerState, MemoryGB
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 8&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;foreach($winVM in $winVMs){ $winMemTotal += $winVM.MemoryGB }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 9&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;foreach($lnxVM in $lnxVMs){ $lnxMemTotal += $lnxVM.MemoryGB }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$memTotal = $winMemTotal + $lnxMemTotal
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$winMemSplit = $winMemTotal / $memTotal
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$winMemSplit *= 100
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$winMemSplit = [math]::Round($winMemSplit)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$lnxMemSplit = $lnxMemTotal / $memTotal
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$lnxMemSplit *= 100
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$lnxMemSplit = [math]::Round($lnxMemSplit)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;Windows memory total is &amp;#34; + [math]::Round($winMemTotal) + &amp;#34;GB&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;Linux memory total is &amp;#34; + [math]::Round($lnxMemTotal) + &amp;#34;GB&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;21&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;The split between Windows and Linux is... Windows &amp;#34; + $winMemSplit + &amp;#34;% to Linux &amp;#34; + $lnxMemSplit + &amp;#34;%&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
           
           
         
@@ -116,8 +139,8 @@ vSAN Configuration To install vCenter you need the datastore in place, which for
       <description>
         
           
-            With access to vCenter or vRealize Automation comes great responsibility. Clients often require a quick and easy way to take a short term snapshot of a server so that they can quick and easily rollback application changes. VMware provides a robust snapshot function, however when things go well these snapshots are often left behind or forgotten about.
-Run PowerCLI and run the below commands to get a list of all VMs with a Snapshot
+            &lt;p&gt;With access to vCenter or vRealize Automation comes great responsibility. Clients often require a quick and easy way to take a short term snapshot of a server so that they can quick and easily rollback application changes. VMware provides a robust snapshot function, however when things go well these snapshots are often left behind or forgotten about.&lt;/p&gt;
+&lt;p&gt;Run PowerCLI and run the below commands to get a list of all VMs with a Snapshot&lt;/p&gt;
           
           
         

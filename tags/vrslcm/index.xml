@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vRSLCM on Gary Flynn</title>
+    <title>VRSLCM on Gary Flynn</title>
     <link>https://garyflynn.com/tags/vrslcm/</link>
-    <description>Recent content in vRSLCM on Gary Flynn</description>
+    <description>Recent content in VRSLCM on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Sat, 09 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vrslcm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VMworld 2021 vRealize Announcements</title>
@@ -16,7 +16,7 @@
       <description>
         
           
-            VMworld 2021 was still held online only this year, which meant there was no shortage of announcements and information available for anyone interested. With a few large announcements including the Project Ensemble Tech Preview and Skyline Advisor Pro, there is plenty to keep an eye on in this space. Below I&#39;ve listed a few things for each of the vRealize Suite products which caught my attention. Leave a comment below on what you&#39;re looking forward to in this next release!
+            &lt;p&gt;VMworld 2021 was still held online only this year, which meant there was no shortage of announcements and information available for anyone interested. With a few large announcements including the &lt;a href=&#34;https://blogs.vmware.com/management/2021/10/introducing-project-ensemble.html&#34;&gt;Project Ensemble Tech Preview&lt;/a&gt; and &lt;a href=&#34;https://blogs.vmware.com/kb/2021/09/skyline-announcement.html&#34;&gt;Skyline Advisor Pro&lt;/a&gt;, there is plenty to keep an eye on in this space. Below I&#39;ve listed a few things for each of the vRealize Suite products which caught my attention. Leave a comment below on what you&#39;re looking forward to in this next release!&lt;/p&gt;
           
           
         
@@ -32,8 +32,9 @@
       <description>
         
           
-            Part one of this blog covered the installation and configuration of vRSLCM which can be found here and this post will cover deploying your first application.
-Create an Environment In vRSLCM, the concept of environments can mean two different things. It could mean Dev/Test/Prod where multiple applications are deployed in one environment or it could mean Dev vRA/Dev vROps/Test vRA/Test vROps where each environment and application combination has its own environment.
+            &lt;p&gt;Part one of this blog covered the installation and configuration of vRSLCM which can be found &lt;a href=&#34;https://garyflynn.com/post/vrealize-lifecycle-manager-part-1-install-configure/&#34;&gt;here&lt;/a&gt; and this post will cover deploying your first application.&lt;/p&gt;
+&lt;h2 id=&#34;create-an-environment&#34;&gt;Create an Environment&lt;/h2&gt;
+&lt;p&gt;In vRSLCM, the concept of environments can mean two different things. It could mean Dev/Test/Prod where multiple applications are deployed in one environment or it could mean Dev vRA/Dev vROps/Test vRA/Test vROps where each environment and application combination has its own environment. In my homelab, I have gone with the latter understanding as there are some limitations placing all of the products in a single environment instance. In the Create Environment wizard, enter the information for which you wish to deploy. Select Next when this is complete.&lt;/p&gt;
           
           
         
@@ -49,7 +50,7 @@ Create an Environment In vRSLCM, the concept of environments can mean two differ
       <description>
         
           
-            Today is a significant day for VMware with the announcements coming out primarily around vSphere 7 and the implementation of Project Tanzu. The vSphere client will now natively support running containers and VMs within the same unified console, the vSphere Client. One very interesting new feature is the VMware Lifecycle Manager (vLCM) that will be introduced to simplify the management of firmware, drivers and ESXi bundles. For more information on today&#39;s announcements, check out the blog here.
+            &lt;p&gt;Today is a significant day for VMware with the announcements coming out primarily around vSphere 7 and the implementation of Project Tanzu. The vSphere client will now natively support running containers and VMs within the same unified console, the vSphere Client. One very interesting new feature is the VMware Lifecycle Manager (vLCM) that will be introduced to simplify the management of firmware, drivers and ESXi bundles. For more information on today&#39;s announcements, check out the blog &lt;a href=&#34;https://blogs.vmware.com/vsphere/2020/03/vsphere-7.html&#34;&gt;here&lt;/a&gt;. But what about the vRealize Suite announcements? That&#39;s what we are really interested in!&lt;/p&gt;
           
           
         
@@ -65,8 +66,16 @@ Create an Environment In vRSLCM, the concept of environments can mean two differ
       <description>
         
           
-            In the previous post we went over the vRSLCM configuration and now we are ready to deploy the vRealize Suite of products. Before we start, I can not stress this enough... Read the release notes!! There are countless changes to each of the products and vRA 8.0 especially is missing some features which may return in vRA 8.1 or later.
- vRealize Suite Lifecycle Manager 8.0 - Release Notes vRealize Automation 8.
+            &lt;p&gt;In the previous &lt;a href=&#34;https://garyflynn.com/post/vrealize-suite-lifecycle-manager-8-0-configuration/&#34;&gt;post&lt;/a&gt; we went over the vRSLCM configuration and now we are ready to deploy the vRealize Suite of products. Before we start, I can not stress this enough... Read the release notes!! There are countless changes to each of the products and vRA 8.0 especially is missing some features which may return in vRA 8.1 or later.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.vmware.com/en/VMware-vRealize-Suite-Lifecycle-Manager/2019/rn/VMware-vRealize-Suite-Lifecycle-Manager-80-Release-Notes.html&#34;&gt;vRealize Suite Lifecycle Manager 8.0 - Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.vmware.com/en/vRealize-Automation/8.0/rn/vRealize-Automation-80-release-notes.html&#34;&gt;vRealize Automation 8.0 - Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.vmware.com/en/vRealize-Log-Insight/8.0/rn/vRealize-Log-Insight-80.html&#34;&gt;vRealize Log Insight 8.0 - Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.vmware.com/en/vRealize-Operations-Manager/8.0/rn/vRealize-Operations-Manager-80.html&#34;&gt;vRealize Operations Manager 8.0 - Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.vmware.com/en/vRealize-Orchestrator/8.0/rn/VMware-vRealize-Orchestrator-80-Release-Notes.html&#34;&gt;vRealize Orchestrator 8.0 - Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vrealize-suite-2019-deployment&#34;&gt;vRealize Suite 2019 Deployment&lt;/h2&gt;
+&lt;p&gt;If this environment is just your homelab, you can leverage the default datacenter otherwise it is best to create a new datacenter. To create a Datacenter, log into vRSLCM and select Lifecycle Operations &amp;gt; Datacenters on the left, then Add Datacenter. Enter a name along with the location and click Save. Add a vCenter Server to your new datacenter and Save. You should now see two datacenters. One called &amp;quot;default_datacenter&amp;quot; located in Palo Alto, California, US which contains the vIDM installation, and another new one for your new deployment. In vRSLCM 8.0.1 you can now edit the location of the default datacenter to match your actual location.&lt;/p&gt;
           
           
         
@@ -82,8 +91,8 @@ Create an Environment In vRSLCM, the concept of environments can mean two differ
       <description>
         
           
-            In the previous post we went over the vRSLCM Easy Installer which deployed vRSLCM 8.0 and vIDM 8.0. The installations went smoothly with no reported issues.
-Let&#39;s log into the vRSLCM UI by navigating to https://&amp;lt;vRSLCM FQDN or IP&amp;gt;/ and log in with the username &amp;quot;admin@local&amp;quot; and the password you set in the deployment in the previous steps. Note the default username has changed from previous versions and is no longer admin@localhost.
+            &lt;p&gt;In the previous &lt;a href=&#34;https://garyflynn.com/post/vrealize-suite-2019-easy-installer/&#34;&gt;post&lt;/a&gt; we went over the vRSLCM Easy Installer which deployed vRSLCM 8.0 and vIDM 8.0. The installations went smoothly with no reported issues.&lt;/p&gt;
+&lt;p&gt;Let&#39;s log into the vRSLCM UI by navigating to https://&amp;lt;vRSLCM FQDN or IP&amp;gt;/ and log in with the username &amp;quot;admin@local&amp;quot; and the password you set in the deployment in the previous steps. Note the default username has changed from previous versions and is no longer admin@localhost. Don&#39;t get caught out trying to log in with the wrong username!&lt;/p&gt;
           
           
         
@@ -99,8 +108,16 @@ Let&#39;s log into the vRSLCM UI by navigating to https://&amp;lt;vRSLCM FQDN or
       <description>
         
           
-            VMware has just announced the latest release of the vRealize Suite (2019) and with it comes vRealize Automation 8.0 (vRA), vRealize Log Insight 8.0 (vRLI), vRealize Operations Manager 8.0 (vROps) and vRealize Suite Lifecycle Manager 8.0 (vRSLCM). Noticeably absent is vRealize Business for Cloud (vRBC), as this product has been deprecated and the functionality has been migrated to vROps.
- Announcing General Availability of vRealize Suite 2019, vCloud Suite 2019, and vCloud Suite 2019 Platinum!
+            &lt;p&gt;VMware has just announced the latest release of the vRealize Suite (2019) and with it comes vRealize Automation 8.0 (vRA), vRealize Log Insight 8.0 (vRLI), vRealize Operations Manager 8.0 (vROps) and vRealize Suite Lifecycle Manager 8.0 (vRSLCM). Noticeably absent is vRealize Business for Cloud (vRBC), as this product has been deprecated and the functionality has been migrated to vROps.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blogs.vmware.com/management/2019/10/vrealize-suite-2019-vcloud-suite-2019-ga.html&#34;&gt;Announcing General Availability of vRealize Suite 2019, vCloud Suite 2019, and vCloud Suite 2019 Platinum!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blogs.vmware.com/management/2019/08/vrslcm-8-0-whats-new.html&#34;&gt;vRealize Suite Lifecycle Manager 8.0 – What’s New&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blogs.vmware.com/management/2019/10/announcing-general-availability-of-vmware-vrealize-automation-8-0.html&#34;&gt;Announcing General Availability of VMware vRealize Automation 8.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blogs.vmware.com/management/2019/10/whats-new-in-vrealize-log-insight-8-0.html&#34;&gt;What’s new in vRealize Log Insight 8.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blogs.vmware.com/management/2019/10/whats-new-in-vrealize-operations-8-0-2.html&#34;&gt;What’s New in vRealize Operations 8.0?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://vxpresss.blogspot.com/2019/10/everything-you-need-to-know-about.html&#34;&gt;Everything you need to know about the vRealize Operations 8.0 release&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So with the exciting announcements out of the way, let&#39;s get these installed!&lt;/p&gt;
           
           
         

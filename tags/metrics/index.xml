@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/metrics/</link>
     <description>Recent content in Metrics on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Thu, 14 Feb 2019 09:52:08 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/metrics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vROps Memory Metric Collection Changes in 6.7 &amp; 7.0&#43;</title>
@@ -16,7 +16,7 @@
       <description>
         
           
-            With vROps prior to 6.7, Memory metrics have caused confusion when comparing the memory metrics generated from vSphere to the metrics generated from the Ep Ops management agent installed on the guest OS. Currently, the metrics shown from the vSphere data collection are memory metrics as seen from the ESXi host layer / VMkernel. This value is at times largely different to the guest OS memory metrics, as explained below. I have a blog post here which explains the different memory metrics in vROps prior to 6.
+            &lt;p&gt;With vROps prior to 6.7, Memory metrics have caused confusion when comparing the memory metrics generated from vSphere to the metrics generated from the Ep Ops management agent installed on the guest OS. Currently, the metrics shown from the vSphere data collection are memory metrics as seen from the ESXi host layer / VMkernel. This value is at times largely different to the guest OS memory metrics, as explained below. I have a blog post &lt;a href=&#34;https://garyflynn.com/post/vrops-memory-metrics-prior-to-vrops-6-7/&#34;&gt;here&lt;/a&gt; which explains the different memory metrics in vROps prior to 6.7&lt;/p&gt;
           
           
         
@@ -32,9 +32,10 @@
       <description>
         
           
-            Memory metrics in vROps have caused many customers confusion and I hope this post will explain the different metrics available and why the values don&#39;t necessarily reflect what you might think. Let&#39;s start with a few definitions to help set the context.
-Virtual Machine / Guest: The virtual operating system object where the guest OS such as Windows Server is installed.
-Host: The physical blade/rack mount server where ESXi is installed.
+            &lt;p&gt;Memory metrics in vROps have caused many customers confusion and I hope this post will explain the different metrics available and why the values don&#39;t necessarily reflect what you might think. Let&#39;s start with a few definitions to help set the context.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Virtual Machine / Guest:&lt;/strong&gt; The virtual operating system object where the guest OS such as Windows Server is installed.&lt;br&gt;
+&lt;strong&gt;Host:&lt;/strong&gt; The physical blade/rack mount server where ESXi is installed. The host consists of RAM, CPU, network etc.&lt;br&gt;
+&lt;strong&gt;Cluster:&lt;/strong&gt; A group of hosts.&lt;/p&gt;
           
           
         

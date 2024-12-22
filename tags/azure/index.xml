@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/azure/</link>
     <description>Recent content in Azure on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Sat, 14 Mar 2020 17:12:00 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vRealize Automation 8.x - Setup Azure Cloud Account</title>
@@ -16,7 +16,7 @@
       <description>
         
           
-            vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Microsoft Azure environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For Azure, there is some preparation we need to do on the Azure Portal, so head over to portal.azure.com and authenticate with the account which has access to the Subscription you want to integrate with.
+            &lt;p&gt;vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Microsoft Azure environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For Azure, there is some preparation we need to do on the Azure Portal, so head over to &lt;a href=&#34;https://portal.azure.com&#34;&gt;portal.azure.com&lt;/a&gt; and authenticate with the account which has access to the Subscription you want to integrate with.&lt;/p&gt;
           
           
         
@@ -32,9 +32,10 @@
       <description>
         
           
-            Integrating vRA / vRO and Azure is available out-of-the-box with vRA 7.2+ and has been well documented by others for how to set the integration up (vaficionado.com).
-The integration is fairly straightforward however I faced two main issues, the first being proxy settings and the second being an issue with the vRO workflow &amp;quot;Add an Azure connection&amp;quot;.
-Update Azure Plugin To resolve other vRO / Azure bugs, ensure you update the Azure plugin in vRO to the latest version from https://kb.
+            &lt;p&gt;Integrating vRA / vRO and Azure is available out-of-the-box with vRA 7.2+ and has been well documented by others for how to set the integration up (&lt;a href=&#34;http://www.vaficionado.com/2016/11/using-new-microsoft-azure-endpoint-vrealize-automation-7-2/&#34;&gt;vaficionado.com&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;The integration is fairly straightforward however I faced two main issues, the first being proxy settings and the second being an issue with the vRO workflow &amp;quot;Add an Azure connection&amp;quot;.&lt;/p&gt;
+&lt;h2 id=&#34;update-azure-plugin&#34;&gt;Update Azure Plugin&lt;/h2&gt;
+&lt;p&gt;To resolve other vRO / Azure bugs, ensure you update the Azure plugin in vRO to the latest version from &lt;a href=&#34;https://kb.vmware.com/s/article/55826&#34;&gt;https://kb.vmware.com/s/article/55826&lt;/a&gt; (see attachment in the KB article). As the KB states, the updated plugin can be installed in vRA/vRO 7.2, 7.3, 7.3.1 &amp;amp; 7.4.&lt;/p&gt;
           
           
         

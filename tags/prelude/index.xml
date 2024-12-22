@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/prelude/</link>
     <description>Recent content in Prelude on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Wed, 25 Nov 2020 17:59:06 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/prelude/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vRealize Automation 8.x - vRA Not Starting if K8s IP Range is Changed</title>
@@ -16,8 +16,8 @@
       <description>
         
           
-            vRealize Automation (vRA) 8.0 introduced a completely new architecture by running the vRA application itself on top of a Kubernetes (k8s) cluster. Unfortunately this was released with a hardcoded IP address range used by the internal k8s cluster. If your corporate network happened to be using the same IP addresses that were selected by the k8s cluster, then you would likely see plenty of errors in vRA.
-Thankfully, vRealize Automation 8.
+            &lt;p&gt;vRealize Automation (vRA) 8.0 introduced a completely new architecture by running the vRA application itself on top of a Kubernetes (k8s) cluster. Unfortunately this was released with a hardcoded IP address range used by the internal k8s cluster. If your corporate network happened to be using the same IP addresses that were selected by the k8s cluster, then you would likely see plenty of errors in vRA.&lt;/p&gt;
+&lt;p&gt;Thankfully, vRealize Automation 8.2 added support for changing the internal IP address range used by the Kubernetes cluster. Unfortunately, there is a bug in the code where only the 10.0.0.0/8 and 127.0.0.0/8 address spaces are supported. If you choose to use the 192.168.0.0/16 address space, the vRA deployment won&#39;t start-up. When running the command &amp;quot;kubectl get pods -n prelude&amp;quot;, the &amp;quot;catalog-service-app&amp;quot; pod will show as 0/1 Ready, and Running.&lt;/p&gt;
           
           
         

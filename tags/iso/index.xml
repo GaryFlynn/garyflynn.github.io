@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/iso/</link>
     <description>Recent content in ISO on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Fri, 24 Aug 2018 19:39:29 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/iso/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create a Bootable USB ESXi Installer</title>
@@ -16,8 +16,25 @@
       <description>
         
           
-            To install ESXi onto a bare metal server without a CD/DVD drive or a KVM console, the simplest way is to create a bootable USB drive with the ESXi installer. To do this, we will use a tool called Rufus.
- Download the latest portable release of Rufus Download the ESXi ISO image (.iso file type)  ESXi 6.7 ESXi 6.5   Connect the USB device to your Computer Open Rufus Select the USB device Select the ESXi installer ISO Ensure &#39;MBR partition&#39; &amp;amp; &#39;BIOS or EUFI&#39; are selected Select Start Select Yes to replace menu.
+            &lt;p&gt;To install ESXi onto a bare metal server without a CD/DVD drive or a KVM console, the simplest way is to create a bootable USB drive with the ESXi installer. To do this, we will use a tool called Rufus.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Download the latest portable release of &lt;a href=&#34;https://rufus.akeo.ie/downloads/&#34;&gt;Rufus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Download the ESXi ISO image (.iso file type)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://my.vmware.com/web/vmware/details?downloadGroup=ESXI670&amp;amp;productId=742&amp;amp;rPId=24636&#34;&gt;ESXi 6.7&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://my.vmware.com/web/vmware/details?downloadGroup=ESXI650&amp;amp;productId=614&#34;&gt;ESXi 6.5&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Connect the USB device to your Computer&lt;/li&gt;
+&lt;li&gt;Open Rufus&lt;/li&gt;
+&lt;li&gt;Select the USB device&lt;/li&gt;
+&lt;li&gt;Select the ESXi installer ISO&lt;/li&gt;
+&lt;li&gt;Ensure &#39;MBR partition&#39; &amp;amp; &#39;BIOS or EUFI&#39; are selected&lt;/li&gt;
+&lt;li&gt;Select Start&lt;/li&gt;
+&lt;li&gt;Select Yes to replace menu.c32&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://garyflynn.com/images/rufus-config.png&#34; alt=&#34;rufus-config&#34; width=&#34;500px&#34;/&gt;
+&lt;p&gt;All done! When booting from the USB installer, you can also use the same device as the install location as the installer is loaded to memory when the server boots and the USB device is not touched.&lt;/p&gt;
           
           
         

@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/powershell/</link>
     <description>Recent content in Powershell on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Fri, 22 Feb 2019 12:38:51 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>File Shares / SMB Not Working</title>
@@ -16,8 +16,8 @@
       <description>
         
           
-            A strange issue occasionally occurs on some servers where random network dropouts occur while accessing any file share (ie. \\servername\c$). I recently came across this issue again and found this fantastic post on the technet forums. About half way down the page a solution is posted which fixed my issue!
-The short version is that in Windows Server 2012 R2 the service / driver SRV2(Server SMB 2.xxx Driver) startup method was changed from Auto to Manual / On Demand.
+            &lt;p&gt;A strange issue occasionally occurs on some servers where random network dropouts occur while accessing any file share (ie. \\servername\c$). I recently came across this issue again and found this fantastic post on the &lt;a href=&#34;https://social.technet.microsoft.com/Forums/en-US/e9567167-22db-4b8c-9f96-a08b97d507f9/server-2012-r2-file-server-stops-responding-to-smb-connections?forum=winserverfiles&#34;&gt;technet forums&lt;/a&gt;. About half way down the page a solution is posted which fixed my issue!&lt;/p&gt;
+&lt;p&gt;The short version is that in Windows Server 2012 R2 the service / driver SRV2(Server SMB 2.xxx Driver) startup method was changed from Auto to Manual / On Demand. This means that the service is not running unless SMB2 traffic is requested. To check the service status run the below command in PowerShell as Administrator.&lt;/p&gt;
           
           
         
@@ -33,9 +33,36 @@ The short version is that in Windows Server 2012 R2 the service / driver SRV2(Se
       <description>
         
           
-            This blog covers creating a new Active Directory forest and adding a secondary domain controller to the domain via PowerShell.
-Create Active Directory Forest To create a new Active Directory (AD) forest, the below PowerShell commands can be run to simplify the process. To start off, run the below command to install the appropriate Windows Feature.
-1Install-WindowsFeature AD-Domain-Services -IncludeManagementTools     Run the below command to add the AD module into PowerShell now that it has been installed.
+            &lt;p&gt;This blog covers creating a new Active Directory forest and adding a secondary domain controller to the domain via PowerShell.&lt;/p&gt;
+&lt;h2 id=&#34;create-active-directory-forest&#34;&gt;Create Active Directory Forest&lt;/h2&gt;
+&lt;p&gt;To create a new Active Directory (AD) forest, the below PowerShell commands can be run to simplify the process. To start off, run the below command to install the appropriate Windows Feature.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure&gt;
+  &lt;picture&gt;
+
+    
+      
+        
+        
+        
+        
+        
+        
+    &lt;img
+      loading=&#34;lazy&#34;
+      decoding=&#34;async&#34;
+      alt=&#34;&#34;
+      
+        class=&#34;image_figure image_internal image_unprocessed&#34;
+        src=&#34;https://garyflynn.com/images/active-directory-forest-1.png&#34;
+      
+      
+    /&gt;
+
+    &lt;/picture&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Run the below command to add the AD module into PowerShell now that it has been installed.&lt;/p&gt;
           
           
         
@@ -51,8 +78,8 @@ Create Active Directory Forest To create a new Active Directory (AD) forest, the
       <description>
         
           
-            With access to vCenter or vRealize Automation comes great responsibility. Clients often require a quick and easy way to take a short term snapshot of a server so that they can quick and easily rollback application changes. VMware provides a robust snapshot function, however when things go well these snapshots are often left behind or forgotten about.
-Run PowerCLI and run the below commands to get a list of all VMs with a Snapshot
+            &lt;p&gt;With access to vCenter or vRealize Automation comes great responsibility. Clients often require a quick and easy way to take a short term snapshot of a server so that they can quick and easily rollback application changes. VMware provides a robust snapshot function, however when things go well these snapshots are often left behind or forgotten about.&lt;/p&gt;
+&lt;p&gt;Run PowerCLI and run the below commands to get a list of all VMs with a Snapshot&lt;/p&gt;
           
           
         
@@ -68,8 +95,8 @@ Run PowerCLI and run the below commands to get a list of all VMs with a Snapshot
       <description>
         
           
-            For many organisations, PowerShell remoting is done through a scripthost server where maximum concurrent session limits and maximum connected user limits can be reached. As explained in this Microsoft blog, the following error might be encountered.
-PS&amp;gt; New-PSSession \[localhost\] Connecting to remote server failed with the following error message : The WS-Management service cannot process the request. This user is allowed a maximum number of 5 concurrent shells, which has been exceeded.
+            &lt;p&gt;For many organisations, PowerShell remoting is done through a scripthost server where maximum concurrent session limits and maximum connected user limits can be reached. As explained in &lt;a href=&#34;https://blogs.msdn.microsoft.com/powershell/2010/05/02/configuring-wsman-limits/&#34;&gt;this Microsoft blog&lt;/a&gt;, the following error might be encountered.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;PS&amp;gt; New-PSSession \[localhost\] Connecting to remote server failed with the following error message : The WS-Management service cannot process the request. This user is allowed a maximum number of 5 concurrent shells, which has been exceeded. Close existing shells or raise the quota for this user. For more information, see the about\_Remote\_Troubleshooting Help topic.   \+ CategoryInfo          : OpenError: (System.Manageme….RemoteRunspa   ce:RemoteRunspace) \[\], PSRemotingTransportException   \+ FullyQualifiedErrorId : PSSessionOpenFailed&lt;/code&gt;&lt;/p&gt;
           
           
         

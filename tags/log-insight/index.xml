@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/log-insight/</link>
     <description>Recent content in Log Insight on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Mon, 21 Oct 2019 10:39:18 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/log-insight/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vRealize Log Insight 8.x - Getting Started</title>
@@ -16,7 +16,7 @@
       <description>
         
           
-            In the previous post we deployed all of the vRealize Suite products and we are now ready to log into vRLI and configure it for use. vRLI 8.0 has some significant improvements including Unlimited Exports of data (increased from 20,000 events), Content Pack Updates and a new OS in the form of Photon OS. For more information check out the VMware blog post here which includes details of how the single upgrade file will also move the OS from SUSE to Photon!
+            &lt;p&gt;In the previous &lt;a href=&#34;https://garyflynn.com/post/vrealize-suite-2019-deploy-using-vrslcm/&#34;&gt;post&lt;/a&gt; we deployed all of the vRealize Suite products and we are now ready to log into vRLI and configure it for use. vRLI 8.0 has some significant improvements including Unlimited Exports of data (increased from 20,000 events), Content Pack Updates and a new OS in the form of Photon OS. For more information check out the VMware blog post &lt;a href=&#34;https://blogs.vmware.com/management/2019/10/whats-new-in-vrealize-log-insight-8-0.html&#34;&gt;here&lt;/a&gt; which includes details of how the single upgrade file will also move the OS from SUSE to Photon! Very impressive!&lt;/p&gt;
           
           
         

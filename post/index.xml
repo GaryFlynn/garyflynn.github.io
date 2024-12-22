@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/post/</link>
     <description>Recent content in Posts on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Sun, 03 Dec 2023 14:57:40 +0000</lastBuildDate><atom:link href="https://garyflynn.com/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vRealize Automation 8.x – Change Internal Kubernetes IP Range</title>
@@ -16,8 +16,8 @@
       <description>
         
           
-            vRealize Automation (vRA) 8.2 added support for changing the IP address range used by the internal Kubernetes cluster, which is great news as many organisation already use the 10.244.0.0/21 address space. Unfortunately if your network already uses the ranges 10.244.0.0/22 or 10.244.4.0/22, you will likely encounter issues, such a provisioning timeouts.
-To resolve this issue in vRA 8.2, run the below commands to view your current configuration, and to update to a new range.
+            &lt;p&gt;vRealize Automation (vRA) 8.2 added support for changing the IP address range used by the internal Kubernetes cluster, which is great news as many organisation already use the 10.244.0.0/21 address space. Unfortunately if your network already uses the ranges 10.244.0.0/22 or 10.244.4.0/22, you will likely encounter issues, such a provisioning timeouts.&lt;/p&gt;
+&lt;p&gt;To resolve this issue in vRA 8.2, run the below commands to view your current configuration, and to update to a new range.&lt;/p&gt;
           
           
         
@@ -33,8 +33,8 @@ To resolve this issue in vRA 8.2, run the below commands to view your current co
       <description>
         
           
-            By default, a vRealize Automation 8.x session will timeout after 30 minutes of inactivity. For those looking to increase the session timeout value, this hasn&#39;t been possible before vRealize Automation 8.5. This all changes with the release of vRealize Automation 8.5, as documented in the release notes here.
-To increase the session timeout from the default 30 minutes, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL.
+            &lt;p&gt;By default, a vRealize Automation 8.x session will timeout after 30 minutes of inactivity. For those looking to increase the session timeout value, this hasn&#39;t been possible before vRealize Automation 8.5. This all changes with the release of vRealize Automation 8.5, as documented in the release notes &lt;a href=&#34;https://docs.vmware.com/en/VMware-vRealize-Automation/8.5/rn/vmware-vrealize-automation-85-release-notes.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To increase the session timeout from the default 30 minutes, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL. Another option would be to run the same API calls in Postman.&lt;/p&gt;
           
           
         
@@ -50,8 +50,8 @@ To increase the session timeout from the default 30 minutes, a simple API call i
       <description>
         
           
-            VMware has created a HashiCorp Terraform provider which can be used to set up your vRealize Automation (vRA) infrastructure, along with requesting deployments and consuming XaaS resources. This post will cover the basics of setting up vRA using Terraform.
-The first two posts in this series cover the basics of Infrastructure as Code with vRA and Terraform along with creating your first Terraform configuration to deploy a vSphere virtual machine. To get started, have a read of the documentation available for either vRA 8 or vRA 7.
+            &lt;p&gt;VMware has created a HashiCorp Terraform provider which can be used to set up your vRealize Automation (vRA) infrastructure, along with requesting deployments and consuming XaaS resources. This post will cover the basics of setting up vRA using Terraform.&lt;/p&gt;
+&lt;p&gt;The first two posts in this series cover the basics of &lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/&#34;&gt;Infrastructure as Code with vRA and Terraform&lt;/a&gt; along with &lt;a href=&#34;https://garyflynn.com/post/create-your-first-vsphere-terraform-configuration/&#34;&gt;creating your first Terraform configuration to deploy a vSphere virtual machine&lt;/a&gt;. To get started, have a read of the documentation available for either &lt;a href=&#34;https://registry.terraform.io/providers/vmware/vra/latest/docs&#34;&gt;vRA 8&lt;/a&gt; or &lt;a href=&#34;https://registry.terraform.io/providers/vmware/vra7/latest/docs&#34;&gt;vRA 7&lt;/a&gt;.&lt;/p&gt;
           
           
         
@@ -67,7 +67,7 @@ The first two posts in this series cover the basics of Infrastructure as Code wi
       <description>
         
           
-            By default, a vRealize Automation 8.x session log you into the Services page, when you and your users are greeted with the Quickstart banner. The easiest way to remove this is to configure a vSphere Cloud Account, however for some environments, vSphere isn&#39;t an endpoint used. In this case, to remove the banner, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL.
+            &lt;p&gt;By default, a vRealize Automation 8.x session log you into the Services page, when you and your users are greeted with the Quickstart banner. The easiest way to remove this is to configure a vSphere Cloud Account, however for some environments, vSphere isn&#39;t an endpoint used. In this case, to remove the banner, a simple API call is all that is required. The below code can be run from either the appliance directly, or from your desktop PC using cURL. Another option would be to run the same API calls in Postman.&lt;/p&gt;
           
           
         
@@ -83,7 +83,7 @@ The first two posts in this series cover the basics of Infrastructure as Code wi
       <description>
         
           
-            VMware Explore EU 2022 was personally my first ever large conference and what an event it was! The biggest benefit of attending for me was to finally meet so many people who are also part of the broader vCommunity, along with fellow vExperts and colleagues from vendors who I have been working very closely with over the past 2-3 years. To everyone I managed to say hello to, thank you for helping to make this a truly amazing event!
+            &lt;p&gt;VMware Explore EU 2022 was personally my first ever large conference and what an event it was! The biggest benefit of attending for me was to finally meet so many people who are also part of the broader vCommunity, along with fellow vExperts and colleagues from vendors who I have been working very closely with over the past 2-3 years. To everyone I managed to say hello to, thank you for helping to make this a truly amazing event!&lt;/p&gt;
           
           
         
@@ -99,7 +99,7 @@ The first two posts in this series cover the basics of Infrastructure as Code wi
       <description>
         
           
-            VMware Explore 2022 was set to be a big event for VMware, with the infamous VMworld branding being changed to VMware Explore along with this being the first in person event since 2019, due to COVID-19. Sure enough, there was no shortage of announcements and information available for everyone this year. Last year at VMworld 2021 we had the announcement of Project Ensemble Tech Preview and this year we saw this formalise into VMware Aria Hub.
+            &lt;p&gt;VMware Explore 2022 was set to be a big event for VMware, with the infamous VMworld branding being changed to VMware Explore along with this being the first in person event since 2019, due to COVID-19. Sure enough, there was no shortage of announcements and information available for everyone this year. Last year at VMworld 2021 we had the announcement of &lt;a href=&#34;https://blogs.vmware.com/management/2021/10/introducing-project-ensemble.html&#34;&gt;Project Ensemble Tech Preview&lt;/a&gt; and this year we saw this formalise into VMware Aria Hub. In fact, the biggest announcement to come out of the event is the announcement of &lt;a href=&#34;https://blogs.vmware.com/management/2022/08/introducing-vmware-aria.html&#34;&gt;VMware Aria&lt;/a&gt;!&lt;/p&gt;
           
           
         
@@ -115,7 +115,7 @@ The first two posts in this series cover the basics of Infrastructure as Code wi
       <description>
         
           
-            VMworld 2021 was still held online only this year, which meant there was no shortage of announcements and information available for anyone interested. With a few large announcements including the Project Ensemble Tech Preview and Skyline Advisor Pro, there is plenty to keep an eye on in this space. Below I&#39;ve listed a few things for each of the vRealize Suite products which caught my attention. Leave a comment below on what you&#39;re looking forward to in this next release!
+            &lt;p&gt;VMworld 2021 was still held online only this year, which meant there was no shortage of announcements and information available for anyone interested. With a few large announcements including the &lt;a href=&#34;https://blogs.vmware.com/management/2021/10/introducing-project-ensemble.html&#34;&gt;Project Ensemble Tech Preview&lt;/a&gt; and &lt;a href=&#34;https://blogs.vmware.com/kb/2021/09/skyline-announcement.html&#34;&gt;Skyline Advisor Pro&lt;/a&gt;, there is plenty to keep an eye on in this space. Below I&#39;ve listed a few things for each of the vRealize Suite products which caught my attention. Leave a comment below on what you&#39;re looking forward to in this next release!&lt;/p&gt;
           
           
         
@@ -131,8 +131,8 @@ The first two posts in this series cover the basics of Infrastructure as Code wi
       <description>
         
           
-            To get started with HashiCorp Terraform, you can download the simple executable file from HashiCorp here. To understand the basics of Infrastructure as Code and Terraform, have a read of the post available here.
-Terraform configuration files are text files with a .tf file extension. To get started, create a new folder for this configuration, along with a file called vsphere.tf. The first part to creating a Terraform configuration file is to define the provider you will interact with.
+            &lt;p&gt;To get started with HashiCorp Terraform, you can download the simple executable file from HashiCorp &lt;a href=&#34;https://www.terraform.io/downloads.html&#34;&gt;here&lt;/a&gt;. To understand the basics of Infrastructure as Code and Terraform, have a read of the post available &lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Terraform configuration files are text files with a .tf file extension. To get started, create a new folder for this configuration, along with a file called &lt;em&gt;vsphere.tf&lt;/em&gt;. The first part to creating a Terraform configuration file is to define the provider you will interact with. In this example, it will create a virtual machine using the vSphere provider. The vSphere provider has some required fields like the user, password and server name. Create the provider block referring to &amp;quot;vsphere&amp;quot; and set the required fields with valid values for your environment.&lt;/p&gt;
           
           
         
@@ -148,8 +148,16 @@ Terraform configuration files are text files with a .tf file extension. To get s
       <description>
         
           
-            On January 28th 2021, I presented at the Automation User Group about vRealize Automation and Terraform and how they work together to provide a new way to deploy your infrastructure. The recording of the session will be available here and the slides are available from here.
- vRealize Automation Cloud What is Infrastructure as Code? Two Approaches: Imperative vs Declarative What is Terraform (OSS)? Additional Resources  vRealize Automation Cloud VMware vRealize Automation (vRA) Cloud allows you to provide multi-cloud infrastructure and application delivery to your end-users.
+            &lt;p&gt;On January 28th 2021, I presented at the &lt;a href=&#34;https://www.autoug.io/&#34;&gt;Automation User Group&lt;/a&gt; about vRealize Automation and Terraform and how they work together to provide a new way to deploy your infrastructure. The recording of the session will be available &lt;a href=&#34;https://youtu.be/Q1XcuxTL6CQ&#34;&gt;here&lt;/a&gt; and the slides are available from &lt;a href=&#34;https://garyflynn.com/wp-content/uploads/2021/01/vRA-and-Terraform-A-New-Way-to-Deploy.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/#vrealize-automation-cloud&#34;&gt;vRealize Automation Cloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/#what-is-infrastructure-as-code&#34;&gt;What is Infrastructure as Code?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/#two-approaches-imperative-vs-declarative&#34;&gt;Two Approaches: Imperative vs Declarative&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/#what-is-terraform-oss&#34;&gt;What is Terraform (OSS)?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/#additional-resources&#34;&gt;Additional Resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;vrealize-automation-cloud&#34;&gt;vRealize Automation Cloud&lt;/h3&gt;
+&lt;p&gt;VMware vRealize Automation (vRA) Cloud allows you to provide multi-cloud infrastructure and application delivery to your end-users. It enhances the visibility of your machines across your different private and public cloud providers, enables collaboration and provides continuous delivery and release automation.&lt;/p&gt;
           
           
         
@@ -165,8 +173,8 @@ Terraform configuration files are text files with a .tf file extension. To get s
       <description>
         
           
-            vRealize Automation (vRA) 8.0 introduced a completely new architecture by running the vRA application itself on top of a Kubernetes (k8s) cluster. Unfortunately this was released with a hardcoded IP address range used by the internal k8s cluster. If your corporate network happened to be using the same IP addresses that were selected by the k8s cluster, then you would likely see plenty of errors in vRA.
-Thankfully, vRealize Automation 8.
+            &lt;p&gt;vRealize Automation (vRA) 8.0 introduced a completely new architecture by running the vRA application itself on top of a Kubernetes (k8s) cluster. Unfortunately this was released with a hardcoded IP address range used by the internal k8s cluster. If your corporate network happened to be using the same IP addresses that were selected by the k8s cluster, then you would likely see plenty of errors in vRA.&lt;/p&gt;
+&lt;p&gt;Thankfully, vRealize Automation 8.2 added support for changing the internal IP address range used by the Kubernetes cluster. Unfortunately, there is a bug in the code where only the 10.0.0.0/8 and 127.0.0.0/8 address spaces are supported. If you choose to use the 192.168.0.0/16 address space, the vRA deployment won&#39;t start-up. When running the command &amp;quot;kubectl get pods -n prelude&amp;quot;, the &amp;quot;catalog-service-app&amp;quot; pod will show as 0/1 Ready, and Running.&lt;/p&gt;
           
           
         
@@ -182,7 +190,7 @@ Thankfully, vRealize Automation 8.
       <description>
         
           
-            vRealize Automation (vRA) 8.2 added support for running your Terraform (TF) configurations directly from the vRA interface. Simply register your code repository endpoint, either GitLab or GitHub, and select which Terraform configuration to run. The vRA logic will even map the deployed resources to your vRA Cloud Accounts, Cloud Zones, and deployed resource objects. This functionality is fantastic to extend the capabilities beyond the supported resource types. You could use the TF configurations to deploy an F5 load balancer, an Azure and AWS VM, as well as creating your Grafana dashboards and registering your Datadog agents all from a single configuration.
+            &lt;p&gt;vRealize Automation (vRA) 8.2 added support for running your Terraform (TF) configurations directly from the vRA interface. Simply register your code repository endpoint, either GitLab or GitHub, and select which Terraform configuration to run. The vRA logic will even map the deployed resources to your vRA Cloud Accounts, Cloud Zones, and deployed resource objects. This functionality is fantastic to extend the capabilities beyond the supported resource types. You could use the TF configurations to deploy an F5 load balancer, an Azure and AWS VM, as well as creating your Grafana dashboards and registering your Datadog agents all from a single configuration.&lt;/p&gt;
           
           
         
@@ -198,8 +206,8 @@ Thankfully, vRealize Automation 8.
       <description>
         
           
-            vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Amazon Web Services (AWS) environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For AWS, we simply need to head over to the AWS Console console.aws.amazon.com and authenticate with the account which has access to the AWS account you want to integrate with.
-To integrate vRA 8.
+            &lt;p&gt;vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Amazon Web Services (AWS) environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For AWS, we simply need to head over to the AWS Console &lt;a href=&#34;https://console.aws.amazon.com/&#34;&gt;console.aws.amazon.com&lt;/a&gt; and authenticate with the account which has access to the AWS account you want to integrate with.&lt;/p&gt;
+&lt;p&gt;To integrate vRA 8.x with AWS, there are 2 configuration IDs and some permissions that need to be set up which we need to complete and provide to the vRA portal. These are covered in the sections listed below.&lt;/p&gt;
           
           
         
@@ -215,8 +223,9 @@ To integrate vRA 8.
       <description>
         
           
-            Part one of this blog covered the installation and configuration of vRSLCM which can be found here and this post will cover deploying your first application.
-Create an Environment In vRSLCM, the concept of environments can mean two different things. It could mean Dev/Test/Prod where multiple applications are deployed in one environment or it could mean Dev vRA/Dev vROps/Test vRA/Test vROps where each environment and application combination has its own environment.
+            &lt;p&gt;Part one of this blog covered the installation and configuration of vRSLCM which can be found &lt;a href=&#34;https://garyflynn.com/post/vrealize-lifecycle-manager-part-1-install-configure/&#34;&gt;here&lt;/a&gt; and this post will cover deploying your first application.&lt;/p&gt;
+&lt;h2 id=&#34;create-an-environment&#34;&gt;Create an Environment&lt;/h2&gt;
+&lt;p&gt;In vRSLCM, the concept of environments can mean two different things. It could mean Dev/Test/Prod where multiple applications are deployed in one environment or it could mean Dev vRA/Dev vROps/Test vRA/Test vROps where each environment and application combination has its own environment. In my homelab, I have gone with the latter understanding as there are some limitations placing all of the products in a single environment instance. In the Create Environment wizard, enter the information for which you wish to deploy. Select Next when this is complete.&lt;/p&gt;
           
           
         
@@ -232,7 +241,7 @@ Create an Environment In vRSLCM, the concept of environments can mean two differ
       <description>
         
           
-            vRealize Automation (vRA) 8.x provides native integration to GitHub.com to share and sync your Blueprints and Action Based Extensibility (ABX) scripts. This integration is provided as a way to edit your blueprints and ABX scripts as Infrastructure as Code (IaC) objects and for vRA to then consume the changes once they are updated and committed to your repository. This integration is not designed as a way to backup or export your content to GitHub.
+            &lt;p&gt;vRealize Automation (vRA) 8.x provides native integration to GitHub.com to share and sync your Blueprints and Action Based Extensibility (ABX) scripts. This integration is provided as a way to edit your blueprints and ABX scripts as Infrastructure as Code (IaC) objects and for vRA to then consume the changes once they are updated and committed to your repository. This integration is not designed as a way to backup or export your content to GitHub. Integration in vRA 8.0 / vRA 8.0.1 is only available to GitHub.com and not GitHub Enterprise Cloud or GitHub Enterprise Self-Hosted.&lt;/p&gt;
           
           
         
@@ -248,8 +257,9 @@ Create an Environment In vRSLCM, the concept of environments can mean two differ
       <description>
         
           
-            To configure Kerberos authentication with vRealize Orchestrator (vRO), the krb5.conf file must be set up for your specific environment and the domain you are connecting to. The location of the krb5.conf file is different for different versions and deployments of vRO, so the below list shows the locations of the krb5.conf file for vRO 7 vs vRO 8 and standalone deployments vs embedded with vRA deployments.
-In vRO 7.x standalone, the krb5.
+            &lt;p&gt;To configure Kerberos authentication with vRealize Orchestrator (vRO), the krb5.conf file must be set up for your specific environment and the domain you are connecting to. The location of the krb5.conf file is different for different versions and deployments of vRO, so the below list shows the locations of the krb5.conf file for vRO 7 vs vRO 8 and standalone deployments vs embedded with vRA deployments.&lt;/p&gt;
+&lt;p&gt;In vRO 7.x standalone, the krb5.conf file is located in /usr/java/jre-vmware/lib/security/krb5.conf&lt;br&gt;
+In vRO 8.x standalone, the krb5.conf file is located in /data/vco/usr/lib/vco/app-server/conf/krb5.conf&lt;/p&gt;
           
           
         
@@ -265,7 +275,7 @@ In vRO 7.x standalone, the krb5.
       <description>
         
           
-            vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Google Cloud Platform (GCP) environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For GCP, there is some preparation we need to do on the GCP Console, so head over to console.cloud.google.com and authenticate with the account which has access to the Project you want to integrate with.
+            &lt;p&gt;vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Google Cloud Platform (GCP) environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For GCP, there is some preparation we need to do on the GCP Console, so head over to &lt;a href=&#34;http://console.cloud.google.com&#34;&gt;console.cloud.google.com&lt;/a&gt; and authenticate with the account which has access to the Project you want to integrate with.&lt;/p&gt;
           
           
         
@@ -281,7 +291,7 @@ In vRO 7.x standalone, the krb5.
       <description>
         
           
-            vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Microsoft Azure environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For Azure, there is some preparation we need to do on the Azure Portal, so head over to portal.azure.com and authenticate with the account which has access to the Subscription you want to integrate with.
+            &lt;p&gt;vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Microsoft Azure environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For Azure, there is some preparation we need to do on the Azure Portal, so head over to &lt;a href=&#34;https://portal.azure.com&#34;&gt;portal.azure.com&lt;/a&gt; and authenticate with the account which has access to the Subscription you want to integrate with.&lt;/p&gt;
           
           
         
@@ -297,7 +307,7 @@ In vRO 7.x standalone, the krb5.
       <description>
         
           
-            vRealize Automation 8.x can integrate with several cloud providers, and to do this for your vSphere environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For vSphere, enter the vCenter FQDN / IP address, the credentials to authenticate with and select a logical name. Under capabilities, enter &amp;quot;cloud:vsphere&amp;quot; as this will enable us to use tagging in the blueprint request forms.
+            &lt;p&gt;vRealize Automation 8.x can integrate with several cloud providers, and to do this for your vSphere environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For vSphere, enter the vCenter FQDN / IP address, the credentials to authenticate with and select a logical name. Under capabilities, enter &amp;quot;cloud:vsphere&amp;quot; as this will enable us to use tagging in the blueprint request forms. Validate the credentials and once they are validated, select which datacenters to allow provisioning to, followed by selecting Add.&lt;/p&gt;
           
           
         
@@ -313,11 +323,11 @@ In vRO 7.x standalone, the krb5.
       <description>
         
           
-            In both vRealize Automation and Orchestrator 8.x, the appliances have been rebuilt using a kubernetes architecture. For this reason, the location of the different Orchestrator user interfaces has changed.
-Orchestrator Client UI - https://FQDN_or_IP_address:443/orchestration-ui
-Orchestrator Client Java UI - deprecated from vRO 8.0 onwards
-Orchestrator Control Center UI - https://FQDN_or_IP_address:443/vco-controlcenter
-To login to the Orchestrator Control Center UI, the username is &#39;root&#39; and the password is the same as the appliance &#39;root&#39; password.
+            &lt;p&gt;In both vRealize Automation and Orchestrator 8.x, the appliances have been rebuilt using a kubernetes architecture. For this reason, the location of the different Orchestrator user interfaces has changed.&lt;/p&gt;
+&lt;p&gt;Orchestrator Client UI - https://&lt;em&gt;FQDN_or_IP_address&lt;/em&gt;:443/orchestration-ui&lt;/p&gt;
+&lt;p&gt;Orchestrator Client Java UI - deprecated from vRO 8.0 onwards&lt;/p&gt;
+&lt;p&gt;Orchestrator Control Center UI - https://&lt;em&gt;FQDN_or_IP_address&lt;/em&gt;:443/vco-controlcenter&lt;/p&gt;
+&lt;p&gt;To login to the Orchestrator Control Center UI, the username is &#39;root&#39; and the password is the same as the appliance &#39;root&#39; password.&lt;/p&gt;
           
           
         
@@ -333,7 +343,7 @@ To login to the Orchestrator Control Center UI, the username is &#39;root&#39; a
       <description>
         
           
-            Today is a significant day for VMware with the announcements coming out primarily around vSphere 7 and the implementation of Project Tanzu. The vSphere client will now natively support running containers and VMs within the same unified console, the vSphere Client. One very interesting new feature is the VMware Lifecycle Manager (vLCM) that will be introduced to simplify the management of firmware, drivers and ESXi bundles. For more information on today&#39;s announcements, check out the blog here.
+            &lt;p&gt;Today is a significant day for VMware with the announcements coming out primarily around vSphere 7 and the implementation of Project Tanzu. The vSphere client will now natively support running containers and VMs within the same unified console, the vSphere Client. One very interesting new feature is the VMware Lifecycle Manager (vLCM) that will be introduced to simplify the management of firmware, drivers and ESXi bundles. For more information on today&#39;s announcements, check out the blog &lt;a href=&#34;https://blogs.vmware.com/vsphere/2020/03/vsphere-7.html&#34;&gt;here&lt;/a&gt;. But what about the vRealize Suite announcements? That&#39;s what we are really interested in!&lt;/p&gt;
           
           
         
@@ -349,8 +359,8 @@ To login to the Orchestrator Control Center UI, the username is &#39;root&#39; a
       <description>
         
           
-            VMware has recently released vRealize Automation 8.0 and with this comes a complete redesign of the vRealize Automation product. Are you just starting out on your Cloud Management Platform (CMP) journey and not quite sure which version to deploy? Hopefully this blog will help you understand some of the key differences between vRA 7.x and vRA 8.x and some familiar features which are missing from vRA 8.x.
-The first place to start is by reading this excellent blog post by Chip Zoller (daphnissov) on the VMware Community Forums.
+            &lt;p&gt;VMware has recently released vRealize Automation 8.0 and with this comes a complete redesign of the vRealize Automation product. Are you just starting out on your Cloud Management Platform (CMP) journey and not quite sure which version to deploy? Hopefully this blog will help you understand some of the key differences between vRA 7.x and vRA 8.x and some familiar features which are missing from vRA 8.x.&lt;/p&gt;
+&lt;p&gt;The first place to start is by reading this excellent &lt;a href=&#34;https://communities.vmware.com/people/daphnissov/blog/2019/10/18/vrealize-automation-vra-8-faq&#34;&gt;blog post&lt;/a&gt; by Chip Zoller (daphnissov) on the VMware Community Forums. This vRA 8 FAQ provides plenty of answers to some of the obvious questions.&lt;/p&gt;
           
           
         
@@ -366,8 +376,22 @@ The first place to start is by reading this excellent blog post by Chip Zoller (
       <description>
         
           
-            With the introduction of vRealize Automation (vRA) 8.0, the traditional appliance VAMI page is gone. This is replaced with the vRA CLI and the kubernetes command line tools. This post will show some of the more common CLI commands you may need. To use all of the commands below, use SSH to connect to the appliance and log in with the root username and password.
- Check Pods / &#39;Services&#39; Status Display vRA Cluster Status Verify the vRA Deployment Status Check Deployment Log File Generate a Log Bundle Stopping / Shut down vRA Cluster Starting vRA Cluster vRA 8.
+            &lt;p&gt;With the introduction of vRealize Automation (vRA) 8.0, the traditional appliance VAMI page is gone. This is replaced with the vRA CLI and the kubernetes command line tools. This post will show some of the more common CLI commands you may need. To use all of the commands below, use SSH to connect to the appliance and log in with the root username and password.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vrealize-automation-8x-troubleshooting/#check-pods--services-status&#34;&gt;Check Pods / &#39;Services&#39; Status&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vrealize-automation-8x-troubleshooting/#display-vra-cluster-status&#34;&gt;Display vRA Cluster Status&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vrealize-automation-8x-troubleshooting/#verify-the-vra-deployment-status&#34;&gt;Verify the vRA Deployment Status&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vrealize-automation-8x-troubleshooting/#check-deployment-log-file&#34;&gt;Check Deployment Log File&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vrealize-automation-8x-troubleshooting/#generate-a-log-bundle&#34;&gt;Generate a Log Bundle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vrealize-automation-8x-troubleshooting/#stopping--shut-down-vra-cluster&#34;&gt;Stopping / Shut down vRA Cluster&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vrealize-automation-8x-troubleshooting/#starting-vra-cluster&#34;&gt;Starting vRA Cluster&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vrealize-automation-8x-troubleshooting/#vra-8x-error---bad-gateway&#34;&gt;vRA 8.x Error - Bad Gateway&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vrealize-automation-8x-troubleshooting/#vra-just-not-working&#34;&gt;vRA just not working...&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vrealize-automation-8x-troubleshooting/#remove-vm-from-inventory-without-deleting-the-vm&#34;&gt;Remove VM from Inventory without deleting the VM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vrealize-automation-8x-troubleshooting/#remove-vra-integration-with-vrealize-log-insight&#34;&gt;Remove vRA integration with vRealize Log Insight&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;check-pods--services-status&#34;&gt;Check Pods / &#39;Services&#39; Status&lt;/h2&gt;
+&lt;p&gt;Although the traditional vRA services are replaced with kubernetes containers, you can still check the running status of them using the command below. This command will show the running status, the age and the number of restarts for each pod or &#39;service&#39;.&lt;/p&gt;
           
           
         
@@ -383,10 +407,36 @@ The first place to start is by reading this excellent blog post by Chip Zoller (
       <description>
         
           
-            Once vRealize Automation 7.x is deployed, you must manually start the vRealize Orchestrator Configurator service to access the Configuration interface.
-To do this, log into the vRealize Automation appliance by SSH using PuTTY (or your preferred Secure Shell client).
-    Run this command to verify that the service is set to automatically start.
-1chkconfig vco-configurator If the service reports &amp;quot;off&amp;quot;, run this command to enable an automatic restart of the vRealize Orchestrator Configurator service when the vRealize Automation appliance is rebooted in future.
+            &lt;p&gt;Once vRealize Automation 7.x is deployed, you must manually start the vRealize Orchestrator Configurator service to access the Configuration interface.&lt;/p&gt;
+&lt;p&gt;To do this, log into the vRealize Automation appliance by SSH using PuTTY (or your preferred Secure Shell client).&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+  &lt;picture&gt;
+
+    
+      
+        
+        
+        
+        
+        
+        
+    &lt;img
+      loading=&#34;lazy&#34;
+      decoding=&#34;async&#34;
+      alt=&#34;&#34;
+      
+        class=&#34;image_figure image_internal image_unprocessed&#34;
+        src=&#34;https://garyflynn.com/images/vra-server-primary-ssh.png&#34;
+      
+      
+    /&gt;
+
+    &lt;/picture&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Run this command to verify that the service is set to automatically start.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;chkconfig vco-configurator
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If the service reports &amp;quot;&lt;strong&gt;off&lt;/strong&gt;&amp;quot;, run this command to enable an automatic restart of the vRealize Orchestrator Configurator service when the vRealize Automation appliance is rebooted in future.&lt;/p&gt;
           
           
         
@@ -402,8 +452,34 @@ To do this, log into the vRealize Automation appliance by SSH using PuTTY (or yo
       <description>
         
           
-            In the previous post we configured vRA 8.0 with a vSphere endpoint and in this post we are going to cover the different Services which are available. vRA 8.0 has four main components or services, Cloud Assembly, Service Broker, Code Stream and Orchestrator. Great, but what is the role of each service?
-    Cloud Assembly The Cloud Assembly service is the multi-cloud provisioning service and is where the bulk of your time will be spent.
+            &lt;p&gt;In the previous &lt;a href=&#34;https://garyflynn.com/post/vrealize-automation-8x-getting-started/&#34;&gt;post&lt;/a&gt; we configured vRA 8.0 with a vSphere endpoint and in this post we are going to cover the different Services which are available. vRA 8.0 has four main components or services, Cloud Assembly, Service Broker, Code Stream and Orchestrator. Great, but what is the role of each service?&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+  &lt;picture&gt;
+
+    
+      
+        
+        
+        
+        
+        
+        
+    &lt;img
+      loading=&#34;lazy&#34;
+      decoding=&#34;async&#34;
+      alt=&#34;&#34;
+      
+        class=&#34;image_figure image_internal image_unprocessed&#34;
+        src=&#34;https://garyflynn.com/images/vra8-services.png&#34;
+      
+      
+    /&gt;
+
+    &lt;/picture&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;cloud-assembly&#34;&gt;Cloud Assembly&lt;/h3&gt;
+&lt;p&gt;The Cloud Assembly service is the multi-cloud provisioning service and is where the bulk of your time will be spent. The Cloud Assembly service is where you can create your SDDC private cloud and it is also an abstraction layer across multiple clouds. This abstraction allows you to create blueprints which can be used to deploy applications across different cloud providers, mapping the cloud constructs of one public cloud provider with another. All of the usual features are there including viewing your existing deployments, creating blueprints and configuring Infrastructure. The addition of the &amp;quot;Guided Setup&amp;quot; on the right hand side helps with understanding how all of the terminology fits everything together. The Infrastructure tab in Cloud Assembly is where most of the configuration is done. Here you can create the different projects, cloud zones, flavour and image mappings and network and storage profiles. The infrastructure tab is also where the cloud accounts are defined and the compute, network, security, storage etc are all deployed, along with the Kubernetes integration. The table below maps the vRA 7.x constructs to the vRA 8.x constructs.&lt;/p&gt;
           
           
         
@@ -419,7 +495,7 @@ To do this, log into the vRealize Automation appliance by SSH using PuTTY (or yo
       <description>
         
           
-            In the previous post we deployed all of the vRealize Suite products and we are now ready to log into vRA and configure it for use. vRA 8.0 is a fundamental change from 7.x and it now consists of four main components, Cloud Assembly, Service Broker, Code Stream and Orchestrator. Let&#39;s get vRA 8.0 configured! Load up the vRA homepage https://&amp;lt;vRA FDQN&amp;gt;/ where you are greeted with the welcome page. One thing to note is that the new vRA 8.
+            &lt;p&gt;In the previous &lt;a href=&#34;https://garyflynn.com/post/vrealize-suite-2019-deploy-using-vrslcm/&#34;&gt;post&lt;/a&gt; we deployed all of the vRealize Suite products and we are now ready to log into vRA and configure it for use. vRA 8.0 is a fundamental change from 7.x and it now consists of four main components, Cloud Assembly, Service Broker, Code Stream and Orchestrator. Let&#39;s get vRA 8.0 configured! Load up the vRA homepage https://&amp;lt;vRA FDQN&amp;gt;/ where you are greeted with the welcome page. One thing to note is that the new vRA 8.0 appliance does not contain a VAMI, instead non-UI configuration is done using the &amp;quot;vracli&amp;quot; commands on the appliance shell.&lt;/p&gt;
           
           
         
@@ -435,7 +511,7 @@ To do this, log into the vRealize Automation appliance by SSH using PuTTY (or yo
       <description>
         
           
-            In the previous post we deployed all of the vRealize Suite products and we are now ready to log into vRLI and configure it for use. vRLI 8.0 has some significant improvements including Unlimited Exports of data (increased from 20,000 events), Content Pack Updates and a new OS in the form of Photon OS. For more information check out the VMware blog post here which includes details of how the single upgrade file will also move the OS from SUSE to Photon!
+            &lt;p&gt;In the previous &lt;a href=&#34;https://garyflynn.com/post/vrealize-suite-2019-deploy-using-vrslcm/&#34;&gt;post&lt;/a&gt; we deployed all of the vRealize Suite products and we are now ready to log into vRLI and configure it for use. vRLI 8.0 has some significant improvements including Unlimited Exports of data (increased from 20,000 events), Content Pack Updates and a new OS in the form of Photon OS. For more information check out the VMware blog post &lt;a href=&#34;https://blogs.vmware.com/management/2019/10/whats-new-in-vrealize-log-insight-8-0.html&#34;&gt;here&lt;/a&gt; which includes details of how the single upgrade file will also move the OS from SUSE to Photon! Very impressive!&lt;/p&gt;
           
           
         
@@ -451,8 +527,16 @@ To do this, log into the vRealize Automation appliance by SSH using PuTTY (or yo
       <description>
         
           
-            In the previous post we went over the vRSLCM configuration and now we are ready to deploy the vRealize Suite of products. Before we start, I can not stress this enough... Read the release notes!! There are countless changes to each of the products and vRA 8.0 especially is missing some features which may return in vRA 8.1 or later.
- vRealize Suite Lifecycle Manager 8.0 - Release Notes vRealize Automation 8.
+            &lt;p&gt;In the previous &lt;a href=&#34;https://garyflynn.com/post/vrealize-suite-lifecycle-manager-8-0-configuration/&#34;&gt;post&lt;/a&gt; we went over the vRSLCM configuration and now we are ready to deploy the vRealize Suite of products. Before we start, I can not stress this enough... Read the release notes!! There are countless changes to each of the products and vRA 8.0 especially is missing some features which may return in vRA 8.1 or later.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.vmware.com/en/VMware-vRealize-Suite-Lifecycle-Manager/2019/rn/VMware-vRealize-Suite-Lifecycle-Manager-80-Release-Notes.html&#34;&gt;vRealize Suite Lifecycle Manager 8.0 - Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.vmware.com/en/vRealize-Automation/8.0/rn/vRealize-Automation-80-release-notes.html&#34;&gt;vRealize Automation 8.0 - Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.vmware.com/en/vRealize-Log-Insight/8.0/rn/vRealize-Log-Insight-80.html&#34;&gt;vRealize Log Insight 8.0 - Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.vmware.com/en/vRealize-Operations-Manager/8.0/rn/vRealize-Operations-Manager-80.html&#34;&gt;vRealize Operations Manager 8.0 - Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.vmware.com/en/vRealize-Orchestrator/8.0/rn/VMware-vRealize-Orchestrator-80-Release-Notes.html&#34;&gt;vRealize Orchestrator 8.0 - Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vrealize-suite-2019-deployment&#34;&gt;vRealize Suite 2019 Deployment&lt;/h2&gt;
+&lt;p&gt;If this environment is just your homelab, you can leverage the default datacenter otherwise it is best to create a new datacenter. To create a Datacenter, log into vRSLCM and select Lifecycle Operations &amp;gt; Datacenters on the left, then Add Datacenter. Enter a name along with the location and click Save. Add a vCenter Server to your new datacenter and Save. You should now see two datacenters. One called &amp;quot;default_datacenter&amp;quot; located in Palo Alto, California, US which contains the vIDM installation, and another new one for your new deployment. In vRSLCM 8.0.1 you can now edit the location of the default datacenter to match your actual location.&lt;/p&gt;
           
           
         
@@ -468,8 +552,8 @@ To do this, log into the vRealize Automation appliance by SSH using PuTTY (or yo
       <description>
         
           
-            In the previous post we went over the vRSLCM Easy Installer which deployed vRSLCM 8.0 and vIDM 8.0. The installations went smoothly with no reported issues.
-Let&#39;s log into the vRSLCM UI by navigating to https://&amp;lt;vRSLCM FQDN or IP&amp;gt;/ and log in with the username &amp;quot;admin@local&amp;quot; and the password you set in the deployment in the previous steps. Note the default username has changed from previous versions and is no longer admin@localhost.
+            &lt;p&gt;In the previous &lt;a href=&#34;https://garyflynn.com/post/vrealize-suite-2019-easy-installer/&#34;&gt;post&lt;/a&gt; we went over the vRSLCM Easy Installer which deployed vRSLCM 8.0 and vIDM 8.0. The installations went smoothly with no reported issues.&lt;/p&gt;
+&lt;p&gt;Let&#39;s log into the vRSLCM UI by navigating to https://&amp;lt;vRSLCM FQDN or IP&amp;gt;/ and log in with the username &amp;quot;admin@local&amp;quot; and the password you set in the deployment in the previous steps. Note the default username has changed from previous versions and is no longer admin@localhost. Don&#39;t get caught out trying to log in with the wrong username!&lt;/p&gt;
           
           
         
@@ -485,8 +569,16 @@ Let&#39;s log into the vRSLCM UI by navigating to https://&amp;lt;vRSLCM FQDN or
       <description>
         
           
-            VMware has just announced the latest release of the vRealize Suite (2019) and with it comes vRealize Automation 8.0 (vRA), vRealize Log Insight 8.0 (vRLI), vRealize Operations Manager 8.0 (vROps) and vRealize Suite Lifecycle Manager 8.0 (vRSLCM). Noticeably absent is vRealize Business for Cloud (vRBC), as this product has been deprecated and the functionality has been migrated to vROps.
- Announcing General Availability of vRealize Suite 2019, vCloud Suite 2019, and vCloud Suite 2019 Platinum!
+            &lt;p&gt;VMware has just announced the latest release of the vRealize Suite (2019) and with it comes vRealize Automation 8.0 (vRA), vRealize Log Insight 8.0 (vRLI), vRealize Operations Manager 8.0 (vROps) and vRealize Suite Lifecycle Manager 8.0 (vRSLCM). Noticeably absent is vRealize Business for Cloud (vRBC), as this product has been deprecated and the functionality has been migrated to vROps.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blogs.vmware.com/management/2019/10/vrealize-suite-2019-vcloud-suite-2019-ga.html&#34;&gt;Announcing General Availability of vRealize Suite 2019, vCloud Suite 2019, and vCloud Suite 2019 Platinum!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blogs.vmware.com/management/2019/08/vrslcm-8-0-whats-new.html&#34;&gt;vRealize Suite Lifecycle Manager 8.0 – What’s New&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blogs.vmware.com/management/2019/10/announcing-general-availability-of-vmware-vrealize-automation-8-0.html&#34;&gt;Announcing General Availability of VMware vRealize Automation 8.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blogs.vmware.com/management/2019/10/whats-new-in-vrealize-log-insight-8-0.html&#34;&gt;What’s new in vRealize Log Insight 8.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blogs.vmware.com/management/2019/10/whats-new-in-vrealize-operations-8-0-2.html&#34;&gt;What’s New in vRealize Operations 8.0?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://vxpresss.blogspot.com/2019/10/everything-you-need-to-know-about.html&#34;&gt;Everything you need to know about the vRealize Operations 8.0 release&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So with the exciting announcements out of the way, let&#39;s get these installed!&lt;/p&gt;
           
           
         
@@ -502,8 +594,8 @@ Let&#39;s log into the vRSLCM UI by navigating to https://&amp;lt;vRSLCM FQDN or
       <description>
         
           
-            vRealize Operations Manager (vROps) stores all symptoms and alerts in an internal database where they are called Alerts and Alarms. To understand how the internal alerts and alarms correlate to symptoms and alerts, have a read of the excellent explanation by James Gill of VirtualCloudIT (https://virtualcloudit.net/2017/06/08/270/).
-Once you understand the terminology of alerts and alarms, how can we ensure that our environment doesn&#39;t breach the recommended values for each? Well thankfully, vROps collects these metrics automatically, so we can create a dashboard to display the information needed.
+            &lt;p&gt;vRealize Operations Manager (vROps) stores all symptoms and alerts in an internal database where they are called Alerts and Alarms. To understand how the internal alerts and alarms correlate to symptoms and alerts, have a read of the excellent explanation by James Gill of VirtualCloudIT (&lt;a href=&#34;https://virtualcloudit.net/2017/06/08/270/&#34;&gt;https://virtualcloudit.net/2017/06/08/270/&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Once you understand the terminology of alerts and alarms, how can we ensure that our environment doesn&#39;t breach the recommended values for each? Well thankfully, vROps collects these metrics automatically, so we can create a dashboard to display the information needed.&lt;/p&gt;
           
           
         
@@ -519,7 +611,7 @@ Once you understand the terminology of alerts and alarms, how can we ensure that
       <description>
         
           
-            Many organisations are seeing the value of NSX-v in SDDC environments, however there is no easy way to export the NSX Distributed Firewall (DFW) rules from NSX to a CSV file. To export all rules in the environment, we need to extract each of the firewall rule IDs and get the details extracted for each rule. We will then export this information in a CSV file and optionally email it to the requestor.
+            &lt;p&gt;Many organisations are seeing the value of NSX-v in SDDC environments, however there is no easy way to export the NSX Distributed Firewall (DFW) rules from NSX to a CSV file. To export all rules in the environment, we need to extract each of the firewall rule IDs and get the details extracted for each rule. We will then export this information in a CSV file and optionally email it to the requestor.&lt;/p&gt;
           
           
         
@@ -535,7 +627,7 @@ Once you understand the terminology of alerts and alarms, how can we ensure that
       <description>
         
           
-            In vRealize Automation 7.x, you can discover Deployments for reclamation in the Administration &amp;gt; Reclamation &amp;gt; Deployments (Tenant Administrator) view or the Administration &amp;gt; Reclamation &amp;gt; Tenant Machines (IaaS Administrator) view. The Advanced Search feature can be selected clicking &amp;gt; in the top right corner and you can search for VMs with Low or High CPU usage along with several other options. But what are the actual thresholds that vRA uses when you select &amp;quot;Low CPU&amp;quot;?
+            &lt;p&gt;In vRealize Automation 7.x, you can discover Deployments for reclamation in the &lt;strong&gt;Administration &amp;gt; Reclamation &amp;gt; Deployments&lt;/strong&gt; (Tenant Administrator) view or the &lt;strong&gt;Administration &amp;gt; Reclamation &amp;gt; Tenant Machines&lt;/strong&gt; (IaaS Administrator) view. The Advanced Search feature can be selected clicking &lt;strong&gt;&amp;gt;&lt;/strong&gt; in the top right corner and you can search for VMs with Low or High CPU usage along with several other options. But what are the actual thresholds that vRA uses when you select &amp;quot;Low CPU&amp;quot;? The table below describes exactly what each of the metrics are, for each advanced search option.&lt;/p&gt;
           
           
         
@@ -551,7 +643,7 @@ Once you understand the terminology of alerts and alarms, how can we ensure that
       <description>
         
           
-            With the introduction of NSX-v 6.4.2, NSX will now log the firewall rule hit count for each firewall rule in the DFW. You can then check the UI or API for the hit count on each individual firewall rule. This capability is fantastic, however there is no way to extract the hit count for every rule in the environment either through the UI or API. Hopefully the API is updated in the future for this feature ;)
+            &lt;p&gt;With the introduction of NSX-v 6.4.2, NSX will now log the firewall rule hit count for each firewall rule in the DFW. You can then check the UI or API for the hit count on each individual firewall rule. This capability is fantastic, however there is no way to extract the hit count for every rule in the environment either through the UI or API. Hopefully the API is updated in the future for this feature ;)&lt;/p&gt;
           
           
         
@@ -567,8 +659,8 @@ Once you understand the terminology of alerts and alarms, how can we ensure that
       <description>
         
           
-            A strange issue occasionally occurs on some servers where random network dropouts occur while accessing any file share (ie. \\servername\c$). I recently came across this issue again and found this fantastic post on the technet forums. About half way down the page a solution is posted which fixed my issue!
-The short version is that in Windows Server 2012 R2 the service / driver SRV2(Server SMB 2.xxx Driver) startup method was changed from Auto to Manual / On Demand.
+            &lt;p&gt;A strange issue occasionally occurs on some servers where random network dropouts occur while accessing any file share (ie. \\servername\c$). I recently came across this issue again and found this fantastic post on the &lt;a href=&#34;https://social.technet.microsoft.com/Forums/en-US/e9567167-22db-4b8c-9f96-a08b97d507f9/server-2012-r2-file-server-stops-responding-to-smb-connections?forum=winserverfiles&#34;&gt;technet forums&lt;/a&gt;. About half way down the page a solution is posted which fixed my issue!&lt;/p&gt;
+&lt;p&gt;The short version is that in Windows Server 2012 R2 the service / driver SRV2(Server SMB 2.xxx Driver) startup method was changed from Auto to Manual / On Demand. This means that the service is not running unless SMB2 traffic is requested. To check the service status run the below command in PowerShell as Administrator.&lt;/p&gt;
           
           
         
@@ -584,7 +676,7 @@ The short version is that in Windows Server 2012 R2 the service / driver SRV2(Se
       <description>
         
           
-            With vROps prior to 6.7, Memory metrics have caused confusion when comparing the memory metrics generated from vSphere to the metrics generated from the Ep Ops management agent installed on the guest OS. Currently, the metrics shown from the vSphere data collection are memory metrics as seen from the ESXi host layer / VMkernel. This value is at times largely different to the guest OS memory metrics, as explained below. I have a blog post here which explains the different memory metrics in vROps prior to 6.
+            &lt;p&gt;With vROps prior to 6.7, Memory metrics have caused confusion when comparing the memory metrics generated from vSphere to the metrics generated from the Ep Ops management agent installed on the guest OS. Currently, the metrics shown from the vSphere data collection are memory metrics as seen from the ESXi host layer / VMkernel. This value is at times largely different to the guest OS memory metrics, as explained below. I have a blog post &lt;a href=&#34;https://garyflynn.com/post/vrops-memory-metrics-prior-to-vrops-6-7/&#34;&gt;here&lt;/a&gt; which explains the different memory metrics in vROps prior to 6.7&lt;/p&gt;
           
           
         
@@ -600,9 +692,10 @@ The short version is that in Windows Server 2012 R2 the service / driver SRV2(Se
       <description>
         
           
-            Memory metrics in vROps have caused many customers confusion and I hope this post will explain the different metrics available and why the values don&#39;t necessarily reflect what you might think. Let&#39;s start with a few definitions to help set the context.
-Virtual Machine / Guest: The virtual operating system object where the guest OS such as Windows Server is installed.
-Host: The physical blade/rack mount server where ESXi is installed.
+            &lt;p&gt;Memory metrics in vROps have caused many customers confusion and I hope this post will explain the different metrics available and why the values don&#39;t necessarily reflect what you might think. Let&#39;s start with a few definitions to help set the context.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Virtual Machine / Guest:&lt;/strong&gt; The virtual operating system object where the guest OS such as Windows Server is installed.&lt;br&gt;
+&lt;strong&gt;Host:&lt;/strong&gt; The physical blade/rack mount server where ESXi is installed. The host consists of RAM, CPU, network etc.&lt;br&gt;
+&lt;strong&gt;Cluster:&lt;/strong&gt; A group of hosts.&lt;/p&gt;
           
           
         
@@ -618,7 +711,7 @@ Host: The physical blade/rack mount server where ESXi is installed.
       <description>
         
           
-            I recently had the requirement to remove an existing vRealize Suite Enterprise key from vRealize Automation 7.3.1 and replace it with a vRealize Suite Advanced key. When you try to replace the license key from the VAMI, you will receive an error stating that you cannot downgrade license keys &amp;quot;Unable to downgrade existing license edition&amp;quot;. To replace the license you must do the following. Note, this is 100% not supported by VMware so use it at your own risk and always do it first in a test environment, and always ensure you have backups.
+            &lt;p&gt;I recently had the requirement to remove an existing vRealize Suite Enterprise key from vRealize Automation 7.3.1 and replace it with a vRealize Suite Advanced key. When you try to replace the license key from the VAMI, you will receive an error stating that you cannot downgrade license keys &amp;quot;Unable to downgrade existing license edition&amp;quot;. To replace the license you must do the following. Note, this is 100% &lt;strong&gt;not supported&lt;/strong&gt; by VMware so use it at your own risk and always do it first in a test environment, and always ensure you have backups.&lt;/p&gt;
           
           
         
@@ -634,9 +727,10 @@ Host: The physical blade/rack mount server where ESXi is installed.
       <description>
         
           
-            Integrating vRA / vRO and Azure is available out-of-the-box with vRA 7.2+ and has been well documented by others for how to set the integration up (vaficionado.com).
-The integration is fairly straightforward however I faced two main issues, the first being proxy settings and the second being an issue with the vRO workflow &amp;quot;Add an Azure connection&amp;quot;.
-Update Azure Plugin To resolve other vRO / Azure bugs, ensure you update the Azure plugin in vRO to the latest version from https://kb.
+            &lt;p&gt;Integrating vRA / vRO and Azure is available out-of-the-box with vRA 7.2+ and has been well documented by others for how to set the integration up (&lt;a href=&#34;http://www.vaficionado.com/2016/11/using-new-microsoft-azure-endpoint-vrealize-automation-7-2/&#34;&gt;vaficionado.com&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;The integration is fairly straightforward however I faced two main issues, the first being proxy settings and the second being an issue with the vRO workflow &amp;quot;Add an Azure connection&amp;quot;.&lt;/p&gt;
+&lt;h2 id=&#34;update-azure-plugin&#34;&gt;Update Azure Plugin&lt;/h2&gt;
+&lt;p&gt;To resolve other vRO / Azure bugs, ensure you update the Azure plugin in vRO to the latest version from &lt;a href=&#34;https://kb.vmware.com/s/article/55826&#34;&gt;https://kb.vmware.com/s/article/55826&lt;/a&gt; (see attachment in the KB article). As the KB states, the updated plugin can be installed in vRA/vRO 7.2, 7.3, 7.3.1 &amp;amp; 7.4.&lt;/p&gt;
           
           
         
@@ -652,8 +746,20 @@ Update Azure Plugin To resolve other vRO / Azure bugs, ensure you update the Azu
       <description>
         
           
-            Below is a collection of blog posts which I have found handy over the years and I hope you find them helpful too.
-Reporting  VM CPU Counters in vSphere (virtual-red-dot.info) Windows vs ESX CPU Values (logicmonitor.com)  vSAN  Removing Inaccessible vSAN Objects (thinkcharles.net)  vCenter  Convert Thick Provisioned Disk to Thin Provisioned (theitbros.com)  
+            &lt;p&gt;Below is a collection of blog posts which I have found handy over the years and I hope you find them helpful too.&lt;/p&gt;
+&lt;h2 id=&#34;reporting&#34;&gt;Reporting&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;VM CPU Counters in vSphere (&lt;a href=&#34;http://virtual-red-dot.info/vm-cpu-counters-vsphere/&#34;&gt;virtual-red-dot.info&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Windows vs ESX CPU Values (&lt;a href=&#34;https://www.logicmonitor.com/blog/a-tale-of-two-metrics-windows-cpu-or-vcenter-vm-cpu/&#34;&gt;logicmonitor.com&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vsan&#34;&gt;vSAN&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Removing Inaccessible vSAN Objects (&lt;a href=&#34;https://www.thinkcharles.net/blog/2018/2/16/removing-inaccessible-objects-in-vsan&#34;&gt;thinkcharles.net&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vcenter&#34;&gt;vCenter&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Convert Thick Provisioned Disk to Thin Provisioned (&lt;a href=&#34;https://theitbros.com/convert-thick-provision-lazy-zeroed-disk-to-thin-vmware-esxi/&#34;&gt;theitbros.com&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
           
           
         
@@ -669,7 +775,7 @@ Reporting  VM CPU Counters in vSphere (virtual-red-dot.info) Windows vs ESX CPU 
       <description>
         
           
-            One of the least discussed products from VMware, vRealize Lifecycle Manager (vRLCM), really is a fantastic product! I have been deploying vRealize Automation (vRA) since it was first purchased from DynamicOps and the first release of vCloud Automation Center was released. The vRealize suite of products have always been difficult to install and this product takes the majority of hassle out of this. This blog will cover the deployment of vRealize Lifecycle Manager.
+            &lt;p&gt;One of the least discussed products from VMware, vRealize Lifecycle Manager (vRLCM), really is a fantastic product! I have been deploying vRealize Automation (vRA) since it was first purchased from DynamicOps and the first release of vCloud Automation Center was released. The vRealize suite of products have always been difficult to install and this product takes the majority of hassle out of this. This blog will cover the deployment of vRealize Lifecycle Manager.&lt;/p&gt;
           
           
         
@@ -685,8 +791,9 @@ Reporting  VM CPU Counters in vSphere (virtual-red-dot.info) Windows vs ESX CPU 
       <description>
         
           
-            To setup the NUC and install ESXi, follow part one of this guide. To configure the basic vSAN configuration for deployments pre vCenter 6.7, follow part two of this guide.
-vCenter Appliance Installation With the Intel NUCs set up (and a vSAN datastore created if running pre 6.7 vCenter), it is time to install the vCenter Server Appliance (vCSA). As you probably know, the Windows vCenter Server is deprecated, so the vCSA will be deployed.
+            &lt;p&gt;To setup the NUC and install ESXi, follow &lt;a href=&#34;https://garyflynn.com/post/homelab-setup-part-1-intel-nuc/&#34;&gt;part one&lt;/a&gt; of this guide. To configure the basic vSAN configuration for deployments pre vCenter 6.7, follow &lt;a href=&#34;https://garyflynn.com/post/homelab-setup-part-2-vsan-configuration/&#34;&gt;part two&lt;/a&gt; of this guide.&lt;/p&gt;
+&lt;h2 id=&#34;vcenter-appliance-installation&#34;&gt;vCenter Appliance Installation&lt;/h2&gt;
+&lt;p&gt;With the Intel NUCs set up (and a vSAN datastore created if running pre 6.7 vCenter), it is time to install the vCenter Server Appliance (vCSA). As you probably know, the Windows vCenter Server is deprecated, so the vCSA will be deployed. Download the &lt;a href=&#34;https://my.vmware.com/web/vmware/details?downloadGroup=VC670&amp;amp;productId=742&amp;amp;rPId=22644&#34;&gt;ISO&lt;/a&gt;, mount it to your PC and run the UI installer located in &amp;quot;Drive:\vcsa-ui-installer\win32\installer.exe&amp;quot;. The process to deploy vCSA has been documented extensively on many blogs including this one from &lt;a href=&#34;http://www.vstellar.com/2018/04/18/exploring-vsphere-6-7-part-2-installing-and-configuring-vcsa/&#34;&gt;Virtual Reality&lt;/a&gt;. For reference, I am installing the vcsa with the following configuration. Note that we don&#39;t have working DNS, so the FQDN and DNS Server should be the IP Address of the vCSA and the IP address of the default gateway (&lt;a href=&#34;https://www.virtuallyghetto.com/2018/12/is-a-dns-server-still-required-when-using-a-static-ip-for-vcsa.html&#34;&gt;Virtually Ghetto&lt;/a&gt;).&lt;/p&gt;
           
           
         
@@ -702,9 +809,36 @@ vCenter Appliance Installation With the Intel NUCs set up (and a vSAN datastore 
       <description>
         
           
-            This blog covers creating a new Active Directory forest and adding a secondary domain controller to the domain via PowerShell.
-Create Active Directory Forest To create a new Active Directory (AD) forest, the below PowerShell commands can be run to simplify the process. To start off, run the below command to install the appropriate Windows Feature.
-1Install-WindowsFeature AD-Domain-Services -IncludeManagementTools     Run the below command to add the AD module into PowerShell now that it has been installed.
+            &lt;p&gt;This blog covers creating a new Active Directory forest and adding a secondary domain controller to the domain via PowerShell.&lt;/p&gt;
+&lt;h2 id=&#34;create-active-directory-forest&#34;&gt;Create Active Directory Forest&lt;/h2&gt;
+&lt;p&gt;To create a new Active Directory (AD) forest, the below PowerShell commands can be run to simplify the process. To start off, run the below command to install the appropriate Windows Feature.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure&gt;
+  &lt;picture&gt;
+
+    
+      
+        
+        
+        
+        
+        
+        
+    &lt;img
+      loading=&#34;lazy&#34;
+      decoding=&#34;async&#34;
+      alt=&#34;&#34;
+      
+        class=&#34;image_figure image_internal image_unprocessed&#34;
+        src=&#34;https://garyflynn.com/images/active-directory-forest-1.png&#34;
+      
+      
+    /&gt;
+
+    &lt;/picture&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Run the below command to add the AD module into PowerShell now that it has been installed.&lt;/p&gt;
           
           
         
@@ -720,7 +854,7 @@ Create Active Directory Forest To create a new Active Directory (AD) forest, the
       <description>
         
           
-            This guide will cover the ESXi installation and configuration process. If installing ESXi onto a bare-metal server from a USB, follow my guide here on how to create a bootable USB installer. Once you have your installation media ready, either a USB installer or the downloaded ISO, insert / attach the media and power on your server. If you are doing this in a nested ESXi environment, attach the media via the VMware Remote Console.
+            &lt;p&gt;This guide will cover the ESXi installation and configuration process. If installing ESXi onto a bare-metal server from a USB, follow my guide &lt;a href=&#34;https://garyflynn.com/post/create-a-bootable-usb-esxi-installer/&#34;&gt;here&lt;/a&gt; on how to create a bootable USB installer. Once you have your installation media ready, either a USB installer or the downloaded ISO, insert / attach the media and power on your server. If you are doing this in a nested ESXi environment, attach the media via the VMware Remote Console.&lt;/p&gt;
           
           
         
@@ -736,8 +870,9 @@ Create Active Directory Forest To create a new Active Directory (AD) forest, the
       <description>
         
           
-            To setup the NUC and install ESXi, follow part one of this guide. The following is the process to bootstrap loading the vCenter Server Appliance onto a vSAN datastore. This process was replaced in vCenter 6.7 which provides this capability natively through the installer. If you are deploying vCenter 6.7+, skip through to part three.
-vSAN Configuration To install vCenter you need the datastore in place, which for my environment is vSAN.
+            &lt;p&gt;To setup the NUC and install ESXi, follow &lt;a href=&#34;https://garyflynn.com/post/homelab-setup-part-1-intel-nuc/&#34;&gt;part one&lt;/a&gt; of this guide. The following is the process to bootstrap loading the vCenter Server Appliance onto a vSAN datastore. This process was replaced in vCenter 6.7 which provides this capability natively through the installer. &lt;strong&gt;If you are deploying vCenter 6.7+, skip through to&lt;/strong&gt; &lt;a href=&#34;https://garyflynn.com/post/homelab-setup-part-3-vcenter-install-configure/&#34;&gt;&lt;strong&gt;part three&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;vsan-configuration&#34;&gt;vSAN Configuration&lt;/h2&gt;
+&lt;p&gt;To install vCenter you need the datastore in place, which for my environment is vSAN. However to configure vSAN, this is done through vCenter. A classic chicken and egg scenario which thankfully VMware have the solution for. You can bootstrap the vSAN datastore which William Lam has documented over at &lt;a href=&#34;https://www.virtuallyghetto.com/2013/09/how-to-bootstrap-vcenter-server-onto_9.html&#34;&gt;virtuallyghetto.com&lt;/a&gt; and my configuration steps are below. On the first host, &lt;a href=&#34;https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.html.hostclient.doc/GUID-B649CB74-832F-467B-B6A4-8BA67AD5C1F0.html&#34;&gt;enable SSH&lt;/a&gt; and SSH into the host. Modify the default vSAN policy to enable force provisioning.&lt;/p&gt;
           
           
         
@@ -753,8 +888,25 @@ vSAN Configuration To install vCenter you need the datastore in place, which for
       <description>
         
           
-            To install ESXi onto a bare metal server without a CD/DVD drive or a KVM console, the simplest way is to create a bootable USB drive with the ESXi installer. To do this, we will use a tool called Rufus.
- Download the latest portable release of Rufus Download the ESXi ISO image (.iso file type)  ESXi 6.7 ESXi 6.5   Connect the USB device to your Computer Open Rufus Select the USB device Select the ESXi installer ISO Ensure &#39;MBR partition&#39; &amp;amp; &#39;BIOS or EUFI&#39; are selected Select Start Select Yes to replace menu.
+            &lt;p&gt;To install ESXi onto a bare metal server without a CD/DVD drive or a KVM console, the simplest way is to create a bootable USB drive with the ESXi installer. To do this, we will use a tool called Rufus.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Download the latest portable release of &lt;a href=&#34;https://rufus.akeo.ie/downloads/&#34;&gt;Rufus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Download the ESXi ISO image (.iso file type)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://my.vmware.com/web/vmware/details?downloadGroup=ESXI670&amp;amp;productId=742&amp;amp;rPId=24636&#34;&gt;ESXi 6.7&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://my.vmware.com/web/vmware/details?downloadGroup=ESXI650&amp;amp;productId=614&#34;&gt;ESXi 6.5&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Connect the USB device to your Computer&lt;/li&gt;
+&lt;li&gt;Open Rufus&lt;/li&gt;
+&lt;li&gt;Select the USB device&lt;/li&gt;
+&lt;li&gt;Select the ESXi installer ISO&lt;/li&gt;
+&lt;li&gt;Ensure &#39;MBR partition&#39; &amp;amp; &#39;BIOS or EUFI&#39; are selected&lt;/li&gt;
+&lt;li&gt;Select Start&lt;/li&gt;
+&lt;li&gt;Select Yes to replace menu.c32&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://garyflynn.com/images/rufus-config.png&#34; alt=&#34;rufus-config&#34; width=&#34;500px&#34;/&gt;
+&lt;p&gt;All done! When booting from the USB installer, you can also use the same device as the install location as the installer is loaded to memory when the server boots and the USB device is not touched.&lt;/p&gt;
           
           
         
@@ -770,8 +922,18 @@ vSAN Configuration To install vCenter you need the datastore in place, which for
       <description>
         
           
-            I have recently decided to purchase a homelab for myself to assist with getting my certifications up to date and after much research and procrastinating I have gone with the setup below. Overall I have been very happy with the performance and compatibility of everything and I have tried to link to all of the useful blogs that helped me along the way.
-Hardware 1 x TP-Link TL-SG108E 8 Port Switch (Amazon UK)
+            &lt;p&gt;I have recently decided to purchase a homelab for myself to assist with getting my certifications up to date and after much research and procrastinating I have gone with the setup below. Overall I have been very happy with the performance and compatibility of everything and I have tried to link to all of the useful blogs that helped me along the way.&lt;/p&gt;
+&lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://garyflynn.com/images/intel-nuc7.png&#34; width=&#34;150&#34; height=&#34;150&#34;&gt;
+&lt;p&gt;1 x TP-Link TL-SG108E 8 Port Switch (&lt;a href=&#34;https://amzn.to/2N4zXoC&#34;&gt;Amazon UK&lt;/a&gt;)&lt;br&gt;
+3 x Intel NUC 7 Baby Canyon i3 NUC7i3BNH (&lt;a href=&#34;https://amzn.to/2Ppi3Pe&#34;&gt;Amazon UK&lt;/a&gt;)&lt;br&gt;
+&lt;em&gt;Each Intel NUC contains the following...&lt;/em&gt;&lt;br&gt;
+2 x Crucial 16GB DDR4 2400MT/s Memory for 32GB total RAM (&lt;a href=&#34;https://amzn.to/2L4gHpD&#34;&gt;Amazon UK&lt;/a&gt;)&lt;br&gt;
+1 x Crucial 16GB DDR4 2400MT/s Memory for SODIMM1 (&lt;a href=&#34;https://amzn.to/2L4gHpD&#34;&gt;Amazon UK&lt;/a&gt;)&lt;br&gt;
+1 x Samsung 32GB DDR4 2666 MHz Memory for SODIMM2 (&lt;a href=&#34;https://www.scan.co.uk/products/32gb-1x32gb-samsung-ddr4-so-dimm-laptop-sff-memory-pc4-21300-2666-non-ecc-unbuffered-cas-19-19-19-12&#34;&gt;SCAN&lt;/a&gt;) (total 48GB)&lt;br&gt;
+1 x Samsung 500GB SSD 860 EVO for vSAN Capacity Tier (&lt;a href=&#34;https://amzn.to/2nQNq8E&#34;&gt;Amazon UK&lt;/a&gt;)&lt;br&gt;
+1 x Samsung 250GB NVMe SSD for vSAN Cache Tier (&lt;a href=&#34;https://amzn.to/2nOY3sG&#34;&gt;Amazon UK&lt;/a&gt;)&lt;br&gt;
+1 x SanDisk Cruzer Fit USB Flash Drive to boot ESXi (&lt;a href=&#34;https://amzn.to/2nQwZcr&#34;&gt;Amazon UK&lt;/a&gt;)&lt;/p&gt;
           
           
         
@@ -787,8 +949,10 @@ Hardware 1 x TP-Link TL-SG108E 8 Port Switch (Amazon UK)
       <description>
         
           
-            Who we are Our website address is: https://garyflynn.com.
-Comments When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor’s IP address and browser user agent string to help spam detection. An anonymised string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.
+            &lt;h2 id=&#34;who-we-are&#34;&gt;Who we are&lt;/h2&gt;
+&lt;p&gt;Our website address is: &lt;a href=&#34;https://garyflynn.com&#34;&gt;https://garyflynn.com&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;comments&#34;&gt;Comments&lt;/h3&gt;
+&lt;p&gt;When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor’s IP address and browser user agent string to help spam detection. An anonymised string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: &lt;a href=&#34;https://automattic.com/privacy/&#34;&gt;https://automattic.com/privacy/&lt;/a&gt;. After approval of your comment, your profile picture is visible to the public in the context of your comment.&lt;/p&gt;
           
           
         
@@ -804,8 +968,29 @@ Comments When visitors leave comments on the site we collect the data shown in t
       <description>
         
           
-            The following Power-CLI command will evaluate a specific cluster and return the ratio of memory utilisation between Windows and Red Hat Linux virtual machines.
-1# Variable settings 2$clusterName = &amp;#34;insert cluster name&amp;#34; 34$winVMs = Get-Cluster $clusterName | Get-VM | ? {$_.Guest.OSFullName -like &amp;#39;Microsoft Windows Server*&amp;#39;} | Select Name, PowerState, MemoryGB 56$lnxVMs = Get-Cluster $clusterName | Get-VM | ? {$_.Guest.OSFullName -like &amp;#39;Red Hat*&amp;#39;} | Select Name, PowerState, MemoryGB 78foreach($winVM in $winVMs){ $winMemTotal += $winVM.
+            &lt;p&gt;The following Power-CLI command will evaluate a specific cluster and return the ratio of memory utilisation between Windows and Red Hat Linux virtual machines.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;# Variable settings
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$clusterName = &amp;#34;insert cluster name&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$winVMs = Get-Cluster $clusterName | Get-VM | ? {$_.Guest.OSFullName -like &amp;#39;Microsoft Windows Server*&amp;#39;} | Select Name, PowerState, MemoryGB
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$lnxVMs = Get-Cluster $clusterName | Get-VM | ? {$_.Guest.OSFullName -like &amp;#39;Red Hat*&amp;#39;} | Select Name, PowerState, MemoryGB
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 8&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;foreach($winVM in $winVMs){ $winMemTotal += $winVM.MemoryGB }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 9&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;foreach($lnxVM in $lnxVMs){ $lnxMemTotal += $lnxVM.MemoryGB }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$memTotal = $winMemTotal + $lnxMemTotal
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$winMemSplit = $winMemTotal / $memTotal
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$winMemSplit *= 100
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$winMemSplit = [math]::Round($winMemSplit)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$lnxMemSplit = $lnxMemTotal / $memTotal
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$lnxMemSplit *= 100
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;$lnxMemSplit = [math]::Round($lnxMemSplit)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;Windows memory total is &amp;#34; + [math]::Round($winMemTotal) + &amp;#34;GB&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;Linux memory total is &amp;#34; + [math]::Round($lnxMemTotal) + &amp;#34;GB&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;21&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;The split between Windows and Linux is... Windows &amp;#34; + $winMemSplit + &amp;#34;% to Linux &amp;#34; + $lnxMemSplit + &amp;#34;%&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
           
           
         
@@ -821,9 +1006,9 @@ Comments When visitors leave comments on the site we collect the data shown in t
       <description>
         
           
-            Every Microsoft System Center Configuration Manager (SCCM) administrator has a handful of WQL Collection Queries that you hang onto. I figured I would share my most commonly used queries. Let me know in the comments if you have any others. The below are just examples and you should test if they are appropriate for your environment.
-All Servers
-select SMS_R_SYSTEM.ResourceID, SMS_R_SYSTEM.ResourceType, SMS_R_SYSTEM.Name, SMS_R_SYSTEM.SMSUniqueIdentifier, SMS_R_SYSTEM.ResourceDomainORWorkgroup, SMS_R_SYSTEM.Client from SMS_R_System inner join SMS_G_System_SYSTEM on SMS_G_System_SYSTEM.
+            &lt;p&gt;Every Microsoft System Center Configuration Manager (SCCM) administrator has a handful of WQL Collection Queries that you hang onto. I figured I would share my most commonly used queries. Let me know in the comments if you have any others. The below are just examples and you should test if they are appropriate for your environment.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;All Servers&lt;/strong&gt;&lt;br&gt;
+select SMS_R_SYSTEM.ResourceID, SMS_R_SYSTEM.ResourceType, SMS_R_SYSTEM.Name, SMS_R_SYSTEM.SMSUniqueIdentifier, SMS_R_SYSTEM.ResourceDomainORWorkgroup, SMS_R_SYSTEM.Client from SMS_R_System inner join SMS_G_System_SYSTEM on SMS_G_System_SYSTEM.ResourceId = SMS_R_System.ResourceId where SMS_G_System_SYSTEM.SystemRole = &amp;quot;Server&amp;quot;&lt;/p&gt;
           
           
         
@@ -839,8 +1024,8 @@ select SMS_R_SYSTEM.ResourceID, SMS_R_SYSTEM.ResourceType, SMS_R_SYSTEM.Name, SM
       <description>
         
           
-            With access to vCenter or vRealize Automation comes great responsibility. Clients often require a quick and easy way to take a short term snapshot of a server so that they can quick and easily rollback application changes. VMware provides a robust snapshot function, however when things go well these snapshots are often left behind or forgotten about.
-Run PowerCLI and run the below commands to get a list of all VMs with a Snapshot
+            &lt;p&gt;With access to vCenter or vRealize Automation comes great responsibility. Clients often require a quick and easy way to take a short term snapshot of a server so that they can quick and easily rollback application changes. VMware provides a robust snapshot function, however when things go well these snapshots are often left behind or forgotten about.&lt;/p&gt;
+&lt;p&gt;Run PowerCLI and run the below commands to get a list of all VMs with a Snapshot&lt;/p&gt;
           
           
         
@@ -856,8 +1041,8 @@ Run PowerCLI and run the below commands to get a list of all VMs with a Snapshot
       <description>
         
           
-            For many organisations, PowerShell remoting is done through a scripthost server where maximum concurrent session limits and maximum connected user limits can be reached. As explained in this Microsoft blog, the following error might be encountered.
-PS&amp;gt; New-PSSession \[localhost\] Connecting to remote server failed with the following error message : The WS-Management service cannot process the request. This user is allowed a maximum number of 5 concurrent shells, which has been exceeded.
+            &lt;p&gt;For many organisations, PowerShell remoting is done through a scripthost server where maximum concurrent session limits and maximum connected user limits can be reached. As explained in &lt;a href=&#34;https://blogs.msdn.microsoft.com/powershell/2010/05/02/configuring-wsman-limits/&#34;&gt;this Microsoft blog&lt;/a&gt;, the following error might be encountered.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;PS&amp;gt; New-PSSession \[localhost\] Connecting to remote server failed with the following error message : The WS-Management service cannot process the request. This user is allowed a maximum number of 5 concurrent shells, which has been exceeded. Close existing shells or raise the quota for this user. For more information, see the about\_Remote\_Troubleshooting Help topic.   \+ CategoryInfo          : OpenError: (System.Manageme….RemoteRunspa   ce:RemoteRunspace) \[\], PSRemotingTransportException   \+ FullyQualifiedErrorId : PSSessionOpenFailed&lt;/code&gt;&lt;/p&gt;
           
           
         

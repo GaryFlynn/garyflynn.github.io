@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/orchestrator/</link>
     <description>Recent content in Orchestrator on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Sat, 14 Mar 2020 13:24:02 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/orchestrator/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vRealize Orchestrator 8.x - Accessing Control Center UI</title>
@@ -16,11 +16,11 @@
       <description>
         
           
-            In both vRealize Automation and Orchestrator 8.x, the appliances have been rebuilt using a kubernetes architecture. For this reason, the location of the different Orchestrator user interfaces has changed.
-Orchestrator Client UI - https://FQDN_or_IP_address:443/orchestration-ui
-Orchestrator Client Java UI - deprecated from vRO 8.0 onwards
-Orchestrator Control Center UI - https://FQDN_or_IP_address:443/vco-controlcenter
-To login to the Orchestrator Control Center UI, the username is &#39;root&#39; and the password is the same as the appliance &#39;root&#39; password.
+            &lt;p&gt;In both vRealize Automation and Orchestrator 8.x, the appliances have been rebuilt using a kubernetes architecture. For this reason, the location of the different Orchestrator user interfaces has changed.&lt;/p&gt;
+&lt;p&gt;Orchestrator Client UI - https://&lt;em&gt;FQDN_or_IP_address&lt;/em&gt;:443/orchestration-ui&lt;/p&gt;
+&lt;p&gt;Orchestrator Client Java UI - deprecated from vRO 8.0 onwards&lt;/p&gt;
+&lt;p&gt;Orchestrator Control Center UI - https://&lt;em&gt;FQDN_or_IP_address&lt;/em&gt;:443/vco-controlcenter&lt;/p&gt;
+&lt;p&gt;To login to the Orchestrator Control Center UI, the username is &#39;root&#39; and the password is the same as the appliance &#39;root&#39; password.&lt;/p&gt;
           
           
         

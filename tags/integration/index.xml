@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/integration/</link>
     <description>Recent content in Integration on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Sun, 03 Dec 2023 14:57:40 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/integration/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vRealize Automation 8.x – Change Internal Kubernetes IP Range</title>
@@ -16,8 +16,8 @@
       <description>
         
           
-            vRealize Automation (vRA) 8.2 added support for changing the IP address range used by the internal Kubernetes cluster, which is great news as many organisation already use the 10.244.0.0/21 address space. Unfortunately if your network already uses the ranges 10.244.0.0/22 or 10.244.4.0/22, you will likely encounter issues, such a provisioning timeouts.
-To resolve this issue in vRA 8.2, run the below commands to view your current configuration, and to update to a new range.
+            &lt;p&gt;vRealize Automation (vRA) 8.2 added support for changing the IP address range used by the internal Kubernetes cluster, which is great news as many organisation already use the 10.244.0.0/21 address space. Unfortunately if your network already uses the ranges 10.244.0.0/22 or 10.244.4.0/22, you will likely encounter issues, such a provisioning timeouts.&lt;/p&gt;
+&lt;p&gt;To resolve this issue in vRA 8.2, run the below commands to view your current configuration, and to update to a new range.&lt;/p&gt;
           
           
         
@@ -33,7 +33,7 @@ To resolve this issue in vRA 8.2, run the below commands to view your current co
       <description>
         
           
-            vRealize Automation (vRA) 8.x provides native integration to GitHub.com to share and sync your Blueprints and Action Based Extensibility (ABX) scripts. This integration is provided as a way to edit your blueprints and ABX scripts as Infrastructure as Code (IaC) objects and for vRA to then consume the changes once they are updated and committed to your repository. This integration is not designed as a way to backup or export your content to GitHub.
+            &lt;p&gt;vRealize Automation (vRA) 8.x provides native integration to GitHub.com to share and sync your Blueprints and Action Based Extensibility (ABX) scripts. This integration is provided as a way to edit your blueprints and ABX scripts as Infrastructure as Code (IaC) objects and for vRA to then consume the changes once they are updated and committed to your repository. This integration is not designed as a way to backup or export your content to GitHub. Integration in vRA 8.0 / vRA 8.0.1 is only available to GitHub.com and not GitHub Enterprise Cloud or GitHub Enterprise Self-Hosted.&lt;/p&gt;
           
           
         

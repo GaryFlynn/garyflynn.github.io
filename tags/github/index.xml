@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/github/</link>
     <description>Recent content in GitHub on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Tue, 17 Mar 2020 20:01:23 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vRealize Automation 8.x - Setup GitHub Integration</title>
@@ -16,7 +16,7 @@
       <description>
         
           
-            vRealize Automation (vRA) 8.x provides native integration to GitHub.com to share and sync your Blueprints and Action Based Extensibility (ABX) scripts. This integration is provided as a way to edit your blueprints and ABX scripts as Infrastructure as Code (IaC) objects and for vRA to then consume the changes once they are updated and committed to your repository. This integration is not designed as a way to backup or export your content to GitHub.
+            &lt;p&gt;vRealize Automation (vRA) 8.x provides native integration to GitHub.com to share and sync your Blueprints and Action Based Extensibility (ABX) scripts. This integration is provided as a way to edit your blueprints and ABX scripts as Infrastructure as Code (IaC) objects and for vRA to then consume the changes once they are updated and committed to your repository. This integration is not designed as a way to backup or export your content to GitHub. Integration in vRA 8.0 / vRA 8.0.1 is only available to GitHub.com and not GitHub Enterprise Cloud or GitHub Enterprise Self-Hosted.&lt;/p&gt;
           
           
         

@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/active-directory/</link>
     <description>Recent content in Active Directory on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Wed, 29 Aug 2018 13:17:09 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/active-directory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create Active Directory Forest via PowerShell</title>
@@ -16,9 +16,36 @@
       <description>
         
           
-            This blog covers creating a new Active Directory forest and adding a secondary domain controller to the domain via PowerShell.
-Create Active Directory Forest To create a new Active Directory (AD) forest, the below PowerShell commands can be run to simplify the process. To start off, run the below command to install the appropriate Windows Feature.
-1Install-WindowsFeature AD-Domain-Services -IncludeManagementTools     Run the below command to add the AD module into PowerShell now that it has been installed.
+            &lt;p&gt;This blog covers creating a new Active Directory forest and adding a secondary domain controller to the domain via PowerShell.&lt;/p&gt;
+&lt;h2 id=&#34;create-active-directory-forest&#34;&gt;Create Active Directory Forest&lt;/h2&gt;
+&lt;p&gt;To create a new Active Directory (AD) forest, the below PowerShell commands can be run to simplify the process. To start off, run the below command to install the appropriate Windows Feature.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure&gt;
+  &lt;picture&gt;
+
+    
+      
+        
+        
+        
+        
+        
+        
+    &lt;img
+      loading=&#34;lazy&#34;
+      decoding=&#34;async&#34;
+      alt=&#34;&#34;
+      
+        class=&#34;image_figure image_internal image_unprocessed&#34;
+        src=&#34;https://garyflynn.com/images/active-directory-forest-1.png&#34;
+      
+      
+    /&gt;
+
+    &lt;/picture&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Run the below command to add the AD module into PowerShell now that it has been installed.&lt;/p&gt;
           
           
         

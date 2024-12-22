@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/nuc/</link>
     <description>Recent content in NUC on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Tue, 28 Aug 2018 10:36:31 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/nuc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Homelab Setup Part 2 - vSAN Configuration</title>
@@ -16,8 +16,9 @@
       <description>
         
           
-            To setup the NUC and install ESXi, follow part one of this guide. The following is the process to bootstrap loading the vCenter Server Appliance onto a vSAN datastore. This process was replaced in vCenter 6.7 which provides this capability natively through the installer. If you are deploying vCenter 6.7+, skip through to part three.
-vSAN Configuration To install vCenter you need the datastore in place, which for my environment is vSAN.
+            &lt;p&gt;To setup the NUC and install ESXi, follow &lt;a href=&#34;https://garyflynn.com/post/homelab-setup-part-1-intel-nuc/&#34;&gt;part one&lt;/a&gt; of this guide. The following is the process to bootstrap loading the vCenter Server Appliance onto a vSAN datastore. This process was replaced in vCenter 6.7 which provides this capability natively through the installer. &lt;strong&gt;If you are deploying vCenter 6.7+, skip through to&lt;/strong&gt; &lt;a href=&#34;https://garyflynn.com/post/homelab-setup-part-3-vcenter-install-configure/&#34;&gt;&lt;strong&gt;part three&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;vsan-configuration&#34;&gt;vSAN Configuration&lt;/h2&gt;
+&lt;p&gt;To install vCenter you need the datastore in place, which for my environment is vSAN. However to configure vSAN, this is done through vCenter. A classic chicken and egg scenario which thankfully VMware have the solution for. You can bootstrap the vSAN datastore which William Lam has documented over at &lt;a href=&#34;https://www.virtuallyghetto.com/2013/09/how-to-bootstrap-vcenter-server-onto_9.html&#34;&gt;virtuallyghetto.com&lt;/a&gt; and my configuration steps are below. On the first host, &lt;a href=&#34;https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.html.hostclient.doc/GUID-B649CB74-832F-467B-B6A4-8BA67AD5C1F0.html&#34;&gt;enable SSH&lt;/a&gt; and SSH into the host. Modify the default vSAN policy to enable force provisioning.&lt;/p&gt;
           
           
         
@@ -33,8 +34,18 @@ vSAN Configuration To install vCenter you need the datastore in place, which for
       <description>
         
           
-            I have recently decided to purchase a homelab for myself to assist with getting my certifications up to date and after much research and procrastinating I have gone with the setup below. Overall I have been very happy with the performance and compatibility of everything and I have tried to link to all of the useful blogs that helped me along the way.
-Hardware 1 x TP-Link TL-SG108E 8 Port Switch (Amazon UK)
+            &lt;p&gt;I have recently decided to purchase a homelab for myself to assist with getting my certifications up to date and after much research and procrastinating I have gone with the setup below. Overall I have been very happy with the performance and compatibility of everything and I have tried to link to all of the useful blogs that helped me along the way.&lt;/p&gt;
+&lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://garyflynn.com/images/intel-nuc7.png&#34; width=&#34;150&#34; height=&#34;150&#34;&gt;
+&lt;p&gt;1 x TP-Link TL-SG108E 8 Port Switch (&lt;a href=&#34;https://amzn.to/2N4zXoC&#34;&gt;Amazon UK&lt;/a&gt;)&lt;br&gt;
+3 x Intel NUC 7 Baby Canyon i3 NUC7i3BNH (&lt;a href=&#34;https://amzn.to/2Ppi3Pe&#34;&gt;Amazon UK&lt;/a&gt;)&lt;br&gt;
+&lt;em&gt;Each Intel NUC contains the following...&lt;/em&gt;&lt;br&gt;
+2 x Crucial 16GB DDR4 2400MT/s Memory for 32GB total RAM (&lt;a href=&#34;https://amzn.to/2L4gHpD&#34;&gt;Amazon UK&lt;/a&gt;)&lt;br&gt;
+1 x Crucial 16GB DDR4 2400MT/s Memory for SODIMM1 (&lt;a href=&#34;https://amzn.to/2L4gHpD&#34;&gt;Amazon UK&lt;/a&gt;)&lt;br&gt;
+1 x Samsung 32GB DDR4 2666 MHz Memory for SODIMM2 (&lt;a href=&#34;https://www.scan.co.uk/products/32gb-1x32gb-samsung-ddr4-so-dimm-laptop-sff-memory-pc4-21300-2666-non-ecc-unbuffered-cas-19-19-19-12&#34;&gt;SCAN&lt;/a&gt;) (total 48GB)&lt;br&gt;
+1 x Samsung 500GB SSD 860 EVO for vSAN Capacity Tier (&lt;a href=&#34;https://amzn.to/2nQNq8E&#34;&gt;Amazon UK&lt;/a&gt;)&lt;br&gt;
+1 x Samsung 250GB NVMe SSD for vSAN Cache Tier (&lt;a href=&#34;https://amzn.to/2nOY3sG&#34;&gt;Amazon UK&lt;/a&gt;)&lt;br&gt;
+1 x SanDisk Cruzer Fit USB Flash Drive to boot ESXi (&lt;a href=&#34;https://amzn.to/2nQwZcr&#34;&gt;Amazon UK&lt;/a&gt;)&lt;/p&gt;
           
           
         

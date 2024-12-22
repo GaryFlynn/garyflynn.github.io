@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/esxi/</link>
     <description>Recent content in ESXi on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Wed, 05 Sep 2018 10:41:21 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/esxi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Homelab Setup Part 3 - vCenter Install &amp; Configure</title>
@@ -16,8 +16,9 @@
       <description>
         
           
-            To setup the NUC and install ESXi, follow part one of this guide. To configure the basic vSAN configuration for deployments pre vCenter 6.7, follow part two of this guide.
-vCenter Appliance Installation With the Intel NUCs set up (and a vSAN datastore created if running pre 6.7 vCenter), it is time to install the vCenter Server Appliance (vCSA). As you probably know, the Windows vCenter Server is deprecated, so the vCSA will be deployed.
+            &lt;p&gt;To setup the NUC and install ESXi, follow &lt;a href=&#34;https://garyflynn.com/post/homelab-setup-part-1-intel-nuc/&#34;&gt;part one&lt;/a&gt; of this guide. To configure the basic vSAN configuration for deployments pre vCenter 6.7, follow &lt;a href=&#34;https://garyflynn.com/post/homelab-setup-part-2-vsan-configuration/&#34;&gt;part two&lt;/a&gt; of this guide.&lt;/p&gt;
+&lt;h2 id=&#34;vcenter-appliance-installation&#34;&gt;vCenter Appliance Installation&lt;/h2&gt;
+&lt;p&gt;With the Intel NUCs set up (and a vSAN datastore created if running pre 6.7 vCenter), it is time to install the vCenter Server Appliance (vCSA). As you probably know, the Windows vCenter Server is deprecated, so the vCSA will be deployed. Download the &lt;a href=&#34;https://my.vmware.com/web/vmware/details?downloadGroup=VC670&amp;amp;productId=742&amp;amp;rPId=22644&#34;&gt;ISO&lt;/a&gt;, mount it to your PC and run the UI installer located in &amp;quot;Drive:\vcsa-ui-installer\win32\installer.exe&amp;quot;. The process to deploy vCSA has been documented extensively on many blogs including this one from &lt;a href=&#34;http://www.vstellar.com/2018/04/18/exploring-vsphere-6-7-part-2-installing-and-configuring-vcsa/&#34;&gt;Virtual Reality&lt;/a&gt;. For reference, I am installing the vcsa with the following configuration. Note that we don&#39;t have working DNS, so the FQDN and DNS Server should be the IP Address of the vCSA and the IP address of the default gateway (&lt;a href=&#34;https://www.virtuallyghetto.com/2018/12/is-a-dns-server-still-required-when-using-a-static-ip-for-vcsa.html&#34;&gt;Virtually Ghetto&lt;/a&gt;).&lt;/p&gt;
           
           
         
@@ -33,7 +34,7 @@ vCenter Appliance Installation With the Intel NUCs set up (and a vSAN datastore 
       <description>
         
           
-            This guide will cover the ESXi installation and configuration process. If installing ESXi onto a bare-metal server from a USB, follow my guide here on how to create a bootable USB installer. Once you have your installation media ready, either a USB installer or the downloaded ISO, insert / attach the media and power on your server. If you are doing this in a nested ESXi environment, attach the media via the VMware Remote Console.
+            &lt;p&gt;This guide will cover the ESXi installation and configuration process. If installing ESXi onto a bare-metal server from a USB, follow my guide &lt;a href=&#34;https://garyflynn.com/post/create-a-bootable-usb-esxi-installer/&#34;&gt;here&lt;/a&gt; on how to create a bootable USB installer. Once you have your installation media ready, either a USB installer or the downloaded ISO, insert / attach the media and power on your server. If you are doing this in a nested ESXi environment, attach the media via the VMware Remote Console.&lt;/p&gt;
           
           
         
@@ -49,8 +50,25 @@ vCenter Appliance Installation With the Intel NUCs set up (and a vSAN datastore 
       <description>
         
           
-            To install ESXi onto a bare metal server without a CD/DVD drive or a KVM console, the simplest way is to create a bootable USB drive with the ESXi installer. To do this, we will use a tool called Rufus.
- Download the latest portable release of Rufus Download the ESXi ISO image (.iso file type)  ESXi 6.7 ESXi 6.5   Connect the USB device to your Computer Open Rufus Select the USB device Select the ESXi installer ISO Ensure &#39;MBR partition&#39; &amp;amp; &#39;BIOS or EUFI&#39; are selected Select Start Select Yes to replace menu.
+            &lt;p&gt;To install ESXi onto a bare metal server without a CD/DVD drive or a KVM console, the simplest way is to create a bootable USB drive with the ESXi installer. To do this, we will use a tool called Rufus.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Download the latest portable release of &lt;a href=&#34;https://rufus.akeo.ie/downloads/&#34;&gt;Rufus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Download the ESXi ISO image (.iso file type)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://my.vmware.com/web/vmware/details?downloadGroup=ESXI670&amp;amp;productId=742&amp;amp;rPId=24636&#34;&gt;ESXi 6.7&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://my.vmware.com/web/vmware/details?downloadGroup=ESXI650&amp;amp;productId=614&#34;&gt;ESXi 6.5&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Connect the USB device to your Computer&lt;/li&gt;
+&lt;li&gt;Open Rufus&lt;/li&gt;
+&lt;li&gt;Select the USB device&lt;/li&gt;
+&lt;li&gt;Select the ESXi installer ISO&lt;/li&gt;
+&lt;li&gt;Ensure &#39;MBR partition&#39; &amp;amp; &#39;BIOS or EUFI&#39; are selected&lt;/li&gt;
+&lt;li&gt;Select Start&lt;/li&gt;
+&lt;li&gt;Select Yes to replace menu.c32&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://garyflynn.com/images/rufus-config.png&#34; alt=&#34;rufus-config&#34; width=&#34;500px&#34;/&gt;
+&lt;p&gt;All done! When booting from the USB installer, you can also use the same device as the install location as the installer is loaded to memory when the server boots and the USB device is not touched.&lt;/p&gt;
           
           
         
@@ -66,8 +84,18 @@ vCenter Appliance Installation With the Intel NUCs set up (and a vSAN datastore 
       <description>
         
           
-            I have recently decided to purchase a homelab for myself to assist with getting my certifications up to date and after much research and procrastinating I have gone with the setup below. Overall I have been very happy with the performance and compatibility of everything and I have tried to link to all of the useful blogs that helped me along the way.
-Hardware 1 x TP-Link TL-SG108E 8 Port Switch (Amazon UK)
+            &lt;p&gt;I have recently decided to purchase a homelab for myself to assist with getting my certifications up to date and after much research and procrastinating I have gone with the setup below. Overall I have been very happy with the performance and compatibility of everything and I have tried to link to all of the useful blogs that helped me along the way.&lt;/p&gt;
+&lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://garyflynn.com/images/intel-nuc7.png&#34; width=&#34;150&#34; height=&#34;150&#34;&gt;
+&lt;p&gt;1 x TP-Link TL-SG108E 8 Port Switch (&lt;a href=&#34;https://amzn.to/2N4zXoC&#34;&gt;Amazon UK&lt;/a&gt;)&lt;br&gt;
+3 x Intel NUC 7 Baby Canyon i3 NUC7i3BNH (&lt;a href=&#34;https://amzn.to/2Ppi3Pe&#34;&gt;Amazon UK&lt;/a&gt;)&lt;br&gt;
+&lt;em&gt;Each Intel NUC contains the following...&lt;/em&gt;&lt;br&gt;
+2 x Crucial 16GB DDR4 2400MT/s Memory for 32GB total RAM (&lt;a href=&#34;https://amzn.to/2L4gHpD&#34;&gt;Amazon UK&lt;/a&gt;)&lt;br&gt;
+1 x Crucial 16GB DDR4 2400MT/s Memory for SODIMM1 (&lt;a href=&#34;https://amzn.to/2L4gHpD&#34;&gt;Amazon UK&lt;/a&gt;)&lt;br&gt;
+1 x Samsung 32GB DDR4 2666 MHz Memory for SODIMM2 (&lt;a href=&#34;https://www.scan.co.uk/products/32gb-1x32gb-samsung-ddr4-so-dimm-laptop-sff-memory-pc4-21300-2666-non-ecc-unbuffered-cas-19-19-19-12&#34;&gt;SCAN&lt;/a&gt;) (total 48GB)&lt;br&gt;
+1 x Samsung 500GB SSD 860 EVO for vSAN Capacity Tier (&lt;a href=&#34;https://amzn.to/2nQNq8E&#34;&gt;Amazon UK&lt;/a&gt;)&lt;br&gt;
+1 x Samsung 250GB NVMe SSD for vSAN Cache Tier (&lt;a href=&#34;https://amzn.to/2nOY3sG&#34;&gt;Amazon UK&lt;/a&gt;)&lt;br&gt;
+1 x SanDisk Cruzer Fit USB Flash Drive to boot ESXi (&lt;a href=&#34;https://amzn.to/2nQwZcr&#34;&gt;Amazon UK&lt;/a&gt;)&lt;/p&gt;
           
           
         

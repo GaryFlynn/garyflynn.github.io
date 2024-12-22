@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/blogs/</link>
     <description>Recent content in Blogs on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Wed, 19 Sep 2018 07:58:09 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VMware - Handy Blog Posts</title>
@@ -16,8 +16,20 @@
       <description>
         
           
-            Below is a collection of blog posts which I have found handy over the years and I hope you find them helpful too.
-Reporting  VM CPU Counters in vSphere (virtual-red-dot.info) Windows vs ESX CPU Values (logicmonitor.com)  vSAN  Removing Inaccessible vSAN Objects (thinkcharles.net)  vCenter  Convert Thick Provisioned Disk to Thin Provisioned (theitbros.com)  
+            &lt;p&gt;Below is a collection of blog posts which I have found handy over the years and I hope you find them helpful too.&lt;/p&gt;
+&lt;h2 id=&#34;reporting&#34;&gt;Reporting&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;VM CPU Counters in vSphere (&lt;a href=&#34;http://virtual-red-dot.info/vm-cpu-counters-vsphere/&#34;&gt;virtual-red-dot.info&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Windows vs ESX CPU Values (&lt;a href=&#34;https://www.logicmonitor.com/blog/a-tale-of-two-metrics-windows-cpu-or-vcenter-vm-cpu/&#34;&gt;logicmonitor.com&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vsan&#34;&gt;vSAN&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Removing Inaccessible vSAN Objects (&lt;a href=&#34;https://www.thinkcharles.net/blog/2018/2/16/removing-inaccessible-objects-in-vsan&#34;&gt;thinkcharles.net&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vcenter&#34;&gt;vCenter&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Convert Thick Provisioned Disk to Thin Provisioned (&lt;a href=&#34;https://theitbros.com/convert-thick-provision-lazy-zeroed-disk-to-thin-vmware-esxi/&#34;&gt;theitbros.com&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
           
           
         

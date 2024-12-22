@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VCF on Gary Flynn</title>
+    <link>https://garyflynn.com/tags/vcf/</link>
+    <description>Recent content in VCF on Gary Flynn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 17 Nov 2024 21:00:00 +1000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vcf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Started with Aria Automation &amp; Terraform</title>
+      <link>https://garyflynn.com/post/aria-automation-and-terraform-part-one/</link>
+      <pubDate>Sun, 17 Nov 2024 21:00:00 +1000</pubDate>
+      
+      <guid>https://garyflynn.com/post/aria-automation-and-terraform-part-one/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Using Terraform to consume Aria Automation / VCF Automation is easy to configure and to get started, have a read of the below code snippets. This guide will cover the initial setup and configuration of the Aria Automation Terraform provider and assumes that you have the Terraform executable installed locally. If not, install locally following the &lt;a href=&#34;https://developer.hashicorp.com/terraform/install&#34;&gt;HashiCorp documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Part One of this guide will cover authenticating to the Aria Automation / VCF Automation instance.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

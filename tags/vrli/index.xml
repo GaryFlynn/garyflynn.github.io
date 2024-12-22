@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vRLI on Gary Flynn</title>
+    <title>VRLI on Gary Flynn</title>
     <link>https://garyflynn.com/tags/vrli/</link>
-    <description>Recent content in vRLI on Gary Flynn</description>
+    <description>Recent content in VRLI on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Mon, 21 Oct 2019 10:39:18 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vrli/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vRealize Log Insight 8.x - Getting Started</title>
@@ -16,7 +16,7 @@
       <description>
         
           
-            In the previous post we deployed all of the vRealize Suite products and we are now ready to log into vRLI and configure it for use. vRLI 8.0 has some significant improvements including Unlimited Exports of data (increased from 20,000 events), Content Pack Updates and a new OS in the form of Photon OS. For more information check out the VMware blog post here which includes details of how the single upgrade file will also move the OS from SUSE to Photon!
+            &lt;p&gt;In the previous &lt;a href=&#34;https://garyflynn.com/post/vrealize-suite-2019-deploy-using-vrslcm/&#34;&gt;post&lt;/a&gt; we deployed all of the vRealize Suite products and we are now ready to log into vRLI and configure it for use. vRLI 8.0 has some significant improvements including Unlimited Exports of data (increased from 20,000 events), Content Pack Updates and a new OS in the form of Photon OS. For more information check out the VMware blog post &lt;a href=&#34;https://blogs.vmware.com/management/2019/10/whats-new-in-vrealize-log-insight-8-0.html&#34;&gt;here&lt;/a&gt; which includes details of how the single upgrade file will also move the OS from SUSE to Photon! Very impressive!&lt;/p&gt;
           
           
         
@@ -32,8 +32,16 @@
       <description>
         
           
-            VMware has just announced the latest release of the vRealize Suite (2019) and with it comes vRealize Automation 8.0 (vRA), vRealize Log Insight 8.0 (vRLI), vRealize Operations Manager 8.0 (vROps) and vRealize Suite Lifecycle Manager 8.0 (vRSLCM). Noticeably absent is vRealize Business for Cloud (vRBC), as this product has been deprecated and the functionality has been migrated to vROps.
- Announcing General Availability of vRealize Suite 2019, vCloud Suite 2019, and vCloud Suite 2019 Platinum!
+            &lt;p&gt;VMware has just announced the latest release of the vRealize Suite (2019) and with it comes vRealize Automation 8.0 (vRA), vRealize Log Insight 8.0 (vRLI), vRealize Operations Manager 8.0 (vROps) and vRealize Suite Lifecycle Manager 8.0 (vRSLCM). Noticeably absent is vRealize Business for Cloud (vRBC), as this product has been deprecated and the functionality has been migrated to vROps.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blogs.vmware.com/management/2019/10/vrealize-suite-2019-vcloud-suite-2019-ga.html&#34;&gt;Announcing General Availability of vRealize Suite 2019, vCloud Suite 2019, and vCloud Suite 2019 Platinum!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blogs.vmware.com/management/2019/08/vrslcm-8-0-whats-new.html&#34;&gt;vRealize Suite Lifecycle Manager 8.0 – What’s New&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blogs.vmware.com/management/2019/10/announcing-general-availability-of-vmware-vrealize-automation-8-0.html&#34;&gt;Announcing General Availability of VMware vRealize Automation 8.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blogs.vmware.com/management/2019/10/whats-new-in-vrealize-log-insight-8-0.html&#34;&gt;What’s new in vRealize Log Insight 8.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blogs.vmware.com/management/2019/10/whats-new-in-vrealize-operations-8-0-2.html&#34;&gt;What’s New in vRealize Operations 8.0?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://vxpresss.blogspot.com/2019/10/everything-you-need-to-know-about.html&#34;&gt;Everything you need to know about the vRealize Operations 8.0 release&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So with the exciting announcements out of the way, let&#39;s get these installed!&lt;/p&gt;
           
           
         

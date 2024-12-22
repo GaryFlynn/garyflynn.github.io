@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/services/</link>
     <description>Recent content in Services on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Mon, 21 Oct 2019 17:47:04 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/services/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vRealize Automation 8.x - Services</title>
@@ -16,8 +16,34 @@
       <description>
         
           
-            In the previous post we configured vRA 8.0 with a vSphere endpoint and in this post we are going to cover the different Services which are available. vRA 8.0 has four main components or services, Cloud Assembly, Service Broker, Code Stream and Orchestrator. Great, but what is the role of each service?
-    Cloud Assembly The Cloud Assembly service is the multi-cloud provisioning service and is where the bulk of your time will be spent.
+            &lt;p&gt;In the previous &lt;a href=&#34;https://garyflynn.com/post/vrealize-automation-8x-getting-started/&#34;&gt;post&lt;/a&gt; we configured vRA 8.0 with a vSphere endpoint and in this post we are going to cover the different Services which are available. vRA 8.0 has four main components or services, Cloud Assembly, Service Broker, Code Stream and Orchestrator. Great, but what is the role of each service?&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+  &lt;picture&gt;
+
+    
+      
+        
+        
+        
+        
+        
+        
+    &lt;img
+      loading=&#34;lazy&#34;
+      decoding=&#34;async&#34;
+      alt=&#34;&#34;
+      
+        class=&#34;image_figure image_internal image_unprocessed&#34;
+        src=&#34;https://garyflynn.com/images/vra8-services.png&#34;
+      
+      
+    /&gt;
+
+    &lt;/picture&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;cloud-assembly&#34;&gt;Cloud Assembly&lt;/h3&gt;
+&lt;p&gt;The Cloud Assembly service is the multi-cloud provisioning service and is where the bulk of your time will be spent. The Cloud Assembly service is where you can create your SDDC private cloud and it is also an abstraction layer across multiple clouds. This abstraction allows you to create blueprints which can be used to deploy applications across different cloud providers, mapping the cloud constructs of one public cloud provider with another. All of the usual features are there including viewing your existing deployments, creating blueprints and configuring Infrastructure. The addition of the &amp;quot;Guided Setup&amp;quot; on the right hand side helps with understanding how all of the terminology fits everything together. The Infrastructure tab in Cloud Assembly is where most of the configuration is done. Here you can create the different projects, cloud zones, flavour and image mappings and network and storage profiles. The infrastructure tab is also where the cloud accounts are defined and the compute, network, security, storage etc are all deployed, along with the Kubernetes integration. The table below maps the vRA 7.x constructs to the vRA 8.x constructs.&lt;/p&gt;
           
           
         

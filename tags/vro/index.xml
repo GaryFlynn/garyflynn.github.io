@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vRO on Gary Flynn</title>
+    <title>VRO on Gary Flynn</title>
     <link>https://garyflynn.com/tags/vro/</link>
-    <description>Recent content in vRO on Gary Flynn</description>
+    <description>Recent content in VRO on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Mon, 16 Mar 2020 11:02:50 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vro/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vRealize Orchestrator - Kerberos Configuration File</title>
@@ -16,8 +16,9 @@
       <description>
         
           
-            To configure Kerberos authentication with vRealize Orchestrator (vRO), the krb5.conf file must be set up for your specific environment and the domain you are connecting to. The location of the krb5.conf file is different for different versions and deployments of vRO, so the below list shows the locations of the krb5.conf file for vRO 7 vs vRO 8 and standalone deployments vs embedded with vRA deployments.
-In vRO 7.x standalone, the krb5.
+            &lt;p&gt;To configure Kerberos authentication with vRealize Orchestrator (vRO), the krb5.conf file must be set up for your specific environment and the domain you are connecting to. The location of the krb5.conf file is different for different versions and deployments of vRO, so the below list shows the locations of the krb5.conf file for vRO 7 vs vRO 8 and standalone deployments vs embedded with vRA deployments.&lt;/p&gt;
+&lt;p&gt;In vRO 7.x standalone, the krb5.conf file is located in /usr/java/jre-vmware/lib/security/krb5.conf&lt;br&gt;
+In vRO 8.x standalone, the krb5.conf file is located in /data/vco/usr/lib/vco/app-server/conf/krb5.conf&lt;/p&gt;
           
           
         
@@ -33,11 +34,11 @@ In vRO 7.x standalone, the krb5.
       <description>
         
           
-            In both vRealize Automation and Orchestrator 8.x, the appliances have been rebuilt using a kubernetes architecture. For this reason, the location of the different Orchestrator user interfaces has changed.
-Orchestrator Client UI - https://FQDN_or_IP_address:443/orchestration-ui
-Orchestrator Client Java UI - deprecated from vRO 8.0 onwards
-Orchestrator Control Center UI - https://FQDN_or_IP_address:443/vco-controlcenter
-To login to the Orchestrator Control Center UI, the username is &#39;root&#39; and the password is the same as the appliance &#39;root&#39; password.
+            &lt;p&gt;In both vRealize Automation and Orchestrator 8.x, the appliances have been rebuilt using a kubernetes architecture. For this reason, the location of the different Orchestrator user interfaces has changed.&lt;/p&gt;
+&lt;p&gt;Orchestrator Client UI - https://&lt;em&gt;FQDN_or_IP_address&lt;/em&gt;:443/orchestration-ui&lt;/p&gt;
+&lt;p&gt;Orchestrator Client Java UI - deprecated from vRO 8.0 onwards&lt;/p&gt;
+&lt;p&gt;Orchestrator Control Center UI - https://&lt;em&gt;FQDN_or_IP_address&lt;/em&gt;:443/vco-controlcenter&lt;/p&gt;
+&lt;p&gt;To login to the Orchestrator Control Center UI, the username is &#39;root&#39; and the password is the same as the appliance &#39;root&#39; password.&lt;/p&gt;
           
           
         
@@ -53,7 +54,7 @@ To login to the Orchestrator Control Center UI, the username is &#39;root&#39; a
       <description>
         
           
-            Today is a significant day for VMware with the announcements coming out primarily around vSphere 7 and the implementation of Project Tanzu. The vSphere client will now natively support running containers and VMs within the same unified console, the vSphere Client. One very interesting new feature is the VMware Lifecycle Manager (vLCM) that will be introduced to simplify the management of firmware, drivers and ESXi bundles. For more information on today&#39;s announcements, check out the blog here.
+            &lt;p&gt;Today is a significant day for VMware with the announcements coming out primarily around vSphere 7 and the implementation of Project Tanzu. The vSphere client will now natively support running containers and VMs within the same unified console, the vSphere Client. One very interesting new feature is the VMware Lifecycle Manager (vLCM) that will be introduced to simplify the management of firmware, drivers and ESXi bundles. For more information on today&#39;s announcements, check out the blog &lt;a href=&#34;https://blogs.vmware.com/vsphere/2020/03/vsphere-7.html&#34;&gt;here&lt;/a&gt;. But what about the vRealize Suite announcements? That&#39;s what we are really interested in!&lt;/p&gt;
           
           
         
@@ -69,10 +70,36 @@ To login to the Orchestrator Control Center UI, the username is &#39;root&#39; a
       <description>
         
           
-            Once vRealize Automation 7.x is deployed, you must manually start the vRealize Orchestrator Configurator service to access the Configuration interface.
-To do this, log into the vRealize Automation appliance by SSH using PuTTY (or your preferred Secure Shell client).
-    Run this command to verify that the service is set to automatically start.
-1chkconfig vco-configurator If the service reports &amp;quot;off&amp;quot;, run this command to enable an automatic restart of the vRealize Orchestrator Configurator service when the vRealize Automation appliance is rebooted in future.
+            &lt;p&gt;Once vRealize Automation 7.x is deployed, you must manually start the vRealize Orchestrator Configurator service to access the Configuration interface.&lt;/p&gt;
+&lt;p&gt;To do this, log into the vRealize Automation appliance by SSH using PuTTY (or your preferred Secure Shell client).&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+  &lt;picture&gt;
+
+    
+      
+        
+        
+        
+        
+        
+        
+    &lt;img
+      loading=&#34;lazy&#34;
+      decoding=&#34;async&#34;
+      alt=&#34;&#34;
+      
+        class=&#34;image_figure image_internal image_unprocessed&#34;
+        src=&#34;https://garyflynn.com/images/vra-server-primary-ssh.png&#34;
+      
+      
+    /&gt;
+
+    &lt;/picture&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Run this command to verify that the service is set to automatically start.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;chkconfig vco-configurator
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If the service reports &amp;quot;&lt;strong&gt;off&lt;/strong&gt;&amp;quot;, run this command to enable an automatic restart of the vRealize Orchestrator Configurator service when the vRealize Automation appliance is rebooted in future.&lt;/p&gt;
           
           
         
@@ -88,7 +115,7 @@ To do this, log into the vRealize Automation appliance by SSH using PuTTY (or yo
       <description>
         
           
-            Many organisations are seeing the value of NSX-v in SDDC environments, however there is no easy way to export the NSX Distributed Firewall (DFW) rules from NSX to a CSV file. To export all rules in the environment, we need to extract each of the firewall rule IDs and get the details extracted for each rule. We will then export this information in a CSV file and optionally email it to the requestor.
+            &lt;p&gt;Many organisations are seeing the value of NSX-v in SDDC environments, however there is no easy way to export the NSX Distributed Firewall (DFW) rules from NSX to a CSV file. To export all rules in the environment, we need to extract each of the firewall rule IDs and get the details extracted for each rule. We will then export this information in a CSV file and optionally email it to the requestor.&lt;/p&gt;
           
           
         
@@ -104,7 +131,7 @@ To do this, log into the vRealize Automation appliance by SSH using PuTTY (or yo
       <description>
         
           
-            With the introduction of NSX-v 6.4.2, NSX will now log the firewall rule hit count for each firewall rule in the DFW. You can then check the UI or API for the hit count on each individual firewall rule. This capability is fantastic, however there is no way to extract the hit count for every rule in the environment either through the UI or API. Hopefully the API is updated in the future for this feature ;)
+            &lt;p&gt;With the introduction of NSX-v 6.4.2, NSX will now log the firewall rule hit count for each firewall rule in the DFW. You can then check the UI or API for the hit count on each individual firewall rule. This capability is fantastic, however there is no way to extract the hit count for every rule in the environment either through the UI or API. Hopefully the API is updated in the future for this feature ;)&lt;/p&gt;
           
           
         
@@ -120,9 +147,10 @@ To do this, log into the vRealize Automation appliance by SSH using PuTTY (or yo
       <description>
         
           
-            Integrating vRA / vRO and Azure is available out-of-the-box with vRA 7.2+ and has been well documented by others for how to set the integration up (vaficionado.com).
-The integration is fairly straightforward however I faced two main issues, the first being proxy settings and the second being an issue with the vRO workflow &amp;quot;Add an Azure connection&amp;quot;.
-Update Azure Plugin To resolve other vRO / Azure bugs, ensure you update the Azure plugin in vRO to the latest version from https://kb.
+            &lt;p&gt;Integrating vRA / vRO and Azure is available out-of-the-box with vRA 7.2+ and has been well documented by others for how to set the integration up (&lt;a href=&#34;http://www.vaficionado.com/2016/11/using-new-microsoft-azure-endpoint-vrealize-automation-7-2/&#34;&gt;vaficionado.com&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;The integration is fairly straightforward however I faced two main issues, the first being proxy settings and the second being an issue with the vRO workflow &amp;quot;Add an Azure connection&amp;quot;.&lt;/p&gt;
+&lt;h2 id=&#34;update-azure-plugin&#34;&gt;Update Azure Plugin&lt;/h2&gt;
+&lt;p&gt;To resolve other vRO / Azure bugs, ensure you update the Azure plugin in vRO to the latest version from &lt;a href=&#34;https://kb.vmware.com/s/article/55826&#34;&gt;https://kb.vmware.com/s/article/55826&lt;/a&gt; (see attachment in the KB article). As the KB states, the updated plugin can be installed in vRA/vRO 7.2, 7.3, 7.3.1 &amp;amp; 7.4.&lt;/p&gt;
           
           
         

@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/storage/</link>
     <description>Recent content in Storage on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Tue, 28 Aug 2018 10:36:31 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/storage/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Homelab Setup Part 2 - vSAN Configuration</title>
@@ -16,8 +16,9 @@
       <description>
         
           
-            To setup the NUC and install ESXi, follow part one of this guide. The following is the process to bootstrap loading the vCenter Server Appliance onto a vSAN datastore. This process was replaced in vCenter 6.7 which provides this capability natively through the installer. If you are deploying vCenter 6.7+, skip through to part three.
-vSAN Configuration To install vCenter you need the datastore in place, which for my environment is vSAN.
+            &lt;p&gt;To setup the NUC and install ESXi, follow &lt;a href=&#34;https://garyflynn.com/post/homelab-setup-part-1-intel-nuc/&#34;&gt;part one&lt;/a&gt; of this guide. The following is the process to bootstrap loading the vCenter Server Appliance onto a vSAN datastore. This process was replaced in vCenter 6.7 which provides this capability natively through the installer. &lt;strong&gt;If you are deploying vCenter 6.7+, skip through to&lt;/strong&gt; &lt;a href=&#34;https://garyflynn.com/post/homelab-setup-part-3-vcenter-install-configure/&#34;&gt;&lt;strong&gt;part three&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;vsan-configuration&#34;&gt;vSAN Configuration&lt;/h2&gt;
+&lt;p&gt;To install vCenter you need the datastore in place, which for my environment is vSAN. However to configure vSAN, this is done through vCenter. A classic chicken and egg scenario which thankfully VMware have the solution for. You can bootstrap the vSAN datastore which William Lam has documented over at &lt;a href=&#34;https://www.virtuallyghetto.com/2013/09/how-to-bootstrap-vcenter-server-onto_9.html&#34;&gt;virtuallyghetto.com&lt;/a&gt; and my configuration steps are below. On the first host, &lt;a href=&#34;https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.html.hostclient.doc/GUID-B649CB74-832F-467B-B6A4-8BA67AD5C1F0.html&#34;&gt;enable SSH&lt;/a&gt; and SSH into the host. Modify the default vSAN policy to enable force provisioning.&lt;/p&gt;
           
           
         

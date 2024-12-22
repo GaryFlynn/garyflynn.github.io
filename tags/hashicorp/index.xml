@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/hashicorp/</link>
     <description>Recent content in HashiCorp on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Wed, 03 May 2023 15:00:57 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/hashicorp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setup vRealize Automation using Terraform</title>
@@ -16,8 +16,8 @@
       <description>
         
           
-            VMware has created a HashiCorp Terraform provider which can be used to set up your vRealize Automation (vRA) infrastructure, along with requesting deployments and consuming XaaS resources. This post will cover the basics of setting up vRA using Terraform.
-The first two posts in this series cover the basics of Infrastructure as Code with vRA and Terraform along with creating your first Terraform configuration to deploy a vSphere virtual machine. To get started, have a read of the documentation available for either vRA 8 or vRA 7.
+            &lt;p&gt;VMware has created a HashiCorp Terraform provider which can be used to set up your vRealize Automation (vRA) infrastructure, along with requesting deployments and consuming XaaS resources. This post will cover the basics of setting up vRA using Terraform.&lt;/p&gt;
+&lt;p&gt;The first two posts in this series cover the basics of &lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/&#34;&gt;Infrastructure as Code with vRA and Terraform&lt;/a&gt; along with &lt;a href=&#34;https://garyflynn.com/post/create-your-first-vsphere-terraform-configuration/&#34;&gt;creating your first Terraform configuration to deploy a vSphere virtual machine&lt;/a&gt;. To get started, have a read of the documentation available for either &lt;a href=&#34;https://registry.terraform.io/providers/vmware/vra/latest/docs&#34;&gt;vRA 8&lt;/a&gt; or &lt;a href=&#34;https://registry.terraform.io/providers/vmware/vra7/latest/docs&#34;&gt;vRA 7&lt;/a&gt;.&lt;/p&gt;
           
           
         
@@ -33,8 +33,8 @@ The first two posts in this series cover the basics of Infrastructure as Code wi
       <description>
         
           
-            To get started with HashiCorp Terraform, you can download the simple executable file from HashiCorp here. To understand the basics of Infrastructure as Code and Terraform, have a read of the post available here.
-Terraform configuration files are text files with a .tf file extension. To get started, create a new folder for this configuration, along with a file called vsphere.tf. The first part to creating a Terraform configuration file is to define the provider you will interact with.
+            &lt;p&gt;To get started with HashiCorp Terraform, you can download the simple executable file from HashiCorp &lt;a href=&#34;https://www.terraform.io/downloads.html&#34;&gt;here&lt;/a&gt;. To understand the basics of Infrastructure as Code and Terraform, have a read of the post available &lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Terraform configuration files are text files with a .tf file extension. To get started, create a new folder for this configuration, along with a file called &lt;em&gt;vsphere.tf&lt;/em&gt;. The first part to creating a Terraform configuration file is to define the provider you will interact with. In this example, it will create a virtual machine using the vSphere provider. The vSphere provider has some required fields like the user, password and server name. Create the provider block referring to &amp;quot;vsphere&amp;quot; and set the required fields with valid values for your environment.&lt;/p&gt;
           
           
         
@@ -50,8 +50,16 @@ Terraform configuration files are text files with a .tf file extension. To get s
       <description>
         
           
-            On January 28th 2021, I presented at the Automation User Group about vRealize Automation and Terraform and how they work together to provide a new way to deploy your infrastructure. The recording of the session will be available here and the slides are available from here.
- vRealize Automation Cloud What is Infrastructure as Code? Two Approaches: Imperative vs Declarative What is Terraform (OSS)? Additional Resources  vRealize Automation Cloud VMware vRealize Automation (vRA) Cloud allows you to provide multi-cloud infrastructure and application delivery to your end-users.
+            &lt;p&gt;On January 28th 2021, I presented at the &lt;a href=&#34;https://www.autoug.io/&#34;&gt;Automation User Group&lt;/a&gt; about vRealize Automation and Terraform and how they work together to provide a new way to deploy your infrastructure. The recording of the session will be available &lt;a href=&#34;https://youtu.be/Q1XcuxTL6CQ&#34;&gt;here&lt;/a&gt; and the slides are available from &lt;a href=&#34;https://garyflynn.com/wp-content/uploads/2021/01/vRA-and-Terraform-A-New-Way-to-Deploy.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/#vrealize-automation-cloud&#34;&gt;vRealize Automation Cloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/#what-is-infrastructure-as-code&#34;&gt;What is Infrastructure as Code?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/#two-approaches-imperative-vs-declarative&#34;&gt;Two Approaches: Imperative vs Declarative&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/#what-is-terraform-oss&#34;&gt;What is Terraform (OSS)?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://garyflynn.com/post/vra-and-terraform-a-new-way-to-deploy/#additional-resources&#34;&gt;Additional Resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;vrealize-automation-cloud&#34;&gt;vRealize Automation Cloud&lt;/h3&gt;
+&lt;p&gt;VMware vRealize Automation (vRA) Cloud allows you to provide multi-cloud infrastructure and application delivery to your end-users. It enhances the visibility of your machines across your different private and public cloud providers, enables collaboration and provides continuous delivery and release automation.&lt;/p&gt;
           
           
         

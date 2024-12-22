@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/configuration-manager/</link>
     <description>Recent content in Configuration Manager on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Wed, 22 Mar 2017 04:39:33 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/configuration-manager/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Useful SCCM Collection Queries</title>
@@ -16,9 +16,9 @@
       <description>
         
           
-            Every Microsoft System Center Configuration Manager (SCCM) administrator has a handful of WQL Collection Queries that you hang onto. I figured I would share my most commonly used queries. Let me know in the comments if you have any others. The below are just examples and you should test if they are appropriate for your environment.
-All Servers
-select SMS_R_SYSTEM.ResourceID, SMS_R_SYSTEM.ResourceType, SMS_R_SYSTEM.Name, SMS_R_SYSTEM.SMSUniqueIdentifier, SMS_R_SYSTEM.ResourceDomainORWorkgroup, SMS_R_SYSTEM.Client from SMS_R_System inner join SMS_G_System_SYSTEM on SMS_G_System_SYSTEM.
+            &lt;p&gt;Every Microsoft System Center Configuration Manager (SCCM) administrator has a handful of WQL Collection Queries that you hang onto. I figured I would share my most commonly used queries. Let me know in the comments if you have any others. The below are just examples and you should test if they are appropriate for your environment.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;All Servers&lt;/strong&gt;&lt;br&gt;
+select SMS_R_SYSTEM.ResourceID, SMS_R_SYSTEM.ResourceType, SMS_R_SYSTEM.Name, SMS_R_SYSTEM.SMSUniqueIdentifier, SMS_R_SYSTEM.ResourceDomainORWorkgroup, SMS_R_SYSTEM.Client from SMS_R_System inner join SMS_G_System_SYSTEM on SMS_G_System_SYSTEM.ResourceId = SMS_R_System.ResourceId where SMS_G_System_SYSTEM.SystemRole = &amp;quot;Server&amp;quot;&lt;/p&gt;
           
           
         

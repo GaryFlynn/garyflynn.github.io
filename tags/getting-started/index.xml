@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/getting-started/</link>
     <description>Recent content in Getting Started on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Sat, 04 Apr 2020 13:19:53 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/getting-started/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vRealize Automation 8.x - Setup Amazon Web Services Cloud Account</title>
@@ -16,8 +16,8 @@
       <description>
         
           
-            vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Amazon Web Services (AWS) environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For AWS, we simply need to head over to the AWS Console console.aws.amazon.com and authenticate with the account which has access to the AWS account you want to integrate with.
-To integrate vRA 8.
+            &lt;p&gt;vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Amazon Web Services (AWS) environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For AWS, we simply need to head over to the AWS Console &lt;a href=&#34;https://console.aws.amazon.com/&#34;&gt;console.aws.amazon.com&lt;/a&gt; and authenticate with the account which has access to the AWS account you want to integrate with.&lt;/p&gt;
+&lt;p&gt;To integrate vRA 8.x with AWS, there are 2 configuration IDs and some permissions that need to be set up which we need to complete and provide to the vRA portal. These are covered in the sections listed below.&lt;/p&gt;
           
           
         
@@ -33,7 +33,7 @@ To integrate vRA 8.
       <description>
         
           
-            vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Google Cloud Platform (GCP) environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For GCP, there is some preparation we need to do on the GCP Console, so head over to console.cloud.google.com and authenticate with the account which has access to the Project you want to integrate with.
+            &lt;p&gt;vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Google Cloud Platform (GCP) environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For GCP, there is some preparation we need to do on the GCP Console, so head over to &lt;a href=&#34;http://console.cloud.google.com&#34;&gt;console.cloud.google.com&lt;/a&gt; and authenticate with the account which has access to the Project you want to integrate with.&lt;/p&gt;
           
           
         
@@ -49,7 +49,7 @@ To integrate vRA 8.
       <description>
         
           
-            vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Microsoft Azure environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For Azure, there is some preparation we need to do on the Azure Portal, so head over to portal.azure.com and authenticate with the account which has access to the Subscription you want to integrate with.
+            &lt;p&gt;vRealize Automation 8.x can integrate with several cloud providers, and to do this for your Microsoft Azure environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For Azure, there is some preparation we need to do on the Azure Portal, so head over to &lt;a href=&#34;https://portal.azure.com&#34;&gt;portal.azure.com&lt;/a&gt; and authenticate with the account which has access to the Subscription you want to integrate with.&lt;/p&gt;
           
           
         
@@ -65,7 +65,7 @@ To integrate vRA 8.
       <description>
         
           
-            vRealize Automation 8.x can integrate with several cloud providers, and to do this for your vSphere environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For vSphere, enter the vCenter FQDN / IP address, the credentials to authenticate with and select a logical name. Under capabilities, enter &amp;quot;cloud:vsphere&amp;quot; as this will enable us to use tagging in the blueprint request forms.
+            &lt;p&gt;vRealize Automation 8.x can integrate with several cloud providers, and to do this for your vSphere environment, select Cloud Assembly &amp;gt; Infrastructure &amp;gt; Connections &amp;gt; Cloud Accounts and create each of the cloud integrations you require. For vSphere, enter the vCenter FQDN / IP address, the credentials to authenticate with and select a logical name. Under capabilities, enter &amp;quot;cloud:vsphere&amp;quot; as this will enable us to use tagging in the blueprint request forms. Validate the credentials and once they are validated, select which datacenters to allow provisioning to, followed by selecting Add.&lt;/p&gt;
           
           
         
@@ -81,7 +81,7 @@ To integrate vRA 8.
       <description>
         
           
-            In the previous post we deployed all of the vRealize Suite products and we are now ready to log into vRA and configure it for use. vRA 8.0 is a fundamental change from 7.x and it now consists of four main components, Cloud Assembly, Service Broker, Code Stream and Orchestrator. Let&#39;s get vRA 8.0 configured! Load up the vRA homepage https://&amp;lt;vRA FDQN&amp;gt;/ where you are greeted with the welcome page. One thing to note is that the new vRA 8.
+            &lt;p&gt;In the previous &lt;a href=&#34;https://garyflynn.com/post/vrealize-suite-2019-deploy-using-vrslcm/&#34;&gt;post&lt;/a&gt; we deployed all of the vRealize Suite products and we are now ready to log into vRA and configure it for use. vRA 8.0 is a fundamental change from 7.x and it now consists of four main components, Cloud Assembly, Service Broker, Code Stream and Orchestrator. Let&#39;s get vRA 8.0 configured! Load up the vRA homepage https://&amp;lt;vRA FDQN&amp;gt;/ where you are greeted with the welcome page. One thing to note is that the new vRA 8.0 appliance does not contain a VAMI, instead non-UI configuration is done using the &amp;quot;vracli&amp;quot; commands on the appliance shell.&lt;/p&gt;
           
           
         
@@ -97,7 +97,7 @@ To integrate vRA 8.
       <description>
         
           
-            In the previous post we deployed all of the vRealize Suite products and we are now ready to log into vRLI and configure it for use. vRLI 8.0 has some significant improvements including Unlimited Exports of data (increased from 20,000 events), Content Pack Updates and a new OS in the form of Photon OS. For more information check out the VMware blog post here which includes details of how the single upgrade file will also move the OS from SUSE to Photon!
+            &lt;p&gt;In the previous &lt;a href=&#34;https://garyflynn.com/post/vrealize-suite-2019-deploy-using-vrslcm/&#34;&gt;post&lt;/a&gt; we deployed all of the vRealize Suite products and we are now ready to log into vRLI and configure it for use. vRLI 8.0 has some significant improvements including Unlimited Exports of data (increased from 20,000 events), Content Pack Updates and a new OS in the form of Photon OS. For more information check out the VMware blog post &lt;a href=&#34;https://blogs.vmware.com/management/2019/10/whats-new-in-vrealize-log-insight-8-0.html&#34;&gt;here&lt;/a&gt; which includes details of how the single upgrade file will also move the OS from SUSE to Photon! Very impressive!&lt;/p&gt;
           
           
         

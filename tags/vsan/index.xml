@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vSAN on Gary Flynn</title>
+    <title>VSAN on Gary Flynn</title>
     <link>https://garyflynn.com/tags/vsan/</link>
-    <description>Recent content in vSAN on Gary Flynn</description>
+    <description>Recent content in VSAN on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Wed, 05 Sep 2018 10:41:21 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/vsan/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Homelab Setup Part 3 - vCenter Install &amp; Configure</title>
@@ -16,8 +16,9 @@
       <description>
         
           
-            To setup the NUC and install ESXi, follow part one of this guide. To configure the basic vSAN configuration for deployments pre vCenter 6.7, follow part two of this guide.
-vCenter Appliance Installation With the Intel NUCs set up (and a vSAN datastore created if running pre 6.7 vCenter), it is time to install the vCenter Server Appliance (vCSA). As you probably know, the Windows vCenter Server is deprecated, so the vCSA will be deployed.
+            &lt;p&gt;To setup the NUC and install ESXi, follow &lt;a href=&#34;https://garyflynn.com/post/homelab-setup-part-1-intel-nuc/&#34;&gt;part one&lt;/a&gt; of this guide. To configure the basic vSAN configuration for deployments pre vCenter 6.7, follow &lt;a href=&#34;https://garyflynn.com/post/homelab-setup-part-2-vsan-configuration/&#34;&gt;part two&lt;/a&gt; of this guide.&lt;/p&gt;
+&lt;h2 id=&#34;vcenter-appliance-installation&#34;&gt;vCenter Appliance Installation&lt;/h2&gt;
+&lt;p&gt;With the Intel NUCs set up (and a vSAN datastore created if running pre 6.7 vCenter), it is time to install the vCenter Server Appliance (vCSA). As you probably know, the Windows vCenter Server is deprecated, so the vCSA will be deployed. Download the &lt;a href=&#34;https://my.vmware.com/web/vmware/details?downloadGroup=VC670&amp;amp;productId=742&amp;amp;rPId=22644&#34;&gt;ISO&lt;/a&gt;, mount it to your PC and run the UI installer located in &amp;quot;Drive:\vcsa-ui-installer\win32\installer.exe&amp;quot;. The process to deploy vCSA has been documented extensively on many blogs including this one from &lt;a href=&#34;http://www.vstellar.com/2018/04/18/exploring-vsphere-6-7-part-2-installing-and-configuring-vcsa/&#34;&gt;Virtual Reality&lt;/a&gt;. For reference, I am installing the vcsa with the following configuration. Note that we don&#39;t have working DNS, so the FQDN and DNS Server should be the IP Address of the vCSA and the IP address of the default gateway (&lt;a href=&#34;https://www.virtuallyghetto.com/2018/12/is-a-dns-server-still-required-when-using-a-static-ip-for-vcsa.html&#34;&gt;Virtually Ghetto&lt;/a&gt;).&lt;/p&gt;
           
           
         
@@ -33,8 +34,9 @@ vCenter Appliance Installation With the Intel NUCs set up (and a vSAN datastore 
       <description>
         
           
-            To setup the NUC and install ESXi, follow part one of this guide. The following is the process to bootstrap loading the vCenter Server Appliance onto a vSAN datastore. This process was replaced in vCenter 6.7 which provides this capability natively through the installer. If you are deploying vCenter 6.7+, skip through to part three.
-vSAN Configuration To install vCenter you need the datastore in place, which for my environment is vSAN.
+            &lt;p&gt;To setup the NUC and install ESXi, follow &lt;a href=&#34;https://garyflynn.com/post/homelab-setup-part-1-intel-nuc/&#34;&gt;part one&lt;/a&gt; of this guide. The following is the process to bootstrap loading the vCenter Server Appliance onto a vSAN datastore. This process was replaced in vCenter 6.7 which provides this capability natively through the installer. &lt;strong&gt;If you are deploying vCenter 6.7+, skip through to&lt;/strong&gt; &lt;a href=&#34;https://garyflynn.com/post/homelab-setup-part-3-vcenter-install-configure/&#34;&gt;&lt;strong&gt;part three&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;vsan-configuration&#34;&gt;vSAN Configuration&lt;/h2&gt;
+&lt;p&gt;To install vCenter you need the datastore in place, which for my environment is vSAN. However to configure vSAN, this is done through vCenter. A classic chicken and egg scenario which thankfully VMware have the solution for. You can bootstrap the vSAN datastore which William Lam has documented over at &lt;a href=&#34;https://www.virtuallyghetto.com/2013/09/how-to-bootstrap-vcenter-server-onto_9.html&#34;&gt;virtuallyghetto.com&lt;/a&gt; and my configuration steps are below. On the first host, &lt;a href=&#34;https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.html.hostclient.doc/GUID-B649CB74-832F-467B-B6A4-8BA67AD5C1F0.html&#34;&gt;enable SSH&lt;/a&gt; and SSH into the host. Modify the default vSAN policy to enable force provisioning.&lt;/p&gt;
           
           
         

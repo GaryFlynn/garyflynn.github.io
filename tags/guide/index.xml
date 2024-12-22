@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/guide/</link>
     <description>Recent content in Guide on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Tue, 17 Mar 2020 20:01:23 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/guide/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vRealize Automation 8.x - Setup GitHub Integration</title>
@@ -16,7 +16,7 @@
       <description>
         
           
-            vRealize Automation (vRA) 8.x provides native integration to GitHub.com to share and sync your Blueprints and Action Based Extensibility (ABX) scripts. This integration is provided as a way to edit your blueprints and ABX scripts as Infrastructure as Code (IaC) objects and for vRA to then consume the changes once they are updated and committed to your repository. This integration is not designed as a way to backup or export your content to GitHub.
+            &lt;p&gt;vRealize Automation (vRA) 8.x provides native integration to GitHub.com to share and sync your Blueprints and Action Based Extensibility (ABX) scripts. This integration is provided as a way to edit your blueprints and ABX scripts as Infrastructure as Code (IaC) objects and for vRA to then consume the changes once they are updated and committed to your repository. This integration is not designed as a way to backup or export your content to GitHub. Integration in vRA 8.0 / vRA 8.0.1 is only available to GitHub.com and not GitHub Enterprise Cloud or GitHub Enterprise Self-Hosted.&lt;/p&gt;
           
           
         
@@ -32,11 +32,11 @@
       <description>
         
           
-            In both vRealize Automation and Orchestrator 8.x, the appliances have been rebuilt using a kubernetes architecture. For this reason, the location of the different Orchestrator user interfaces has changed.
-Orchestrator Client UI - https://FQDN_or_IP_address:443/orchestration-ui
-Orchestrator Client Java UI - deprecated from vRO 8.0 onwards
-Orchestrator Control Center UI - https://FQDN_or_IP_address:443/vco-controlcenter
-To login to the Orchestrator Control Center UI, the username is &#39;root&#39; and the password is the same as the appliance &#39;root&#39; password.
+            &lt;p&gt;In both vRealize Automation and Orchestrator 8.x, the appliances have been rebuilt using a kubernetes architecture. For this reason, the location of the different Orchestrator user interfaces has changed.&lt;/p&gt;
+&lt;p&gt;Orchestrator Client UI - https://&lt;em&gt;FQDN_or_IP_address&lt;/em&gt;:443/orchestration-ui&lt;/p&gt;
+&lt;p&gt;Orchestrator Client Java UI - deprecated from vRO 8.0 onwards&lt;/p&gt;
+&lt;p&gt;Orchestrator Control Center UI - https://&lt;em&gt;FQDN_or_IP_address&lt;/em&gt;:443/vco-controlcenter&lt;/p&gt;
+&lt;p&gt;To login to the Orchestrator Control Center UI, the username is &#39;root&#39; and the password is the same as the appliance &#39;root&#39; password.&lt;/p&gt;
           
           
         
@@ -52,8 +52,8 @@ To login to the Orchestrator Control Center UI, the username is &#39;root&#39; a
       <description>
         
           
-            VMware has recently released vRealize Automation 8.0 and with this comes a complete redesign of the vRealize Automation product. Are you just starting out on your Cloud Management Platform (CMP) journey and not quite sure which version to deploy? Hopefully this blog will help you understand some of the key differences between vRA 7.x and vRA 8.x and some familiar features which are missing from vRA 8.x.
-The first place to start is by reading this excellent blog post by Chip Zoller (daphnissov) on the VMware Community Forums.
+            &lt;p&gt;VMware has recently released vRealize Automation 8.0 and with this comes a complete redesign of the vRealize Automation product. Are you just starting out on your Cloud Management Platform (CMP) journey and not quite sure which version to deploy? Hopefully this blog will help you understand some of the key differences between vRA 7.x and vRA 8.x and some familiar features which are missing from vRA 8.x.&lt;/p&gt;
+&lt;p&gt;The first place to start is by reading this excellent &lt;a href=&#34;https://communities.vmware.com/people/daphnissov/blog/2019/10/18/vrealize-automation-vra-8-faq&#34;&gt;blog post&lt;/a&gt; by Chip Zoller (daphnissov) on the VMware Community Forums. This vRA 8 FAQ provides plenty of answers to some of the obvious questions.&lt;/p&gt;
           
           
         

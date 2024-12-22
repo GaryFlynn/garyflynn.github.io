@@ -5,7 +5,7 @@
     <link>https://garyflynn.com/tags/file-share/</link>
     <description>Recent content in File Share on Gary Flynn</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
     <lastBuildDate>Fri, 22 Feb 2019 12:38:51 +0000</lastBuildDate><atom:link href="https://garyflynn.com/tags/file-share/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>File Shares / SMB Not Working</title>
@@ -16,8 +16,8 @@
       <description>
         
           
-            A strange issue occasionally occurs on some servers where random network dropouts occur while accessing any file share (ie. \\servername\c$). I recently came across this issue again and found this fantastic post on the technet forums. About half way down the page a solution is posted which fixed my issue!
-The short version is that in Windows Server 2012 R2 the service / driver SRV2(Server SMB 2.xxx Driver) startup method was changed from Auto to Manual / On Demand.
+            &lt;p&gt;A strange issue occasionally occurs on some servers where random network dropouts occur while accessing any file share (ie. \\servername\c$). I recently came across this issue again and found this fantastic post on the &lt;a href=&#34;https://social.technet.microsoft.com/Forums/en-US/e9567167-22db-4b8c-9f96-a08b97d507f9/server-2012-r2-file-server-stops-responding-to-smb-connections?forum=winserverfiles&#34;&gt;technet forums&lt;/a&gt;. About half way down the page a solution is posted which fixed my issue!&lt;/p&gt;
+&lt;p&gt;The short version is that in Windows Server 2012 R2 the service / driver SRV2(Server SMB 2.xxx Driver) startup method was changed from Auto to Manual / On Demand. This means that the service is not running unless SMB2 traffic is requested. To check the service status run the below command in PowerShell as Administrator.&lt;/p&gt;
           
           
         
